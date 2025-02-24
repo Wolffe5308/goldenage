@@ -6,6 +6,7 @@ tags={
 	"Gameplay"
 	"Translation"
 }
+
 name="Golden Age: Brotherly nation"
 picture="thumbnail.png"
 supported_version="1.15.4"
