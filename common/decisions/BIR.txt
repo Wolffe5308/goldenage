@@ -1,0 +1,339 @@
+development_of_the_jasr = {
+
+    economic_development = {
+
+    icon = generic_factory
+
+		fire_only_once = no
+
+		modifier = {
+			production_factory_start_efficiency_factor = 0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 1000
+				original_tag = BIR
+			}
+		}
+	}
+}
+
+development_of_the_jasr = {
+
+    cooperation_with_the_usss_bir = {
+
+    icon = SOV_place_hq
+
+		fire_only_once = no
+
+		modifier = {
+			political_power_factor = 0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 50
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 1000
+				original_tag = BIR
+			}
+		}
+	}
+}
+
+development_of_the_jasr = {
+
+    jewish_volunteers = {
+
+    icon = generic_military
+
+		fire_only_once = no
+
+		modifier = {
+			mobilization_speed = 0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 50
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 1000
+				original_tag = BIR
+			}
+		}
+	}
+}
+
+development_of_the_jasr = {
+
+    infrastructure_improvement = {
+
+    icon = generic_merge_plant_materiel
+
+		fire_only_once = no
+
+		modifier = {
+			production_speed_infrastructure_factor = 0.05
+            production_speed_rail_way_factor = 0.05
+			production_speed_supply_node_factor = 0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 1000
+				original_tag = BIR
+			}
+		}
+	}
+}
+
+development_of_relations_with_the_ussr = {
+
+    creation_of_the_jewish_anti_fascist_committee = {
+
+    icon = generic_speech
+
+        available = {
+			has_war_with = GER
+			is_in_faction_with = SOV
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions creation_of_the_jewish_anti_fascist_committee"
+			add_ideas = BIR_jewish_anti_fascist_committee
+		}
+
+        days_remove = 60
+		cost = 50
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 1000
+				original_tag = BIR
+			}
+		}
+	}
+}
+
+development_of_relations_with_the_ussr = {
+
+    international_assistance_for_the_red_army = {
+
+    icon = hol_war_on_pacifism
+
+        available = {
+			has_war_with = GER
+			is_in_faction_with = SOV
+		}
+
+		fire_only_once = no
+
+		modifier = {
+			supply_node_range = 0.1 
+		}
+
+			remove_effect = {
+				log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision international_assistance_for_the_red_army" 
+				random_list = {
+					10 = {
+						add_equipment_to_stockpile = {
+							type = motorized_equipment
+							amount = 75
+							producer = USA
+						}
+					}
+				}
+				effect_tooltip = {
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 75
+						producer = USA
+					}
+				}
+				random_list = {
+					10 = {
+						add_equipment_to_stockpile = {
+							type = motorized_equipment
+							amount = 75
+							producer = ENG
+						}
+					}
+				}
+				effect_tooltip = {
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 75
+						producer = ENG
+					}
+				}
+				random_list = {
+					10 = {
+						add_equipment_to_stockpile = {
+							type = motorized_equipment
+							amount = 75
+							producer = CAN
+						}
+					}
+				}
+				effect_tooltip = {
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 75
+						producer = CAN
+					}
+				}
+				random_list = {
+					10 = {
+						add_equipment_to_stockpile = {
+							type = motorized_equipment
+							amount = 75
+							producer = MEX
+						}
+					}
+				}
+				effect_tooltip = {
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 75
+						producer = MEX
+					}
+				}
+				random_list = {
+					10 = {
+						add_equipment_to_stockpile = {
+							type = support_equipment
+							amount = 125
+							producer = USA
+						}
+					}
+				}
+				effect_tooltip = {
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 125
+						producer = USA
+					}
+				}
+				random_list = {
+					10 = {
+						add_equipment_to_stockpile = {
+							type = support_equipment
+							amount = 125
+							producer = ENG
+						}
+					}
+				}
+				effect_tooltip = {
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 125
+						producer = ENG
+					}
+				}
+				random_list = {
+					10 = {
+						add_equipment_to_stockpile = {
+							type = support_equipment
+							amount = 125
+							producer = CAN
+						}
+					}
+				}
+				effect_tooltip = {
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 125
+						producer = CAN
+					}
+				}
+				random_list = {
+					10 = {
+						add_equipment_to_stockpile = {
+							type = support_equipment
+							amount = 125
+							producer = MEX
+						}
+					}
+				}
+				effect_tooltip = {
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 125
+						producer = MEX
+					}
+				}
+			}
+
+        days_remove = 60
+		cost = 50
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 1000
+				original_tag = BIR
+			}
+		}
+	}
+}
+
+development_of_relations_with_the_ussr = {
+
+    letter_from_the_jewish_anti_fascist_committee = {
+
+    icon = eng_trade_unions_support
+
+        available = {
+			has_war_with = GER
+			is_in_faction_with = SOV
+			has_idea = BIR_jewish_anti_fascist_committee
+			SOV = {
+			controls_state = 137
+			controls_state = 913
+			controls_state = 914
+		}
+	}
+
+		fire_only_once = yes
+
+        days_remove = 60
+		cost = 50
+
+		remove_effect = {
+		   log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision letter_from_the_jewish_anti_fascist_committee" 
+           country_event = { id = BIR_jewis.2 days = 1 }
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 1000
+				original_tag = BIR
+			}
+		}
+	}
+}

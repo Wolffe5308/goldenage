@@ -1,0 +1,455 @@
+
+self_development = {
+
+    benefits_for_workers = {
+
+    icon = generic_construction
+
+		fire_only_once = no
+
+		modifier = {
+			production_speed_buildings_factor = 0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = TAN
+			}
+		}
+	}
+}
+
+self_development = {
+
+    expand_field_hospitals = {
+
+    icon = eng_blackshirt_march
+
+	fire_only_once = no
+
+	modifier = {
+        army_morale_factor = 0.15
+	}
+
+	days_remove = 90
+	days_re_enable = 7
+
+	cost = 50
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = TAN
+			}
+		}
+	}
+}
+
+self_development = {
+
+    propaganda_for_workers = {
+
+    icon = eng_propaganda_campaigns
+
+		fire_only_once = no
+
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.1
+            production_factory_max_efficiency_factor = 0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = TAN
+			}
+		}
+	}
+}
+
+self_development = {
+
+    recruit_volunteers_for_the_army = {
+
+    icon = generic_military
+
+		fire_only_once = yes
+
+		modifier = {
+			conscription_factor = 0.05
+		}
+
+		cost = 50
+		days_remove = 360
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = TAN
+			}
+		}
+	}
+}
+
+aid_from_the_ussr = {
+
+    help_from_the_central_committee = {
+
+    icon = generic_decision
+
+		fire_only_once = no
+
+		modifier = {
+            stability_weekly = -0.002
+            communism_drift = 0.05
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = TAN
+			}
+		}
+	}
+}
+
+aid_from_the_ussr = {
+
+    purchase_of_soviet_equipment = {
+
+    icon = generic_industry
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 7
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = TAN
+			}
+		}
+
+		remove_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision purchase_of_soviet_equipment" 
+		random_list = {
+				10 = {
+					modifier = {
+						factor = 100
+						has_government = communism
+					}
+					modifier = {
+						factor = 100
+						has_war_with = SOV
+					}
+					add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 2000
+					    producer = SOV
+                    }
+                }
+            }
+            effect_tooltip = {
+				add_equipment_to_stockpile = {
+				    type = infantry_equipment
+				    amount = 2000
+				    producer = SOV
+				}
+			}
+		}
+    }
+}
+
+aid_from_the_ussr = {
+
+    purchase_of_soviet_armored_vehicles = {
+
+    icon = generic_merge_plant_tank
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 7
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = TAN
+			}
+		}
+
+		remove_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision aid_from_the_ussr" 
+		random_list = {
+				10 = {
+					modifier = {
+						factor = 100
+						has_government = communism
+					}
+					modifier = {
+						factor = 100
+						has_war_with = SOV
+					}
+					add_equipment_to_stockpile = {
+					    type = gw_armored_car_equipment
+					    amount = 100
+					    producer = SOV
+                    }
+                }
+            }
+            effect_tooltip = {
+				add_equipment_to_stockpile = {
+				    type = gw_armored_car_equipment
+				    amount = 100
+				    producer = SOV
+				}
+			}
+		}
+    }
+}
+
+aid_from_the_ussr = {
+
+    purchase_of_soviet_tanks = {
+
+    icon = generic_tank
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 7
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = TAN
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision purchase_of_soviet_tanks" 
+			random_list = {
+                50 = {
+					modifier = {
+						factor = 100
+						has_government = communism
+					}
+					add_equipment_to_stockpile = {
+					    type = light_tank_chassis
+					    amount = 50
+					    producer = SOV
+					}
+				}
+			}
+            effect_tooltip = {
+				add_equipment_to_stockpile = {
+				    type = light_tank_chassis
+				    amount = 50
+				    producer = SOV
+				}
+			}
+		}
+    }
+}
+
+aid_from_the_ussr = {
+
+    purchase_of_soviet_trucks = {
+
+    icon = generic_trucks
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 7
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = TAN
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision purchase_of_soviet_trucks" 
+			random_list = {
+                50 = {
+					modifier = {
+						factor = 100
+						has_government = communism
+					}
+					add_equipment_to_stockpile = {
+					    type = motorized_equipment
+					    amount = 200
+					    producer = SOV
+					}
+				}
+            }
+            effect_tooltip = {
+				add_equipment_to_stockpile = {
+				    type = motorized_equipment
+				    amount = 200
+				    producer = SOV
+				}
+			}
+		}
+    }
+}
+
+aid_from_the_ussr = {
+
+    divisions_of_the_nkvd = {
+
+    icon = GFX_decision_generic_protection
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions divisions_of_the_nkvd" 
+		add_manpower = 30000
+		division_template = {
+				name = "NKVD division"
+				priority = 1
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+		
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 329 }
+				limit = { PREV = { has_full_control_of_state = PREV } }
+				create_unit = {
+					division = "name = \"NKVD division\" division_template = \"NKVD division\" start_experience_factor = 0.4" 
+					owner = TAN
+				}
+				create_unit = {
+					division = "name = \"NKVD division\" division_template = \"NKVD division\" start_experience_factor = 0.4" 
+					owner = TAN
+				}
+				create_unit = {
+					division = "name = \"NKVD division\" division_template = \"NKVD division\" start_experience_factor = 0.4" 
+					owner = TAN
+				}
+				create_unit = {
+					division = "name = \"NKVD division\" division_template = \"NKVD division\" start_experience_factor = 0.4" 
+					owner = TAN
+				}
+			}
+		}
+	}
+}
+
+aid_from_the_ussr = {
+
+    army_training = {
+
+    icon = GFX_decision_generic_prepare_civil_war
+
+		cost = 75
+
+		fire_only_once = yes
+
+		days_remove = 90
+
+		remove_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision army_training" 
+		army_experience = 50
+		}
+	}
+}

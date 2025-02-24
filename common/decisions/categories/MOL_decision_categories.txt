@@ -1,0 +1,16 @@
+reunite_the_moldovian_people = {
+
+    icon = GFX_decision_category_border_war
+
+    picture = GFX_decision_cat_picture_government_in_exile
+
+    priority = 1000
+
+    allowed = {
+        original_tag = MOL
+    }
+
+    visible = {
+        always = yes
+    }
+}

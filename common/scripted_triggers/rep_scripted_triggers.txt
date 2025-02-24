@@ -1,0 +1,11 @@
+REP_basic_joint_trigger = {
+    OR = {
+        tag = SOV
+        tag = UKR
+        tag = BLR
+        tag = ZSR
+    }
+    AND = {
+        is_in_faction_with = SOV
+    }
+}

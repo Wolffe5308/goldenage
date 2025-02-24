@@ -1,0 +1,55 @@
+reunite_the_belarussian_people = {
+
+    icon = GFX_decision_category_border_war
+
+    picture = GFX_decision_cat_picture_government_in_exile
+
+    priority = 1000
+
+    allowed = {
+        original_tag = BLR
+    }
+}
+
+development_of_industrial_regions = {
+
+    icon = generic_economy
+
+    priority = 1000
+
+    visible = {
+		has_completed_focus = BLR_new_five_year_plan
+	}
+
+    allowed = {
+        original_tag = BLR
+    }
+}
+
+building_a_new_party = {
+
+    icon = SOV_permanent_revolution
+
+    priority = 1000
+
+    visible = {
+		has_completed_focus = BLR_new_party
+	}
+
+    allowed = {
+        original_tag = BLR
+    }
+}
+
+BLR_belarus_balance_category = {
+
+    icon = GFX_decision_category_saf_anti_colonialist_crusade
+
+    allowed = {
+        original_tag = BLR
+    }
+
+    visible = {
+        has_completed_focus = BLR_new_party
+    }
+}

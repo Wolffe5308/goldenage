@@ -1,0 +1,806 @@
+Unite_the_peoples_of_the_caucasus = {
+
+unite_azeris_1 = {  
+
+		icon = SOV_the_workers_dictatorship
+
+		fire_only_once = yes
+
+		available = {
+			controls_state = 419 # Tabriz
+			controls_state = 420 # Gilan
+		}
+
+		complete_effect = {
+			
+			# Tabriz
+			419 = { add_core_of = ROOT }
+			
+			# Gilan
+			420 = { add_core_of = ROOT }
+			
+			hidden_effect = { 
+				set_global_flag = azeris_united_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+liberate_anatolian_peoples_1 = {  
+
+		icon = SOV_the_stalin_constitution
+
+		available = {
+			controls_state = 354 # Trabzon
+			controls_state = 800 # Van
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				original_tag = ZSR 
+			}
+			NOT = { has_global_flag = anatolians_liberated_flag }
+		}
+
+		complete_effect = {
+			
+			# Trabzon
+			354 = { add_core_of = ROOT }
+			
+			# Van
+			800 = { add_core_of = ROOT }
+			
+			hidden_effect = { 
+				set_global_flag = anatolians_liberated_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+release_turkish_kurdistan_1 = {  
+
+		icon = faction_tur_kurdish
+  
+		available = {
+			controls_state = 352 # Hakkari
+			controls_state = 353 # Tunceli
+			controls_state = 350 # Diyarbakir
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				original_tag = ZSR 
+			}
+			NOT = { has_global_flag = anatolian_kurds_subjugated_flag }
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = release_anatolian_kurdistan_tt 
+			
+			
+			hidden_effect = { 
+			
+				set_global_flag = anatolian_kurds_subjugated_flag
+				
+				KUR = {
+					transfer_state = 350 # Diyarbakir
+					transfer_state = 352 # Hakkari
+					transfer_state = 353 # Tunceli
+					if = {
+						limit = {
+							ROOT = { controls_state = 344 } #Malatya
+						}
+						add_state_core = 344
+						transfer_state = 344
+					}
+					load_oob = "KUR_liberation_troops"
+				}
+				
+				puppet = KUR
+				
+				if = {
+					limit = {
+						has_war_with = TUR
+					}
+					KUR = {
+						add_to_war = {
+							targeted_alliance = ROOT 
+							enemy = TUR
+							hostility_reason = asked_to_join
+						}
+					}
+				}
+				
+				
+				
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+government_projects = {
+
+conscription_reforms = {  
+
+		icon = generic_military
+
+		modifier = {
+            conscription_factor = 0.05
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+government_projects = {
+
+civil_uprising = {  
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			any_enemy_country = {
+				has_war_with = ZSR
+			}
+		}
+
+		modifier = {
+			army_defence_factor = 0.05
+			modifier_army_sub_unit_militia_max_org_factor = 0.05
+			modifier_army_sub_unit_militia_attack_factor = 0.05
+			modifier_army_sub_unit_militia_defence_factor = 0.05
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+government_projects = {
+
+resource_exploration = {  
+
+		icon = steel
+
+		modifier = {
+			local_resources_factor = 0.15
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+government_projects = {
+
+benefits_for_builders = {  
+
+		icon = generic_factory
+
+		modifier = {
+			production_speed_buildings_factor = 0.05
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+economic_projects = {
+
+raise_salaries = {  
+
+		icon = generic_factory
+
+		modifier = {
+			production_speed_buildings_factor = 0.05
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+economic_projects = {
+
+Improve_the_quality_of_work = {  
+
+		icon = generic_factory
+
+		modifier = {
+			line_change_production_efficiency_factor = 0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+economic_projects = {
+
+Union_expansion = {  
+
+		icon = generic_factory
+
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+economic_projects = {
+
+Increase_the_number_of_holidays = {  
+
+		icon = generic_factory
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			stability_factor = 0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+ZSR_kavkaz_balance_category = {
+
+give_the_leader_new_powers = {  
+
+		icon = eng_blackshirt_speech
+
+		priority = 100
+
+		days_remove = 60
+		days_re_enable = 90
+
+		cost = 50
+
+		fire_only_once = no
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision give_the_leader_new_powers" 
+			add_stability = 0.02
+			add_power_balance_value = {
+				id = ZSR_kavkaz_balance
+				value = 0.05
+			}
+		}
+	}
+}
+
+ZSR_kavkaz_balance_category = {
+
+hold_a_review_of_troops_with_awards = {  
+
+		icon = generic_military
+
+		priority = 100
+
+		days_remove = 60
+		days_re_enable = 90
+
+		cost = 50
+
+		fire_only_once = no
+
+		modifier = {
+			grant_medal_cost_factor = -0.5
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision hold_a_review_of_troops_with_awards" 
+			add_war_support = 0.02
+			add_power_balance_value = {
+				id = ZSR_kavkaz_balance
+				value = 0.05
+			}
+		}
+	}
+}
+
+ZSR_kavkaz_balance_category = {
+
+hold_competitions_for_workers_at_enterprises = {  
+
+		icon = generic_factory
+
+		priority = 100
+
+		days_remove = 60
+		days_re_enable = 90
+
+		fire_only_once = no
+
+		cost = 50
+
+		modifier = {
+			production_factory_start_efficiency_factor = 0.05
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision hold_competitions_for_workers_at_enterprises" 
+			add_power_balance_value = {
+				id = ZSR_kavkaz_balance
+				value = 0.05
+			}
+		}
+	}
+}
+
+ZSR_kavkaz_balance_category = {
+
+expand_the_supreme_soviet = {  
+
+		icon = SOV_place_hq
+
+		priority = 40
+
+		days_remove = 60
+		days_re_enable = 60
+
+		cost = 25
+
+		fire_only_once = no
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision expand_the_supreme_soviet" 
+			add_command_power = 2.0
+			add_power_balance_value = {
+				id = ZSR_kavkaz_balance
+				value = -0.1
+			}
+		}
+	}
+}
+
+ZSR_kavkaz_balance_category = {
+
+hunt_for_corrupt_officials = {  
+
+		icon = gre_investment_decisions
+
+		priority = 40
+
+		days_remove = 60
+		days_re_enable = 90
+
+		cost = 50
+
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = -0.05 
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision hunt_for_corrupt_officials" 
+			add_power_balance_value = {
+				id = ZSR_kavkaz_balance
+				value = -0.15
+			}
+		}
+	}
+}
+
+ZSR_kavkaz_balance_category = {
+
+develop_komsomol = {  
+
+		icon = generic_civil_support
+
+		priority = 40
+
+		days_remove = 60
+		days_re_enable = 90
+
+		fire_only_once = no
+
+		cost = 50
+
+		modifier = {
+			political_power_factor = 0.1
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision develop_komsomol" 
+			add_power_balance_value = {
+				id = ZSR_kavkaz_balance
+				value = -0.1
+			}
+		}
+	}
+}
+
+ZSR_kavkaz_balance_category = {
+
+expansion_of_collective_farms = {  
+
+		icon = gre_paying_ifc_debt
+
+		priority = 40
+
+		days_remove = 60
+		days_re_enable = 90
+
+		fire_only_once = no
+
+		cost = 80
+
+		modifier = {
+			monthly_population = 0.2
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision expansion_of_collective_farms" 
+			add_power_balance_value = {
+				id = ZSR_kavkaz_balance
+				value = -0.1
+			}
+		}
+	}
+}
+
+ZSR_kavkaz_balance_category = {
+
+zsr_bob_mission_balance_military_potential_of_transcaucasia = {  
+		
+	icon = generic_army_support
+	
+	priority = 40
+	
+	fire_only_once = yes
+	is_good = no
+	selectable_mission = no
+	days_mission_timeout = 730
+	
+	available = {
+		num_of_military_factories > 15
+		has_army_manpower = { size > 200000 }
+	}
+
+	allowed = {
+		always=no
+	}
+
+	visible = {
+		has_completed_focus = ZSR_party_congress
+		has_completed_focus = ZSR_reform_the_army
+	}
+
+	complete_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions zsr_bob_mission_balance_military_potential_of_transcaucasia"
+		country_event = ZSR_bop.2
+		army_experience = 25
+		add_war_support = 0.05
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.25
+			uses = 1
+			category = land_doctrine
+		}
+	}
+	
+	timeout_effect = {
+		country_event = ZSR_bop.3
+		add_war_support = -0.05
+		add_political_power = -25
+	    }
+	}
+}
+
+ZSR_kavkaz_balance_category = {
+
+zsr_bob_mission_balance_industrial_potential_of_transcaucasia = {  
+		
+		icon = generic_merge_plant_materiel
+		
+		priority = 40
+		
+		fire_only_once = yes
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 730
+		
+		available = {
+			num_of_civilian_factories > 15
+			has_tech = improved_machine_tools
+			OR = {
+				has_tech = concentrated_industry2
+				has_tech = dispersed_industry2
+			} 
+		}
+
+		allowed = {
+			always=no
+		}
+	
+		visible = {
+			has_completed_focus = ZSR_party_congress
+			has_completed_focus = ZSR_peoples_production
+		}
+
+		complete_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions zsr_bob_mission_balance_industrial_potential_of_transcaucasia"
+		country_event = ZSR_bop.2
+		add_political_power = 25
+		add_tech_bonus = {
+			bonus = 1.0
+			uses = 1
+			category = industry
+			category = electronics
+		}
+	}
+		
+	timeout_effect = {
+		country_event = ZSR_bop.3
+		add_stability = -0.05
+		add_political_power = -25
+	}
+}
+}
+
+ZSR_kavkaz_balance_category = {
+
+zsr_bob_mission_balance_aircraft_potential_of_transcaucasia = {  
+		
+		icon = generic_merge_plant_aircraft
+		
+		priority = 40
+		
+		fire_only_once = yes
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 730
+		
+		available = {
+			has_equipment = { small_plane_airframe_1 > 200 }
+			has_equipment = { small_plane_cas_airframe_1 > 100 }
+		}
+
+		allowed = {
+			always=no
+		}
+	
+		visible = {
+			has_completed_focus = ZSR_party_congress
+			has_completed_focus = ZSR_waf
+		}
+
+		complete_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions zsr_bob_mission_balance_aircraft_potential_of_transcaucasia" 
+		country_event = ZSR_bop.2
+		add_political_power = 25
+		add_war_support = 0.05
+		add_tech_bonus = {
+			bonus = 1.0
+			uses = 1
+			category = light_fighter
+		}
+		add_tech_bonus = {
+			bonus = 1.0
+			uses = 1
+			category = cas_bomber
+		}
+	}
+		
+	timeout_effect = {
+		country_event = ZSR_bop.3
+		add_war_support = -0.05
+		add_political_power = -25
+	}
+}
+}
+
+ZSR_operation_consent = {
+
+capture_of_iran = {
+
+		icon = GFX_decision_generic_operation
+
+		allowed = {always=no}
+		
+        available = {
+			controls_state = 419
+			controls_state = 420
+			controls_state = 266
+        }
+		
+		fire_only_once = yes
+		is_good = no
+        selectable_mission = no
+        days_mission_timeout = 180
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions capture_of_iran" 
+			white_peace = PER
+			if = {
+				limit = {
+					has_completed_focus = ZSR_invasion_of_iran
+				}
+				set_autonomy = {
+					target = PER
+					autonomy_state = autonomy_integrated_puppet
+				}
+				transfer_state = 419
+				transfer_state = 420
+			}
+			else = {
+				every_state = {
+					limit = {
+						is_core_of = PER
+					}
+					transfer_state_to = ZSR
+				}
+			}
+		}
+		
+        timeout_effect = {
+            add_war_support = -0.15
+			add_political_power = -25
+        }
+	}
+}
+
+ZSR_operation_retribution = {
+
+capture_of_turkey = {
+
+		icon = GFX_decision_generic_operation
+	
+        allowed = {always=no}
+        
+        available = {
+			controls_state = 354
+			controls_state = 800
+			controls_state = 49
+			controls_state = 797
+			controls_state = 352
+			controls_state = 353
+			controls_state = 350
+        }
+
+		fire_only_once = yes
+        is_good = no
+        selectable_mission = no
+        days_mission_timeout = 365
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions capture_of_turkey" 
+			white_peace = TUR
+			if = {
+				limit = {
+					has_completed_focus = ZSR_invasion_of_turkey
+				}
+				set_autonomy = {
+					target = TUR
+					autonomy_state = autonomy_integrated_puppet
+				}
+				transfer_state = 354
+				transfer_state = 800
+				transfer_state = 352
+				transfer_state = 353
+				transfer_state = 350
+				transfer_state = 344
+			}
+		}
+		
+        timeout_effect = {
+            add_war_support = -0.15
+			add_political_power = -25
+        }
+	}
+}
+	

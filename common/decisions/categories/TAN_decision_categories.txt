@@ -1,0 +1,29 @@
+aid_from_the_ussr = {
+
+    icon = GFX_decision_category_generic_communism
+
+    picture = GFX_decision_cat_picture_soviet_comecon
+
+    priority = 90
+
+    visible = {
+		has_completed_focus = TAN_loyalty_to_moscow
+	}
+
+    allowed = {
+        original_tag = TAN
+    }
+}
+
+self_development = {
+
+    icon = GFX_decision_category_generic_political_actions
+
+    picture = GFX_decision_cat_picture_soviet_national_academy_of_sciences
+
+    priority = 90
+
+    allowed = {
+        original_tag = TAN
+    }
+}

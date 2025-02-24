@@ -1,0 +1,39 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_modifiers_sov_crimea_assr"
+		texturefile = "gfx/interface/state_modifiers/modifiers_sov_crimea_assr.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_sov_abhazia_assr"
+		texturefile = "gfx/interface/state_modifiers/modifiers_sov_abhazia_assr.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_sov_assr"
+		texturefile = "gfx/interface/state_modifiers/modifiers_sov_assr.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_sov_german_volga_assr"
+		texturefile = "gfx/interface/state_modifiers/modifiers_sov_german_volga_assr.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_sov_kazak_assr"
+		texturefile = "gfx/interface/state_modifiers/modifiers_sov_kazak_assr.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_sov_kirgiz_assr"
+		texturefile = "gfx/interface/state_modifiers/modifiers_sov_kirgiz_assr.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_sov_tatgik_assr"
+		texturefile = "gfx/interface/state_modifiers/modifiers_sov_tatgik_assr.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_sov_turkmenia_assr"
+		texturefile = "gfx/interface/state_modifiers/modifiers_sov_turkmenia_assr.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_sov_uzbek_assr"
+		texturefile = "gfx/interface/state_modifiers/modifiers_sov_uzbek_assr.dds"
+	}
+}

@@ -1,0 +1,7 @@
+﻿l_russian:
+  SS_recruitment_desc:0 ""
+ nazi_recruitment_desc:1 "Руководство СС во главе с Гиммлером полагает, что необходимо провести кампанию по призыву иностранных добровольцев для глобального сражения с большевизмом. Вермахт с этим категорически не согласен и не потерпит параллельной структуры. Если дать одной из сторон зайти слишком далеко, это будет иметь серьёзные последствия."
+ ss_loyalty_output_text:0 "[?GER.SS_anger|-0]"
+ ss_loyalty_tooltip:0 "Текущий §Yуровень настроения§! в руководстве СС: [Root.GetSSAngerLevel]"
+ heer_loyalty_tooltip:0 "Текущий §Yуровень настроения§! в ОКВ: [Root.GetWehrmachtAngerLevel]"
+ heer_loyalty_output_text:0 "[?GER.wehrmacht_anger|-0]"

@@ -1,0 +1,598 @@
+shared_focus = {
+	id = REP_development_of_the_republics
+	icon = GFX_focus_generic_soviet_politics
+    cost = 0
+
+	x = -3
+	y = -1
+	#SOV
+	offset = {
+		x = 26
+		y = 6
+		trigger = {
+			tag = SOV
+		}
+	}
+
+	#UKR
+	offset = {
+		x = 28
+		y = 7
+		trigger = {
+			tag = UKR
+		}
+	}
+
+	#BLR
+	offset = {
+		x = 36
+		y = 5
+		trigger = {
+			tag = BLR
+		}
+	}
+
+	#ZSR
+	offset = {
+		x = 6
+		y = 5
+		trigger = {
+			tag = ZSR
+		}
+	}
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+	    has_government = communism
+	}
+
+    completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_development_of_the_republics"
+		add_political_power = 100
+	}
+}
+
+joint_focus = {
+	id = REP_internationalism
+	icon = GFX_focus_YUG_pan_slavic_congress
+	prerequisite = { focus = REP_development_of_the_republics }
+	relative_position_id = REP_development_of_the_republics
+	x = 0
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_internationalism"
+		add_stability = 0.1
+		add_political_power = 50
+	}
+	completion_reward_joint_member = {
+		add_stability = 0.05
+		add_political_power = 25
+    }
+}
+
+joint_focus = {
+	id = REP_cooperation_with_minsk
+	icon = GFX_goal_UKR_help_minsk
+	prerequisite = { focus = REP_internationalism }
+	relative_position_id = REP_internationalism
+	x = -1
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_cooperation_with_minsk"
+		add_ideas = BLR_belarusian_comrades
+		add_war_support = 0.1
+	}
+	completion_reward_joint_member = {
+		add_ideas = BLR_belarusian_comrades
+		add_war_support = 0.05
+    }
+}
+
+joint_focus = {
+	id = REP_cooperation_with_kyiv
+	icon = GFX_goal_ukrainian_deal_communist
+	prerequisite = { focus = REP_internationalism }
+	relative_position_id = REP_internationalism
+	x = 1
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_cooperation_with_kyiv"
+		add_ideas = Officers_from_ukraine
+		add_ideas = Volunteers_from_ukraine
+	}
+	completion_reward_joint_member = {
+		add_ideas = Officers_from_ukraine
+		add_ideas = Volunteers_from_ukraine
+    }
+}
+
+joint_focus = {
+	id = REP_cooperation_with_tbilisi
+	icon = GFX_goal_UKR_help_tbilisi
+	prerequisite = { focus = REP_cooperation_with_kyiv }
+	prerequisite = { focus = REP_cooperation_with_minsk }
+	relative_position_id = REP_cooperation_with_kyiv
+	relative_position_id = REP_cooperation_with_minsk
+	x = 1
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_cooperation_with_tbilisi"
+		add_ideas = ZSR_caucasian_soviet_exercises
+	}
+	completion_reward_joint_member = {
+		add_ideas = ZSR_caucasian_soviet_exercises
+    }
+}
+
+joint_focus = {
+	id = REP_military_training
+	icon = GFX_goal_generic_allies_build_infantry
+	prerequisite = { focus = REP_development_of_the_republics }
+	relative_position_id = REP_development_of_the_republics
+	x = 4
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_military_training"
+		army_experience = 50
+	}
+	completion_reward_joint_member = {
+		army_experience = 25
+    }
+}
+
+joint_focus = {
+	id = REP_joint_development_of_the_army
+	icon = GFX_focus_SOV_builder_of_the_red_army
+	prerequisite = { focus = REP_military_training }
+	relative_position_id = REP_military_training
+	x = -1
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_joint_development_of_the_army"
+		add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 1.0
+			uses = 1
+			category = infantry_weapons
+			category = artillery
+		}
+	}
+	completion_reward_joint_member = {
+		add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 0.5
+			uses = 1
+			category = infantry_weapons
+			category = artillery
+		}
+    }
+}
+
+joint_focus = {
+	id = REP_accelerated_training_courses
+	icon = GFX_goal_SOV_accelerated_training_courses
+	prerequisite = { focus = REP_joint_development_of_the_army }
+	relative_position_id = REP_joint_development_of_the_army
+	x = -1
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_joint_development_of_the_army"
+		add_ideas = SOV_training_courses
+        add_manpower = 50000
+	}
+	completion_reward_joint_member = {
+		add_ideas = SOV_training_courses
+        add_manpower = 25000
+    }
+}
+
+joint_focus = {
+	id = REP_military_commission_in_the_republic
+	icon = GFX_goal_SOV_military_commision_to_republicks
+	prerequisite = { focus = REP_joint_development_of_the_army }
+	relative_position_id = REP_joint_development_of_the_army
+	x = 1
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_military_commission_in_the_republic"
+		add_ideas = CHI_military_affairs_commission
+	}
+	completion_reward_joint_member = {
+		add_ideas = CHI_military_affairs_commission
+    }
+}
+
+joint_focus = {
+	id = REP_air_force_joint_development
+	icon = GFX_focus_SOV_flying_clubs
+	prerequisite = { focus = REP_military_training }
+	relative_position_id = REP_military_training
+	x = 3
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_air_force_joint_development"
+		air_experience = 50
+		add_doctrine_cost_reduction = {
+			name = air_doc_bonus
+			cost_reduction = 1.0
+			uses = 1
+			category = air_doctrine
+		}
+	}
+	completion_reward_joint_member = {
+		air_experience = 25
+		add_doctrine_cost_reduction = {
+			name = air_doc_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = air_doctrine
+		}
+    }
+}
+
+joint_focus = {
+	id = REP_construction_of_air_bases_in_the_republics
+	icon = GFX_goal_generic_air_production
+	prerequisite = { focus = REP_air_force_joint_development }
+	relative_position_id = REP_air_force_joint_development
+	x = -1
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_construction_of_air_bases_in_the_republics"
+		random_controlled_state = {
+		    add_building_construction = {
+			    type = air_base
+			    level = 2
+			    instant_build = yes
+			}
+		}
+	}
+	completion_reward_joint_member = {
+		random_controlled_state = {
+		    add_building_construction = {
+			    type = air_base
+			    level = 1
+			    instant_build = yes
+			}
+		}
+    }
+}
+
+joint_focus = {
+	id = REP_fuel_storage
+	icon = GFX_goal_generic_oil_refinery
+	prerequisite = { focus = REP_air_force_joint_development }
+	relative_position_id = REP_air_force_joint_development
+	x = 1
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_fuel_storage"
+		random_controlled_state = {
+			add_building_construction = {
+				type = fuel_silo
+				level = 2
+				instant_build = yes						
+			}
+		}
+	}
+	completion_reward_joint_member = {
+		random_controlled_state = {
+			add_building_construction = {
+				type = fuel_silo
+				level = 1
+				instant_build = yes						
+			}
+		}
+    }
+}
+
+joint_focus = {
+	id = REP_investments_in_industry
+	icon = GFX_goal_generic_production2
+	prerequisite = { focus = REP_development_of_the_republics }
+	relative_position_id = REP_development_of_the_republics
+	x = -3
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_investments_in_industry"
+		add_tech_bonus = {
+			bonus = 1.0
+			uses = 1
+			category = industry
+		}
+	}
+	completion_reward_joint_member = {
+        add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = industry
+		}
+    }
+}
+
+joint_focus = {
+	id = REP_development_of_the_military_industry_of_the_republics
+	icon = GFX_focus_generic_reorient_production
+	prerequisite = { focus = REP_investments_in_industry }
+	relative_position_id = REP_investments_in_industry
+	x = -2
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_development_of_the_military_industry_of_the_republics"
+		random_owned_state = {
+			limit = {
+				is_controlled_by = ROOT 
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes  
+				}
+			}
+			add_extra_state_shared_building_slots = 4 
+			add_building_construction = {
+				type = arms_factory
+				level = 2 
+				instant_build = yes 
+			}
+		}
+    }
+	completion_reward_joint_member = {
+		random_owned_state = {
+			limit = {
+				is_controlled_by = ROOT 
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes  
+				}
+			}
+			add_extra_state_shared_building_slots = 2 
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes 
+			}
+		}
+    }
+}
+
+joint_focus = {
+	id = REP_development_of_the_civil_industry_of_the_republics
+	icon = GFX_focus_generic_industry_2
+	prerequisite = { focus = REP_investments_in_industry }
+	relative_position_id = REP_investments_in_industry
+	x = 0
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_development_of_the_civil_industry_of_the_republics"
+		random_owned_state = {
+			limit = {
+				is_controlled_by = ROOT 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes  
+				}
+			}
+			add_extra_state_shared_building_slots = 4 
+			add_building_construction = {
+				type = industrial_complex
+				level = 2 
+				instant_build = yes 
+			}
+		}
+	}
+	completion_reward_joint_member = {
+        random_owned_state = {
+			limit = {
+				is_controlled_by = ROOT 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes  
+				}
+			}
+			add_extra_state_shared_building_slots = 2 
+			add_building_construction = {
+				type = industrial_complex
+				level = 1 
+				instant_build = yes 
+			}
+		}
+    }
+}
+
+joint_focus = {
+	id = REP_development_of_roads_in_the_republics
+	icon = GFX_goal_generic_construct_infrastructure
+	prerequisite = { focus = REP_development_of_the_civil_industry_of_the_republics }
+	prerequisite = { focus = REP_development_of_the_military_industry_of_the_republics }
+	relative_position_id = REP_development_of_the_civil_industry_of_the_republics 
+	relative_position_id = REP_development_of_the_military_industry_of_the_republics
+	x = 1
+	y = 1
+	cost = 5
+
+	available = {
+        has_country_flag = rep_republic_or_leader
+		has_government = communism
+	}
+
+	joint_trigger = {
+		REP_basic_joint_trigger = yes
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus REP_development_of_roads_in_the_republics"
+		random_owned_controlled_state = {
+		    add_building_construction = {
+			    type = infrastructure
+			    level = 2
+		        instant_build = yes
+			}
+		}
+	}
+	completion_reward_joint_member = {
+		random_owned_controlled_state = {
+            add_building_construction = {
+			    type = infrastructure
+			    level = 1
+		        instant_build = yes
+			}
+		}
+    }
+}

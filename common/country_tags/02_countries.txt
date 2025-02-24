@@ -1,0 +1,2 @@
+ZSR = "countries/Transcaucasia.txt"
+BIR = "countries/Birobidjan.txt"

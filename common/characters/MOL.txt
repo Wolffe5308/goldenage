@@ -1,0 +1,105 @@
+characters={
+    MOL_pyotr_borodin={
+		name=MOL_pyotr_borodin
+		portraits={
+			civilian={
+				large=GFX_portrait_peter_borodin
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+    MOL_nikita_lebedenko={
+		name=MOL_nikita_lebedenko
+		portraits={
+			civilian={
+				large=GFX_portrait_SOV_semyon_timoshenko
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer infantry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+	MOL_alexander_diorditsa={
+		name=MOL_alexander_diorditsa
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_pavel_postyshev.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOL_alexander_diorditsa
+			allowed = {
+				original_tag = MOL
+			}
+			traits = {
+				financial_expert 
+			}
+		}
+	}
+	MOL_ivan_coditsa={
+		name=MOL_ivan_coditsa
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_pavel_postyshev.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOL_ivan_coditsa
+			allowed = {
+				original_tag = MOL
+			}
+			traits = {
+				minister_of_peasants
+			}
+		}
+	}
+	MOL_nikolay_sazykin={
+		name=MOL_nikolay_sazykin
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_pavel_postyshev.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOL_nikolay_sazykin
+			allowed = {
+				original_tag = MOL
+			}
+			traits = {
+				JUNO_socialist_economist
+				minister_of_the_interior_abate
+			}
+		}
+	}
+	MOL_makar_radul={
+		name=MOL_makar_radul
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_pavel_postyshev.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOL_makar_radul
+			allowed = {
+				original_tag = MOL
+			}
+			traits = {
+				leftist_intellectual
+			}
+		}
+	}
+}

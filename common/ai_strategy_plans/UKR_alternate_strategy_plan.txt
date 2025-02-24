@@ -1,0 +1,199 @@
+UKR_skoropadsky_plan = {
+	name = "UKR skoropadsky plan"
+	desc = ""
+
+	allowed = {
+		original_tag = UKR
+	}
+	enable = {
+		OR = {
+			has_country_flag = UKR_AI_RANDOM_NEUTRALITY_SKOROPADSKY
+			has_game_rule = {
+				rule = UKR_ai_behavior
+				option = UKR_SKOROPADSKY
+			}
+		}
+	}
+	abort = {
+		is_subject = no
+	}
+
+	ai_national_focuses = {
+		# 1936  
+		UKR_terrorist_attack_at_the_congress
+		UKR_communist_persecution
+		UKR_hunt_for_politicians
+		UKR_bribe_the_generals
+		UKR_arm_the_faithful
+		UKR_change_of_government
+		UKR_monarchists_take_over
+		UKR_army_reforms
+		UKR_development_of_ukraine
+
+		#1937
+        UKR_restoring_order
+		UKR_new_ukrainian_state
+		UKR_rulers_choice
+		UKR_skoropadskys_power
+		UKR_black_sea_doctrine
+        UKR_treaty_with_romania
+		UKR_treaty_with_bulgaria
+		UKR_delegation_to_turkey
+		UKR_question_ukrainian_officers_union_fatherland
+
+		# 1938 
+        UKR_prepare_a_coup_in_belarus
+		UKR_delegation_to_poland
+		UKR_reunion_of_two_nations
+		UKR_delegation_to_the_baltic_countries
+		UKR_don_kuban_claims
+		UKR_supreme_leader_of_the_army_and_judiciary
+		UKR_ban_of_left_parties
+
+		# 1939
+        UKR_bet_on_the_bourgeoisie_and_large_landowners
+		UKR_banning_all_opposition
+		UKR_agrarian_reform
+		UKR_national_cultural_policy
+		
+		# 1940 
+		
+
+		# 1941
+		UKR_war_with_ussr
+	
+		# 1942
+		UKR_war_with_germany
+
+		# 1943
+		
+
+		#1944
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	focus_factors = {
+		UKR_terrorist_attack_at_the_congress = 300
+		UKR_skoropadskys_power = 300
+		UKR_expand_party = 0
+		UKR_coronation_of_the_king = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+UKR_habsburg_plan = {
+	name = "UKR habsburg plan"
+	desc = ""
+
+	allowed = {
+		original_tag = UKR
+	}
+	enable = {
+		OR = {
+			has_country_flag = UKR_AI_RANDOM_NEUTRALITY_HABSBURG
+			has_game_rule = {
+				rule = UKR_ai_behavior
+				option = UKR_HABSBURG
+			}
+		}
+	}
+	abort = {
+		is_subject = no
+	}
+
+	ai_national_focuses = {
+		# 1936  
+		UKR_terrorist_attack_at_the_congress
+		UKR_communist_persecution
+		UKR_hunt_for_politicians
+		UKR_bribe_the_generals
+		UKR_arm_the_faithful
+		UKR_change_of_government
+		UKR_monarchists_take_over
+
+		#1937
+		UKR_army_reforms
+        UKR_development_of_ukraine
+        UKR_restoring_order
+		UKR_new_ukrainian_state
+		UKR_rulers_choice
+		UKR_coronation_of_the_king
+
+		# 1938 
+		UKR_aristocratic_fascism
+		UKR_royal_officer_corps
+		UKR_soldier_king
+		UKR_real_ukraine
+		UKR_press_the_habsburg_claim
+		UKR_align_with_habsburgs
+		UKR_czechoslovakia_claims
+		UKR_treaty_with_poland
+		UKR_align_with_poland
+        
+		# 1939
+        UKR_war_with_romania
+		UKR_take_revenge_on_yugoslavia
+		
+		# 1940 
+		
+
+		# 1941
+		UKR_destruction_of_communism
+	
+		# 1942
+		UKR_destruction_of_nazim
+
+		# 1943
+		
+
+		#1944
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	focus_factors = {
+		UKR_terrorist_attack_at_the_congress = 300
+		UKR_coronation_of_the_king = 300
+		UKR_expand_party = 0
+        UKR_skoropadskys_power = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

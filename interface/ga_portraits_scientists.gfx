@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_SOV_joseph_kotin"
+		texturefile = "gfx/leaders/scientists/portrait_SOV_joseph_kotin.dds"
+	}
+}

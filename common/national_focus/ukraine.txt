@@ -1,0 +1,5081 @@
+focus_tree = {
+	id = ukraine_focus
+
+	shortcut = {
+		name = UKR_army_shortcut
+		target = UKR_army_reforms
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = UKR_air_shortcut
+		target = UKR_ukrainian_waf
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = UKR_navy_shortcut
+		target = UKR_wsf
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = UKR_economic_shortcut
+		target = UKR_development_of_ukraine
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = UKR_left_shortcut
+		target = UKR_expand_party
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = UKR_opposition_shortcut
+		target = UKR_terrorist_attack_at_the_congress
+		scroll_wheel_factor = 1.0
+	}
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = UKR
+		}
+	}
+	default = no
+
+	continuous_focus_position = { x = 50 y = 2400 }
+
+	shared_focus = REP_development_of_the_republics
+
+    focus = { ############# ПРОМКА
+		id = UKR_development_of_ukraine
+		icon = GFX_goal_UKR_development_of_ukraine
+		x = 7
+		y = 0
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_development_of_ukraine"
+		add_political_power = 50
+	}
+}
+
+focus = {
+		id = UKR_economic_policy_of_the_ukrainian_ssr
+		icon = GFX_focus_generic_communist_industry
+		prerequisite = { focus = UKR_development_of_ukraine }
+		x = 0
+		y = 1
+		relative_position_id = UKR_development_of_ukraine
+		cost = 5
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_economic_policy_of_the_ukrainian_ssr"
+		activate_mission = ukr_bob_mission_balance_industrial_potential_of_ukraine
+		hidden_effect = {
+			country_event = { id = UKR_generic.1 days = 7 }
+			country_event = { id = UKR_industrialization.1 days = 2 }
+		}
+	}
+}
+
+focus = {
+		id = UKR_communist_approach
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = UKR_economic_policy_of_the_ukrainian_ssr }
+		mutually_exclusive = { focus = UKR_reformist_methods }
+		x = 3
+		y = 1
+		relative_position_id = UKR_economic_policy_of_the_ukrainian_ssr
+		cost = 5
+
+		available = {
+			has_government = communism
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_communist_approach"
+		swap_ideas = {
+			remove_idea = UKR_small_industry
+			add_idea = UKR_small_industry_communist
+		}
+	}
+}
+
+focus = {
+		id = UKR_reformist_methods
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = UKR_economic_policy_of_the_ukrainian_ssr }
+		mutually_exclusive = { focus = UKR_communist_approach }
+		x = -3
+		y = 1
+		relative_position_id = UKR_economic_policy_of_the_ukrainian_ssr
+		cost = 5
+
+		available = {
+			has_government = social_democrat
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_reformist_methods"
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1.0
+			uses = 1
+			category = industry
+		}
+		swap_ideas = {
+			remove_idea = UKR_small_industry
+			add_idea = UKR_small_industry_socdem
+		}
+	}
+}
+
+focus = {
+		id = UKR_the_call_of_peasants_to_the_collective_farms
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		prerequisite = { focus = UKR_communist_approach focus = UKR_reformist_methods }
+		x = 3
+		y = 1
+		relative_position_id = UKR_communist_approach
+		relative_position_id = UKR_reformist_methods
+		cost = 5
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+        bypass = {
+			NOT = {	
+			has_government = communism
+			}
+		}
+		
+		search_filters = {
+			FOCUS_FILTER_RESEARCH 
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_the_call_of_peasants_to_the_collective_farms"
+		unlock_decision_category_tooltip = ukrainian_economy
+		swap_ideas = {
+			remove_idea = UKR_destroyed_collective_farms
+			add_idea = UKR_destroyed_collective_farms_1
+		}
+	}
+}
+
+focus = {
+	id = UKR_investments_in_civil_industry
+	icon = GFX_focus_generic_industry_2
+	prerequisite = { focus = UKR_reformist_methods }
+	x = -5
+	y = 2
+	relative_position_id = UKR_reformist_methods
+	cost = 5
+
+	available = {
+		has_government = social_democrat
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_investments_in_civil_industry"
+		swap_ideas = {
+			remove_idea = UKR_small_industry_socdem
+			add_idea = UKR_small_industry_socdem_2
+		}
+	}
+}
+
+focus = {
+		id = UKR_quality_education
+		icon = GFX_focus_research
+		prerequisite = { focus = UKR_investments_in_civil_industry }
+	    x = -1
+	    y = 1
+	    relative_position_id = UKR_investments_in_civil_industry
+		cost = 5
+
+		available = {
+			has_government = social_democrat
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_RESEARCH 
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_quality_education"
+		swap_ideas = {
+            remove_idea = UKR_low_level_of_education
+            add_idea = UKR_low_level_of_education_1
+		}
+	}
+}
+
+focus = {
+		id = UKR_hire_specialists_from_other_countries
+		icon = GFX_focus_NOR_moscows_education_centers
+		prerequisite = { focus = UKR_investments_in_civil_industry }
+	    x = 1
+	    y = 1
+	    relative_position_id = UKR_investments_in_civil_industry
+		cost = 5
+
+		available = {
+			has_government = social_democrat
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_RESEARCH 
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_hire_specialists_from_other_countries"
+		add_research_slot = 1
+		add_stability = -0.05
+	}
+}
+
+focus = {
+		id = UKR_use_the_experience_of_nep
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = UKR_quality_education }
+		prerequisite = { focus = UKR_hire_specialists_from_other_countries }
+	    x = -1
+	    y = 1
+	    relative_position_id = UKR_quality_education
+		relative_position_id = UKR_hire_specialists_from_other_countries
+		cost = 5
+
+		available = {
+			has_government = social_democrat
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_RESEARCH 
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_use_the_experience_of_nep"
+		remove_ideas = UKR_small_industry_socdem_2
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.25
+			uses = 2
+			category = industry
+		}
+		swap_ideas = {
+            remove_idea = UKR_low_level_of_education_1
+            add_idea = UKR_normal_level_of_education
+		}
+	}
+}
+
+focus = {
+		id = UKR_trade_union_power
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = UKR_communist_approach }
+		x = 5
+		y = 2
+		relative_position_id = UKR_communist_approach
+		cost = 5
+
+		available = {
+			has_government = communism
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY 
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_trade_union_power"
+		add_stability = 0.05
+		add_power_balance_value = {
+			id = UKR_communist_balance
+			value = -0.1
+		}
+		swap_ideas = {
+			remove_idea = UKR_small_industry_communist
+			add_idea = UKR_small_industry_communist_2
+		}
+	}
+}
+
+focus = {
+		id = UKR_kyiv_institute
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = UKR_trade_union_power }
+		x = -1
+		y = 1
+		relative_position_id = UKR_trade_union_power
+		cost = 5
+
+		available = {
+			has_government = communism
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_RESEARCH 
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_kyiv_institute"
+		add_research_slot = 1
+		swap_ideas = {
+            remove_idea = UKR_low_level_of_education
+            add_idea = UKR_low_level_of_education_1
+		}
+	}
+}
+
+focus = {
+		id = UKR_creating_your_own_products
+		icon = GFX_focus_generic_full_employment
+		prerequisite = { focus = UKR_trade_union_power }
+		x = 1
+		y = 1
+		relative_position_id = UKR_trade_union_power
+		cost = 5
+
+		available = {
+			has_government = communism
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_creating_your_own_products"
+		swap_ideas = {
+			remove_idea = UKR_small_industry_communist_2
+			add_idea = UKR_small_industry_communist_3
+		}
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+		}
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			uses = 1
+			category = electronics
+		}
+	}
+}
+
+focus = {
+		id = UKR_ukrainian_hospitality
+		icon = GFX_focus_YUG_pan_slavic_congress
+		prerequisite = { focus = UKR_creating_your_own_products }
+		prerequisite = { focus = UKR_kyiv_institute }
+		x = 1
+		y = 1
+		relative_position_id = UKR_creating_your_own_products
+		relative_position_id = UKR_kyiv_institute
+		cost = 5
+
+		available = {
+			has_government = communism
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_ukrainian_hospitality"
+		add_research_slot = 1
+		remove_ideas = UKR_small_industry_communist_3
+		remove_ideas = UKR_low_level_of_education_1
+	}
+}
+
+focus = {
+		id = UKR_advisors_from_moscow
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = UKR_the_call_of_peasants_to_the_collective_farms }
+		x = -4
+		y = 1
+		relative_position_id = UKR_the_call_of_peasants_to_the_collective_farms
+		cost = 5
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_advisors_from_moscow"
+		add_ideas = UKR_professional_advisors
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = UKR_pavel_lobanov
+	}
+}
+
+focus = {
+		id = UKR_workplaces
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = UKR_advisors_from_moscow }
+		x = -1
+		y = 1
+		relative_position_id = UKR_advisors_from_moscow
+		cost = 5
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY 
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_workplaces"
+		add_ideas = Workplaces
+		set_temp_variable = { UKR_influence_change = 5 }
+		UKR_industrialization_score = yes
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+		id = UKR_quality_control
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = UKR_workplaces }
+		x = 0
+		y = 1
+		relative_position_id = UKR_workplaces
+		cost = 5
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY 
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_quality_control"
+		add_ideas = Quality_control
+		set_temp_variable = { UKR_influence_change = 5 }
+		UKR_industrialization_score = yes
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.25
+			uses = 2
+			category = industry
+		}
+	}
+}
+
+focus = {
+		id = UKR_qualitative_specialists
+		icon = GFX_focus_spa_the_spanish_miracle
+		prerequisite = { focus = UKR_advisors_from_moscow }
+		x = 1
+		y = 1
+		relative_position_id = UKR_advisors_from_moscow
+		cost = 5
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		bypass = {
+			NOT = {	
+			has_government = communism
+			}
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY 
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_qualitative_specialists"
+		set_temp_variable = { UKR_influence_change = 5 }
+		UKR_industrialization_score = yes
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1.0
+			uses = 1
+			category = electronics
+		}
+	}
+}
+
+focus = {
+	id = UKR_civil_industry
+	icon = GFX_goal_generic_construct_civ_factory
+	prerequisite = { focus = UKR_qualitative_specialists }
+	x = 0
+	y = 1
+	relative_position_id = UKR_qualitative_specialists
+	cost = 5
+
+	available = {
+		OR = {
+			has_government = communism
+			has_government = social_democrat
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+
+	search_filters = { 
+		FOCUS_FILTER_INDUSTRY 
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_civil_industry"
+		set_temp_variable = { UKR_influence_change = 5 }
+		UKR_industrialization_score = yes
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+		id = UKR_quality_production
+		icon = GFX_focus_generic_public_works
+		prerequisite = { focus = UKR_quality_control }
+		prerequisite = { focus = UKR_civil_industry }
+	    x = -1
+	    y = 1
+	    relative_position_id = UKR_quality_control
+		relative_position_id = UKR_civil_industry
+		cost = 5
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+		
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY 
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_quality_production"
+		add_ideas = Quality_production
+		set_temp_variable = { UKR_influence_change = 5 }
+		UKR_industrialization_score = yes
+		add_war_support = -0.02
+		add_stability = 0.03
+	}
+}
+
+focus = {
+		id = UKR_awaken_the_industry
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = UKR_the_call_of_peasants_to_the_collective_farms }
+		x = 4
+		y = 1
+		relative_position_id = UKR_the_call_of_peasants_to_the_collective_farms
+		cost = 5
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+        search_filters = { 
+			FOCUS_FILTER_INDUSTRY 
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_awaken_the_industry"
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+		id = UKR_mining
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = UKR_awaken_the_industry }
+		x = -1
+		y = 1
+		relative_position_id = UKR_awaken_the_industry
+		cost = 5
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY 
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_mining"
+		set_temp_variable = { UKR_influence_change = 5 }
+		UKR_industrialization_score = yes
+		add_ideas = Mining
+        227 = {
+			add_resource = {
+				type = steel
+				amount = 5
+			}
+			add_resource = {
+				type = tungsten
+				amount = 5
+			}
+		}
+		228 = {
+			add_resource = {
+				type = steel
+				amount = 5
+			}
+			add_resource = {
+				type = tungsten
+				amount = 5
+			}
+		}
+	}
+}
+
+focus = {
+	id = UKR_oil_production_1
+	icon = GFX_goal_generic_oil_refinery
+	prerequisite = { focus = UKR_mining }
+	x = 0
+	y = 1
+	relative_position_id = UKR_mining
+	cost = 5
+
+	available = {
+		OR = {
+			has_government = communism
+			has_government = social_democrat
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+
+	search_filters = { 
+		FOCUS_FILTER_INDUSTRY 
+	}
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_oil_production_1"
+		set_temp_variable = { UKR_influence_change = 5 }
+		UKR_industrialization_score = yes
+		196 = {
+			add_resource = {
+				type = oil
+				amount = 10
+			}
+		}
+	    if = {
+			limit = {
+				has_full_control_of_state = 196 
+			}
+			196 = { 
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			196 = { 
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = fuel_silo
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		add_tech_bonus = {
+			name = SOV_synthetic_rubber
+			bonus = 1
+			uses = 1
+			category = cat_synth_rubber
+		}
+	}
+}
+
+focus = {
+	id = UKR_investments_in_military_industry
+	icon = GFX_focus_generic_combined_arms
+	prerequisite = { focus = UKR_awaken_the_industry }
+	x = 1
+	y = 1
+	relative_position_id = UKR_awaken_the_industry
+	cost = 5
+
+	available = {
+		OR = {
+			has_government = communism
+			has_government = social_democrat
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+
+	search_filters = { 
+		FOCUS_FILTER_INDUSTRY 
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_investments_in_military_industry"
+		set_temp_variable = { UKR_influence_change = 5 }
+		UKR_industrialization_score = yes
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+	id = UKR_new_tools
+	icon = GFX_focus_SOV_organize_wreckers
+	prerequisite = { focus = UKR_investments_in_military_industry }
+	x = 0
+	y = 1
+	relative_position_id = UKR_investments_in_military_industry
+	cost = 5
+
+	available = {
+		OR = {
+			has_government = communism
+			has_government = social_democrat
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+
+	bypass = {
+		NOT = {	
+		has_government = communism
+		}
+	}
+
+	search_filters = { 
+		FOCUS_FILTER_INDUSTRY 
+	}
+	
+	completion_reward = {
+	    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_new_tools"
+        set_temp_variable = { UKR_influence_change = 5 }
+		UKR_industrialization_score = yes
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			uses = 1
+			category = electronics
+		}
+    }
+}
+
+focus = {
+		id = UKR_centralization_of_the_economy
+		icon = GFX_focus_DEN_heavy_regulations
+		prerequisite = { focus = UKR_oil_production_1 }
+		prerequisite = { focus = UKR_new_tools }
+	    x = -1
+	    y = 1
+	    relative_position_id = UKR_oil_production_1
+		relative_position_id = UKR_new_tools
+		cost = 5
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_centralization_of_the_economy"
+		set_temp_variable = { UKR_influence_change = 5 }
+		UKR_industrialization_score = yes
+		add_power_balance_value = {
+			id = UKR_communist_balance
+			value = 0.1
+		}
+	}
+}
+
+focus = {
+		id = UKR_expand_collective_farms
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = UKR_the_call_of_peasants_to_the_collective_farms }
+		mutually_exclusive = { focus = UKR_increase_the_efficiency_of_collective_farms }
+	    x = 1
+	    y = 2
+	    relative_position_id = UKR_the_call_of_peasants_to_the_collective_farms
+		cost = 5
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		bypass = {
+			NOT = {	
+			has_government = communism
+			}
+		}
+		
+		search_filters = { 
+			FOCUS_FILTER_RESEARCH 
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_expand_collective_farms"
+		swap_ideas = {
+			remove_idea = UKR_destroyed_collective_farms_1
+			add_idea = UKR_destroyed_collective_farms_2
+		}
+	}
+}
+
+focus = {
+		id = UKR_peasant_organization
+		icon = GFX_focus_por_workers_of_iberia
+		prerequisite = { focus = UKR_expand_collective_farms }
+	    x = 0
+	    y = 1
+	    relative_position_id = UKR_expand_collective_farms
+		cost = 5
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		bypass = {
+			NOT = {	
+			has_government = communism
+			}
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_peasant_organization"
+        swap_ideas = {
+			remove_idea = UKR_destroyed_collective_farms_2
+			add_idea = UKR_ukrainian_collective_farms
+		}
+	}
+}
+
+focus = {
+		id = UKR_increase_the_efficiency_of_collective_farms
+		icon = GFX_focus_FIN_socialist_welfare
+		prerequisite = { focus = UKR_the_call_of_peasants_to_the_collective_farms }
+	    mutually_exclusive = { focus = UKR_expand_collective_farms }
+		x = -1
+	    y = 2
+	    relative_position_id = UKR_the_call_of_peasants_to_the_collective_farms
+		cost = 5
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_increase_the_efficiency_of_collective_farms"
+		swap_ideas = {
+			remove_idea = UKR_destroyed_collective_farms_1
+			add_idea = UKR_destroyed_collective_farms_alt
+		}
+	}
+}
+
+
+focus = {
+		id = UKR_enlarge_the_highway
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		prerequisite = { focus = UKR_increase_the_efficiency_of_collective_farms }
+	    x = 0
+	    y = 1
+	    relative_position_id = UKR_increase_the_efficiency_of_collective_farms
+		cost = 5
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_enlarge_the_highway"
+		swap_ideas = {
+			remove_idea = UKR_destroyed_collective_farms_alt
+			add_idea = UKR_ukrainian_collective_farms_alt
+		}
+	}
+}
+
+focus = {
+		id = UKR_the_end_of_industrialization
+		icon = GFX_focus_generic_workers
+		prerequisite = { focus = UKR_quality_production }
+		prerequisite = { focus = UKR_centralization_of_the_economy }
+		prerequisite = { focus = UKR_enlarge_the_highway focus = UKR_peasant_organization }
+		x = -1
+		y = 2
+		relative_position_id = UKR_quality_production
+		relative_position_id = UKR_centralization_of_the_economy
+		relative_position_id = UKR_enlarge_the_highway
+		relative_position_id = UKR_peasant_organization
+		cost = 5
+
+		available = {
+			has_country_flag = UKR_industrialisation_done
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY 
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_the_end_of_industrialization"
+	    add_stability = 0.03
+		add_war_support = 0.03
+		add_political_power = 25
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+		id = UKR_development_of_western_regions
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = UKR_the_end_of_industrialization }
+		x = 0
+		y = 1
+		relative_position_id = UKR_the_end_of_industrialization
+		cost = 5
+
+		available = {
+		    controls_state = 89
+		    controls_state = 91
+		    controls_state = 93
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY 
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_development_of_western_regions"
+		89 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		91 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		93 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+		id = UKR_integration_of_western_ukraine
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = UKR_development_of_western_regions }
+		x = -1
+		y = 1
+		relative_position_id = UKR_development_of_western_regions
+		cost = 5
+
+		available = {
+			controls_state = 91
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY 
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_integration_of_western_ukraine"
+		91 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+		id = UKR_new_mines
+		icon = GFX_focus_generic_mining_industry
+		prerequisite = { focus = UKR_development_of_western_regions }
+		x = 1
+		y = 1
+		relative_position_id = UKR_development_of_western_regions
+		cost = 5
+
+		available = {
+			controls_state = 89
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY 
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_new_mines"
+		89 = {
+		    add_resource = {
+			    type = steel
+			    amount = 10
+			}
+		}
+	}
+}
+
+focus = {
+		id = UKR_delay_the_inevitable
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = UKR_integration_of_western_ukraine }
+		prerequisite = { focus = UKR_new_mines }
+		x = -1
+		y = 1
+		relative_position_id = UKR_integration_of_western_ukraine
+		relative_position_id = UKR_new_mines
+		cost = 5
+
+		available = {
+		    controls_state = 89
+		    controls_state = 91
+		    controls_state = 93
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY 
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_delay_the_inevitable"
+		89 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 6431
+				instant_build = yes
+			}
+		}
+		91 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 9468
+				instant_build = yes
+			}
+		}
+		91 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 536
+				instant_build = yes
+			}
+		}
+		93 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 422
+				instant_build = yes
+			}
+		}
+		93 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 11441
+				instant_build = yes
+			}
+		}
+	}
+}
+
+############## Политика
+focus = {
+		id = UKR_expand_party
+		icon = GFX_goal_UKR_expand_party
+		mutually_exclusive = { focus = UKR_terrorist_attack_at_the_congress }
+		x = 33
+		y = 0
+		
+		cost = 10
+
+		ai_will_do = {
+            factor = 100
+            modifier = {
+                factor = 0
+                has_game_rule = { rule = UKR_ai_behavior option = UKR_HISTORICAL }
+				has_game_rule = { rule = UKR_ai_behavior option = DEFAULT }
+            }
+		}
+
+		available = {
+          is_in_faction_with = SOV 
+		  has_government = communism
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_expand_party"
+			complete_national_focus = REP_development_of_the_republics
+			hidden_effect = {
+               set_country_flag = rep_republic_or_leader
+			}
+			country_event = { id = UKR_bop.1 hours = 6 }
+			add_political_power = 150
+			set_power_balance = {
+				id = UKR_communist_balance
+				left_side = ukr_supreme_soviet_left_side
+				right_side = khrushchev_right_side
+				set_default = yes
+			}
+			hidden_effect = {
+			country_event = { id = UKR_com.1 days = 1 }
+			}
+		}
+	}
+
+focus = {
+	id = UKR_red_cossacks
+	icon = GFX_focus_SOV_restore_cossack_units
+	prerequisite = { focus = UKR_expand_party }
+	relative_position_id = UKR_expand_party
+	x = -8
+	y = 1
+	
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+        is_in_faction_with = SOV 
+		has_government = communism
+		has_completed_focus = UKR_army_reforms
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_red_cossacks_1"
+		country_event = UKR_com.5
+		add_ideas = UKR_ukrainian_red_cossacks
+		division_template = {
+			name = "Red cossacks"
+			priority = 1
+			regiments = {
+				cavalry = { x = 0 y = 0 }
+				cavalry = { x = 0 y = 1 }
+				cavalry = { x = 0 y = 2 }
+	
+				cavalry = { x = 1 y = 0 }
+				cavalry = { x = 1 y = 1 }
+				cavalry = { x = 1 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 199 }
+			limit = { PREV = { has_full_control_of_state = PREV } }
+			create_unit = {
+				division = "name = \"1st Zaporozhye cavalry division\" division_template = \"Red cossacks\" start_experience_factor = 0.5" 
+				owner = UKR
+			}
+			create_unit = {
+				division = "name = \"9th Cavalry division\" division_template = \"Red cossacks\" start_experience_factor = 0.5" 
+				owner = UKR
+		    }
+			create_unit = {
+				division = "name = \"28th Cavalry division\" division_template = \"Red cossacks\" start_experience_factor = 0.5" 
+				owner = UKR
+			}
+	    }
+	}
+}
+
+focus = {
+	id = UKR_mechanized_brigades
+	icon = GFX_focus_generic_truck
+	prerequisite = { focus = UKR_red_cossacks }
+	relative_position_id = UKR_red_cossacks
+	x = -1
+	y = 1
+	
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+        is_in_faction_with = SOV 
+		has_government = communism
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_mechanized_brigades"
+		add_tech_bonus = {
+			bonus = 0.75
+			uses = 1
+			category = armor
+		}
+	}
+}
+
+focus = {
+	id = UKR_cavalry_reforms
+	icon = GFX_goal_generic_cavalry
+	prerequisite = { focus = UKR_red_cossacks }
+	relative_position_id = UKR_red_cossacks
+	x = 1
+	y = 1
+	
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+        is_in_faction_with = SOV 
+		has_government = communism
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_red_cossacks_2"
+		army_experience = 25
+		swap_ideas = {
+			remove_idea = UKR_ukrainian_red_cossacks
+			add_idea = UKR_ukrainian_red_cossacks_1
+		}
+	}
+}
+
+focus = {
+	id = UKR_auxiliary_brigades
+	icon = GFX_goal_generic_army_doctrines
+	prerequisite = { 
+		focus = UKR_mechanized_brigades
+	}
+	prerequisite = { 
+		focus = UKR_cavalry_reforms
+	}
+	relative_position_id = UKR_mechanized_brigades
+	relative_position_id = UKR_cavalry_reforms
+	x = -1
+	y = 1
+	
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+        is_in_faction_with = SOV 
+		has_government = communism
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_auxiliary_brigades"
+		swap_ideas = {
+			remove_idea = UKR_ukrainian_red_cossacks_1
+			add_idea = UKR_ukrainian_red_cossacks_2
+		}
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+
+
+focus = {
+		id = UKR_domestic_politics
+		icon = GFX_goal_UKR_domestic_politics
+		prerequisite = { focus = UKR_expand_party }
+		relative_position_id = UKR_expand_party
+		x = -4
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_domestic_politics"
+			hidden_effect = {
+			country_event = { id = UKR_com.2 days = 1 }
+		}
+			swap_ideas = {
+                remove_idea = UKR_strong_party
+                add_idea = UKR_strong_party_1
+		    }
+			add_power_balance_value = {
+				id = UKR_communist_balance
+				value = 0.1
+			}
+		}
+	}
+
+
+focus = {
+		id = UKR_economic_reforms
+		icon = GFX_goal_UKR_economic_reforms
+		prerequisite = { focus = UKR_domestic_politics }
+		relative_position_id = UKR_domestic_politics
+		x = -1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_economic_reforms"
+            swap_ideas = {
+                remove_idea = UKR_strong_party_1
+                add_idea = UKR_strong_party_2
+			}
+			add_power_balance_value = {
+				id = UKR_communist_balance
+				value = 0.05
+			}
+		}
+	}
+
+focus = {
+		id = UKR_political_mobility
+		icon = GFX_goal_UKR_political_mobility
+		prerequisite = { focus = UKR_economic_reforms }
+		relative_position_id = UKR_economic_reforms
+		x = 0
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+
+		completion_reward = {
+		  log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_political_mobility"
+          swap_ideas = {
+                remove_idea = UKR_strong_party_2
+                add_idea = UKR_strong_party_3
+			}
+			add_power_balance_value = {
+				id = UKR_communist_balance
+				value = 0.05
+			}
+		}
+	}
+
+focus = {
+		id = UKR_special_troops
+		icon = GFX_goal_UKR_special_troops
+		prerequisite = { focus = UKR_domestic_politics }
+		relative_position_id = UKR_domestic_politics
+		x = 1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_special_troops"
+			add_ideas = Special_forses
+			add_power_balance_value = {
+				id = UKR_communist_balance
+				value = 0.05
+			}
+		}
+	}
+
+focus = {
+		id = UKR_new_shots
+		icon = GFX_goal_UKR_new_shots
+		prerequisite = { focus = UKR_special_troops }
+		relative_position_id = UKR_special_troops
+		x = 0
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_new_shots"
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = UKR_pavel_postyshev
+			add_power_balance_value = {
+				id = UKR_communist_balance
+				value = 0.05
+			}
+		}
+	}
+
+focus = {
+		id = UKR_party_projects
+		icon = GFX_goal_UKR_party_projects
+		prerequisite = { focus = UKR_new_shots }
+		prerequisite = { focus = UKR_political_mobility }
+		relative_position_id = UKR_new_shots
+		relative_position_id = UKR_political_mobility
+		x = 1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_party_projects"
+			unlock_decision_category_tooltip = party_projects
+			add_power_balance_value = {
+				id = UKR_communist_balance
+				value = 0.05
+			}
+		}
+	}
+
+focus = {
+		id = UKR_foreign_policy
+		icon = GFX_goal_UKR_foreign_policy
+		prerequisite = { focus = UKR_expand_party }
+		relative_position_id = UKR_expand_party
+		x = 2
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_foreign_policy"
+			add_political_power = 100
+		}
+	}
+
+focus = {
+		id = UKR_help_for_spanish_workers
+		icon = GFX_focus_intervention_spain_republic
+		prerequisite = { focus = UKR_expand_party }
+		relative_position_id = UKR_expand_party
+		x = 8
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+        if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPR_scw_in_progress = yes
+				if = {
+					limit = {
+						NOT = { has_global_flag = spanish_civil_war }
+					}
+					custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_country_exist_tt
+					    country_exists = SPR
+				    }
+				    custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_at_peace_tt
+						NOT = { has_war_with = SPR }
+				    }
+				}
+				else = {
+					if = {
+						limit = {
+							has_completed_focus = SOV_covert_support_for_spanish_poum
+						}
+						country_exists = SPC
+						NOT = { has_war_with = SPC }
+					}
+					else = {
+						country_exists = SPD
+						NOT = { has_war_with = SPD }
+					}
+				}
+			}
+			else = {
+				any_other_country = {
+					original_tag = SPR
+					has_civil_war = yes
+					NOT = { has_war_with = ROOT }
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+			}
+			has_government = communism
+		}
+		
+		search_filters = {
+			FOCUS_FILTER_SPA_CIVIL_WAR
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_help_for_spanish_workers"
+			add_timed_idea = { idea = SPA_spanish_civil_war_commitments days = 730 }
+		}
+	}
+
+focus = {
+		id = UKR_humanitarian_aid
+		icon = GFX_focus_spr_war_of_independence
+		prerequisite = { focus = UKR_help_for_spanish_workers }
+		relative_position_id = UKR_help_for_spanish_workers
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+        if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPR_scw_in_progress = yes
+				if = {
+					limit = {
+						NOT = { has_global_flag = spanish_civil_war }
+					}
+					custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_country_exist_tt
+					    country_exists = SPR
+				    }
+				    custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_at_peace_tt
+						NOT = { has_war_with = SPR }
+				    }
+				}
+				else = {
+					if = {
+						limit = {
+							has_completed_focus = SOV_covert_support_for_spanish_poum
+						}
+						country_exists = SPC
+						NOT = { has_war_with = SPC }
+					}
+					else = {
+						country_exists = SPD
+						NOT = { has_war_with = SPD }
+					}
+				}
+			}
+			else = {
+				any_other_country = {
+					original_tag = SPR
+					has_civil_war = yes
+					NOT = { has_war_with = ROOT }
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+			}
+			has_government = communism
+		}
+		
+		search_filters = {
+			FOCUS_FILTER_SPA_CIVIL_WAR
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_humanitarian_aid"
+			SPD = {
+			add_timed_idea = { idea = Humanitarian_aid days = 120 }
+		}
+	}
+}
+
+focus = {
+		id = UKR_military_specialists
+		icon = GFX_focus_ITA_garibaldi_legion
+		prerequisite = { focus = UKR_help_for_spanish_workers }
+		relative_position_id = UKR_help_for_spanish_workers
+		x = 1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+        if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPR_scw_in_progress = yes
+				if = {
+					limit = {
+						NOT = { has_global_flag = spanish_civil_war }
+					}
+					custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_country_exist_tt
+					    country_exists = SPR
+				    }
+				    custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_at_peace_tt
+						NOT = { has_war_with = SPR }
+				    }
+				}
+				else = {
+					if = {
+						limit = {
+							has_completed_focus = SOV_covert_support_for_spanish_poum
+						}
+						country_exists = SPC
+						NOT = { has_war_with = SPC }
+					}
+					else = {
+						country_exists = SPD
+						NOT = { has_war_with = SPD }
+					}
+				}
+			}
+			else = {
+				any_other_country = {
+					original_tag = SPR
+					has_civil_war = yes
+					NOT = { has_war_with = ROOT }
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+			}
+			has_government = communism
+		}
+		
+		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_military_specialists"
+			SPD = {
+			    army_experience = 50
+            }
+			UKR = {
+				army_experience = 50
+		}
+	}
+}
+
+focus = {
+		id = UKR_armaments_for_the_spaniards
+		icon = GFX_focus_SOV_support_spanish_poum
+		prerequisite = { focus = UKR_humanitarian_aid }
+		prerequisite = { focus = UKR_military_specialists }
+		relative_position_id = UKR_humanitarian_aid
+		relative_position_id = UKR_military_specialists
+		x = -1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPR_scw_in_progress = yes
+				if = {
+					limit = {
+						NOT = { has_global_flag = spanish_civil_war }
+					}
+					custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_country_exist_tt
+					    country_exists = SPR
+				    }
+				    custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_at_peace_tt
+						NOT = { has_war_with = SPR }
+				    }
+				}
+				else = {
+					if = {
+						limit = {
+							has_completed_focus = SOV_covert_support_for_spanish_poum
+						}
+						country_exists = SPC
+						NOT = { has_war_with = SPC }
+					}
+					else = {
+						country_exists = SPD
+						NOT = { has_war_with = SPD }
+					}
+				}
+			}
+			else = {
+				any_other_country = {
+					original_tag = SPR
+					has_civil_war = yes
+					NOT = { has_war_with = ROOT }
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+			}
+			has_government = communism
+		}
+		
+		search_filters = {
+			FOCUS_FILTER_SPA_CIVIL_WAR
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_armaments_for_the_spaniards"
+			send_equipment = {
+			    equipment = infantry_equipment
+			    amount = 1000
+			    target = SPD
+			}
+		}
+	}
+
+focus = {
+		id = UKR_anti_fascist_rhetoric
+		icon = GFX_goal_UKR_anti_fascist_rhetoric
+		prerequisite = { focus = UKR_foreign_policy }
+		relative_position_id = UKR_foreign_policy
+		x = -2
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_anti_fascist_rhetoric"
+			add_ideas = Fight_against_fascism
+		}
+	}
+
+focus = {
+		id = UKR_destabilize_the_situation_in_poland
+		icon = GFX_goal_UKR_destabilize_the_situation_in_poland
+		prerequisite = { focus = UKR_anti_fascist_rhetoric }
+		relative_position_id = UKR_anti_fascist_rhetoric
+		x = -1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_destabilize_the_situation_in_poland"
+			POL = {		
+				add_stability = -0.1
+			}
+		}
+	}
+
+focus = {
+		id = UKR_raise_moldovan_separatism
+		icon = GFX_goal_UKR_raise_moldovan_separatism
+		prerequisite = { focus = UKR_anti_fascist_rhetoric }
+		relative_position_id = UKR_anti_fascist_rhetoric
+		x = 1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_raise_moldovan_separatism"
+			ROM = {
+			add_timed_idea = { idea = Moldovan_separatism days = 90 }
+		}
+	}
+}
+
+focus = {
+		id = UKR_cooperation_with_the_west
+		icon = GFX_goal_UKR_cooperation_with_the_west
+		prerequisite = { focus = UKR_foreign_policy }
+		relative_position_id = UKR_foreign_policy
+		x = 1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_cooperation_with_the_west"
+			ENG = {
+				add_opinion_modifier = {
+				target = ROOT
+				modifier = SOV_strengthened_relations_with_us
+			}
+			FRA = {
+				add_opinion_modifier = {
+				target = ROOT
+				modifier = SOV_strengthened_relations_with_us
+			}
+			USA = {
+					add_opinion_modifier = {
+					target = ROOT
+					modifier = SOV_strengthened_relations_with_us
+				    }
+				}
+			}
+		}
+	}
+}
+
+
+focus = {
+		id = UKR_accept_refugees
+		icon = GFX_goal_UKR_accept_refugees
+		prerequisite = { focus = UKR_foreign_policy }
+		relative_position_id = UKR_foreign_policy
+		x = 3
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		  log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_accept_refugees"
+		  add_ideas = European_refugees
+        }
+	}
+
+
+focus = {
+		id = UKR_joint_training
+		icon = GFX_goal_UKR_joint_training
+		prerequisite = { focus = UKR_cooperation_with_the_west }
+		prerequisite = { focus = UKR_accept_refugees }
+		relative_position_id = UKR_cooperation_with_the_west
+		relative_position_id = UKR_accept_refugees
+		x = -1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_joint_training"
+			army_experience = 50
+		}
+	}
+
+focus = {
+		id = UKR_the_great_patriotic_war
+		icon = GFX_goal_UKR_the_great_patriotic_war
+		x = 18
+		y = 0
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		custom_trigger_tooltip = {
+				tooltip = great_war_republics		
+				always = no
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_the_great_patriotic_war"
+			add_ideas = UKR_the_great_patriotic_war_1
+		}
+	}
+
+focus = {
+		id = UKR_give_battle_to_the_invaders
+		icon = GFX_goal_UKR_give_battle_to_the_invaders
+		prerequisite = { focus = UKR_the_great_patriotic_war }
+		x = -2
+		y = 1
+		relative_position_id = UKR_the_great_patriotic_war
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+           has_war_with = GER
+		   not = { has_idea = UKR_the_great_patriotic_war_1 }
+		   has_government = communism
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_give_battle_to_the_invaders"
+			add_ideas = UKR_death_to_the_invaders
+		}
+	}
+
+focus = {
+		id = UKR_we_wont_give_up
+		icon = GFX_goal_UKR_we_wont_give_up
+		prerequisite = { focus = UKR_the_great_patriotic_war }
+		x = 0
+		y = 1
+		relative_position_id = UKR_the_great_patriotic_war
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+           has_war_with = GER
+		   not = { has_idea = UKR_the_great_patriotic_war_1 }
+		   has_government = communism
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_we_wont_give_up"
+			add_ideas = UKR_well_die_but_we_wont_give_up
+		}
+	}
+
+focus = {
+		id = UKR_bring_back_the_deserters
+		icon = GFX_goal_UKR_bring_back_the_deserters
+		prerequisite = { focus = UKR_the_great_patriotic_war }
+		x = 2
+		y = 1
+		relative_position_id = UKR_the_great_patriotic_war
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+           has_war_with = GER
+		   not = { has_idea = UKR_the_great_patriotic_war_1 }
+		   has_government = communism
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_bring_back_the_deserters"
+			add_ideas = UKR_back_in_line
+		}
+	}
+
+focus = {
+		id = UKR_holy_war
+		icon = GFX_goal_UKR_holy_war
+		prerequisite = { focus = UKR_give_battle_to_the_invaders }
+		prerequisite = { focus = UKR_we_wont_give_up }
+		x = -1
+		y = 1
+        relative_position_id = UKR_give_battle_to_the_invaders
+		relative_position_id = UKR_we_wont_give_up
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+           has_war_with = GER
+		   not = { has_idea = UKR_the_great_patriotic_war_1 }
+		   has_government = communism
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_holy_war"
+			add_ideas = UKR_the_holy_war
+		}
+	}
+
+	focus = {
+		id = UKR_civil_milita
+		icon = GFX_goal_generic_red_milita
+		prerequisite = { focus = UKR_bring_back_the_deserters }
+		prerequisite = { focus = UKR_we_wont_give_up }
+		x = 1
+		y = 1
+		relative_position_id = UKR_give_battle_to_the_invaders
+		relative_position_id = UKR_we_wont_give_up
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+           has_war_with = GER
+		   not = { has_idea = UKR_the_great_patriotic_war_1 }
+		   has_government = communism
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_civil_milita"
+			UKR_sidor_kovpak = {
+            add_corps_commander_role = {
+                    traits = { reckless war_hero commando }
+                    skill = 3
+                    attack_skill = 2
+                    defense_skill = 2
+                    planning_skill = 3
+                    logistics_skill = 3
+                }
+            }
+			division_template = {
+				name = "Ukrainian People's Militia"
+				priority = 1
+				regiments = {
+					militia = { x = 0 y = 0 }
+		            militia = { x = 0 y = 1 }
+		            militia = { x = 1 y = 0 }
+		            militia = { x = 1 y = 1 }
+		            militia = { x = 2 y = 0 }
+		            militia = { x = 2 y = 1 }
+		            militia = { x = 3 y = 0 }
+		            militia = { x = 3 y = 1 }
+		            militia = { x = 4 y = 0 }
+		            militia = { x = 4 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 226 }
+				limit = { PREV = { has_full_control_of_state = PREV } }
+				create_unit = {
+					division = "name = \"1st milita\" division_template = \"Ukrainian People's Militia\" start_experience_factor = 0.5" 
+					owner = UKR
+				}
+				create_unit = {
+					division = "name = \"2st milita\" division_template = \"Ukrainian People's Militia\" start_experience_factor = 0.5" 
+					owner = UKR
+				}
+				create_unit = {
+					division = "name = \"3st milita\" division_template = \"Ukrainian People's Militia\" start_experience_factor = 0.5" 
+					owner = UKR
+				}
+				create_unit = {
+					division = "name = \"4th milita\" division_template = \"Ukrainian People's Militia\" start_experience_factor = 0.5" 
+					owner = UKR
+				}
+			}
+		}
+	}
+
+
+
+###### Авиация
+focus = {
+		id = UKR_ukrainian_waf
+		icon = GFX_focus_generic_aircraft_production
+		x = 24
+		y = 11
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_ukrainian_waf"
+			activate_mission = ukr_bob_mission_balance_aircraft_potential_of_ukraine
+			air_experience = 50
+			add_ideas = Ukrainian_air_force
+		}
+	}
+
+focus = {
+		id = UKR_soviet_specialists
+		icon = GFX_focus_SOV_flying_clubs
+		prerequisite = { focus = UKR_ukrainian_waf }
+		relative_position_id = UKR_ukrainian_waf
+		x = 1
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_soviet_specialists"
+			swap_ideas = {
+                remove_idea = Ukrainian_air_force
+                add_idea = Ukrainian_air_force_1
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.6
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+focus = {
+		id = UKR_aircraft_manufacturing
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = UKR_soviet_specialists }
+		relative_position_id = UKR_soviet_specialists
+		x = 1
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_aircraft_manufacturing"
+        swap_ideas = {
+                remove_idea = Ukrainian_air_force_1
+                add_idea = Ukrainian_air_force_2
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.6
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+focus = {
+		id = UKR_construction_of_airfields
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = UKR_ukrainian_waf }
+		relative_position_id = UKR_ukrainian_waf
+		x = -1
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_construction_of_airfields"
+        random_owned_controlled_state = {
+					limit = {
+						air_base < 9
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+focus = {
+		id = UKR_service_staff
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = UKR_construction_of_airfields }
+		relative_position_id = UKR_construction_of_airfields
+		x = -1
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_service_staff"
+		random_owned_controlled_state = {
+							limit = {
+								air_base < 9
+							}
+							add_building_construction = {
+								type = air_base
+								level = 2
+								instant_build = yes
+					}
+				}
+			}
+		}
+
+focus = {
+		id = UKR_new_aircraft
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = UKR_soviet_specialists }
+		prerequisite = { focus = UKR_construction_of_airfields }
+		relative_position_id = UKR_soviet_specialists
+		relative_position_id = UKR_construction_of_airfields
+		x = 1
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_new_aircraft"
+			add_tech_bonus = {
+				name = SOV_ground_support
+				bonus = 0.75
+				uses = 2
+				category = light_fighter
+				category = cas_bomber
+			}
+		}
+	}
+
+focus = {
+		id = UKR_standardized_production
+		icon =  GFX_goal_generic_air_doctrine
+		prerequisite = { focus = UKR_new_aircraft }
+		prerequisite = { focus = UKR_aircraft_manufacturing }
+		prerequisite = { focus = UKR_service_staff }
+		relative_position_id = UKR_new_aircraft
+		relative_position_id = UKR_aircraft_manufacturing
+		relative_position_id = UKR_service_staff
+		x = 2
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_standardized_production"
+			add_ideas = Aircraft_manufacturing
+		}
+	}
+
+##### ВМФ
+focus = {
+		id = UKR_wsf
+		icon = GFX_goal_generic_build_navy
+		x = 30
+		y = 11
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		  log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_wsf"
+	      add_ideas = Ukrainian_navy
+		}
+	}
+
+focus = {
+		id = UKR_expand_southern_bases
+		icon = GFX_focus_SOV_reinforce_southern_naval_bases
+		prerequisite = { focus = UKR_wsf }
+		relative_position_id = UKR_wsf
+		x = -2
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_expand_southern_bases"
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+focus = {
+		id = UKR_fleet_development
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = UKR_wsf }
+		relative_position_id = UKR_wsf
+		x = 2
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_fleet_development"
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+focus = {
+		id = UKR_nk_navy_ussr
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = UKR_wsf }
+		relative_position_id = UKR_wsf
+		x = 0
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_nk_navy_ussr"
+            add_ideas = Shipbuilding
+		}
+	}
+
+focus = {
+		id = UKR_submarine_development
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = UKR_expand_southern_bases }
+		prerequisite = { focus = UKR_nk_navy_ussr }
+		relative_position_id = UKR_expand_southern_bases
+		relative_position_id = UKR_nk_navy_ussr
+		x = -1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_submarine_development"
+			navy_experience = 15
+			add_tech_bonus = {
+			    name = SOV_submarine_warfare
+			    bonus = 1.0
+			    uses = 1
+			    category = ss_tech
+		}
+	}
+}
+
+focus = {
+		id = UKR_construction_of_the_surface_fleet
+		icon = GFX_focus_generic_destroyer
+		prerequisite = { focus = UKR_fleet_development }
+		prerequisite = { focus = UKR_nk_navy_ussr }
+		relative_position_id = UKR_fleet_development
+		relative_position_id = UKR_nk_navy_ussr
+		x = 1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_construction_of_the_surface_fleet"
+			navy_experience = 25
+			add_tech_bonus = {
+				name = SOV_an_oceangoing_navy
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+			}
+		}
+	}
+
+focus = {
+		id = UKR_mine_warfare
+		icon = GFX_focus_generic_mine_warfare
+		prerequisite = { focus = UKR_submarine_development }
+		prerequisite = { focus = UKR_construction_of_the_surface_fleet }
+		relative_position_id = UKR_submarine_development
+		relative_position_id = UKR_construction_of_the_surface_fleet
+		x = -1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_mine_warfare"
+			add_ideas = SOV_mine_warfare_ns
+			add_tech_bonus = {
+				name = SOV_mine_warfare
+				bonus = 1.0
+				uses = 2
+				category = naval_mines
+		}
+	}
+}
+
+##### Армия
+
+focus = {
+		id = UKR_army_reforms
+		icon = GFX_goal_UKR_army_reform
+		x = 14
+		y = 11
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_army_reforms"
+		activate_mission = ukr_bob_mission_balance_military_potential_of_ukraine
+		hidden_effect = {
+			country_event = { id = UKR_generic.2 days = 1 }
+		}
+		add_ideas = UKR_unorganized_cossacks
+		swap_ideas = {
+            remove_idea = UKR_depleted_army
+            add_idea = UKR_depleted_army_1
+	    }
+	}
+}
+
+focus = {
+	id = UKR_cossacks_in_service
+	icon = GFX_focus_SOV_restore_cossack_units
+	prerequisite = { focus = UKR_army_reforms }
+	mutually_exclusive = { focus = UKR_our_doctrine }
+	relative_position_id = UKR_army_reforms
+	x = 3
+	y = 1
+	
+	cost = 10
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_cossacks_in_service"
+	add_manpower = 50000
+	    swap_ideas = {
+		    remove_idea = UKR_unorganized_cossacks
+		    add_idea = UKR_unorganized_cossacks_1
+	    }
+    }
+}
+
+focus = {
+		id = UKR_increase_in_the_army
+		icon = GFX_goal_UKR_increase_military_funding
+		prerequisite = { focus = UKR_cossacks_in_service }
+		relative_position_id = UKR_cossacks_in_service
+		x = -2
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_increase_in_the_army"
+		swap_ideas = {
+            remove_idea = UKR_depleted_army_1
+            add_idea = UKR_depleted_army_2
+	    }
+	}
+}
+
+focus = {
+		id = UKR_solve_problems_in_the_army
+		icon = GFX_focus_POL_ukrainian_army
+		prerequisite = { focus = UKR_cossacks_in_service }
+		relative_position_id = UKR_cossacks_in_service
+		x = 0
+		y = 1
+
+		available = {
+			has_completed_focus = UKR_increase_in_the_army
+		}
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_solve_problems_in_the_army"
+		remove_ideas = UKR_depleted_army_2
+		custom_effect_tooltip = UKR_solve_problems_in_the_army_ns_tt
+		hidden_effect = {
+			add_dynamic_modifier = { modifier = UKR_ukrainian_army_dynamic_modifier }
+			set_variable = { UKR_ukrainian_army_army_infantry_attack_factor = 0.05 }
+			set_variable = { UKR_ukrainian_army_army_infantry_defence_factor = 0.05 }
+		}
+	}
+}
+
+focus = {
+		id = UKR_organize_the_cossacks
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = UKR_cossacks_in_service }
+		relative_position_id = UKR_cossacks_in_service
+		x = 2
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_organize_the_cossacks"
+		remove_ideas = UKR_unorganized_cossacks_1
+		add_ideas = UKR_ukrainian_cossacks
+	}
+}
+
+focus = {
+		id = UKR_army_exercises
+		icon = GFX_goal_ukr_army_exercises
+		prerequisite = { focus = UKR_increase_in_the_army }
+		prerequisite = { focus = UKR_solve_problems_in_the_army }
+		relative_position_id = UKR_increase_in_the_army
+		relative_position_id = UKR_solve_problems_in_the_army
+		x = -1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_army_exercises"
+		army_experience = 50
+		custom_effect_tooltip = UKR_army_exercises_ns_tt
+		add_to_variable = { UKR_ukrainian_army_conscription_factor = 0.1 }
+	}
+}
+
+focus = {
+		id = UKR_new_weapons
+		icon = GFX_goal_ukr_new_weapons
+		prerequisite = { focus = UKR_organize_the_cossacks }
+		prerequisite = { focus = UKR_solve_problems_in_the_army }
+		relative_position_id = UKR_organize_the_cossacks
+		relative_position_id = UKR_solve_problems_in_the_army
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_new_weapons"
+		add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 1.0
+			uses = 1
+			category = infantry_weapons
+			category = artillery
+		}
+	}
+}
+
+focus = {
+	id = UKR_professional_officers
+	icon = GFX_goal_ukr_professional_officers
+	prerequisite = { focus = UKR_army_exercises }
+	prerequisite = { focus = UKR_increase_in_the_army }
+	relative_position_id = UKR_army_exercises
+	relative_position_id = UKR_increase_in_the_army
+	x = 0
+	y = 2
+	cost = 5
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_professional_officers"
+    custom_effect_tooltip = UKR_professional_officers_ns_tt
+	add_to_variable = { UKR_ukrainian_army_army_org_factor = 0.05 }
+	add_to_variable = { UKR_ukrainian_army_max_planning_factor = 0.15 }
+    }
+}
+
+focus = {
+	id = UKR_modern_army
+	icon = GFX_goal_ukr_modern_army
+	prerequisite = { focus = UKR_army_exercises }
+	prerequisite = { focus = UKR_new_weapons }
+	relative_position_id = UKR_army_exercises
+	relative_position_id = UKR_new_weapons
+	x = -1
+	y = 1
+	cost = 5
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_modern_army"
+	custom_effect_tooltip = UKR_modern_army_ns_tt
+	add_to_variable = { UKR_ukrainian_army_army_morale_factor = 0.05 }
+    }
+}
+
+focus = {
+	id = UKR_loyalty_to_traditions
+	icon = GFX_goal_UKR_loyalty_to_traditions
+	prerequisite = { focus = UKR_organize_the_cossacks }
+	prerequisite = { focus = UKR_new_weapons }
+	relative_position_id = UKR_new_weapons
+	relative_position_id = UKR_organize_the_cossacks
+	x = 0
+	y = 2
+	cost = 5
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_loyalty_to_traditions"
+	    add_doctrine_cost_reduction = {
+		    name = land_doc_bonus
+		    cost_reduction = 0.5
+		    uses = 1
+		    category = land_doctrine
+	    }
+	    swap_ideas = {
+		    remove_idea = UKR_ukrainian_cossacks
+		    add_idea = UKR_ukrainian_cossacks_2
+	    }
+    }
+}
+
+focus = {
+	id = UKR_modern_cossacks
+	icon = GFX_goal_UKR_modern_cossacks
+	prerequisite = { focus = UKR_modern_army }
+	relative_position_id = UKR_modern_army
+	x = 0
+	y = 1
+	cost = 5
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_4"
+	add_tech_bonus = {
+		name = motorized_bonus
+		bonus = 1.0
+		technology = motorised_infantry
+	}
+	custom_effect_tooltip = UKR_modern_cossacks_ns_tt
+	add_to_variable = { UKR_ukrainian_army_motorized_attack_factor = 0.05 }
+	add_to_variable = { UKR_ukrainian_army_motorized_defence_factor = 0.05 }
+    }
+}
+
+focus = {
+		id = UKR_our_doctrine
+		icon = GFX_goal_ukr_our_doctrine
+		prerequisite = { focus = UKR_army_reforms }
+		mutually_exclusive = { focus = UKR_cossacks_in_service }
+		relative_position_id = UKR_army_reforms
+		x = -4
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_our_doctrine"
+		remove_ideas = UKR_unorganized_cossacks
+		army_experience = 25
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = land_doctrine
+		}
+		custom_effect_tooltip = UKR_our_doctrine_ns_tt
+		hidden_effect = {
+			add_dynamic_modifier = { modifier = UKR_armored_forces_dynamic_modifier }
+			set_variable = { UKR_armored_forces_training_time_factor = 0.05 }
+		}
+	}
+}
+
+focus = {
+	id = UKR_tank_project
+	icon = GFX_goal_ukr_tank_project
+	prerequisite = { focus = UKR_our_doctrine }
+	relative_position_id = UKR_our_doctrine
+	x = -2
+	y = 1
+	cost = 5
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_tank_project"
+	custom_effect_tooltip = UKR_tank_project_ns_tt
+	add_to_variable = { UKR_armored_forces_unit_light_armor_design_cost_factor = -0.25 }
+	add_to_variable = { UKR_armored_forces_unit_medium_armor_design_cost_factor = -0.25 }
+    }
+}
+
+focus = {
+	id = UKR_tank_crew_training
+	icon = GFX_goal_ukr_tank_crew_training
+	prerequisite = { focus = UKR_our_doctrine }
+	relative_position_id = UKR_our_doctrine
+	x = 2
+	y = 1
+	
+	cost = 5
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_tank_crew_training"
+	custom_effect_tooltip = UKR_tank_crew_training_ns_tt
+	add_to_variable = { UKR_armored_forces_army_org_factor = 0.05 }
+	add_to_variable = { UKR_armored_forces_planning_speed = 0.1 }
+    }
+}
+
+focus = {
+	id = UKR_military_experiments
+	icon = GFX_goal_generic_position_armies
+	prerequisite = { focus = UKR_our_doctrine }
+	relative_position_id = UKR_our_doctrine
+	x = 0
+	y = 2
+	cost = 5
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_military_experiments"
+	    add_tech_bonus = {
+		    name = armor_bonus
+		    bonus = 1.0
+		    uses = 2
+		    category = armor
+	    }
+    }
+}
+
+focus = {
+	id = UKR_tank_guns
+	icon = GFX_goal_ukr_tank_guns
+	prerequisite = { focus = UKR_tank_project }
+	prerequisite = { focus = UKR_military_experiments }
+	relative_position_id = UKR_tank_project
+	relative_position_id = UKR_military_experiments
+	x = -2
+	y = 1
+	cost = 5
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_tank_guns"
+	add_tech_bonus = {
+		name = infantry_artillery_bonus
+		bonus = 1.0
+		uses = 1
+		category = artillery
+	}
+	custom_effect_tooltip = UKR_tank_guns_ns_tt
+	add_to_variable = { UKR_armored_forces_army_armor_attack_factor = 0.05 }
+    }
+}
+
+focus = {
+	id = UKR_strong_armor
+	icon = GFX_goal_ukr_strong_armor
+	prerequisite = { focus = UKR_tank_crew_training }
+	prerequisite = { focus = UKR_military_experiments }
+	relative_position_id = UKR_tank_crew_training
+	relative_position_id = UKR_military_experiments
+	x = 2
+	y = 1
+	cost = 5
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_strong_armor"
+	custom_effect_tooltip = UKR_strong_armor_ns_tt
+	add_to_variable = { UKR_armored_forces_army_armor_defence_factor = 0.05 }
+    }
+}
+
+focus = {
+	id = UKR_mobile_warfare
+	icon = GFX_goal_ukr_mobile_warfare
+	prerequisite = { focus = UKR_tank_guns }
+	prerequisite = { focus = UKR_strong_armor }
+	relative_position_id = UKR_tank_guns
+	relative_position_id = UKR_strong_armor
+	x = -2
+	y = 1
+	cost = 5
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_mobile_warfare"
+	custom_effect_tooltip = UKR_mobile_warfare_ns_tt
+	add_to_variable = { UKR_armored_forces_army_armor_speed_factor = 0.05 }
+    }
+}
+
+focus = {
+	id = UKR_prepare_supplies
+	icon = GFX_goal_ukr_prepare_supplies
+	prerequisite = { focus = UKR_mobile_warfare }
+	relative_position_id = UKR_mobile_warfare
+	x = -2
+	y = 1
+	cost = 5
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_prepare_supplies"
+	custom_effect_tooltip = UKR_prepare_supplies_ns_tt
+	add_to_variable = { UKR_armored_forces_supply_node_range = 0.1 }
+    }
+}
+
+focus = {
+	id = UKR_radio_in_tanks
+	icon = GFX_goal_ukr_radio_in_tanks
+	prerequisite = { focus = UKR_mobile_warfare }
+	relative_position_id = UKR_mobile_warfare
+	x = 2
+	y = 1
+	cost = 5
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_radio_in_tanks"
+	custom_effect_tooltip = UKR_radio_in_tanks_ns_tt
+	add_to_variable = { UKR_armored_forces_coordination_bonus = 0.05 }
+    }
+}
+
+focus = {
+		id = UKR_end_of_reforms
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = UKR_mobile_warfare }
+	    relative_position_id = UKR_mobile_warfare
+	    x = 0
+	    y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_end_of_reforms"
+		add_ideas = Our_military_vehicles
+		remove_ideas = UKR_depleted_army_1
+	}
+}
+
+focus = {
+		id = UKR_terrorist_attack_at_the_congress
+		icon = GFX_goal_UKR_terrorist_attack_at_the_congress
+		mutually_exclusive = { focus = UKR_expand_party }
+		x = 49
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+            factor = 100
+            modifier = {
+                factor = 0
+                has_game_rule = { rule = UKR_ai_behavior option = UKR_SKOROPADSKY }
+				has_game_rule = { rule = UKR_ai_behavior option = UKR_HABSBURG }
+            }
+		}
+
+		available = {
+          has_government = communism
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_terrorist_attack_at_the_congress"
+			country_event = UKR_Ev.16
+		}
+	}
+
+focus = {
+		id = UKR_communist_persecution
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = UKR_terrorist_attack_at_the_congress }
+		x = 48
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_communist_persecution"
+			remove_ideas = UKR_strong_party
+			remove_ideas = SR_soviet_republic
+			add_popularity = {
+				ideology = communism
+				popularity = -0.3
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			
+		}
+	}
+}
+
+    focus = {
+		id = UKR_hunt_for_politicians
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = UKR_terrorist_attack_at_the_congress }
+		x = 50
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_hunt_for_politicians"
+		add_ideas = UKR_fear_of_politicians
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+}
+
+    focus = {
+		id = UKR_bribe_the_generals
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = { focus = UKR_communist_persecution }
+		x = 48
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_bribe_the_generals"
+		add_ideas = UKR_bribed_generals
+	}
+}
+
+    focus = {
+		id = UKR_arm_the_faithful
+		icon = GFX_focus_SOV_rebuild_the_savior_cathedral
+		prerequisite = { focus = UKR_hunt_for_politicians }
+		x = 50
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_arm_the_faithful"
+		add_stability = 0.4
+		add_ideas = UKR_holy_guard
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+	}
+}
+
+    focus = {
+		id = UKR_change_of_government
+		icon = GFX_goal_UKR_change_goverment
+		prerequisite = { focus = UKR_arm_the_faithful }
+		prerequisite = { focus = UKR_bribe_the_generals }
+		x = 49
+		y = 3
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_change_of_government"
+		remove_ideas = UKR_fear_of_politicians
+		country_event = UKR_Ev.15
+		country_event = UKR_Ev.19
+		add_stability = -0.1
+        add_political_power = 300
+		add_timed_idea = { idea = UKR_repressed_communists days = 30 }
+        SOV = { remove_from_faction = ROOT }
+        hidden_effect = {
+		news_event = Wnews.3
+		set_variable = { UKR_independence_target = OVERLORD } 
+		}
+        OVERLORD = { set_autonomy = { target = ROOT autonomy_state = autonomy_free } }
+		}
+	}
+
+focus = {
+	    id= UKR_monarchists_take_over
+		icon = GFX_goal_UKR_monarchists_take_over
+		prerequisite = { focus = UKR_change_of_government }
+		x = 46
+		y = 4
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+          has_government = neutrality
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_monarchists_take_over"
+		country_event = UKR_Ev.18
+	}
+}
+
+focus = {
+	    id= UKR_restoring_order
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = UKR_monarchists_take_over }
+		x = 45
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_restoring_order"
+		add_stability = 0.1
+		add_war_support = 0.1
+	}
+}
+
+focus = {
+	    id= UKR_new_ukrainian_state
+		icon = GFX_goal_ukr_new_state
+		prerequisite = { focus = UKR_monarchists_take_over }
+		x = 47
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_new_ukrainian_state"
+		add_ideas = UKR_ukrainian_state
+	}
+}
+
+focus = {
+	    id= UKR_rulers_choice
+		icon = GFX_focus_SOV_zemsky_sobor
+		prerequisite = { focus = UKR_new_ukrainian_state }
+		prerequisite = { focus = UKR_restoring_order }
+		x = 46
+		y = 6
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_rulers_choice"
+		country_event = UKR_Ev.2
+	}
+}
+
+focus = {
+	    id= UKR_coronation_of_the_king
+		icon = GFX_focus_POL_habsburg
+		prerequisite = { focus = UKR_rulers_choice }
+		mutually_exclusive = { focus = UKR_skoropadskys_power }
+		x = 49
+		y = 7
+		cost = 5
+
+		available = {
+		has_country_leader = {
+				character = UKR_vasil_vyshivany
+				ruling_only = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_coronation_of_the_king"
+		add_country_leader_trait = habsburg_lorraine
+		hidden_effect = {
+		news_event = Wnews.1
+		}
+		set_cosmetic_tag = UKR_KING
+		add_stability = 0.1
+		}
+	}
+
+
+	focus = {
+	    id= UKR_royal_officer_corps
+		icon = GFX_goal_UKR_royal_officer_corps
+		prerequisite = { focus = UKR_aristocratic_fascism }
+		x = 51
+		y = 9
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_royal_officer_corps"
+		army_experience = 50
+		add_ideas = { 
+			POL_royal_officer_corps 
+		}	
+	}
+}
+
+	focus = {
+	    id= UKR_soldier_king
+		icon = GFX_goal_UKR_soldier_king
+		prerequisite = { focus = UKR_aristocratic_fascism }
+		x = 53
+		y = 9
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_soldier_king"
+		add_field_marshal_role = {
+			character = "UKR_vasil_vyshivany"
+			traits={ infantry_officer war_hero }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		UKR_vasil_vyshivany = {
+			add_country_leader_trait = POL_soldier_king
+		}
+	}
+}
+
+	focus = {
+	    id= UKR_restoration_of_sich_riflemen
+		icon = GFX_goal_UKR_restoration_of_sich_riflemen
+		prerequisite = { focus = UKR_royal_officer_corps }
+		x = 50
+		y = 10
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_restoration_of_sich_riflemen"
+		country_event = UKR_Ev.24
+	}
+}
+
+	focus = {
+	    id= UKR_development_of_galicia
+		icon = GFX_goal_UKR_development_of_galicia
+		prerequisite = { focus = UKR_align_with_poland }
+		x = 50
+		y = 15
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 88
+			controls_state = 91
+			controls_state = 88
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_development_of_galicia"
+        88 = {
+		    add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		91 = {
+		    add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		88 = {
+		    add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+	id= UKR_development_of_transcarpathia
+	icon = GFX_goal_ukr_development_of_transcarpathia
+	prerequisite = { focus = UKR_czechoslovakia_claims }
+	x = 49
+	y = 14
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		controls_state = 73
+	}
+	
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_development_of_transcarpathia"
+	73 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+            }
+	    }
+    }
+}
+
+focus = {
+	    id= UKR_ties_with_the_oun
+		icon = GFX_goal_UKR_contacts_with_the_oun
+		prerequisite = { focus = UKR_aristocratic_fascism }
+		x = 49
+		y = 9
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_ties_with_the_oun"
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+		unlock_decision_category_tooltip = UKR_cooperation_with_the_oun
+	}
+}
+
+focus = {
+	    id= UKR_aristocratic_fascism
+		icon = GFX_goal_ukr_aristocratic_fascism
+		prerequisite = { focus = UKR_coronation_of_the_king }
+		x = 51
+		y = 8
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_aristocratic_fascism"
+		add_political_power = 50
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+}
+
+focus = {
+	id= UKR_real_ukraine
+	icon = GFX_goal_ukr_real_ukraine
+	prerequisite = { focus = UKR_royal_officer_corps }
+	prerequisite = { focus = UKR_soldier_king }
+	x = 52
+	y = 10
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		fascism > 0.3
+    }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_real_ukraine"
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+        set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		add_country_leader_role = {
+			character = "UKR_vasil_vyshivany"
+			country_leader = {
+				ideology = fascism_ideology
+				traits = { habsburg_lorraine }
+				expire = "1965.3.1.1"
+			}
+			promote_leader = yes 
+		}
+	}
+}
+
+focus = {
+	id= UKR_alliance_with_germany
+	icon = GFX_focus_chi_mission_to_germany
+	prerequisite = { focus = UKR_real_ukraine }
+	mutually_exclusive = { focus = UKR_press_the_habsburg_claim }
+	x = 57
+	y = 11
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	bypass = {
+	    is_in_faction_with = GER
+	}
+
+	available = {
+		is_in_faction = no
+		fascism > 0.3
+		country_exists = GER
+		GER = {
+			has_government = fascism
+		}
+    }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_alliance_with_germany"
+		GER = { country_event = { id = generic.2 hours = 4 random_hours = 2 } }
+	}
+}
+
+focus = {
+	id= UKR_treaty_with_germany
+	icon = GFX_goal_ukr_treaty_with_germany
+	prerequisite = { focus = UKR_alliance_with_germany } 
+	x = 56
+	y = 12
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		is_in_faction_with = GER
+		fascism > 0.3
+		country_exists = GER
+		GER = {
+			has_government = fascism
+		}
+    }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_treaty_with_germany"
+		GER = {
+			country_event = UKR_Ev.21
+		}
+	}
+}
+
+focus = {
+	id= UKR_military_cooperation_ger
+	icon = GFX_goal_ukr_military_cooperation_ger
+	prerequisite = { focus = UKR_alliance_with_germany }
+	x = 58
+	y = 12
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	bypass = {
+		NOT = {
+			is_in_faction_with = GER
+		}
+	}
+
+	available = {
+		country_exists = GER
+		GER = {
+			has_government = fascism
+		}
+		is_in_faction_with = GER
+		OR = {
+			has_government = neutrality
+			has_government = fascism
+		}
+    }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_military_cooperation_ger"
+		army_experience = 25
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+		GER = {
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+}
+
+focus = {
+	id= UKR_german_tanks
+	icon = GFX_goal_generic_ger_tank
+	prerequisite = { focus = UKR_military_cooperation_ger }
+	x = 56
+	y = 13
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	bypass = {
+		NOT = {
+			is_in_faction_with = GER
+		}
+	}
+
+	available = {
+		country_exists = GER
+		GER = {
+			has_government = fascism
+		}
+		is_in_faction_with = GER
+		OR = {
+			has_government = neutrality
+			has_government = fascism
+		}
+    }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_german_tanks"
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 1.0
+			uses = 1
+			category = armor
+		}
+		add_relation_modifier = {
+			target = GER
+			modifier = ITA_military_agreements
+		}
+	}
+}
+
+focus = {
+	id= UKR_german_artillery
+	icon = GFX_goal_generic_ger_artilery
+	prerequisite = { focus = UKR_military_cooperation_ger }
+	x = 58
+	y = 13
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	bypass = {
+		NOT = {
+			is_in_faction_with = GER
+		}
+	}
+
+	available = {
+		country_exists = GER
+		GER = {
+			has_government = fascism
+		}
+		is_in_faction_with = GER
+		OR = {
+			has_government = neutrality
+			has_government = fascism
+		}
+    }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_german_artillery"
+		add_tech_bonus = {
+			bonus = 1.0
+			uses = 1
+			category = artillery
+		}
+	}
+}
+
+focus = {
+	id= UKR_german_aircraft
+	icon = GFX_goal_generic_ger_airplane
+	prerequisite = { focus = UKR_military_cooperation_ger }
+	x = 60
+	y = 13
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	bypass = {
+		NOT = {
+			is_in_faction_with = GER
+		}
+	}
+
+	available = {
+		country_exists = GER
+		GER = {
+			has_government = fascism
+		}
+		is_in_faction_with = GER
+		OR = {
+			has_government = neutrality
+			has_government = fascism
+		}
+    }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_german_aircraft"
+		air_experience = 15
+			if = {
+				limit = {
+					country_exists = GER
+					NOT = { has_war_with = GER }
+				}
+			add_equipment_to_stockpile = { 
+				type = small_plane_cas_airframe_1
+				amount = 300
+				producer = GER
+				variant_name = "Ju 87"
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+				category = light_fighter
+			}
+		}
+	}
+}
+
+focus = {
+	    id= UKR_press_the_habsburg_claim
+		icon = GFX_focus_hun_elect_a_king
+		prerequisite = { focus = UKR_real_ukraine }
+		mutually_exclusive = { focus = UKR_alliance_with_germany }
+		x = 52
+		y = 11
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			if = { #Tooltip purposes (Vojvodina takes over Hungary and we don't want it to be shown here)
+				HUN = {
+					exists = yes
+					NOT = {
+						HUN = {
+						has_country_leader = {
+							character = HUN_otto_von_habsburg
+							ruling_only = yes
+						}
+					}
+				}
+			}
+		}
+	}
+		
+		bypass = {
+			HUN = {
+				has_country_leader = {
+					character = HUN_otto_von_habsburg
+					ruling_only = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_press_the_habsburg_claim"
+			if = { #Tooltip purposes (Vojvodina takes over Hungary and we don't want it to be shown here)
+				HUN = {
+					country_event = { id = POL_habsburg_events.1 hours = 3 } 
+				}
+			}
+			else = {
+				custom_effect_tooltip = POL_hungary_scope_no_vojvodina_tt
+				effect_tooltip = {
+					country_event = { id = POL_habsburg_events.1 hours = 3 } 
+				}
+			}
+		}
+	}
+
+	focus = {
+	    id= UKR_align_with_habsburgs
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		prerequisite = { focus = UKR_press_the_habsburg_claim }
+		x = 51
+		y = 12
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			HUN = {
+				OR = {
+					is_in_faction = no
+					is_faction_leader = yes
+				}
+				NOT = { has_war_with = ROOT }
+				HUN = {
+				has_country_leader = {
+					character = HUN_otto_von_habsburg
+					ruling_only = yes
+				    }
+				}
+			}
+			NOT = {
+				any_allied_country = { has_war_with = HUN }
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_align_with_habsburgs"
+			if = {
+				limit = {
+					HUN = { is_faction_leader = yes }
+				}
+				HUN = { country_event = generic.2 }
+			}
+			else = {
+				create_faction = POL_habsburg_pact
+				HUN = { country_event = POL_habsburg_events.2 }
+			}
+		}
+	}
+
+	focus = {
+	    id= UKR_align_with_poland
+		icon = GFX_focus_generic_polish_deal
+		prerequisite = { focus = UKR_treaty_with_poland }
+		x = 52
+		y = 14
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+        available = {
+			NOT = {
+				has_war_with = POL
+			}
+            POL = {
+			exists = yes 
+		}
+	}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_align_with_poland"
+		POL = {
+				country_event = { id = baltic.7 days = 1 }
+			}
+		}
+	}
+
+	focus = {
+	    id= UKR_destruction_of_nazim
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = UKR_align_with_poland }
+		x = 52
+		y = 15
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_destruction_of_nazim"
+		create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GER
+			}
+		}
+	}
+
+	focus = {
+	    id= UKR_treaty_with_poland
+		icon = GFX_goal_UKR_treaty_with_poland
+		prerequisite = { focus = UKR_align_with_habsburgs }
+		x = 52
+		y = 13
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = POL
+			}
+            POL = {
+			exists = yes 
+		}
+	}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_treaty_with_poland"
+		POL = {
+		country_event = { id = UKR_Ev.9 days = 1 }
+		}
+	}
+}
+
+    focus = {
+	    id= UKR_war_with_romania
+		icon = GFX_focus_generic_attack_romania
+		prerequisite = { focus = UKR_press_the_habsburg_claim focus = UKR_alliance_with_germany }
+		x = 54
+		y = 12
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_war_with_romania"
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ROM
+		}
+	}
+}
+
+    focus = {
+	    id= UKR_czechoslovakia_claims
+		icon = GFX_goal_UKR_treaty_with_czechoslovakia
+		prerequisite = { focus = UKR_align_with_habsburgs }
+		x = 50
+		y = 13
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+        available = {
+			NOT = {
+				has_war_with = CZE
+			}
+            CZE = {
+			exists = yes 
+		}
+	}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_czechoslovakia_claims"
+		CZE = {
+		country_event = { id = UKR_Ev.12 days = 1 }
+		}
+	}
+}
+
+focus = {
+	id= UKR_alliance_with_austria
+	icon = GFX_goal_generic_aus_friend
+	prerequisite = { focus = UKR_align_with_habsburgs }
+	x = 48
+	y = 13
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		NOT = {
+			has_war_with = AUS
+		}
+		AUS = {
+		exists = yes
+		OR = {
+			has_government = fascism
+			has_government = neutrality
+		}
+	}
+}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_alliance_with_austria"
+	AUS = {
+	country_event = { id = baltic.7 days = 1 }
+	}
+}
+}
+
+focus = {
+	    id= UKR_cultural_development
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = UKR_coronation_of_the_king focus = UKR_skoropadskys_power }
+		x = 48
+		y = 8
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_cultural_development"
+		add_political_power = 50
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	    id= UKR_new_economic_system
+		icon = GFX_focus_generic_industry_3
+		prerequisite = {focus = UKR_coronation_of_the_king focus = UKR_skoropadskys_power }
+		x = 46
+		y = 8
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_new_economic_system"
+		remove_ideas = UKR_small_industry
+		remove_ideas = UKR_destroyed_collective_farms
+		add_ideas = UKR_new_ukrainian_economy
+	}
+}
+
+focus = {
+	    id= UKR_royal_guard
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = UKR_coronation_of_the_king focus = UKR_skoropadskys_power}
+		x = 44
+		y = 8
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_royal_guard"
+		add_manpower = 50000
+		division_template = {
+				name = "Royal ukranian guard"
+				priority = 1
+				division_names_group = POL_MNT_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+		
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+
+                    infantry = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+					artillery_brigade = { x = 2 y = 2 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+					artillery = { x = 0 y = 2 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 202 }
+				limit = { PREV = { has_full_control_of_state = PREV } }
+				create_unit = {
+					division = "name = \"1st Royal Guard\" division_template = \"Royal Guard\" start_experience_factor = 1.0" 
+					owner = UKR
+				}
+				create_unit = {
+					division = "name = \"2th Royal Guard\" division_template = \"Royal Guard\" start_experience_factor = 1.0" 
+					owner = UKR
+				}
+				create_unit = {
+					division = "name = \"3st Royal Guard\" division_template = \"Royal Guard\" start_experience_factor = 1.0" 
+					owner = UKR
+				}
+				create_unit = {
+					division = "name = \"4st Royal Guard\" division_template = \"Royal Guard\" start_experience_factor = 1.0" 
+					owner = UKR
+				}
+				create_unit = {
+					division = "name = \"5nd Royal Guard\" division_template = \"Royal Guard\" start_experience_factor = 1.0" 
+					owner = UKR
+				}
+				create_unit = {
+					division = "name = \"6th Royal Guard\" division_template = \"Royal Guard\" start_experience_factor = 1.0" 
+					owner = UKR
+				}
+			}
+		}
+	}
+
+focus = {
+	    id= UKR_recognition_from_european_monarchies
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { focus = UKR_cultural_development }
+		prerequisite = { focus = UKR_new_economic_system }
+		x = 47
+		y = 9
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_recognition_from_european_monarchies"
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.15
+		}
+	}
+}
+
+focus = {
+	    id= UKR_corporate_state
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = UKR_royal_guard }
+		prerequisite = { focus = UKR_new_economic_system }
+		x = 45
+		y = 9
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_corporate_state"
+		add_ideas = UKR_ukrainian_corporate_state
+	}
+}
+
+focus = {
+	    id= UKR_ukrainian_nationalist_entity
+		icon = GFX_goal_ukrainian_nationalism
+		prerequisite = { focus = UKR_recognition_from_european_monarchies }
+		prerequisite = { focus = UKR_corporate_state }
+		x = 46
+		y = 10
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_ukrainian_nationalist_entity"
+		add_ideas = UKR_ideological_fanaticism
+	}
+}
+
+focus = {
+	    id= UKR_skoropadskys_power
+		icon = GFX_goal_UKR_the_power_of_skoropadsky
+		prerequisite = { focus = UKR_rulers_choice }
+		mutually_exclusive = { focus = UKR_coronation_of_the_king }
+		x = 43
+		y = 7
+		cost = 5
+
+		available = {
+		has_country_leader = {
+				character = UKR_pavel_skoropadskiy
+				ruling_only = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_skoropadskys_power"
+		add_country_leader_trait = hetman_of_all_ukraine
+		hidden_effect = {
+		news_event = Wnews.2
+		}
+		set_cosmetic_tag = UKR_SKOROPADSKY
+		add_war_support = 0.1
+		}
+	}
+
+focus = {
+	    id= UKR_question_ukrainian_officers_union_fatherland
+		icon = GFX_goal_ukr_question_ukrainian_officers_union_fatherland
+		prerequisite = { focus = UKR_skoropadskys_power }
+		x = 41
+		y = 8
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_question_ukrainian_officers_union_fatherland"
+		   country_event = UKR_Ev.31
+		} 
+	}
+
+focus = {
+	    id= UKR_supreme_leader_of_the_army_and_judiciary
+		icon = GFX_goal_ukr_supreme_leader_of_the_army_and_judiciary
+		prerequisite = { focus = UKR_question_ukrainian_officers_union_fatherland }
+		x = 41
+		y = 9
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_supreme_leader_of_the_army_and_judiciary"
+		add_field_marshal_role = {
+			character = "UKR_pavel_skoropadskiy"
+			traits={ infantry_officer war_hero }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}
+
+focus = {
+	    id= UKR_ban_of_left_parties
+		icon = GFX_goal_ukr_ban_of_left_parties
+		prerequisite = { focus = UKR_supreme_leader_of_the_army_and_judiciary }
+		x = 42
+		y = 10
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_ban_of_left_parties"
+		add_popularity = {
+			ideology = communism
+			popularity = -0.9
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}
+	}
+}
+
+focus = {
+	    id= UKR_bet_on_the_bourgeoisie_and_large_landowners
+		icon = GFX_goal_ukr_bet_on_the_bourgeoisie_and_large_landowners
+		prerequisite = { focus = UKR_supreme_leader_of_the_army_and_judiciary }
+		x = 40
+		y = 10
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_bet_on_the_bourgeoisie_and_large_landowners"
+		   add_ideas = UKR_bet_on_the_bourgeoisie_and_large_landowners_idea
+		}
+	}
+
+focus = {
+	    id= UKR_banning_all_opposition
+		icon = GFX_goal_ukr_banning_all_opposition
+		prerequisite = { focus = UKR_ban_of_left_parties }
+		prerequisite = { focus = UKR_bet_on_the_bourgeoisie_and_large_landowners }
+		x = 41
+		y = 11
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_banning_all_opposition"
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.9
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.15
+		}
+	}
+}
+
+focus = {
+	    id= UKR_agrarian_reform
+		icon = GFX_goal_ukr_agrarian_reform
+		prerequisite = { focus = UKR_bet_on_the_bourgeoisie_and_large_landowners }
+		x = 39
+		y = 11
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			has_completed_focus = UKR_new_economic_system
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_agrarian_reform"
+		   add_ideas = UKR_ukrainian_collective_farms
+		}
+	}
+
+focus = {
+	    id= UKR_national_cultural_policy
+		icon = GFX_goal_ukr_national_cultural_policy
+		prerequisite = { focus = UKR_agrarian_reform }
+		prerequisite = { focus = UKR_banning_all_opposition }
+		x = 40
+		y = 12
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_national_cultural_policy"
+		   add_stability = 0.05
+		   add_ideas = UKR_national_cultural_policy_idea
+		}
+	}
+
+focus = {
+	    id= UKR_black_sea_doctrine
+		icon = GFX_focus_SOV_reinforce_southern_naval_bases
+		prerequisite = { focus = UKR_skoropadskys_power }
+		x = 36
+		y = 8
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_black_sea_doctrine"
+		country_event = { id = UKR_Ev.1 }
+	}
+}
+
+focus = {
+	    id= UKR_treaty_with_romania
+		icon = GFX_focus_invite_romania
+		prerequisite = { focus = UKR_black_sea_doctrine }
+		x = 35
+		y = 9
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = ROM
+			}
+			ROM = {
+			exists = yes
+		    }
+	    }
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_treaty_with_romania"
+		ROM = {
+			country_event = { id = UKR_Ev.3 days = 1 }
+		}
+	}
+}
+
+focus = {
+	    id= UKR_treaty_with_bulgaria
+		icon = GFX_focus_generic_befriend_bulgaria
+		prerequisite = { focus = UKR_black_sea_doctrine }
+		x = 37
+		y = 9
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = BUL
+			}
+			BUL = {
+			exists = yes
+		    }
+	    }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_treaty_with_bulgaria"
+			BUL = {
+				country_event = { id = UKR_Ev.28 days = 1 }
+			}
+		}
+	}
+
+focus = {
+	    id= UKR_war_with_germany
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = UKR_don_kuban_claims }
+		x = 35
+		y = 14
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_war_with_germany"
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = GER
+		}
+	}
+}
+
+focus = {
+	    id= UKR_delegation_to_turkey
+		icon = GFX_focus_generic_befriend_turkey
+		prerequisite = { focus = UKR_treaty_with_bulgaria }
+		prerequisite = { focus = UKR_treaty_with_romania }
+		x = 36
+		y = 10
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = TUR
+			}
+			TUR = {
+			exists = yes
+		    }
+	    }
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_delegation_to_turkey"
+		TUR = {
+			country_event = UKR_Ev.28
+		}
+	}
+}
+
+focus = {
+	id= UKR_delegation_to_poland
+	icon = GFX_focus_generic_polish_deal
+	prerequisite = { focus = UKR_delegation_to_turkey }
+	x = 37
+	y = 11
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		NOT = {
+			has_war_with = POL
+		}
+		POL = {
+		exists = yes
+		}
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_delegation_to_poland"
+	POL = {
+		country_event = UKR_Ev.25
+	    }
+    }
+}
+
+focus = {
+	id= UKR_delegation_to_the_baltic_countries
+	icon = GFX_focus_SOV_baltic_security
+	prerequisite = { focus = UKR_delegation_to_poland }
+	x = 37
+	y = 12
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		NOT = {
+			has_war_with = LIT
+			has_war_with = LAT
+			has_war_with = EST
+		}
+		LIT = {
+		exists = yes
+		}
+		LAT = {
+			exists = yes
+		}
+		EST = {
+			exists = yes
+		}
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_delegation_to_poland"
+	LIT = {
+		country_event = UKR_Ev.28
+	}
+	LAT = {
+		country_event = UKR_Ev.28
+	}
+	EST = {
+		country_event = UKR_Ev.28
+	    }
+    }
+}
+
+focus = {
+	id= UKR_prepare_a_coup_in_belarus
+	icon = GFX_goal_UKR_prepare_a_coup_in_belarus
+	prerequisite = { focus = UKR_delegation_to_turkey }
+	x = 35
+	y = 11
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		NOT = {
+			has_war_with = BLR
+		}
+		BLR = {
+		exists = yes
+		}
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_prepare_a_coup_in_belarus"
+	SOV = { remove_from_faction = BLR }
+	hidden_effect = { set_variable = { BLR_independence_target = OVERLORD } }
+	OVERLORD = { set_autonomy = { target = BLR autonomy_state = autonomy_free } }
+	BLR = {
+	country_event = UKR_Ev.17
+	}
+}
+}
+
+focus = {
+	    id= UKR_reunion_of_two_nations
+		icon = GFX_goal_UKR_reunion_of_two_nations
+		prerequisite = { focus = UKR_prepare_a_coup_in_belarus }
+		x = 35
+		y = 12
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			BLR = {
+				exists = yes
+				NOT ={
+					is_in_faction_with = SOV
+					has_government = communism
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_reunion_of_two_nations"
+			194 = { add_core_of = ROOT }
+			204 = { add_core_of = ROOT }
+			241 = { add_core_of = ROOT }
+			206 = { add_core_of = ROOT }
+			207 = { add_core_of = ROOT }
+			94 = { add_core_of = ROOT }
+			95 = { add_core_of = ROOT }
+			96 = { add_core_of = ROOT }
+			97 = { add_core_of = ROOT }
+		annex_country = {
+				target = BLR
+				transfer_troops = yes
+			}
+		}
+	}
+
+focus = {
+		id= UKR_a_look_at_the_middle_east
+		icon = GFX_focus_TUR_treaty_of_saadabad
+		prerequisite = { focus = UKR_delegation_to_the_baltic_countries }
+		prerequisite = { focus = UKR_reunion_of_two_nations }
+		x = 34
+		y = 13
+		cost = 5
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = PER
+			}
+			PER = {
+			exists = yes
+			}
+		}
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_delegation_to_poland"
+		PER = {
+			country_event = UKR_Ev.28
+		}
+		IRQ = {
+			country_event = UKR_Ev.28
+		}
+	}
+}
+
+focus = {
+	id= UKR_don_kuban_claims
+	icon = GFX_goal_ukr_don_kuban_claims
+	prerequisite = { focus = UKR_delegation_to_the_baltic_countries }
+	prerequisite = { focus = UKR_reunion_of_two_nations }
+	x = 36
+	y = 13
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	completion_reward = {
+	log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_don_kuban_claims"
+	  add_state_claim = 218
+	  add_state_claim = 234
+	  add_state_claim = 235
+	  add_state_claim = 238
+	  add_state_claim = 245
+    }
+}
+
+focus = {
+	    id= UKR_war_with_ussr
+		icon = GFX_focus_attack_soviet
+		prerequisite = { focus = UKR_don_kuban_claims }
+		x = 37
+		y = 14
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_war_with_ussr"
+		add_state_claim = 240
+		add_state_claim = 224
+		add_state_claim = 260
+		add_state_claim = 913
+		add_state_claim = 914
+		add_state_claim = 137
+		add_state_claim = 237
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SOV
+		}
+		create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ZSR
+			}
+		}
+	}
+
+focus = {
+	    id= UKR_destruction_of_communism
+		icon = GFX_focus_attack_soviet
+		prerequisite = { focus = UKR_take_revenge_on_yugoslavia }
+		x = 54
+		y = 14
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_destruction_of_communism"
+		create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SOV
+			}
+		}
+	}
+
+focus = {
+	    id= UKR_take_revenge_on_yugoslavia
+		icon = GFX_goal_generic_war_with_yugoslavia
+		prerequisite = { focus = UKR_war_with_romania }
+		x = 54
+		y = 13
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_take_revenge_on_yugoslavia"
+		create_wargoal = {
+				type = puppet_wargoal_focus
+				target = YUG
+			}
+		}
+    }
+}

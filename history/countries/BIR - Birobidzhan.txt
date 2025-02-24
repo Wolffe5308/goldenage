@@ -1,0 +1,41 @@
+
+set_party_name = {
+	ideology = communism
+	long_name = BIR_communism_party_long
+	name = BIR_communism_party
+}
+
+oob = "BIR_1936"
+
+capital = 657 
+
+set_politics = {
+    ruling_party = communism
+    last_election = "1933.7.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 10
+	communism = 90
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	basic_train = 1
+}
+
+recruit_character = BIR_iosif_izrailevich
+recruit_character = BIR_grigory_stern
+recruit_character = BIR_yakov_smushkevich
+recruit_character = BIR_semyon_dimanstein
+recruit_character = BIR_lev_mekhlis
+recruit_character = BIR_solomon_lozovsky

@@ -1,0 +1,29 @@
+state = {
+	id = 826
+	name = "STATE_826"
+
+	history = {
+		owner = ZSR
+		victory_points = {
+			11617 1 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			
+
+		}
+		add_core_of = SOV
+		add_core_of = ZSR
+		add_core_of = ABK
+	}
+
+	provinces = {
+		672 11599 11617 11647 
+	}
+	manpower = 491569
+	buildings_max_level_factor = 2.000
+	state_category = town
+
+	local_supplies = 0.0 
+}

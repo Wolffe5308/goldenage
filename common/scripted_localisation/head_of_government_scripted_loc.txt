@@ -1,0 +1,12 @@
+defined_text = {
+	name = GetHeadOfGovernment
+	text = {
+		trigger = {
+			any_character = {
+				is_head_of_government = yes
+				set_temp_variable = { current_head_of_government_character = THIS }
+			}
+		}
+		localization_key = "[?current_head_of_government_character.GetName]"
+	}
+}

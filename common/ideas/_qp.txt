@@ -1,0 +1,166 @@
+ideas = {
+	country = {
+		qp_logistics_effort_idea = {
+
+			removal_cost = -1
+			
+			picture = idea_generic_build_infrastructure
+			
+			modifier = {
+				production_speed_rail_way_factor = 1.0
+				production_speed_supply_node_factor = 1.0
+			}
+		}
+	}
+	country = {
+		qp_production_effort_idea = {
+
+			removal_cost = -1
+			
+			picture = idea_generic_industrial_concern_2
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.3
+			}
+		}
+	}
+	country = {
+		qp_fiveyearplan_idea = {
+
+			removal_cost = -1
+			
+			picture = idea_generic_industrial_concern_2
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_synthetic_refinery_factor = 0.2
+			}
+		}
+	}
+	country = {
+		qp_trade_unions_idea = {
+
+			removal_cost = -1
+			
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				communism_drift = 0.05
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+	}
+	country = {
+		qp_communist_reforms_idea = {
+
+			removal_cost = -1
+			
+			picture = gre_agricultural_communes
+			
+			modifier = {
+				recruitable_population_factor = 0.1
+				non_core_manpower = 0.2
+			}
+		}
+	}
+	country = {
+		qp_communist_reforms_2_idea = {
+
+			removal_cost = -1
+			
+			picture = gre_agricultural_communes
+			
+			modifier = {
+				recruitable_population_factor = 0.1
+				non_core_manpower = 0.2
+				monthly_population = 0.15
+				consumer_goods_factor = -0.03
+			}
+		}
+		qp_nat_con_idea = {
+			picture = SPR_the_popular_front
+			
+			modifier = {
+				fascism_drift = 0.1
+			}
+		}
+		
+		qp_support_military_manufacturers = {
+			picture = SOV_third_five_year_plan_military
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		qp_criticism_of_democracy_idea = {
+			picture = SPR_torchbearers_of_tomorrow
+			
+			modifier = {
+				democratic_drift = -0.2
+			}
+			
+		}
+		
+		qp_rally_the_youth_idea = {
+			picture = SPR_international_brigades
+			
+			modifier = {
+				conscription = 0.02
+			}
+			
+		}
+		
+		qp_propaganda_idea = {
+
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+		qp_stab_sit_idea = {
+
+			removal_cost = -1
+			
+			picture = placeholder
+			
+			modifier = {
+				fascism_drift = -0.03
+				communism_drift = -0.03
+			}
+		}
+		qp_neutral_policy_idea = {
+
+			removal_cost = -1
+			
+			picture = placeholder
+			
+			modifier = {
+				neutrality_drift = 0.05
+				political_power_factor = 0.2
+				join_faction_tension = 0.25
+				lend_lease_tension = 0.3
+				request_lease_tension = 0.3
+				send_volunteers_tension = 0.2
+			}
+		}
+		qp_armed_neutrality_idea = {
+
+			removal_cost = -1
+			
+			picture = placeholder
+			
+			modifier = {
+				base_fuel_gain_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
+				defence = 0.05
+				industrial_capacity_factory = 0.1
+			}
+		}
+	}
+}

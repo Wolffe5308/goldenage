@@ -1,0 +1,104 @@
+MON_mongolian_empire_plan = {
+	name = "MON mongolian empire plan"
+	desc = ""
+
+	allowed = {
+		original_tag = MON
+	}
+	enable = {
+		OR = {
+			has_country_flag = MON_AI_RANDOM_NEUTRALITY_MONGOLIAN_EMPIRE
+			has_game_rule = {
+				rule = MON_ai_behavior
+				option = MON_MONGOLIAN_EMPIRE
+			}
+		}
+	}
+	abort = {
+		is_subject = no
+	}
+
+	ai_national_focuses = {
+		# 1936  
+		MON_resurgence_of_the_monarchy
+		MON_revive_the_aristocracy
+		MON_revival_of_religion
+		MON_revive_estates
+		MON_propaganda_against_the_communists
+		MON_invite_the_monarch
+		MON_seizure_of_power
+		MON_remember_past_greatness
+
+		#1937
+		MON_conquer_china
+		MON_bring_back_the_old_ways
+		MON_imperial_army
+		MON_great_generals
+		MON_power_of_the_emperor
+		MON_imperial_retinue
+		MON_monopoly
+		MON_encourage_the_actions_of_the_oligarchy
+
+		# 1938 
+		MON_the_greatness_of_the_empire
+		MON_econ_focus_1
+		MON_econ_focus_3
+		MON_econ_focus_4
+		MON_econ_focus_13
+		MON_econ_focus_2
+		MON_econ_focus_14
+
+		# 1939
+		MON_econ_focus_15
+		MON_econ_focus_5
+		MON_econ_focus_16
+		MON_econ_focus_8
+		MON_econ_focus_7
+		MON_econ_focus_6
+		MON_econ_focus_9
+
+		# 1940 
+		MON_econ_focus_11
+		MON_econ_focus_10
+		MON_econ_focus_12
+		MON_conquer_asia
+
+		# 1941
+		MON_air_focus_6
+		MON_air_focus_7
+	
+		# 1942
+		MON_conquer_europe
+
+		# 1943
+		
+
+		#1944
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	focus_factors = {
+		MON_resurgence_of_the_monarchy = 300
+		MON_1 = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

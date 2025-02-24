@@ -1,0 +1,170 @@
+add_namespace = BLR_com
+add_namespace = BLR_generic
+add_namespace = BLR_bop
+
+country_event = { ##### Новая партия
+	id = BLR_com.1
+	title = BLR_com.1.t
+	desc = BLR_com.1.d
+	picture = GFX_report_event_generic_communist_congress
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event BLR_com.1"}
+	is_triggered_only = yes
+
+	option = {
+		name = BLR_com.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ##### Восстановление порядка
+	id = BLR_com.2
+	title = BLR_com.2.t
+	desc = BLR_com.2.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event BLR_com.2"}
+	is_triggered_only = yes
+
+	option = {
+		name = BLR_com.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ##### Внутренняя политика Беларуси
+	id = BLR_com.3
+	title = BLR_com.3.t
+	desc = BLR_com.3.d
+	picture = GFX_report_event_poland_rejects
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event BLR_com.3"}
+	is_triggered_only = yes
+
+	option = {
+		name = BLR_com.3.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ##### Внешняя политика Беларуси
+	id = BLR_com.4
+	title = BLR_com.4.t
+	desc = BLR_com.4.d
+	picture = GFX_report_event_gre_allied_diplomacy
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event BLR_com.4"}
+	is_triggered_only = yes
+
+	option = {
+		name = BLR_com.4.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ##### Наше место в СССР
+	id = BLR_com.5
+	title = BLR_com.5.t
+	desc = BLR_com.5.d
+	picture = GFX_report_event_stalin_01
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event BLR_com.5"}
+	is_triggered_only = yes
+
+	option = {
+		name = BLR_com.5.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ##### Подготовка офицеров
+	id = BLR_generic.1
+	title = BLR_generic.1.t
+	desc = BLR_generic.1.d
+	picture = GFX_report_event_soldiers_marching
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event BLR_generic.1"}
+	is_triggered_only = yes
+
+	option = {
+		name = BLR_generic.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ##### Баланс сил
+	id = BLR_bop.1
+	title = BLR_bop.1.t
+	desc = BLR_bop.1.d
+	picture = GFX_report_event_generic_parliament
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event BLR_bop.1"}
+	is_triggered_only = yes
+
+	option = { #Федерализация
+	    name = BLR_bop.1.a
+	    ai_chance = {
+			factor = 0
+	    }
+	    trigger = {
+	    }
+		add_power_balance_modifier = {
+			id = BLR_communist_balance
+			modifier = BLR_communist_balance_supreme_soviet
+		}
+    }
+    option = { #Централизация
+	    name = BLR_bop.1.b
+	    ai_chance = {
+			factor = 0
+	    }
+	    trigger = {
+	    }
+	    add_power_balance_modifier = {
+			id = BLR_communist_balance
+			modifier = BLR_communist_balance_ponamarenko
+	    }
+    }
+	option = { #Оставить все как есть
+	    name = BLR_bop.1.c 
+		ai_chance = {
+			factor = 50
+	    }
+	}
+}
+
+country_event = { ##### Баланс сил
+	id = BLR_bop.2
+	title = BLR_bop.2.t
+	desc = BLR_bop.2.d
+	picture = GFX_report_event_generic_read_write
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event BLR_bop.2"}
+	is_triggered_only = yes
+
+	option = {
+	    name = BLR_bop.2.a
+	    ai_chance = {
+			factor = 100
+	    }
+	    trigger = {
+	    }
+		add_power_balance_value = {
+			id = BLR_communist_balance
+			value = 0.1
+		}
+    }
+}
+
+country_event = { ##### Баланс сил
+	id = BLR_bop.3
+	title = BLR_bop.3.t
+	desc = BLR_bop.3.d
+	picture = GFX_report_event_generic_parliament
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event BLR_bop.3"}
+	is_triggered_only = yes
+
+	option = {
+	    name = BLR_bop.3.a
+	    ai_chance = {
+			factor = 100
+	    }
+	    trigger = {
+	    }
+		add_power_balance_value = {
+			id = BLR_communist_balance
+			value = -0.1
+		}
+    }
+}

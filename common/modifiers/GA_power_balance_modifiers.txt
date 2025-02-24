@@ -1,0 +1,27 @@
+#########################################
+###### BALANCE OF POWER ######
+#########################################
+
+UKR_communist_balance_supreme_soviet = {
+	power_balance_daily = -0.001
+}
+
+UKR_communist_balance_khrushchev = {
+	power_balance_daily = 0.001
+}
+
+BLR_communist_balance_supreme_soviet = {
+	power_balance_daily = -0.001
+}
+
+BLR_communist_balance_ponamarenko = {
+	power_balance_daily = 0.001
+}
+
+ZSR_communist_balance_supreme_soviet = {
+	power_balance_daily = -0.001
+}
+
+ZSR_communist_balance_beria = {
+	power_balance_daily = 0.001
+}

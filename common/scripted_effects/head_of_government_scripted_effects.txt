@@ -1,0 +1,6 @@
+remove_head_of_government_role = {
+	if = {
+		limit = { has_advisor_role = head_of_government }
+		remove_advisor_role = { slot = head_of_government }
+	}
+}

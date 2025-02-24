@@ -1,0 +1,37 @@
+UKR_ukrainian_army_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_UKR_ukraine_army
+
+	#INITIAL
+	army_infantry_attack_factor	= UKR_ukrainian_army_army_infantry_attack_factor #
+	army_infantry_defence_factor = UKR_ukrainian_army_army_infantry_defence_factor #
+	
+	#FUTURE
+	army_org_factor = UKR_ukrainian_army_army_org_factor #
+	conscription_factor = UKR_ukrainian_army_conscription_factor #
+	army_morale_factor = UKR_ukrainian_army_army_morale_factor #
+	max_planning_factor = UKR_ukrainian_army_max_planning_factor #
+	motorized_attack_factor = UKR_ukrainian_army_motorized_attack_factor #
+	motorized_defence_factor = UKR_ukrainian_army_motorized_defence_factor #
+}
+
+UKR_armored_forces_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_UKR_armored_forces
+
+	#INITIAL
+	training_time_factor = UKR_armored_forces_training_time_factor #
+	
+	#FUTURE
+	unit_light_armor_design_cost_factor = UKR_armored_forces_unit_light_armor_design_cost_factor #
+	unit_medium_armor_design_cost_factor = UKR_armored_forces_unit_medium_armor_design_cost_factor #
+	planning_speed = UKR_armored_forces_planning_speed #
+	army_org_factor = UKR_armored_forces_army_org_factor #
+	army_armor_attack_factor = UKR_armored_forces_army_armor_attack_factor #
+	army_armor_defence_factor = UKR_armored_forces_army_armor_defence_factor #
+	army_armor_speed_factor = UKR_armored_forces_army_armor_speed_factor #
+	supply_node_range = UKR_armored_forces_supply_node_range #
+	coordination_bonus = UKR_armored_forces_coordination_bonus #
+}

@@ -1,0 +1,36 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_fascism_small"
+		texturefile = "gfx/interface/ideologies/fascism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_neutrality_small"
+		texturefile = "gfx/interface/ideologies/neutrality_small.dds"
+	}
+	spriteType = {
+		name = "GFX_democratic_small"
+		texturefile = "gfx/interface/ideologies/democratic_small.dds"
+	}
+	spriteType = {
+		name = "GFX_liberal_small"
+		texturefile = "gfx/interface/ideologies/liberal_small.dds"
+	}
+	spriteType = {
+		name = "GFX_social_democrat_small"
+		texturefile = "gfx/interface/ideologies/social_democrat_small.dds"
+	}
+	spriteType = {
+		name = "GFX_liberal_small"
+		texturefile = "gfx/interface/ideologies/liberal_small.dds"
+	}
+	spriteType = {
+		name = "GFX_communism_small"
+		texturefile = "gfx/interface/ideologies/communism_small.dds"
+	}
+	spriteType = {
+		name = "GFX_anarchism_small"
+		texturefile = "gfx/interface/ideologies/anarchism_small.dds"
+	}
+}
+

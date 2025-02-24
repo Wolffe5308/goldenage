@@ -1,0 +1,41 @@
+ZSR_caucasian_army_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ZSR_caucasian_army
+
+	#INITIAL
+	army_org_factor = ZSR_caucasian_army_army_org_factor #0.05
+	command_power_gain = ZSR_caucasian_army_command_power_gain #0.05
+
+	#FUTURE
+	special_forces_cap = ZSR_caucasian_army_special_forces_cap #
+	modifier_army_sub_unit_mountaineers_defence_factor = ZSR_caucasian_army_modifier_army_sub_unit_mountaineers_defence_factor #
+    modifier_army_sub_unit_mountaineers_attack_factor = ZSR_caucasian_army_modifier_army_sub_unit_mountaineers_attack_factor #
+	land_reinforce_rate = ZSR_caucasian_army_land_reinforce_rate #
+	heat_attrition_factor = ZSR_caucasian_army_heat_attrition_factor #
+	acclimatization_hot_climate_gain_factor = ZSR_caucasian_army_acclimatization_hot_climate_gain_factor #
+	special_forces_out_of_supply_factor = ZSR_caucasian_army_special_forces_out_of_supply_factor #
+	max_planning_factor = ZSR_caucasian_army_max_planning_factor #
+	supply_node_range = ZSR_caucasian_army_supply_node_range #
+}
+
+ZSR_artillery_corps_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ZSR_artillery_corps
+
+	#INITIAL
+	max_command_power = ZSR_artillery_corps_max_command_power #50
+	army_morale_factor = ZSR_artillery_corps_army_morale_factor #0.05
+
+	#FUTURE
+	army_attack_factor = ZSR_artillery_corps_army_attack_factor #
+	army_defence_factor = ZSR_artillery_corps_army_defence_factor #
+	planning_speed = ZSR_artillery_corps_planning_speed #
+	terrain_penalty_reduction = ZSR_artillery_corps_terrain_penalty_reduction #
+	supply_consumption_factor = ZSR_artillery_corps_supply_consumption_factor #
+	breakthrough_factor = ZSR_artillery_corps_breakthrough_factor #
+	command_abilities_cost_factor = ZSR_artillery_corps_command_abilities_cost_factor #
+	land_reinforce_rate = ZSR_artillery_corps_land_reinforce_rate #
+	training_time_factor = ZSR_artillery_corps_training_time_factor #
+}

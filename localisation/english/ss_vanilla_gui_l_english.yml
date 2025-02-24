@@ -1,0 +1,8 @@
+﻿l_english:
+ SS_recruitment_desc:0 ""
+ nazi_recruitment_desc:1 "The SS under Himmler believes that they should be in charge of recruiting foreign volunteers for the fight against global bolshevism. The Wehrmacht strongly disagrees and will not tolerate a parrallel command structure. Pushing either of them too far may have grave consequences..."
+ ss_loyalty_output_text:0 "[?GER.SS_anger|-0]"
+ ss_loyalty_tooltip:0 "Current §YMood§! in the SS Leadership: [Root.GetSSAngerLevel]"
+ heer_loyalty_tooltip:0 "Current §YMood§! in the OKW: [Root.GetWehrmachtAngerLevel]"
+ heer_loyalty_output_text:0 "[?GER.wehrmacht_anger|-0]"
+ 

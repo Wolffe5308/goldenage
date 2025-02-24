@@ -1,0 +1,95 @@
+scripted_gui = {
+    party_popularity_number = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "party_popularity_number_container"
+
+		ai_enabled = {
+			always = no
+		}
+
+		properties = {
+			popularity_ideology_icon = {
+				image = "[GetPopIcon]"
+			}
+		}
+	}
+
+	coalition_fascism_icon = {
+		window_name = "fascCoal"
+		context_type = player_context
+		parent_window_token = politics_tab
+		visible = {
+			OR = {
+			is_in_array = { ROOT.coalition_partners = token:fascism }
+			has_government = fascism
+			}
+		}
+	}
+	coalition_neutrality_icon = {
+		window_name = "neutralCoal"
+		context_type = player_context
+		parent_window_token = politics_tab
+		visible = {
+			OR = {
+			is_in_array = { ROOT.coalition_partners = token:neutrality }
+			has_government = neutrality
+			}
+		}
+	}
+	coalition_democratic_icon = {
+		window_name = "demCoal"
+		context_type = player_context
+		parent_window_token = politics_tab
+		visible = {
+			OR = {
+			is_in_array = { ROOT.coalition_partners = token:democratic }
+			has_government = democratic
+		    }
+		}
+	}
+	coalition_liberal_icon = {
+		window_name = "libCoal"
+		context_type = player_context
+		parent_window_token = politics_tab
+		visible = {
+			OR = {
+			is_in_array = { ROOT.coalition_partners = token:liberal }
+			has_government = liberal
+		    }
+		}
+	}
+	coalition_social_democrat_icon = {
+		window_name = "socdemCoal"
+		context_type = player_context
+		parent_window_token = politics_tab
+		visible = {
+			OR = {
+			is_in_array = { ROOT.coalition_partners = token:social_democrat }
+			has_government = social_democrat
+		    }
+		}
+	}
+	coalition_communism_icon = {
+		window_name = "comCoal"
+		context_type = player_context
+		parent_window_token = politics_tab
+		visible = {
+			OR = {
+			is_in_array = { ROOT.coalition_partners = token:communism }
+			has_government = communism
+		    } 
+		}
+	}
+	coalition_anarchism_icon = {
+		window_name = "anarchCoal"
+		context_type = player_context
+		parent_window_token = politics_tab
+		visible = {
+			OR = {
+			is_in_array = { ROOT.coalition_partners = token:anarchism }
+			has_government = anarchism
+		    }
+		}
+	}
+}

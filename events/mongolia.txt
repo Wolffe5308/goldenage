@@ -1,0 +1,495 @@
+add_namespace = MON_Ev
+add_namespace = MON_bn_com
+add_namespace = MON_bn
+add_namespace = MON_Br
+
+country_event = {
+	id = MON_Ev.1
+	title = MON_Ev.1.t
+	desc = MON_Ev.1.desc
+	picture = GFX_report_event_generic_rally
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_Ev.1"}
+	is_triggered_only = yes
+
+	option = {
+	    name = MON_Ev.1.a
+		ai_chance = {
+			factor = 80
+		}
+		ENG = {
+		country_event = { id = MON_Ev.4 days = 1 }
+		}
+		MON = {
+			country_event = { id = MON_Ev.2 days = 1 }
+			        if = {
+						limit = { RAJ = { owns_state = 441 controls_state = 441 } }
+						transfer_state = 441
+					}
+					if = {
+						limit = { RAJ = { owns_state = 787 controls_state = 787 } }
+						transfer_state = 787
+					}
+					if = {
+						limit = { RAJ = { owns_state = 442 controls_state = 442 } }
+						transfer_state = 442
+					}
+					if = {
+						limit = { RAJ = { owns_state = 440 controls_state = 440 } }
+						transfer_state = 440
+					}
+					if = {
+						limit = { RAJ = { owns_state = 445 controls_state = 445 } }
+						transfer_state = 445
+					}
+					if = {
+						limit = { RAJ = { owns_state = 444 controls_state = 444 } }
+						transfer_state = 444
+					}
+					if = {
+						limit = { RAJ = { owns_state = 443 controls_state = 443 } }
+						transfer_state = 443
+					}
+					if = {
+						limit = { RAJ = { owns_state = 433 controls_state = 433 } }
+						transfer_state = 433
+					}
+					if = {
+						limit = { RAJ = { owns_state = 439 controls_state = 439 } }
+						transfer_state = 439
+					}
+					if = {
+						limit = { RAJ = { owns_state = 434 controls_state = 434 } }
+						transfer_state = 434
+					}
+					if = {
+						limit = { RAJ = { owns_state = 640 controls_state = 640 } }
+						transfer_state = 640
+					}
+		}
+	}
+	option = {
+	    name = MON_Ev.1.b
+		ai_chance = {
+			factor = 20
+		}
+		MON = {
+		country_event = { id = MON_Ev.3 days = 1 }
+		create_wargoal = {
+				type = annex_everything
+				target = RAJ
+				expire = 0
+			}
+		}
+    }
+}
+
+country_event = {
+	id = MON_Ev.2
+	title = MON_Ev.2.t
+	desc = MON_Ev.2.d
+	picture = GFX_report_event_generic_read_write
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_Ev.2"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_Ev.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = MON_Ev.3
+	title = MON_Ev.3.t
+	desc = MON_Ev.3.d
+	picture = GFX_report_event_generic_strike
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_Ev.3"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_Ev.3.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = MON_Ev.4
+	title = MON_Ev.4.t
+	desc = MON_Ev.4.d
+	picture = GFX_report_event_generic_soldiers_surrendering
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_Ev.4"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_Ev.4.a
+		ai_chance = {
+			factor = 20
+		}
+		ENG = {
+		create_wargoal = {
+				type = annex_everything
+				target = MON
+				expire = 0
+			}
+	}
+	MON = {
+	country_event = { id = MON_Ev.5 days = 1 }
+	}
+ }
+        option = {
+		name = MON_Ev.4.b
+		ai_chance = {
+			factor = 80
+		}
+		MON = {
+		country_event = { id = MON_Ev.6 days = 1 }
+        }
+    }
+}
+
+country_event = {
+	id = MON_Ev.5
+	title = MON_Ev.5.t
+	desc = MON_Ev.5.d
+	picture = GFX_report_event_german_advisors_remain
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_Ev.5"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_Ev.5.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = MON_Ev.6
+	title = MON_Ev.6.t
+	desc = MON_Ev.6.d
+	picture = GFX_report_event_german_politician_speech
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_Ev.6"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_Ev.6.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ############ Следовать за Москвой
+	id = MON_bn_com.1
+	title = MON_bn_com.1.t
+	desc = MON_bn_com.1.d
+	picture = GFX_report_event_generic_communist_congress
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_bn_com.1"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_bn_com.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ############ Устранить Амара
+	id = MON_bn_com.2
+	title = MON_bn_com.2.t
+	desc = MON_bn_com.2.d
+	picture = GFX_report_event_gathering_protest
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_bn_com.2"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_bn_com.2.a
+		ai_chance = { factor = 100 }
+		retire_character = MON_anandyn_amar
+	}
+}
+
+country_event = { ############ Власть Чойболсана
+	id = MON_bn_com.3
+	title = MON_bn_com.3.t
+	desc = MON_bn_com.3.d
+	picture = GFX_report_event_MON_choibalsan_troops
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_bn_com.3"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_bn_com.3.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ############ Улучшить связи с Коминтерном
+	id = MON_bn_com.4
+	title = MON_bn_com.4.t
+	desc = MON_bn_com.4.d
+	picture = GFX_report_event_MON_soviet_ties
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_bn_com.4"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_bn_com.4.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ############ Укрепить правительство
+	id = MON_bn_com.5
+	title = MON_bn_com.5.t
+	desc = MON_bn_com.5.d
+	picture = GFX_report_event_MON_diplomats_table_discussion
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_bn_com.5"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_bn_com.5.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ############ Офицеры из СССР
+	id = MON_bn_com.6
+	title = MON_bn_com.6.t
+	desc = MON_bn_com.6.d
+	picture = GFX_report_event_MON_welcoming_parade
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_bn_com.6"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_bn_com.6.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ############ Договор с Ком. Китаем
+	id = MON_bn_com.7
+	title = MON_bn_com.7.t
+	desc = MON_bn_com.7.d
+	picture = GFX_report_event_generic_sign_treaty1
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_bn_com.7"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_bn_com.7.a
+		ai_chance = { factor = 100 }
+		transfer_state = 621
+		transfer_state = 746
+		transfer_state = 756
+		PRC = {
+					if = {
+						limit = {
+							NOT = {
+								has_non_aggression_pact_with = MON
+							}
+						}
+						diplomatic_relation = {
+							country = MON
+							relation = non_aggression_pact
+							active = yes
+				    }
+				}
+			}
+		}
+	}
+
+country_event = { ############ Договор с Синьцзянем - Политика
+	id = MON_bn_com.8
+	title = MON_bn_com.8.t
+	desc = MON_bn_com.8.d
+	picture = GFX_report_event_generic_sign_treaty1
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_bn_com.8"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_bn_com.8.a
+		ai_chance = { factor = 100 }
+		SIK = { add_ideas = mongolian_xinjiang_cooperation }
+		MON = { add_ideas = mongolian_xinjiang_cooperation }
+		country_event = { id = MON_bn_com.9 days = 1 }
+	}
+}
+
+country_event = { ############ Договор с Синьцзянем - Армия
+	id = MON_bn_com.9
+	title = MON_bn_com.9.t
+	desc = MON_bn_com.9.d
+	picture = GFX_report_event_generic_sign_treaty1
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_bn_com.9"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_bn_com.9.a
+		ai_chance = { factor = 100 }
+		country_event = { id = MON_bn_com.10 days = 1 }
+		SIK = {
+			swap_ideas = {
+				remove_idea = mongolian_xinjiang_cooperation
+				add_idea = mongolian_xinjiang_cooperation_2
+			}
+		}
+		MON = {
+			swap_ideas = {
+				remove_idea = mongolian_xinjiang_cooperation
+				add_idea = mongolian_xinjiang_cooperation_2
+			}
+		}
+	}
+}
+
+country_event = { ############ Договор с Синьцзянем - Экономика
+	id = MON_bn_com.10
+	title = MON_bn_com.10.t
+	desc = MON_bn_com.10.d
+	picture = GFX_report_event_generic_sign_treaty1
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_bn_com.10"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_bn_com.10.a
+		ai_chance = { factor = 100 }
+		SIK = {
+		swap_ideas = {
+		remove_idea = mongolian_xinjiang_cooperation_2
+		add_idea = mongolian_xinjiang_cooperation_3
+		}
+	}
+		MON = {
+		swap_ideas = {
+		remove_idea = mongolian_xinjiang_cooperation_2
+		add_idea = mongolian_xinjiang_cooperation_3
+		}
+		}
+	}
+}
+
+country_event = { ############ Пригласить монарха
+	id = MON_bn.7
+	title = MON_bn.7.t
+	desc = MON_bn.7.d
+	picture = GFX_news_event_MON_bogd_khanate_restored
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_bn.7"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_bn.7.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = MON_Ev.7
+	title = MON_Ev.7.t
+	desc = MON_Ev.7.desc
+	picture = GFX_report_event_german_mission_tibet
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_Ev.7"}
+	is_triggered_only = yes
+
+	option = {
+	    name = MON_Ev.7.a
+		ai_chance = {
+			factor = 80
+		}
+		MON = {
+			country_event = { id = MON_Ev.8 days = 1 }
+			annex_country = { target = TIB transfer_troops = yes }
+		}
+	}
+	option = {
+	    name = MON_Ev.7.b
+		ai_chance = {
+			factor = 20
+		}
+		MON = {
+		country_event = { id = MON_Ev.9 days = 1 }
+		create_wargoal = {
+				type = annex_everything
+				target = TIB
+				expire = 0
+			}
+		}
+    }
+}
+
+country_event = {
+	id = MON_Ev.8
+	title = MON_Ev.8.t
+	desc = MON_Ev.8.d
+	picture = GFX_report_event_generic_read_write
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_Ev.8"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_Ev.8.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = MON_Ev.9
+	title = MON_Ev.9.t
+	desc = MON_Ev.9.d
+	picture = GFX_report_event_MON_demonstration_people
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_Ev.9"}
+	is_triggered_only = yes
+
+	option = {
+		name = MON_Ev.9.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+###################Цепочка ивентов о взаимодействии Монголии и Бурятии############################
+country_event = {
+    id = MON_Br.1
+    title = MON_Br.1.t
+    desc = MON_Br.1.d
+    picture = GFX_report_event_MON_demonstration_people
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_Br.1"}
+    is_triggered_only = yes
+
+    option = {
+        name = MON_Br.1.a
+		ai_chance = { factor = 100 }
+        add_ideas = BR_comrades
+        country_event = { id = MON_Br.2 days = 7 }
+    }
+}
+
+country_event = {
+    id = MON_Br.2
+    title = MON_Br.2.t
+    desc = MON_Br.2.d
+    picture = GFX_report_event_MON_demonstration_people
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_Br.2"}
+    is_triggered_only = yes
+
+    option = {
+        name = MON_Br.2.a
+		ai_chance = { factor = 100 }
+        load_oob = "MON_br_coop"
+        country_event = { id = MON_Br.3 days = 7 }
+    }
+}
+
+country_event = {
+    id = MON_Br.3
+    title = MON_Br.3.t
+    desc = MON_Br.3.d
+    picture = GFX_report_event_MON_demonstration_people
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event MON_Br.3"}
+    is_triggered_only = yes
+
+    option = {
+        name = MON_Br.3.a
+		ai_chance = { factor = 100 }
+        MON_ilya_baldinov = {
+            add_corps_commander_role = {
+                    traits = { cavalry_officer }
+                    skill = 3
+                    attack_skill = 2
+                    defense_skill = 3
+                    planning_skill = 3
+                    logistics_skill = 2
+                }
+            }
+    }
+}
+######################################################################

@@ -1,0 +1,79 @@
+guiTypes = {
+    containerWindowType = {
+		name = "fascCoal"
+		position = { x = 361 y = 248 }
+		iconType ={
+			name = "coalition_pol_party_bg"
+			spriteType = "GFX_coalition_pol_party_bg"
+			position = { x= -3 y = 0 }
+			Orientation = "UPPER_LEFT"
+            alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "neutralCoal"
+		position = { x = 361 y = 263 }
+		iconType ={
+			name = "coalition_pol_party_bg"
+			spriteType = "GFX_coalition_pol_party_bg"
+			position = { x= -3 y = 0 }
+			Orientation = "UPPER_LEFT"
+            alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "demCoal"
+		position = { x = 361 y = 216 }
+		iconType ={
+			name = "coalition_pol_party_bg"
+			spriteType = "GFX_coalition_pol_party_bg"
+			position = { x= -3 y = 0 }
+			Orientation = "UPPER_LEFT"
+            alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "libCoal"
+		position = { x = 361 y = 280 }
+		iconType ={
+			name = "coalition_pol_party_bg"
+			spriteType = "GFX_coalition_pol_party_bg"
+			position = { x= -3 y = 0 }
+			Orientation = "UPPER_LEFT"
+            alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "socdemCoal"
+		position = {  x = 361 y = 295 }
+		iconType ={
+			name = "coalition_pol_party_bg"
+			spriteType = "GFX_coalition_pol_party_bg"
+			position = { x= -3 y = 0 }
+			Orientation = "UPPER_LEFT"
+            alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "comCoal"
+		position = { x = 361 y = 232 }
+		iconType ={
+			name = "coalition_pol_party_bg"
+			spriteType = "GFX_coalition_pol_party_bg"
+			position = { x= -3 y = 0 }
+			Orientation = "UPPER_LEFT"
+            alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "anarchCoal"
+		position = { x = 361 y = 311 }
+		iconType ={
+			name = "coalition_pol_party_bg"
+			spriteType = "GFX_coalition_pol_party_bg"
+			position = { x= -3 y = 0 }
+			Orientation = "UPPER_LEFT"
+            alwaystransparent = yes
+		}
+	}
+}

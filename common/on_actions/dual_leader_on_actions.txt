@@ -1,0 +1,84 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			SOV = {
+				add_ideas = SOV_D_Mikhail_Kalinin
+			}
+			UKR = {
+				add_ideas = UKR_D_Grigory_Petrovsky
+			}
+			ZSR = {
+				add_ideas = ZSR_D_Sultan_Mufidzade
+			}
+			BLR = {
+				add_ideas = BLR_D_Alexander_Chervyakov
+			}
+			ITA = {
+				add_ideas = ITA_D_Vittorio_Emanuele
+			}
+			SWE = {
+				add_ideas = SWE_D_Gustaf_V
+			}
+			NOR = {
+				add_ideas = NOR_D_Haakon_VII
+			}
+			DEN = {
+				add_ideas = DEN_D_Christian_X
+			}
+			POL = {
+				add_ideas = POL_D_Felician_Skladkovsky
+			}
+			LIT = {
+				add_ideas = LIT_D_Juozas_Tubelis
+			}
+			CZE = {
+				add_ideas = CZE_D_Milan_Hodza
+			}
+			HUN = {
+				add_ideas = HUN_D_Gyula_Gombos
+			}
+			YUG = {
+				add_ideas = YUG_D_Milan_Stojadinovic
+			}
+			BUL = {
+				add_ideas = BUL_D_Georgi_Kyoseivanov
+			}
+			GRE = {
+				add_ideas = GRE_D_George_II
+			}
+			GER = {
+				add_ideas = GER_D_Rudolf_Hess
+			}
+			AUS = {
+				add_ideas = AUS_D_Wilhelm_Miklas
+			}
+			HOL = {
+				add_ideas = HOL_D_Wilhelmina
+			}
+			BEL = {
+				add_ideas = BEL_D_Leopold_III
+			}
+			FRA = {
+				add_ideas = FRA_D_Albert_Francois
+			}
+			POR = {
+				add_ideas = POR_D_Antonio_Carmona
+			}
+			SWI = {
+				add_ideas = SWI_D_Albert_Meyer
+			}
+			CAN = {
+				add_ideas = CAN_D_John_Buchan
+			}
+			USA = {
+				add_ideas = USA_D_John_Garner
+			}
+			AST = {
+				add_ideas = AST_D_Alexander_Hore_Ruthven
+			}
+			NZL = {
+				add_ideas = NZL_D_George_Monckton_Arundell
+			}
+		}
+	}
+}

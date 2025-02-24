@@ -1,0 +1,18 @@
+
+spriteTypes = {	
+    				
+	spriteType = {
+		name = "GFX_bop_RPB_leader_side"
+		texturefile = "gfx/interface/bop/bop_RPB_leader_side.dds"
+	}
+		
+	spriteType = {
+		name = "GFX_bop_RPB_leader_improved_side"
+		texturefile = "gfx/interface/bop/bop_RPB_leader_improved_side.dds"
+	}
+		
+	spriteType = {
+		name = "GFX_bop_RPB_supreme_soviet_side"
+		texturefile = "gfx/interface/bop/bop_RPB_supreme_soviet_side.dds"
+	}
+}

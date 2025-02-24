@@ -1,0 +1,10 @@
+﻿l_english:
+### HEAD OF GOVERNMENT ###
+ head_of_government_slot: "Head of government"
+ head_of_government: "Head of government"
+ 
+ is_head_of_government: "Is the head of government."
+ is_head_of_government_NOT: "Is not the head of government"
+
+ laws: "Laws"
+ government: "Government"

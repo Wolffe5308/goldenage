@@ -1,0 +1,268 @@
+scripted_gui = {
+		open_lore_window = {
+			context_type = player_context
+			parent_window_token = politics_tab
+			window_name = "open_lore_window"
+			visible = {
+				is_ai = no			
+			}			
+			effects = {
+				open_lore_window_button_click = {
+					if = {
+						limit = {
+							check_variable = { show_lore = 1 }
+						}
+						set_variable = { show_lore = 0 }
+						set_variable = { show_history_of_the_revolution = 0 }
+						set_variable = { show_history_of_the_revolution_in_ukraine = 0 }
+						set_variable = { show_history_of_the_revolution_in_belarus = 0 }
+						set_variable = { show_history_of_the_revolution_in_kavkaz = 0 }
+						set_variable = { show_the_situation_at_the_time_of_1936_ukrainian_ssr = 0 }
+						set_variable = { show_the_situation_at_the_time_of_1936_belarusian_ssr = 0 }
+						set_variable = { show_the_situation_at_the_time_of_1936_transcaucasian_sfsr = 0 }
+						set_variable = { show_remains_of_resistance_to_the_bolsheviks_abroad = 0 }
+					}
+					else = {
+						set_variable = { show_lore = 1 }
+					}
+				}
+				open_lore_window_button_right_click = {
+					every_country = {
+						limit = {
+							OR = {
+								AND = {
+									is_puppet = no
+									is_in_faction = yes
+								}
+								AND = {
+									is_puppet = no
+									num_of_factories > 4
+								}
+								AND = {
+									is_puppet = yes 
+									num_of_factories > 9
+								}
+							}	
+							exists = yes	
+							has_government = democratic 
+							democratic > 0.49
+						}
+					}
+					every_country = {
+						limit = {
+							OR = {
+								AND = {
+									is_puppet = no
+									is_in_faction = yes
+								}
+								AND = {
+									is_puppet = no
+									num_of_factories > 4
+								}
+								AND = {
+									is_puppet = yes 
+									num_of_factories > 9
+								}
+							}
+							exists = yes
+							has_government = fascism
+							fascism > 0.49
+						}
+					}				
+					every_country = {
+						limit = {
+							OR = {
+								AND = {
+									is_puppet = no
+									is_in_faction = yes
+								}
+								AND = {
+									is_puppet = no
+									num_of_factories > 4
+								}
+								AND = {
+									is_puppet = yes 
+									num_of_factories > 9
+								}
+							}	
+							exists = yes	
+							has_government = communism 
+							communism > 0.49
+						}
+					}				
+					every_country = {
+						limit = {
+							OR = {
+								AND = {
+									is_puppet = no
+									is_in_faction = yes
+								}
+								AND = {
+									is_puppet = no
+									num_of_factories > 4
+								}
+								AND = {
+									is_puppet = yes 
+									num_of_factories > 9
+								}
+							}	
+							exists = yes	
+							has_government = neutrality 
+							neutrality > 0.49
+						}
+					}
+				}
+			}
+			triggers = {			
+			}		
+		}
+		lore_window = {
+			context_type = player_context		
+			window_name = "lore_window"		
+			visible = {					
+				check_variable = { show_lore > 0 }				
+			}
+			effects = {
+				lore_close_button_click = {
+					set_variable = { show_lore = 0 }
+				}
+				history_of_the_revolution_lore_button_click = {
+					set_temp_variable = { show = 1 }
+					subtract_from_temp_variable = { show = show_history_of_the_revolution }
+					set_variable = { show_history_of_the_revolution = show }
+				}
+				history_of_the_revolution_in_ukraine_lore_button_click = {
+					set_temp_variable = { show = 1 }
+					subtract_from_temp_variable = { show = show_history_of_the_revolution_in_ukraine }
+					set_variable = { show_history_of_the_revolution_in_ukraine = show }
+				}
+				history_of_the_revolution_in_belarus_lore_button_click = {
+					set_temp_variable = { show = 1 }
+					subtract_from_temp_variable = { show = show_history_of_the_revolution_in_belarus }
+					set_variable = { show_history_of_the_revolution_in_belarus = show }
+				}
+				history_of_the_revolution_in_kavkaz_lore_button_click = {
+					set_temp_variable = { show = 1 }
+					subtract_from_temp_variable = { show = show_history_of_the_revolution_in_kavkaz }
+					set_variable = { show_history_of_the_revolution_in_kavkaz = show }
+				}
+				the_situation_at_the_time_of_1936_ukrainian_ssr_lore_button_click = {
+					set_temp_variable = { show = 1 }
+					subtract_from_temp_variable = { show = show_the_situation_at_the_time_of_1936_ukrainian_ssr }
+					set_variable = { show_the_situation_at_the_time_of_1936_ukrainian_ssr = show }
+				}
+				the_situation_at_the_time_of_1936_belarusian_ssr_lore_button_click = {
+					set_temp_variable = { show = 1 }
+					subtract_from_temp_variable = { show = show_the_situation_at_the_time_of_1936_belarusian_ssr }
+					set_variable = { show_the_situation_at_the_time_of_1936_belarusian_ssr = show }
+				}
+				the_situation_at_the_time_of_1936_transcaucasian_sfsr_lore_button_click = {
+					set_temp_variable = { show = 1 }
+					subtract_from_temp_variable = { show = show_the_situation_at_the_time_of_1936_transcaucasian_sfsr }
+					set_variable = { show_the_situation_at_the_time_of_1936_transcaucasian_sfsr = show }
+				}
+				remains_of_resistance_to_the_bolsheviks_abroad_lore_button_click = {
+					set_temp_variable = { show = 1 }
+					subtract_from_temp_variable = { show = show_remains_of_resistance_to_the_bolsheviks_abroad }
+					set_variable = { show_remains_of_resistance_to_the_bolsheviks_abroad = show }
+				}
+			}
+		}		
+###################### Лор республик	
+history_of_the_revolution_lore_window = {
+			context_type = player_context		
+			window_name = "history_of_the_revolution_lore_window"		
+			visible = {					
+				check_variable = { show_history_of_the_revolution > 0 }				
+			}
+			effects = {
+				history_of_the_revolution_lore_close_button_click = {
+					set_variable = { show_history_of_the_revolution = 0 }
+				}				
+			}
+		}
+		history_of_the_revolution_in_ukraine_lore_window = {
+			context_type = player_context		
+			window_name = "history_of_the_revolution_in_ukraine_lore_window"		
+			visible = {					
+				check_variable = { show_history_of_the_revolution_in_ukraine > 0 }				
+			}
+			effects = {
+				history_of_the_revolution_in_ukraine_lore_close_button_click = {
+					set_variable = { show_history_of_the_revolution_in_ukraine = 0 }
+				}				
+			}
+		}
+		history_of_the_revolution_in_belarus_lore_window = {
+			context_type = player_context		
+			window_name = "history_of_the_revolution_in_belarus_lore_window"		
+			visible = {					
+				check_variable = { show_history_of_the_revolution_in_belarus > 0 }				
+			}
+			effects = {
+				history_of_the_revolution_in_belarus_lore_close_button_click = {
+					set_variable = { show_history_of_the_revolution_in_belarus = 0 }
+				}				
+			}
+		}
+		history_of_the_revolution_in_kavkaz_lore_window = {
+			context_type = player_context		
+			window_name = "history_of_the_revolution_in_kavkaz_lore_window"		
+			visible = {					
+				check_variable = { show_history_of_the_revolution_in_kavkaz > 0 }				
+			}
+			effects = {
+				history_of_the_revolution_in_kavkaz_lore_close_button_click = {
+					set_variable = { show_history_of_the_revolution_in_kavkaz = 0 }
+				}				
+			}
+		}
+		the_situation_at_the_time_of_1936_ukrainian_ssr_lore_window = {
+			context_type = player_context		
+			window_name = "the_situation_at_the_time_of_1936_ukrainian_ssr_lore_window"		
+			visible = {					
+				check_variable = { show_the_situation_at_the_time_of_1936_ukrainian_ssr > 0 }				
+			}
+			effects = {
+				the_situation_at_the_time_of_1936_ukrainian_ssr_lore_close_button_click = {
+					set_variable = { show_the_situation_at_the_time_of_1936_ukrainian_ssr = 0 }
+				}				
+			}
+		}
+		the_situation_at_the_time_of_1936_belarusian_ssr_lore_window = {
+			context_type = player_context		
+			window_name = "the_situation_at_the_time_of_1936_belarusian_ssr_lore_window"		
+			visible = {					
+				check_variable = { show_the_situation_at_the_time_of_1936_belarusian_ssr > 0 }				
+			}
+			effects = {
+				the_situation_at_the_time_of_1936_belarusian_ssr_lore_close_button_click = {
+					set_variable = { show_the_situation_at_the_time_of_1936_belarusian_ssr = 0 }
+				}				
+			}
+		}
+		the_situation_at_the_time_of_1936_transcaucasian_sfsr_lore_window = {
+			context_type = player_context		
+			window_name = "the_situation_at_the_time_of_1936_transcaucasian_sfsr_lore_window"		
+			visible = {					
+				check_variable = { show_the_situation_at_the_time_of_1936_transcaucasian_sfsr > 0 }				
+			}
+			effects = {
+				the_situation_at_the_time_of_1936_transcaucasian_sfsr_lore_close_button_click = {
+					set_variable = { show_the_situation_at_the_time_of_1936_transcaucasian_sfsr = 0 }
+				}				
+			}
+		}
+		remains_of_resistance_to_the_bolsheviks_abroad_lore_window = {
+			context_type = player_context		
+			window_name = "remains_of_resistance_to_the_bolsheviks_abroad_lore_window"		
+			visible = {					
+				check_variable = { show_remains_of_resistance_to_the_bolsheviks_abroad > 0 }				
+			}
+			effects = {
+				remains_of_resistance_to_the_bolsheviks_abroad_lore_close_button_click = {
+					set_variable = { show_remains_of_resistance_to_the_bolsheviks_abroad = 0 }
+				}				
+			}
+		}
+}

@@ -1,0 +1,106 @@
+ZSR_historical_plan = {
+	name = "ZSR historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = ZSR
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = ZSR_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = ZSR_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = ZSR_ai_behavior
+				option = ZSR_HISTORICAL
+			}
+		}
+	}
+	abort = {
+		is_subject = no
+	}
+
+	ai_national_focuses = {
+		#1936
+		ZSR_party_congress
+		ZSR_unity_of_the_armenian_people
+		ZSR_veto_on_national_conflicts
+		ZSR_law_and_order
+		ZSR_equal_rights_for_armenians
+		ZSR_equal_rights_for_azerbaijan
+		ZSR_freedom_equality_brotherhood
+
+		#1937
+		ZSR_peoples_production
+		ZSR_internal_politics_of_the_caucasus
+        ZSR_control_of_christian_churches
+
+		#1938
+		ZSR_control_of_islamic_mosques
+		ZSR_compromise_of_religions
+		ZSR_spread_of_atheism
+
+		#1939
+		ZSR_reform_the_army
+		ZSR_united_komsomol
+		ZSR_industrial_reforms
+		ZSR_unity_of_peoples
+
+		#1940
+		ZSR_waf
+		ZSR_foreign_policy_of_the_caucasus
+		ZSR_condemn_the_armenian_genocide
+		ZSR_claims_on_iranian_azerbaijan
+		ZSR_delegation_to_moscow
+		ZSR_preparing_for_war
+
+		#1941
+		ZSR_the_great_patriotic_war
+		ZSR_give_battle_to_the_invaders
+		ZSR_we_wont_give_up
+		ZSR_bring_back_the_deserters
+		ZSR_holy_war
+		ZSR_civil_milita
+
+		#1942
+		
+
+		#1943
+		
+
+		#1944
+		
+		
+		#1945
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	focus_factors = {
+		ZSR_party_congress = 300	
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

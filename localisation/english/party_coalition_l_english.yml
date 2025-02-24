@@ -1,0 +1,181 @@
+﻿l_english:
+
+### Ideology ###
+
+ government_is_loc: "Current ruling party is "
+ government_is_not_loc: "Current ruling party is not "
+
+ is_anarchist: "$government_is_loc$§Y$anarchist$§!"
+ is_anarchist_NOT: "$government_is_not_loc$§Y$anarchist$§!"
+
+ is_socialist: "$government_is_loc$§Y$communism$§! or §Y$social_democrat$§!"
+ is_socialist_NOT: "$government_is_not_loc$§Y$communism$§! or §Y$social_democrat$§!"
+
+ is_democratic: "$government_is_loc$§Y$social_democrat$§!, §Y$liberal$§! or §Y$democratic$§!"
+ is_democratic_NOT: "$government_is_not_loc$§Y$social_democrat$§!, §Y$liberal$§! or §Y$democratic$§!"
+
+ is_authoritarian: "$government_is_loc$§Y$neutrality$§!"
+ is_authoritarian_NOT: "$government_is_not_loc$§Y$neutrality$§!"
+
+ is_dictatorship: "$government_is_loc$§Y$fascism$§!"
+ is_dictatorship_NOT: "$government_is_not_loc$§Y$fascism$§!"
+
+### Party Popularity Tooltips ###
+ popularity_ideology_tooltip: "Your current ruling party is §H[?current_party_ideology_group.GetTokenLocalizedKey]§!"
+ popularity_ideology_desc: "§L[GetPopularityTooltipDesc]§!"
+ party_popularity_delayed_tooltip: "Party popularity represents your current government's control over the nation and their support with the people. Political parties with high popularity are more able to push their political agenda and stabilise the nation."
+
+ party_popularity_tooltip: "§HParty Popularity§![GetPopularityPPGain]"
+ party_popularity_tooltip_long: "§H\n\nEffects from our current Party Popularity:§!\nDaily Political Power Gain: [GetPopularityPPGainValue][GetHasCoalition][GetCoalitionFascism][GetCoalitionNeutrality][GetCoalitionDemocratic][GetCoalitionLiberal][GetCoalitionSocialDemocrat][GetCoalitionCommunism][GetCoalitionAnarchism]"
+
+ party_popularity_dynamic_modifier: "Party Popularity"
+ party_popularity_dynamic_modifier_ideology_mapped: "Party Popularity"
+ party_popularity_dynamic_modifier_coalition: "Coalitions"
+
+ party_popularity_value_default: "[?party_popularity@ruling_party|%0]"
+ party_popularity_value_mapped: "[?party_popularity@var:political_power_ideology|%0]"
+
+ party_popularity_gain_value_default: "[?party_popularity@ruling_party|2=+]"
+ party_popularity_gain_value_mapped: "[?party_popularity@var:political_power_ideology|2=+]"
+ party_popularity_gain_value_disabled: "[?0|2=+]"
+
+ party_pop_coalition: "\n\n§HCoalition Partners:§!\n"
+ party_pop_coalition_pp_gain: "[?coalition_pp_gain|=+2]"
+
+ ### Coalition Tooltips###
+ fasc_will_join_coalition_tt:0 "The §FFascists§! will join the coalition."
+ neutral_will_join_coalition_tt:0 "The §gAuthoritarians§! will join the coalition."
+ dem_will_join_coalition_tt:0 "The §BConservatives§! will join the coalition."
+ lib_will_join_coalition_tt:0 "The §YLiberals§! will join the coalition."
+ socdem_will_join_coalition_tt:0 "The §OSocial Democrats§! will join the coalition."
+ com_will_join_coalition_tt:0 "The §RCommunists§! will join the coalition."
+ anarch_will_join_coalition_tt:0 "The §LAnarchists§! will join the coalition."
+
+ fasc_will_leave_coalition_tt:0 "The §FFascists§! will leave the coalition."
+ neutral_will_leave_coalition_tt:0 "The §gAuthoritarians§! will leave the coalition."
+ dem_will_leave_coalition_tt:0 "The §BConservatives§! will leave the coalition."
+ lib_will_leave_coalition_tt:0 "The §YLiberals§! will leave the coalition."
+ socdem_will_leave_coalition_tt:0 "The §OSocial Democrats§! will leave the coalition."
+ com_will_leave_coalition_tt:0 "The §RCommunists§! will leave the coalition."
+ anarch_will_leave_coalition_tt:0 "The §LAnarchists§! will leave the coalition."
+
+ party_pop_coalition: "\n\n§HCoalition Partners:§!\n"
+ party_pop_coalition_fascism: "- [?token:fascism.GetTokenLocalizedKey] ([GetCoalitionPPGain_Fascism])\n"
+ party_pop_coalition_neutrality: "- [?token:neutrality.GetTokenLocalizedKey]  ([GetCoalitionPPGain_Neutrality])\n"
+ party_pop_coalition_democratic: "- [?token:democratic.GetTokenLocalizedKey]  ([GetCoalitionPPGain_Democratic])\n"
+ party_pop_coalition_liberal: "- [?token:liberal.GetTokenLocalizedKey] ([GetCoalitionPPGain_Liberal])\n"
+ party_pop_coalition_social_democrat: "- [?token:social_democrat.GetTokenLocalizedKey] ([GetCoalitionPPGain_SocialDemocrat])\n"
+ party_pop_coalition_communism: "- [?token:communism.GetTokenLocalizedKey] ([GetCoalitionPPGain_Communism])\n"
+ party_pop_coalition_anarchism: "- [?token:anarchism.GetTokenLocalizedKey] ([GetCoalitionPPGain_Anarchism])\n"
+
+ add_to_coalition: "The §[GetCoalitionTooltipColour][?coalition_partner_var.GetTokenLocalizedKey]s§! will join the coalition."
+ remove_from_coalition: "The §[GetCoalitionTooltipColour][?coalition_partner_var.GetTokenLocalizedKey]s§! will leave the coalition."
+
+ has_coalition_with_target: "Is in coalition with the §H[?coalition_target.GetTokenLocalizedKey]s§!."
+ has_coalition_with_target_NOT: "Is not in coalition with the §H[?coalition_target.GetTokenLocalizedKey]s§!."
+
+ coalition_stability_tooltip: "Coalition partners now provide $RIGHT|G%0$ of their popularity as additional §Hpolitical power gain§!."
+
+
+ has_coalition_with: "Is in coalition with the §H[?coalition_partner_to_check.GetTokenLocalizedKey]§!"
+
+ empty: ""
+
+##################
+### Ideologies ###
+##################
+
+### Names ###
+ fascism: "Fascist"
+ neutrality: "Authoritarianism"
+ democratic: "Conservative"
+ liberal: "Liberal"
+ liberalism: "Liberal"
+ social_democrat: "Social Democrat"
+ communism: "Communist"
+ anarchism: "Anarchist"
+ 
+ 
+### Nouns ###
+ fascism_noun: "Fascism"
+ neutrality_noun: "Authoritarianism"
+ democratic_noun: "Conservatism"
+ liberal_noun: "Liberalism"
+ social_democrat_noun: "Social Democracy"
+ communism_noun: "Communism"
+ anarchism_noun: "Anarchism"
+ 
+### Ideology Grouping ###
+ fascism_desc: "Totalitarian Regime"
+ neutrality_desc: "Authoritarian Regime"
+ democratic_desc: "Democratic Regime"
+ liberal_desc: "Democratic Regime"
+ social_democrat_desc: "Democratic Regime"
+ communism_desc: "Socialist regime"
+ anarchism_desc: "Anarchy"
+
+### Sub ideology ###
+ nazism: "Nazism"
+ gen_nazism: "Nazism"
+ fascism_ideology: "Fascism"
+ falangism: "Falangism"
+ rexism: "Rexism"
+ despotism: "Despotism"
+ oligarchism: "Oligarchism"
+ moderatism: "Moderatism"
+ centrism: "Centrism"
+ conservatism: "Conservatism"
+ social_conservatism:0 "Social-Conservatism"
+ populism: "Populism"
+ agrarianism:0 "Agrarianism"
+ social_liberalism:0 "Social-Liberalism"
+ national_liberalism:0 "National-Liberalism"
+ economic_liberalism:0 "Economic Liberalism"
+ democratic_socialism:0 "Democratic Socialism"
+ socialism: "Socialism"
+ marxism: "Marxism"
+ leninism: "Leninism"
+ stalinism: "Stalinism"
+ anti_revisionism: "Anti-Revisionism"
+ #anarchism: "Анархизм"
+ anarchist_communism: "Anarchist Communism"
+ anarchist_syndicalist:0 "Anarcho Syndicalism"
+
+### Sub ideology Desc ###
+ nazism_desc: "Rooted in extreme nationalism, National Socialism is driven by ideas of Germanic supremacy. It promotes aggressive expansionism and a totalitarian state where the people are united under a leader with absolute power, the Führer."
+ gen_nazism_desc: "Rooted in extreme nationalism, National Socialism is driven by ideas of racial supremacy. It promotes aggressive expansionism and a totalitarian state where the people are united under a leader with absolute power."
+ fascism_ideology_desc: "Encompassing a variety of ultra-nationalist movements, fascism typically venerates devotion to the state and uniting the people under a strong leader."
+ falangism_desc: "An authoritarian ideology with traits of fascism and conservatism, Falangism values national and Catholic identity."
+ rexism_desc: "Strongly opposed to both liberal and communist ideals, Rexism is a staunchly conservative nationalist movement who advocate a corporatist economic policy. Employing increasingly populist and authoritarian rhetoric, their ideals are shifting closer to other fascist movements."
+ despotism_desc: "Despotism is a form of government in which a single person rules with absolute power."
+ oligarchism_desc: "Oligarchy is a form of government in which a group of people rule with absolute power."
+ moderatism_desc: "Moderatism is a form of government which avoids the extremes of left and right by taking a moderate position or course of action."
+ centrism_desc: "Centrism is a form of government which wants to achieve common sense solutions that appropriately address current and future needs, that support the public trust and serve the common good with consideration of risk and capacity in context of these needs."
+ conservatism_desc: "Considering rapid changes to society to be potentially harmful, conservatism espouses tradition and moderate reforms, sometimes advocating a return to old moral values."
+ social_conservatism_desc:0 "According to the adherents of social conservatism, the state must constantly take care of the welfare of the population and its growth; the main means of implementing the social functions of the state is the effective development of the economy on the basis of principles common to modern conservatism; the necessary condition for social progress is to remain faithful to national culture."
+ populism_desc: "A political movement with little clear ideological framework. Populists advocate for policies from across the spectrum that are popular with the electorate or are perceived as at odds with the preferences of the political 'elite.'"
+ liberalism_desc: "With a long philosophical tradition of valuing personal liberty, liberalism views safeguarding these rights as the primary function of the state."
+ agrarianism_desc:0 "Agrarianism is a social and political philosophy that advocates for a return to subsistence agriculture, family farming, widespread property ownership, and political decentralization."
+ social_liberalism_desc:0 "According to social liberals, the state is obliged to intervene in economic processes in order to combat monopoly and maintain a competitive market environment."
+ national_liberalism_desc:0 "National liberalism can be seen as a form of civic nationalism and national democracy, which typically combines right-wing liberalism with moderate anti-conservative nationalism."
+ economic_liberalism_desc:0 "This ideology rejects government regulation of the economy and economic intervention in the free market, and supports complete and maximum economic freedom, free trade and competition."
+ democratic_socialism_desc:0 "Democratic socialism is a political, social, and economic philosophy and ideology that advocates political democracy in a public economy, with particular emphasis on economic democracy, workers' democracy, and workers' self-management."
+ socialism_desc: "Social Democrats preach social equality, which they call for through reforms; in their opinion, society should limit the extreme manifestations of capitalism."
+ marxism_desc: "Encompassing a broad spectrum of economic and historical views, Marxist politics seek to apply the theories of Karl Marx to political practice. Class struggle and the need for transition to a society based on common ownership of the means of production characterize these ideologies."
+ leninism_desc: "A political ideology based in Marxist thought, Leninism seeks to establish a socialist state by a vanguard party leading a revolution overthrowing capitalist society. Once in power, the party rules through a system whereby policies are open for internal debate until a decision has been made."
+ stalinism_desc: "Identifying as a form of government applying and developing Marxist-Leninist policies, Stalinism emphasizes rapid industrialization and collectivization as well as the need for a strong, authorative socialist state to purge any counter-revolutionary elements."
+ anti_revisionism_desc: "A reaction to the many ideologies claiming to be successors to Marxism, Anti-Revisionism advocates retaining key elements of original revolutionary theory. Mainly opposing incorporation of capitalist economic elements into socialist states, the ideology is defined as much by what it isn't as what it is."
+ #anarchism_desc: "Anarchism is the rejection of all power. It promotes the division of the community into self-governing collectives instead of a single centralized country."
+ anarchist_communism_desc: "For anarchist communists, communism is a classless society with no state. They dislike the idea of ​​a transitional socialist state and advocate a society based on voluntary ties and mutual aid."
+ anarchist_syndicalist_desc:0 "Anarcho-syndicalists believe that workers' unions should operate on the basis of the principle of decision-making by the entire collective, through general meetings at the local level."
+
+
+### Subtype Descriptions ###
+ fascism_subtype_desc: "Encompassing a variety of ultra-nationalist movements, fascism typically venerates devotion to the state and uniting the people under a strong leader."
+ neutrality_subtype_desc: "Authoritarianism is, firstly, a socio-political system based on subordination to the state and its leaders. Secondly, it is a social attitude or personality trait characterized by the belief that society should have strict and unconditional loyalty to the ruler, unquestioning submission of people to authorities and government."
+ democratic_subtype_desc: "Considering rapid changes to society to be potentially harmful, conservatism espouses tradition and moderate reforms, sometimes advocating a return to old moral values."
+ liberal_subtype_desc: "With a long philosophical tradition of valuing personal liberty, liberalism views safeguarding these rights as the primary function of the state."
+ social_democrat_subtype_desc: "Social Democrats preach social equality, which they call for through reforms; in their opinion, society should limit the extreme manifestations of capitalism."
+ communism_subtype_desc: "According to the works of the founders of Marxism, communism presupposes the presence of highly developed productive forces, the absence of a state, money and the division of society into social classes."
+ anarchism_subtype_desc: "Anarchism is the rejection of all power. It promotes the division of the community into self-governing collectives instead of a single centralized country."
+

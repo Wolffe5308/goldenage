@@ -1,0 +1,76 @@
+﻿l_russian:
+
+ BOP_TOOLTIP:1 "§Y[root.GetPowerBalanceName]§! в данный момент [?.root.power_balance_value|0%H] на следующей стороне: §Y[root.GetActiveSideName]§!"
+ BOP_TOOLTIP_TREND:0 "Баланс сил склоняется в следующую сторону: §Y[root.GetTrendingSideName]§! на [root.GetBopTrendTextIcon][root.GetChangeRateDesc].\n[root.GetPowerBalanceModDesc]"
+ BOP_TOOLTIP_STABLE:1 "Баланс сил в данное время стабилен."
+ BOP_LEFT_SIDE_TOOLTIP:0 "[root.GetLeftSideName]"
+ BOP_RIGHT_SIDE_TOOLTIP:0 "[root.GetRightSideName]"
+ BOP_ACTIVE_RANGE_DESC:0 "[root.GetActiveRangeName]"
+ BOP_ACTIVE_RANGE_TOOLTIP:0 "[root.GetActiveRangeModDesc][root.GetActiveRangeRuleDesc]"
+
+ BOP_CHANGE_RATE_DAILY:2 "$VALUE|2%H$ в день"
+ BOP_CHANGE_RATE_WEEKLY:2 "$VALUE|2%H$ в неделю"
+
+ BOP_RANGE_DESC:0 "$NAME|Y$\nДальность: $MIN|%Y$–$MAX|%Y$\n$MODIFIER$\n$RULE$\n$ACTIVATION_EFFECT$\n$DEACTIVATION_EFFECT$"
+ BOP_RANGE_MODIFIER:0 "§YМодификаторы:§!\n$DESC$"
+ BOP_RANGE_RULE:0 "§YПравила:§!\n$DESC$"
+ BOP_RANGE_ACTIVATION_EFFECT:0 "\n§YЭффект активации:§!\n$DESC$"
+ BOP_RANGE_DEACTIVATION_EFFECT:0 "\n§YЭффект деактивации:§!\n$DESC$"
+ 
+ BOP_PERCENTAGE:0 "$VALUE|0%$"
+ BOP_LEVELS:0 "$UNLOCKED$/$TOTAL$"
+ 
+ BOP_STATIC_MODIFIER:0 "$NAME|H$"
+ 
+ ZSR_kavkaz_balance:0 "Баланс Сил"
+ supreme_soviet_left_side:0 "Верховный Совет"
+ supreme_soviet_left_side_influence:0 "Совет оказывает влияние"
+ supreme_soviet_left_side_low:0 "Низкая власть Совета"
+ supreme_soviet_left_side_dominance:0 "Доминирующая власть Совета"
+ supreme_soviet_left_side_absolute:0 "Абсолютная власть Совета"
+ mid_range:0 "Баланс сил в политике"
+ beria_right_side:0 "Вождь"
+ beria_right_side_influence:0 "Вождь оказывает влияние"
+ beria_right_side_low:0 "Низкая власть вождя"
+ beria_right_side_dominance:0 "Доминирующая власть вождя"
+ beria_right_side_absolute:0 "Абсолютная власть вождя"
+
+ UKR_communist_balance:0 "Баланс Сил"
+ ukr_supreme_soviet_left_side:0 "Верховный Совет"
+ ukr_supreme_soviet_left_side_influence:0 "Совет оказывает влияние"
+ ukr_supreme_soviet_left_side_low:0 "Низкая власть Совета"
+ ukr_supreme_soviet_left_side_dominance:0 "Доминирующая власть Совета"
+ ukr_supreme_soviet_left_side_absolute:0 "Абсолютная власть Совета"
+ ukr_mid_range:0 "Баланс сил в политике"
+ khrushchev_right_side:0 "Вождь"
+ khrushchev_right_side_influence:0 "Вождь оказывает влияние"
+ khrushchev_right_side_low:0 "Низкая власть вождя"
+ khrushchev_right_side_dominance:0 "Доминирующая власть вождя"
+ khrushchev_right_side_absolute:0 "Абсолютная власть вождя"
+
+ BLR_communist_balance:0 "Баланс Сил"
+ blr_supreme_soviet_left_side:0 "Верховный Совет"
+ blr_supreme_soviet_left_side_influence:0 "Совет оказывает влияние"
+ blr_supreme_soviet_left_side_low:0 "Низкая власть Совета"
+ blr_supreme_soviet_left_side_dominance:0 "Доминирующая власть Совета"
+ blr_supreme_soviet_left_side_absolute:0 "Абсолютная власть Совета"
+ blr_mid_range:0 "Баланс сил в политике"
+ ponomarenko_right_side:0 "Вождь"
+ ponomarenko_right_side_influence:0 "Вождь оказывает влияние"
+ ponomarenko_right_side_low:0 "Низкая власть вождя"
+ ponomarenko_right_side_dominance:0 "Доминирующая власть вождя"
+ ponomarenko_right_side_absolute:0 "Абсолютная власть вождя"
+
+ UKR_communist_balance_supreme_soviet:0 "Федерализация"
+ UKR_communist_balance_khrushchev:0 "Централизация"
+
+ BLR_communist_balance_supreme_soviet:0 "Федерализация"
+ BLR_communist_balance_ponamarenko:0 "Централизация"
+
+ ZSR_communist_balance_supreme_soviet:0 "Федерализация"
+ ZSR_communist_balance_beria:0 "Централизация"
+ 
+
+# === [LocEditor:OrphanedKeys] Keys that do not exist in English ===
+ BOP_RANGE_ACTIVATE_EFFECT:0 "Эффект после активации:\n$ACTIVATE_EFFECT$"
+ BOP_RANGE_DEACTIVATE_EFFECT:0 "Эффект после деактивации:\n$DEACTIVATE_EFFECT$"

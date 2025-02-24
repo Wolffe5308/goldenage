@@ -1,0 +1,105 @@
+BLR_historical_plan = {
+	name = "BLR historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = BLR
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = BLR_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = BLR_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = BLR_ai_behavior
+				option = BLR_HISTORICAL
+			}
+		}
+	}
+	abort = {
+		is_subject = no
+	}
+
+	ai_national_focuses = {
+		#1936
+		BLR_new_party
+		BLR_negotiations_with_protesters
+		BLR_disperse_the_rest
+		BLR_komsomol
+		BLR_peoples_newspaper
+		BLR_restoring_order
+		BLR_restoring_order
+
+		#1937
+		BLR_internal_policy_of_belarus
+		BLR_recruitment_to_partisan_troops
+		BLR_military_commissariats
+		BLR_officer_training
+		BLR_war_propoganda
+		BLR_partisan_exercises
+
+		#1938
+		BLR_partisan_komsomol
+		BLR_state_and_people_are_united
+
+		#1939
+		BLR_foreign_policy_of_belarus
+		BLR_undermine_morale_in_poland
+		BLR_delegation_to_western_countries
+		BLR_western_scientists
+		BLR_treaty_with_lithuania
+		BLR_military_advisers
+
+
+		#1940
+		BLR_waf
+
+		#1941
+		BLR_the_great_patriotic_war
+		BLR_give_battle_to_the_invaders
+		BLR_we_wont_give_up
+		BLR_bring_back_the_deserters
+		BLR_holy_war
+
+		#1942
+		BLR_anti_hitler_coalition
+
+		#1943
+		
+
+		#1944
+		
+		
+		#1945
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	focus_factors = {
+		BLR_new_party = 300	
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

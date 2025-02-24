@@ -1,0 +1,112 @@
+UKR_communist_balance = {
+	initial_value = 0.25
+	left_side = ukr_supreme_soviet_left_side
+	right_side = khrushchev_right_side
+    decision_category = UKR_ukraine_balance_category
+	range = {
+		id = ukr_mid_range
+		min = -0.15
+		max = 0.15
+		modifier = {
+			stability_factor = 0.05
+		}
+	}
+	side = {
+		id = ukr_supreme_soviet_left_side	
+		icon = GFX_bop_ETH_communist_side
+		range = {
+			id = blr_supreme_soviet_left_side_absolute
+			min = -1
+			max = -0.9
+			modifier = {
+				political_advisor_cost_factor = -0.15
+				political_power_factor = 0.15
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+			}
+			on_activate = {
+                promote_character = UKR_supreme_soviet
+            }
+		}
+		range = {
+			id = ukr_supreme_soviet_left_side_dominance
+			min = -0.9
+			max = -0.65
+			modifier = {
+				political_advisor_cost_factor = -0.1
+				political_power_factor = 0.1
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+		}
+		range = {
+			id = ukr_supreme_soviet_left_side_low
+			min = -0.65
+			max = -0.35
+			modifier = {
+				political_advisor_cost_factor = -0.1
+				political_power_factor = 0.1
+			}
+		}
+		range = {
+			id = ukr_supreme_soviet_left_side_influence
+			min = -0.35
+			max = -0.15
+			modifier = {
+				political_advisor_cost_factor = -0.05
+				political_power_factor = 0.05
+			}
+		}
+	}
+	side = {
+		id = khrushchev_right_side
+		icon = GFX_bop_RPB_leader_side
+		range = {
+			id = khrushchev_right_side_influence
+			min = 0.15
+			max = 0.35
+			modifier = {
+				conscription_factor = 0.05
+				production_factory_start_efficiency_factor = 0.02
+			}
+		}
+		range = {
+			id = khrushchev_right_side_low
+			min = 0.35
+			max = 0.65
+			modifier = {
+				conscription_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		range = {
+			id = khrushchev_right_side_dominance
+			min = 0.65
+			max = 0.9
+			modifier = {
+				conscription_factor = 0.1
+                production_factory_start_efficiency_factor = 0.05
+                political_power_factor = -0.1
+                political_advisor_cost_factor = 0.1
+			}
+		}
+		range = {
+			id = khrushchev_right_side_absolute
+			min = 0.9
+			max = 1
+			modifier = {
+				conscription_factor = 0.15
+                production_factory_start_efficiency_factor = 0.1
+                political_power_factor = -0.15
+                political_advisor_cost_factor = 0.2
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = UKR_communist_balance
+					side = khrushchev_right_side
+					gfx = GFX_bop_RPB_leader_improved_side
+				}
+			}
+		}
+	}
+}

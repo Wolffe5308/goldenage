@@ -1,0 +1,1480 @@
+seizure_of_the_northern_lands_of_india = {
+
+	march_on_india = {
+
+		icon = generic_form_nation
+
+        available = {
+			758 = { is_owned_and_controlled_by = MON }
+			757 = { is_owned_and_controlled_by = MON }
+			619 = { is_owned_and_controlled_by = MON }
+			287 = { is_owned_and_controlled_by = MON }
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		complete_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions march_on_india"
+		RAJ = {
+		country_event = { id = MON_Ev.1 days = 1 }
+	}
+}
+
+    ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+	}
+}
+
+restoration_of_the_mongol_empire = {
+
+	nationalization_of_chinese_west_lands = {
+
+		icon = generic_form_nation
+
+        available = {
+			controls_state = 618 #Синзянь
+			controls_state = 760 #Синзянь
+			controls_state = 617 #Синзянь
+			controls_state = 759 #Синзянь
+			controls_state = 287 #Синзянь
+			controls_state = 619 #Синзянь
+			controls_state = 322 #Тибет
+			controls_state = 758 #Тибет
+			controls_state = 757 #Тибет
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions nationalization_of_chinese_west_lands"
+			618 = { add_core_of = ROOT }
+			760 = { add_core_of = ROOT }
+			617 = { add_core_of = ROOT }
+			759 = { add_core_of = ROOT }
+			287 = { add_core_of = ROOT }
+			619 = { add_core_of = ROOT }
+			322 = { add_core_of = ROOT }
+			758 = { add_core_of = ROOT }
+			757 = { add_core_of = ROOT }
+		}
+
+	}
+}
+
+restoration_of_the_mongol_empire = {
+
+	nationalization_of_chinese_north_lands = {
+
+		icon = generic_form_nation
+
+        available = {
+			controls_state = 755 #Сибень Сань Ма
+			controls_state = 616 #Сибень Сань Ма
+			controls_state = 756 #Сибень Сань Ма
+			controls_state = 604 #Сибень Сань Ма	
+			controls_state = 754 #Сибень Сань Ма
+			controls_state = 283 #Сибень Сань Ма
+			controls_state = 753 #Сибень Сань Ма
+			controls_state = 622 #Ком. Китай
+			controls_state = 621 #Шаньси
+			controls_state = 746 #Шаньси
+			controls_state = 615 #Шаньси
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions nationalization_of_chinese_north_lands"
+			755 = { add_core_of = ROOT }
+			616 = { add_core_of = ROOT }
+			756 = { add_core_of = ROOT }
+			604 = { add_core_of = ROOT }
+			754 = { add_core_of = ROOT }
+			283 = { add_core_of = ROOT }
+			753 = { add_core_of = ROOT }
+			622 = { add_core_of = ROOT }
+			621 = { add_core_of = ROOT }
+			746 = { add_core_of = ROOT }
+			615 = { add_core_of = ROOT }
+		}
+	}
+}
+
+restoration_of_the_mongol_empire = {
+
+	nationalization_of_chinese_east_lands = {
+
+		icon = generic_form_nation
+
+        available = {
+			controls_state = 612 #Мензянь
+			controls_state = 611 #Мензянь
+			controls_state = 761 #Манжурия
+			controls_state = 714 #Манжурия
+			controls_state = 715 #Манжурия
+			controls_state = 610 #Манжурия
+			controls_state = 717 #Манжурия
+			controls_state = 328 #Манжурия
+			controls_state = 716 #Манжурия
+			controls_state = 609 #Япония
+			controls_state = 745 #Япония
+			controls_state = 527 #Япония
+			controls_state = 525 #Япония
+			controls_state = 743 #Япония
+			controls_state = 761 #Япония
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions nationalization_of_chinese_east_lands"
+			618 = { add_core_of = ROOT }
+			611 = { add_core_of = ROOT }
+			761 = { add_core_of = ROOT }
+			714 = { add_core_of = ROOT }
+			715 = { add_core_of = ROOT }
+			610 = { add_core_of = ROOT }
+			717 = { add_core_of = ROOT }
+			328 = { add_core_of = ROOT }
+			716 = { add_core_of = ROOT }
+			609 = { add_core_of = ROOT }
+			745 = { add_core_of = ROOT }
+			527 = { add_core_of = ROOT }
+			525 = { add_core_of = ROOT }
+			743 = { add_core_of = ROOT }
+			761 = { add_core_of = ROOT }
+		}
+
+	}
+}
+
+restoration_of_the_mongol_empire = {
+
+	nationalization_of_chinese_lands = {
+
+		icon = generic_form_nation
+
+        available = {
+			controls_state = 601 #Китай
+			controls_state = 752 #Китай
+			controls_state = 751 #Китай
+			controls_state = 605 #Китай
+			controls_state = 748 #Китай
+			controls_state = 603 #Китай
+			controls_state = 744 #Китай
+			controls_state = 620 #Китай
+			controls_state = 750 #Китай
+			controls_state = 602 #Китай
+			controls_state = 600 #Китай
+			controls_state = 595 #Китай
+			controls_state = 596 #Китай
+			controls_state = 613 #Китай
+			controls_state = 606 #Китай
+			controls_state = 607 #Китай
+			controls_state = 749 #Китай
+			controls_state = 597 #Китай
+			controls_state = 598 #Китай
+			controls_state = 614 #Китай
+			controls_state = 608 #Китай
+			controls_state = 747 #Юньань
+			controls_state = 325 #Юньань
+			controls_state = 599 #Гуанси
+			controls_state = 594 #Гуанси
+			controls_state = 593 #Гуанси
+			controls_state = 592 #Гуанси
+			controls_state = 591 #Гуанси
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions nationalization_of_chinese_lands"
+			601 = { add_core_of = ROOT }
+			752 = { add_core_of = ROOT }
+			751 = { add_core_of = ROOT }
+			605 = { add_core_of = ROOT }
+			748 = { add_core_of = ROOT }
+			603 = { add_core_of = ROOT }
+			744 = { add_core_of = ROOT }
+			620 = { add_core_of = ROOT }
+			750 = { add_core_of = ROOT }
+			602 = { add_core_of = ROOT }
+			600 = { add_core_of = ROOT }
+			595 = { add_core_of = ROOT }
+			596 = { add_core_of = ROOT }
+			613 = { add_core_of = ROOT }
+			606 = { add_core_of = ROOT }
+			607 = { add_core_of = ROOT }
+			749 = { add_core_of = ROOT }
+			597 = { add_core_of = ROOT }
+			598 = { add_core_of = ROOT }
+			608 = { add_core_of = ROOT }
+			747 = { add_core_of = ROOT }
+			614 = { add_core_of = ROOT }
+			608 = { add_core_of = ROOT }
+			747 = { add_core_of = ROOT }
+			325 = { add_core_of = ROOT }
+			599 = { add_core_of = ROOT }
+			594 = { add_core_of = ROOT }
+			593 = { add_core_of = ROOT }
+			592 = { add_core_of = ROOT }
+			591 = { add_core_of = ROOT }
+		}
+	}
+}
+
+restoration_of_the_mongol_empire = {
+
+	nationalization_of_asian_lands = {
+
+		icon = generic_form_nation
+
+        available = {
+			controls_state = 323 #Непал
+			controls_state = 324 #Бутан
+			controls_state = 434 #Индия
+			controls_state = 640 #Индия
+			controls_state = 441 #Индия
+			controls_state = 787 #Индия
+			controls_state = 442 #Индия
+			controls_state = 440 #Индия
+			controls_state = 445 #Индия
+			controls_state = 444 #Индия
+			controls_state = 443 #Индия
+			controls_state = 439 #Индия
+			controls_state = 433 #Индия
+			controls_state = 267 #Афганистан
+			controls_state = 415 #Афганистан
+			controls_state = 416 #Иран
+			controls_state = 414 #Иран
+			controls_state = 410 #Иран
+			controls_state = 412 #Иран
+			controls_state = 411 #Иран
+			controls_state = 418 #Иран
+			controls_state = 266 #Иран
+			controls_state = 417 #Иран
+			controls_state = 413 #Иран
+			controls_state = 421 #Иран
+			controls_state = 420 #Иран
+			controls_state = 419 #Иран
+			controls_state = 676 #Ирак
+			controls_state = 291 #Ирак
+			controls_state = 352 #Турция
+			controls_state = 800 #Турция
+			controls_state = 354 #Турция
+			controls_state = 353 #Турция
+			controls_state = 350 #Турция
+			controls_state = 344 #Турция
+			controls_state = 798 #Турция
+			controls_state = 348 #Турция
+			controls_state = 346 #Турция
+			controls_state = 345 #Турция
+			controls_state = 355 #Турция
+			controls_state = 349 #Турция
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions nationalization_of_asian_lands"
+			323 = { add_core_of = ROOT }
+			324 = { add_core_of = ROOT }
+			434 = { add_core_of = ROOT }
+			640 = { add_core_of = ROOT }
+			441 = { add_core_of = ROOT }
+			787 = { add_core_of = ROOT }
+			442 = { add_core_of = ROOT }
+			440 = { add_core_of = ROOT }
+			445 = { add_core_of = ROOT }
+			444 = { add_core_of = ROOT }
+			443 = { add_core_of = ROOT }
+			439 = { add_core_of = ROOT }
+			433 = { add_core_of = ROOT }
+			267 = { add_core_of = ROOT }
+			415 = { add_core_of = ROOT }
+			416 = { add_core_of = ROOT }
+			414 = { add_core_of = ROOT }
+			410 = { add_core_of = ROOT }
+			412 = { add_core_of = ROOT }
+			411 = { add_core_of = ROOT }
+			418 = { add_core_of = ROOT }
+			266 = { add_core_of = ROOT }
+			417 = { add_core_of = ROOT }
+			413 = { add_core_of = ROOT }
+			421 = { add_core_of = ROOT }
+			420 = { add_core_of = ROOT }
+			419 = { add_core_of = ROOT }
+			676 = { add_core_of = ROOT }
+			291 = { add_core_of = ROOT }
+			352 = { add_core_of = ROOT }
+			800 = { add_core_of = ROOT }
+			354 = { add_core_of = ROOT }
+			353 = { add_core_of = ROOT }
+			350 = { add_core_of = ROOT }
+			344 = { add_core_of = ROOT }
+			798 = { add_core_of = ROOT }
+			348 = { add_core_of = ROOT }
+			346 = { add_core_of = ROOT }
+			345 = { add_core_of = ROOT }
+			355 = { add_core_of = ROOT }
+			349 = { add_core_of = ROOT }
+		}
+	}
+}
+
+restoration_of_the_mongol_empire = {
+
+	nationalization_of_european_lands = {
+
+		icon = generic_form_nation
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+
+        available = {
+			controls_state = 329 #Тува
+			controls_state = 837 #Тува
+			controls_state = 836 #Тува
+			controls_state = 838 #Тува
+			controls_state = 835 #Тува
+			controls_state = 78 #Румыния
+			controls_state = 80 #Румыния
+			controls_state = 766 #Румыния
+			controls_state = 79 #Румыния
+			controls_state = 46 #Румыния
+			controls_state = 81 #Румыния
+			controls_state = 408 #СССР
+			controls_state = 409 #СССР
+			controls_state = 560 #СССР
+			controls_state = 657 #СССР
+			controls_state = 561 #СССР
+			controls_state = 563 #СССР
+			controls_state = 564 #СССР
+			controls_state = 566 #СССР
+			controls_state = 567 #СССР
+			controls_state = 568 #СССР
+			controls_state = 569 #СССР
+			controls_state = 570 #СССР
+			controls_state = 571 #СССР
+			controls_state = 40 #СССР
+			controls_state = 654 #СССР
+			controls_state = 588 #СССР
+			controls_state = 590 #СССР
+			controls_state = 583 #СССР
+			controls_state = 402 #СССР
+			controls_state = 406 #СССР
+			controls_state = 407 #СССР
+			controls_state = 589 #СССР
+			controls_state = 404 #СССР
+			controls_state = 587 #СССР
+			controls_state = 823 #СССР
+			controls_state = 732 #СССР
+			controls_state = 586 #СССР
+			controls_state = 742 #СССР
+			controls_state = 585 #СССР
+			controls_state = 831 #СССР
+			controls_state = 584 #СССР
+			controls_state = 832 #СССР
+			controls_state = 830 #СССР
+			controls_state = 405 #СССР
+			controls_state = 582 #СССР
+			controls_state = 651 #СССР
+			controls_state = 652 #СССР
+			controls_state = 217 #СССР
+			controls_state = 245 #СССР
+			controls_state = 218 #СССР
+			controls_state = 236 #СССР
+			controls_state = 237 #СССР
+			controls_state = 238 #СССР
+			controls_state = 234 #СССР
+			controls_state = 235 #СССР
+			controls_state = 232 #СССР
+			controls_state = 229 #СССР
+			controls_state = 230 #СССР
+			controls_state = 231 #СССР
+			controls_state = 233 #СССР
+			controls_state = 826 #СССР
+			controls_state = 821 #СССР
+			controls_state = 827 #СССР
+			controls_state = 828 #СССР
+			controls_state = 840 #СССР
+			controls_state = 839 #СССР
+			controls_state = 137 #СССР
+			controls_state = 196 #СССР
+			controls_state = 200 #СССР
+			controls_state = 228 #СССР
+			controls_state = 227 #СССР
+			controls_state = 197 #СССР
+			controls_state = 226 #СССР
+			controls_state = 231 #СССР
+			controls_state = 225 #СССР
+			controls_state = 259 #СССР
+			controls_state = 192 #СССР
+			controls_state = 834 #СССР
+			controls_state = 203 #СССР
+			controls_state = 198 #СССР
+			controls_state = 199 #СССР
+			controls_state = 201 #СССР
+			controls_state = 202 #СССР
+			controls_state = 193 #СССР
+			controls_state = 194 #СССР
+			controls_state = 241 #СССР
+			controls_state = 206 #СССР
+			controls_state = 204 #СССР
+			controls_state = 207 #СССР
+			controls_state = 216 #СССР
+			controls_state = 351 #СССР
+			controls_state = 400 #СССР
+			controls_state = 399 #СССР
+			controls_state = 249 #СССР
+			controls_state = 251 #СССР
+			controls_state = 401 #СССР
+			controls_state = 250 #СССР
+			controls_state = 264 #СССР
+			controls_state = 244 #СССР
+			controls_state = 195 #СССР
+			controls_state = 208 #СССР
+			controls_state = 210 #СССР
+			controls_state = 209 #СССР
+			controls_state = 263 #СССР
+			controls_state = 265 #СССР
+			controls_state = 260 #СССР
+			controls_state = 243 #СССР
+			controls_state = 220 #СССР
+			controls_state = 224 #СССР
+			controls_state = 242 #СССР
+			controls_state = 246 #СССР
+			controls_state = 243 #СССР
+			controls_state = 205 #СССР
+			controls_state = 219 #СССР
+			controls_state = 247 #СССР
+			controls_state = 248 #СССР
+			controls_state = 253 #СССР
+			controls_state = 252 #СССР
+			controls_state = 833 #СССР
+			controls_state = 256 #СССР
+			controls_state = 222 #СССР
+			controls_state = 223 #СССР
+			controls_state = 254 #СССР
+			controls_state = 258 #СССР
+			controls_state = 257 #СССР
+			controls_state = 255 #СССР
+			controls_state = 239 #СССР
+			controls_state = 829 #СССР
+			controls_state = 240 #СССР
+			controls_state = 221 #СССР
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions nationalization_of_european_lands"
+			329 = { add_core_of = ROOT }
+			837 = { add_core_of = ROOT }
+			836 = { add_core_of = ROOT }
+			838 = { add_core_of = ROOT }
+			835 = { add_core_of = ROOT }
+			78 = { add_core_of = ROOT }
+			80 = { add_core_of = ROOT }
+			766 = { add_core_of = ROOT }
+			79 = { add_core_of = ROOT }
+			46 = { add_core_of = ROOT }
+			81 = { add_core_of = ROOT }
+			408 = { add_core_of = ROOT }
+			409 = { add_core_of = ROOT }
+			560 = { add_core_of = ROOT }
+			657 = { add_core_of = ROOT }
+			561 = { add_core_of = ROOT }
+			563 = { add_core_of = ROOT }
+			564 = { add_core_of = ROOT }
+			566 = { add_core_of = ROOT }
+			567 = { add_core_of = ROOT }
+			568 = { add_core_of = ROOT }
+			569  = { add_core_of = ROOT }
+			570 = { add_core_of = ROOT }
+			571 = { add_core_of = ROOT }
+			40 = { add_core_of = ROOT }
+			654 = { add_core_of = ROOT }
+			588 = { add_core_of = ROOT }
+			590 = { add_core_of = ROOT }
+			583 = { add_core_of = ROOT }
+			402 = { add_core_of = ROOT }
+			407 = { add_core_of = ROOT }
+			406 = { add_core_of = ROOT }
+			589 = { add_core_of = ROOT }
+			404 = { add_core_of = ROOT }
+			587 = { add_core_of = ROOT }
+			823 = { add_core_of = ROOT }
+			732 = { add_core_of = ROOT }
+			586 = { add_core_of = ROOT }
+			742 = { add_core_of = ROOT }
+			585 = { add_core_of = ROOT }
+			831 = { add_core_of = ROOT }
+			584 = { add_core_of = ROOT }
+			832 = { add_core_of = ROOT }
+			830 = { add_core_of = ROOT }
+			405 = { add_core_of = ROOT }
+			582 = { add_core_of = ROOT }
+			651 = { add_core_of = ROOT }
+			652 = { add_core_of = ROOT }
+			217 = { add_core_of = ROOT }
+			245 = { add_core_of = ROOT }
+			218 = { add_core_of = ROOT }
+			236 = { add_core_of = ROOT }
+			237 = { add_core_of = ROOT }
+			238 = { add_core_of = ROOT }
+			234 = { add_core_of = ROOT }
+			235 = { add_core_of = ROOT }
+			232 = { add_core_of = ROOT }
+			229 = { add_core_of = ROOT }
+			230 = { add_core_of = ROOT }
+			231 = { add_core_of = ROOT }
+			233 = { add_core_of = ROOT }
+			826 = { add_core_of = ROOT }
+			821 = { add_core_of = ROOT }
+			828 = { add_core_of = ROOT }
+			827 = { add_core_of = ROOT }
+			840 = { add_core_of = ROOT }
+			839 = { add_core_of = ROOT }
+			137 = { add_core_of = ROOT }
+			196 = { add_core_of = ROOT }
+			200 = { add_core_of = ROOT }
+			228 = { add_core_of = ROOT }
+			227 = { add_core_of = ROOT }
+			197 = { add_core_of = ROOT }
+			226 = { add_core_of = ROOT }
+			231 = { add_core_of = ROOT }
+			225 = { add_core_of = ROOT }
+			259 = { add_core_of = ROOT }
+			192 = { add_core_of = ROOT }
+			834 = { add_core_of = ROOT }
+			203 = { add_core_of = ROOT }
+			198 = { add_core_of = ROOT }
+			199 = { add_core_of = ROOT }
+			201 = { add_core_of = ROOT }
+			202 = { add_core_of = ROOT }
+			193 = { add_core_of = ROOT }
+			194 = { add_core_of = ROOT }
+			241 = { add_core_of = ROOT }
+			206 = { add_core_of = ROOT }
+			204 = { add_core_of = ROOT }
+			207 = { add_core_of = ROOT }
+			216 = { add_core_of = ROOT }
+			351 = { add_core_of = ROOT }
+			400 = { add_core_of = ROOT }
+			399 = { add_core_of = ROOT }
+			249 = { add_core_of = ROOT }
+			251 = { add_core_of = ROOT }
+			401 = { add_core_of = ROOT }
+			250 = { add_core_of = ROOT }
+			264 = { add_core_of = ROOT }
+			244 = { add_core_of = ROOT }
+			195 = { add_core_of = ROOT }
+			208 = { add_core_of = ROOT }
+			210 = { add_core_of = ROOT }
+			209 = { add_core_of = ROOT }
+			263 = { add_core_of = ROOT }
+			265 = { add_core_of = ROOT }
+            260 = { add_core_of = ROOT }
+            243 = { add_core_of = ROOT }
+            220 = { add_core_of = ROOT }
+            224 = { add_core_of = ROOT }
+			242 = { add_core_of = ROOT }
+			246 = { add_core_of = ROOT }
+			243 = { add_core_of = ROOT }
+			205 = { add_core_of = ROOT }
+			219 = { add_core_of = ROOT }
+			247 = { add_core_of = ROOT }
+			248 = { add_core_of = ROOT }
+			253 = { add_core_of = ROOT }
+			252 = { add_core_of = ROOT }
+			833 = { add_core_of = ROOT }
+			256 = { add_core_of = ROOT }
+			222 = { add_core_of = ROOT }
+			223 = { add_core_of = ROOT }
+			254 = { add_core_of = ROOT }
+			258 = { add_core_of = ROOT }
+			255 = { add_core_of = ROOT }
+			257 = { add_core_of = ROOT }
+			239 = { add_core_of = ROOT }
+			829 = { add_core_of = ROOT }
+			240 = { add_core_of = ROOT }
+			221 = { add_core_of = ROOT }
+		}
+	}
+}
+
+restoration_of_the_mongol_empire = {
+
+	restore_the_mongol_empire = {
+
+		icon = generic_form_nation
+
+        available = {
+			custom_trigger_tooltip = {
+				tooltip = mon_all_territories_under_control
+                controls_state = 618 #Синзянь
+                controls_state = 760 #Синзянь
+                controls_state = 617 #Синзянь
+                controls_state = 759 #Синзянь
+                controls_state = 287 #Синзянь
+                controls_state = 619 #Синзянь
+                controls_state = 322 #Тибет
+                controls_state = 758 #Тибет
+                controls_state = 757 #Тибет
+                controls_state = 755 #Сибень Сань Ма
+                controls_state = 616 #Сибень Сань Ма
+                controls_state = 756 #Сибень Сань Ма
+                controls_state = 604 #Сибень Сань Ма	
+                controls_state = 754 #Сибень Сань Ма
+                controls_state = 283 #Сибень Сань Ма
+                controls_state = 753 #Сибень Сань Ма
+                controls_state = 622 #Ком. Китай
+                controls_state = 621 #Шаньси
+                controls_state = 746 #Шаньси
+                controls_state = 615 #Шаньси
+                controls_state = 612 #Мензянь
+                controls_state = 611 #Мензянь
+                controls_state = 761 #Манжурия
+                controls_state = 714 #Манжурия
+                controls_state = 715 #Манжурия
+                controls_state = 610 #Манжурия
+                controls_state = 717 #Манжурия
+                controls_state = 328 #Манжурия
+                controls_state = 716 #Манжурия
+                controls_state = 609 #Япония
+                controls_state = 745 #Япония
+                controls_state = 527 #Япония
+                controls_state = 525 #Япония
+                controls_state = 743 #Япония
+                controls_state = 761 #Япония
+                controls_state = 601 #Китай
+                controls_state = 752 #Китай
+                controls_state = 751 #Китай
+                controls_state = 605 #Китай
+                controls_state = 748 #Китай
+                controls_state = 603 #Китай
+                controls_state = 744 #Китай
+                controls_state = 620 #Китай
+                controls_state = 750 #Китай
+                controls_state = 602 #Китай
+                controls_state = 600 #Китай
+                controls_state = 595 #Китай
+                controls_state = 596 #Китай
+                controls_state = 613 #Китай
+                controls_state = 606 #Китай
+                controls_state = 607 #Китай
+                controls_state = 749 #Китай
+                controls_state = 597 #Китай
+                controls_state = 598 #Китай
+                controls_state = 614 #Китай
+                controls_state = 608 #Китай
+                controls_state = 747 #Юньань
+                controls_state = 325 #Юньань
+                controls_state = 599 #Гуанси
+                controls_state = 594 #Гуанси
+                controls_state = 593 #Гуанси
+                controls_state = 592 #Гуанси
+                controls_state = 591 #Гуанси
+                controls_state = 323 #Непал
+                controls_state = 324 #Бутан
+                controls_state = 434 #Индия
+                controls_state = 640 #Индия
+                controls_state = 441 #Индия
+                controls_state = 787 #Индия
+                controls_state = 442 #Индия
+                controls_state = 440 #Индия
+                controls_state = 445 #Индия
+                controls_state = 444 #Индия
+                controls_state = 443 #Индия
+                controls_state = 439 #Индия
+                controls_state = 433 #Индия
+                controls_state = 267 #Афганистан
+                controls_state = 415 #Афганистан
+                controls_state = 416 #Иран
+                controls_state = 414 #Иран
+                controls_state = 410 #Иран
+                controls_state = 412 #Иран
+                controls_state = 411 #Иран
+                controls_state = 418 #Иран
+                controls_state = 266 #Иран
+                controls_state = 417 #Иран
+                controls_state = 413 #Иран
+                controls_state = 421 #Иран
+                controls_state = 420 #Иран
+                controls_state = 419 #Иран
+                controls_state = 676 #Ирак
+                controls_state = 291 #Ирак
+                controls_state = 352 #Турция
+                controls_state = 800 #Турция
+                controls_state = 354 #Турция
+                controls_state = 353 #Турция
+                controls_state = 350 #Турция
+                controls_state = 344 #Турция
+                controls_state = 798 #Турция
+                controls_state = 348 #Турция
+                controls_state = 346 #Турция
+                controls_state = 345 #Турция
+                controls_state = 355 #Турция
+                controls_state = 349 #Турция
+				controls_state = 329 #Тува
+				controls_state = 837 #Тува
+				controls_state = 836 #Тува
+				controls_state = 838 #Тува
+				controls_state = 835 #Тува
+				controls_state = 78 #Румыния
+				controls_state = 80 #Румыния
+				controls_state = 766 #Румыния
+				controls_state = 79 #Румыния
+				controls_state = 46 #Румыния
+				controls_state = 81 #Румыния
+				controls_state = 408 #СССР
+				controls_state = 409 #СССР
+				controls_state = 560 #СССР
+				controls_state = 657 #СССР
+				controls_state = 561 #СССР
+				controls_state = 563 #СССР
+				controls_state = 564 #СССР
+				controls_state = 566 #СССР
+				controls_state = 567 #СССР
+				controls_state = 568 #СССР
+				controls_state = 569 #СССР
+				controls_state = 570 #СССР
+				controls_state = 571 #СССР
+				controls_state = 40 #СССР
+				controls_state = 654 #СССР
+				controls_state = 588 #СССР
+				controls_state = 590 #СССР
+				controls_state = 583 #СССР
+				controls_state = 402 #СССР
+				controls_state = 406 #СССР
+				controls_state = 407 #СССР
+				controls_state = 589 #СССР
+				controls_state = 404 #СССР
+				controls_state = 587 #СССР
+				controls_state = 823 #СССР
+				controls_state = 732 #СССР
+				controls_state = 586 #СССР
+				controls_state = 742 #СССР
+				controls_state = 585 #СССР
+				controls_state = 831 #СССР
+				controls_state = 584 #СССР
+				controls_state = 832 #СССР
+				controls_state = 830 #СССР
+				controls_state = 405 #СССР
+				controls_state = 582 #СССР
+				controls_state = 651 #СССР
+				controls_state = 652 #СССР
+				controls_state = 217 #СССР
+				controls_state = 245 #СССР
+				controls_state = 218 #СССР
+				controls_state = 236 #СССР
+				controls_state = 237 #СССР
+				controls_state = 238 #СССР
+				controls_state = 234 #СССР
+				controls_state = 235 #СССР
+				controls_state = 232 #СССР
+				controls_state = 229 #СССР
+				controls_state = 230 #СССР
+				controls_state = 231 #СССР
+				controls_state = 233 #СССР
+				controls_state = 826 #СССР
+				controls_state = 821 #СССР
+				controls_state = 827 #СССР
+				controls_state = 828 #СССР
+				controls_state = 840 #СССР
+				controls_state = 839 #СССР
+				controls_state = 137 #СССР
+				controls_state = 196 #СССР
+				controls_state = 200 #СССР
+				controls_state = 228 #СССР
+				controls_state = 227 #СССР
+				controls_state = 197 #СССР
+				controls_state = 226 #СССР
+				controls_state = 231 #СССР
+				controls_state = 225 #СССР
+				controls_state = 259 #СССР
+				controls_state = 192 #СССР
+				controls_state = 834 #СССР
+				controls_state = 203 #СССР
+				controls_state = 198 #СССР
+				controls_state = 199 #СССР
+				controls_state = 201 #СССР
+				controls_state = 202 #СССР
+				controls_state = 193 #СССР
+				controls_state = 194 #СССР
+				controls_state = 241 #СССР
+				controls_state = 206 #СССР
+				controls_state = 204 #СССР
+				controls_state = 207 #СССР
+				controls_state = 216 #СССР
+				controls_state = 351 #СССР
+				controls_state = 400 #СССР
+				controls_state = 399 #СССР
+				controls_state = 249 #СССР
+				controls_state = 251 #СССР
+				controls_state = 401 #СССР
+				controls_state = 250 #СССР
+				controls_state = 264 #СССР
+				controls_state = 244 #СССР
+				controls_state = 195 #СССР
+				controls_state = 208 #СССР
+				controls_state = 210 #СССР
+				controls_state = 209 #СССР
+				controls_state = 263 #СССР
+				controls_state = 265 #СССР
+				controls_state = 260 #СССР
+				controls_state = 243 #СССР
+				controls_state = 220 #СССР
+				controls_state = 224 #СССР
+				controls_state = 242 #СССР
+				controls_state = 246 #СССР
+				controls_state = 243 #СССР
+				controls_state = 205 #СССР
+				controls_state = 219 #СССР
+				controls_state = 247 #СССР
+				controls_state = 248 #СССР
+				controls_state = 253 #СССР
+				controls_state = 252 #СССР
+				controls_state = 833 #СССР
+				controls_state = 256 #СССР
+				controls_state = 222 #СССР
+				controls_state = 223 #СССР
+				controls_state = 254 #СССР
+				controls_state = 258 #СССР
+				controls_state = 257 #СССР
+				controls_state = 255 #СССР
+				controls_state = 239 #СССР
+				controls_state = 829 #СССР
+				controls_state = 240 #СССР
+				controls_state = 221 #СССР
+			}
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions restore_the_mongol_empire"
+		      country_event = { id = Wnews.4 days = 1 }
+		      set_cosmetic_tag = MON_empire
+			}
+		}
+	}
+
+military_aid_from_the_ussr = {
+
+    help_from_the_central_committee_mon = {
+
+    icon = generic_decision
+
+		fire_only_once = no
+
+		modifier = {
+            stability_weekly = -0.002
+            communism_drift = 0.05
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+	}
+}
+
+military_aid_from_the_ussr = {
+
+    purchase_of_soviet_equipment_mon = {
+
+    icon = generic_industry
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 7
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision purchase_of_soviet_equipment_mon"
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 100
+						has_government = communism
+					}
+					modifier = {
+						factor = 100
+						has_war_with = SOV
+					}
+					add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 2000
+					    producer = SOV
+                    }
+                }
+            }
+            effect_tooltip = {
+				add_equipment_to_stockpile = {
+				    type = infantry_equipment
+				    amount = 2000
+				    producer = SOV
+				}
+			}
+		}
+    }
+}
+
+military_aid_from_the_ussr = {
+
+    purchase_of_soviet_armored_vehicles_mon = {
+
+    icon = generic_merge_plant_tank
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 7
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision purchase_of_soviet_armored_vehicles_mon"
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 100
+						has_government = communism
+					}
+					modifier = {
+						factor = 100
+						has_war_with = SOV
+					}
+					add_equipment_to_stockpile = {
+					    type = gw_armored_car_equipment
+					    amount = 100
+					    producer = SOV
+                    }
+                }
+            }
+            effect_tooltip = {
+				add_equipment_to_stockpile = {
+				    type = gw_armored_car_equipment
+				    amount = 100
+				    producer = SOV
+				}
+			}
+		}
+    }
+}
+
+military_aid_from_the_ussr = {
+
+    purchase_of_soviet_tanks_mon = {
+
+    icon = generic_tank
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 7
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision purchase_of_soviet_tanks_mon"
+			random_list = {
+                10 = {
+					modifier = {
+						factor = 100
+						has_government = communism
+					}
+					modifier = {
+						factor = 100
+						has_war_with = SOV
+					}
+					add_equipment_to_stockpile = {
+					    type = light_tank_chassis
+					    amount = 50
+					    producer = SOV
+					}
+				}
+			}
+            effect_tooltip = {
+				add_equipment_to_stockpile = {
+				    type = light_tank_chassis
+				    amount = 50
+				    producer = SOV
+                }
+			}
+		}
+    }
+}
+
+military_aid_from_the_ussr = {
+
+    purchase_of_soviet_trucks_mon = {
+
+    icon = generic_trucks
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 7
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision purchase_of_soviet_trucks_mon"
+			random_list = {
+                10 = {
+					modifier = {
+						factor = 100
+						has_government = communism
+					}
+					modifier = {
+						factor = 100
+						has_war_with = SOV
+					}
+					add_equipment_to_stockpile = {
+					    type = motorized_equipment
+					    amount = 200
+					    producer = SOV
+					}
+				}
+			}
+            effect_tooltip = {
+				add_equipment_to_stockpile = {
+				    type = motorized_equipment
+				    amount = 200
+				    producer = SOV
+				}
+			}
+		}
+    }
+}
+
+development_of_mongolia = {
+
+    improve_the_quality_of_work_mon = {
+
+    icon = generic_wreckers
+
+		cost = 25
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 7
+
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+    }
+}
+
+development_of_mongolia = {
+
+    military_investment = {
+
+    icon = generic_industry
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 7
+
+		modifier = {
+			production_speed_arms_factory_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+    }
+}
+
+development_of_mongolia = {
+
+    investment_in_construction = {
+
+    icon = generic_factory
+
+		cost = 25
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 7
+
+		modifier = {
+			production_speed_buildings_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+    }
+}
+
+development_of_mongolia = {
+
+    road_construction_mon = {
+
+    icon = eng_trade_unions_support
+
+		cost = 25
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 7
+
+		modifier = {
+			production_speed_rail_way_factor = 0.1
+			production_speed_supply_node_factor = 0.1
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = MON
+			}
+		}
+    }
+}
+
+internal_mongolia_com = {
+
+capture_of_mengjiang_and_manchukuo = {
+
+		icon = GFX_decision_generic_operation
+	
+        allowed = {always=no}
+        
+        available = {
+			controls_state = 612
+			controls_state = 611
+			controls_state = 761
+			MAN = {
+			has_capitulated = yes
+			}
+			MEN = {
+			has_capitulated = yes
+			}
+        }
+
+		fire_only_once = yes
+        is_good = no
+        selectable_mission = no
+        days_mission_timeout = 365
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions capture_of_mengjiang_and_manchukuo"
+			white_peace = MEN
+			if = {
+				limit = {
+					has_completed_focus = MON_autonomous_inner_mongolia
+				}
+				transfer_state = 612
+				transfer_state = 611
+			}
+			white_peace = MAN
+			if = {
+				limit = {
+					has_completed_focus = MON_autonomous_inner_mongolia
+				}
+				transfer_state = 761
+			}
+		}
+		
+        timeout_effect = {
+            add_war_support = -0.15
+			add_political_power = -25
+        }
+	}
+}
+
+internal_mongolia_com = {
+
+treaty_with_communist_china = {
+
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+        fire_only_once = yes
+        cost = 50
+		days_remove = 30
+
+        available = {
+			NOT = { has_war_with = PRC }
+			NOT = { has_war_with = SHX }
+			NOT = { has_war_with = XSM }
+        }
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions treaty_with_communist_china"
+			country_event = { id = MON_bn_com.7 days = 1 }
+		}
+	}
+}
+
+interaction_with_xinjiang = {
+
+development_of_diplomatic_relations = {
+
+		icon = GFX_decision_generic_operation
+		
+        available = {
+			SIK = { has_government = communism }
+			NOT = { has_war_with = ROOT }
+        }
+		
+		fire_only_once = no
+		cost = 50
+		days_remove = 30
+		
+		remove_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision development_of_diplomatic_relations"
+        add_opinion_modifier = { target = SIK modifier = MON_development_of_diplomatic_relations }
+		SIK = { add_opinion_modifier = { target = ROOT modifier = MON_development_of_diplomatic_relations } }
+       }
+	}
+	
+delegation_to_xinjiang = {
+
+		icon = GFX_decision_generic_operation
+		
+        available = {
+			SIK = { has_government = communism }
+			NOT = { has_war_with = ROOT }
+        }
+		
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+		
+		remove_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision delegation_to_xinjiang"
+        country_event = { id = MON_bn_com.8 days = 1 }
+
+       }
+	}
+}

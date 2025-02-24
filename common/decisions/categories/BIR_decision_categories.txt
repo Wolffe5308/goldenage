@@ -1,0 +1,29 @@
+development_of_the_jasr = {
+
+    icon = GFX_decision_category_generic_economy
+
+    picture = GFX_decision_cat_picture_soviet_national_academy_of_sciences
+
+    priority = 90
+
+    allowed = {
+        original_tag = BIR
+    }
+}
+
+development_of_relations_with_the_ussr = {
+
+    icon = GFX_decision_category_SOV_civil_puppet_interaction
+
+    picture = GFX_decision_cat_picture_soviet_national_academy_of_sciences
+
+    priority = 90
+
+    allowed = {
+        original_tag = BIR
+    }
+
+    visible = {
+        has_completed_focus = BIR_development_of_relations_with_the_ussr
+    }
+}

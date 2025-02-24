@@ -1,0 +1,25 @@
+﻿
+units= {
+
+	### Black Sea Fleet -- Одесса
+	fleet = {
+		name = "Chernomorskiy Flot"
+		naval_base = 11670 # Одесса
+		task_force = {				
+			name = "Chernomorskiy Nadvodniy Flot"
+			location = 11670 # Одесса
+			ship = { name = "Odessa" definition = battleship start_experience_factor = 0.2 equipment = { ship_hull_heavy_1 = { amount = 1 owner = UKR version_name = "Ukraina Class" } } }
+			ship = { name = "Chervona Ukraina" definition = light_cruiser start_experience_factor = 0.2 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Ukraina Class" } } }
+			ship = { name = "Molotov" definition = light_cruiser start_experience_factor = 0.2 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Ukraina Class" } } }
+			ship = { name = "Voroshilov" definition = light_cruiser start_experience_factor = 0.2 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UKR version_name = "Ukraina Class" } } }
+		}	
+		task_force = {	
+			name = "Chernomorskiy Podvodniy Flot"
+			location = 11670 # Одесса
+			ship = { name = "D-4 Revolutionary" definition = submarine start_experience_factor = 0.2 equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Series Dekabrist" } } }			
+			ship = { name = "D-5 Spartacus" definition = submarine start_experience_factor = 0.2 equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Series Dekabrist" } } }			
+			ship = { name = "D-6 Jacobin" definition = submarine start_experience_factor = 0.2 equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Series Dekabrist" } } }			
+			ship = { name = "L-5 Chartist" definition = submarine start_experience_factor = 0.2 equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Series Dekabrist" } } }			
+		}	
+	}
+}

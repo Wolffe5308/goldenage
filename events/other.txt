@@ -1,0 +1,159 @@
+add_namespace = RPB
+add_namespace = SOV_GA
+
+country_event = {
+	id = RPB.1
+	title = RPB.1.t
+	desc = RPB.1.d
+	picture = GFX_report_event_generic_panzer_attack
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event RPB.1"}
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		has_war_with = GER
+		is_in_faction_with = SOV
+		tag = BLR
+		}
+
+	option = {
+		name = RPB.1.a
+		ai_chance = {
+			factor = 100
+		}
+		unlock_national_focus = BLR_the_great_patriotic_war
+		add_timed_idea = { idea = UKR_the_great_patriotic_war_1 days = 60 }
+	}
+}
+
+country_event = {
+	id = RPB.2
+	title = RPB.2.t
+	desc = RPB.2.d
+	picture = GFX_report_event_generic_panzer_attack
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event RPB.2"}
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		has_war_with = GER
+		is_in_faction_with = SOV
+		tag = UKR
+	}
+
+	option = {
+		name = RPB.2.a
+		ai_chance = {
+			factor = 100
+		}
+		unlock_national_focus = UKR_the_great_patriotic_war
+		add_timed_idea = { idea = UKR_the_great_patriotic_war_1 days = 60 }
+	}
+}
+
+country_event = {
+	id = RPB.3
+	title = RPB.3.t
+	desc = RPB.3.d
+	picture = GFX_report_event_generic_panzer_attack
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event RPB.3"}
+	fire_only_once = yes
+	
+	trigger = {
+		has_government = communism
+		has_war_with = GER
+		is_in_faction_with = SOV
+		tag = ZSR
+	}
+
+	option = {
+		name = RPB.3.a
+		ai_chance = {
+			factor = 100
+		}
+		unlock_national_focus = ZSR_the_great_patriotic_war
+		add_timed_idea = { idea = UKR_the_great_patriotic_war_1 days = 60 }
+	}
+}
+
+country_event = {
+	id = RPB.4
+	title = RPB.4.t
+	desc = RPB.4.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event RPB.4"}
+	fire_only_once = yes
+	
+	trigger = {
+		has_completed_focus = UKR_change_of_government
+		tag = UKR
+	}
+
+	option = {
+		name = RPB.4.a
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = MOL
+			expire = 0
+		}	
+		MOL = { country_event = RPB.5 hours = 6 }
+	}
+}
+
+country_event = {
+	id = RPB.5
+	title = RPB.5.t
+	desc = RPB.5.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event RPB.5"}
+	fire_only_once = yes
+
+	trigger = {
+		has_completed_focus = UKR_change_of_government
+		tag = MOL
+	}
+	
+	option = {
+		name = RPB.5.a
+		ai_chance = {
+			factor = 100
+		}
+		SOV = { remove_from_faction = MOL }
+		set_variable = { MOL_independence_target = SOV } 
+		SOV = { set_autonomy = { target = MOL autonomy_state = autonomy_free } }
+	}
+}
+
+country_event = {
+	id = SOV_GA.1
+	title = SOV_GA.1.t
+	desc = SOV_GA.1.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event SOV_GA.1"}
+	fire_only_once = yes
+
+	trigger = {
+		has_government = communism
+		has_war_with = GER
+		tag = SOV
+		GER = {
+			casualties > 1500000
+		}
+	}
+	
+	option = {
+		name = SOV_GA.1.a
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = sov_seidlitz_proposal_was_accepted
+	}
+
+	option = {
+		name = SOV_GA.1.b
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = 25
+	}
+}

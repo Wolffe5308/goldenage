@@ -1,0 +1,26 @@
+﻿
+units= {
+
+	### Black Sea Fleet -- Одесса
+	fleet = {
+		name = "Chernomorskiy Flot Ukraini"
+		naval_base = 11670 # Одесса
+		task_force = {				
+			name = "Chernomorskiy Flot Ukraini"
+			location = 11670 # Одесса
+			ship = { name = "Odessa" definition = battleship equipment = { battleship_1 = { amount = 1 owner = UKR  } } }
+			ship = { name = "Chervona Ukraina" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = UKR  } } }
+			ship = { name = "Molotov" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = UKR  } } }
+			ship = { name = "Voroshilov" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = UKR  } } }
+		}	
+		task_force = {	
+			name = "Chernomorskiy Podvodniy Flot Ukraini"
+			location = 11670 # Одесса
+			ship = { name = "D-4 Revolutionary" definition = submarine equipment = { submarine_1 = { amount = 1 owner = UKR  } } }			
+			ship = { name = "D-5 Spartacus" definition = submarine equipment = { submarine_1 = { amount = 1 owner = UKR  } } }			
+			ship = { name = "D-6 Jacobin" definition = submarine equipment = { submarine_1 = { amount = 1 owner = UKR  } } }			
+			ship = { name = "L-5 Chartist" definition = submarine equipment = { submarine_1 = { amount = 1 owner = UKR  } } }			
+		}	
+	}
+}
+

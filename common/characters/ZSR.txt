@@ -1,0 +1,585 @@
+characters={
+    ZSR_lavrenti_beria={
+		name=ZSR_lavrenti_beria
+		portraits={
+			civilian={
+				large="GFX_portrait_ZSR_lavrenty_beriya"
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_lavrenti_beria.dds"
+			}
+		}
+		field_marshal = {
+			traits = { politically_connected inflexible_strategist }
+			skill=3
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+        }
+        advisor={
+			slot = army_chief
+			idea_token = ZSR_lavrenti_beria
+			allowed = {
+				original_tag = ZSR
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits = { head_of_the_nkvd_zsr }
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+	ZSR_noah_jordania = {
+		name = ZSR_noah_jordania
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ZSR/portrait_SOV_supreme_soviet.dds"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1965.1.1.1"
+		}
+	}
+	ZSR_supreme_soviet = {
+		name = ZSR_supreme_soviet
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ZSR/portrait_SOV_supreme_soviet.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			traits = { strong_party_discipline }
+			expire = "1965.1.1.1"
+		}
+	}
+	ZSR_chairmen_of_the_cec={ ######## Трио главы правительства
+		name=ZSR_chairmen_of_the_cec
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_sergey_goglidze.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ZSR_chairmen_of_the_cec
+			cost = 0
+			can_be_fired = no
+			allowed = {
+				original_tag = ZSR
+			}
+			available = {
+				has_government = communism
+			}
+			on_add = {
+				ROOT = {
+			        set_country_flag = ZSR_communist_head_of_goverment
+				}
+			}
+			traits = { head_of_government_communist_advisor }
+		}
+	}
+	ZSR_sergey_goglidze={
+		name=ZSR_sergey_goglidze
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_sergey_goglidze.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ZSR_sergey_goglidze
+			allowed = {
+				original_tag = ZSR
+			}
+			available = {
+				has_completed_focus = ZSR_party_congress
+				has_country_flag = ZSR_communist_head_of_goverment
+			}
+			traits = {
+				SWI_intelligence_officer
+			}
+		}
+	}
+	ZSR_artavazd_sahakyants={
+		name=ZSR_artavazd_sahakyants
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_artavazd_sahakyants.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ZSR_artavazd_sahakyants
+			allowed = {
+				original_tag = ZSR
+			}
+			available = {
+				has_completed_focus = ZSR_party_congress
+				has_country_flag = ZSR_communist_head_of_goverment
+			}
+			traits = {
+				minister_of_peasants
+			}
+		}
+	}
+	ZSR_aziz_mammad_aliyev={
+		name=ZSR_aziz_mammad_aliyev
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_aziz_mammad_aliyev.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ZSR_aziz_mammad_aliyev
+			allowed = {
+				original_tag = ZSR
+			}
+			available = {
+				has_completed_focus = ZSR_party_congress
+				has_country_flag = ZSR_communist_head_of_goverment
+			}
+			traits = {
+				people's_commissar_of_health
+			}
+		}
+	}
+	ZSR_saak_karapetyan={
+	    name=ZSR_saak_karapetyan
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_saak_karapetyan.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ZSR_saak_karapetyan
+			allowed = {
+				original_tag = ZSR
+			}
+			available = {
+				has_completed_focus = ZSR_party_congress
+				has_country_flag = ZSR_communist_head_of_goverment
+			}
+			traits = {
+				SWI_diplomat
+			}
+		}
+	}
+	ZSR_george_sturua={
+		name=ZSR_george_sturua
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_george_sturua.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ZSR_george_sturua
+			allowed = {
+				original_tag = ZSR
+			}
+			available = {
+				has_completed_focus = ZSR_party_congress
+				has_country_flag = ZSR_communist_head_of_goverment
+			}
+			traits = {
+				trade_unionist_com_prof
+			}
+		}
+	}
+    ZSR_bagramyan_ivan={
+		name=ZSR_bagramyan_ivan
+		portraits={
+			civilian={
+				large=GFX_portrait_baghramyan_khristoforovich
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_baghramyan_ivan.dds"
+			}
+		}
+		field_marshal = {
+			traits = { infantry_officer bearer_of_artillery }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    ZSR_babajanyan_khachaturovich={
+		name=ZSR_babajanyan_khachaturovich
+		portraits={
+			civilian={
+				large=GFX_portrait_babajanyan_amazasp
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_babajanyan_amazasp.dds"
+			}
+		}
+		field_marshal = {
+			traits = { inflexible_strategist }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    ZSR_varlam_kakuchaya={
+		name=ZSR_varlam_kakuchaya
+		portraits={
+			civilian={
+				large=GFX_portrait_varlam_kakuchaya
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_varlam_kakuchaya.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ZSR_varlam_kakuchaya
+			allowed = {
+				original_tag = ZSR
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    ZSR_konstantin_leselidze={
+		name=ZSR_konstantin_leselidze
+		portraits={
+			civilian={
+				large=GFX_portrait_konstantin_leselidze
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_konstantin_leselidze.dds"
+			}
+		}
+		corps_commander = {
+			traits = { bearer_of_artillery }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    ZSR_porfiry_chanchibadze={
+		name=ZSR_porfiry_chanchibadze
+		portraits={
+			civilian={
+				large=GFX_portrait_porfiry_chanchibadze
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_porfiry_chanchibadze.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    ZSR_dmitry_namgaladze={
+		name=ZSR_dmitry_namgaladze
+		portraits={
+			civilian={
+				large=GFX_portrait_dmitry_namgaladze
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_dmitry_namgaladze.dds"
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    ZSR_vasily_stalin={
+		name=ZSR_vasily_stalin
+		portraits={
+			civilian={
+				large=GFX_portrait_vasily_stalin
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_vasily_stalin.dds"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = ZSR_vasily_stalin_air_chief
+			allowed = {
+				original_tag = ZSR
+			}
+			available = {
+				has_completed_focus = ZSR_party_congress
+				has_completed_focus = ZSR_waf
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+			cost = 75
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected inflexible_strategist }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    ZSR_salahadd_kazimov={
+		name=ZSR_salahadd_kazimov
+		portraits={
+			civilian={
+				large=GFX_portrait_salahaddin_kazimov
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_salahaddin_kazimov.dds"
+			}
+		}
+		advisor={
+			cost = 50			
+			slot = theorist
+			idea_token = ZSR_salahadd_kazimov
+			ledger = army
+			allowed = {
+				original_tag = ZSR
+			}	
+			traits = {
+				military_theorist
+			}
+		}
+		corps_commander = {
+			traits = { bearer_of_artillery }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    ZSR_mikhail_parsegov={
+		name=ZSR_mikhail_parsegov
+		portraits={
+			civilian={
+				large=GFX_portrait_mikhail_parsegov
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_mikhail_parsegov.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ZSR_mikhail_parsegov
+			allowed = {
+				original_tag = ZSR
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer bearer_of_artillery }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    ZSR_bagrad_arushanyan={
+		name=ZSR_bagrad_arushanyan
+		portraits={
+			civilian={
+				large=GFX_portrait_baghrad_arushanyan
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_baghrad_arushanyan.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    ZSR_christopher_alaverdov={
+		name=ZSR_christopher_alaverdov
+		portraits={
+			civilian={
+				large=GFX_portrait_christopher_alaverdov
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_christopher_alaverdov.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer cavalry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    ZSR_hazi_aslanov={
+		name=ZSR_hazi_aslanov
+		portraits={
+			civilian={
+				large=GFX_portrait_hazi_aslanov
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_hazi_aslanov.dds"
+			}
+		}
+		corps_commander = {
+			traits = { armor_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+	ZSR_armenak_khanferyants={
+		name=ZSR_armenak_khanferyants
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_armenak_khanferyants.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ZSR_armenak_khanferyants
+			ledger = air
+			allowed = {
+				original_tag = ZSR
+			}
+			available = {
+				has_completed_focus = ZSR_party_congress
+				has_completed_focus = ZSR_waf
+			}
+			traits = {
+				air_close_air_support_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		advisor={
+			slot = theorist
+			cost = 100
+			idea_token = ZSR_armenak_khanferyants
+			ledger = air
+			allowed = {
+				original_tag = ZSR
+			}
+			available = {
+				has_completed_focus = ZSR_party_congress
+				has_completed_focus = ZSR_waf
+			}
+			traits = {
+				air_warfare_theorist
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	ZSR_ivan_yumashev={
+		name=ZSR_ivan_yumashev
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_ivan_yumashev.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ZSR_ivan_yumashev
+			ledger = navy
+			allowed = {
+				original_tag = ZSR
+			}
+			available = {
+				has_completed_focus = ZSR_party_congress
+				has_completed_focus = ZSR_wsf
+			}
+			traits = {
+				navy_screen_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		advisor={
+			slot = theorist
+			cost = 100
+			idea_token = ZSR_ivan_yumashev
+			ledger = navy
+			allowed = {
+				original_tag = ZSR
+			}
+			available = {
+				has_completed_focus = ZSR_party_congress
+				has_completed_focus = ZSR_wsf
+			}
+			traits = {
+				naval_theorist
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = ZSR_ivan_yumashev
+			allowed = {
+				original_tag = ZSR
+			}
+			available = {
+				has_completed_focus = ZSR_party_congress
+				has_completed_focus = ZSR_wsf
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}

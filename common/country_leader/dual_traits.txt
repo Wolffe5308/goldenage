@@ -1,0 +1,35 @@
+leader_traits = {
+
+#TITLES
+TITLE_SOV_Chairman = { random = no }
+TITLE_UKR_Chairman = { random = no }
+TITLE_ZSR_Chairman = { random = no }
+TITLE_BLR_Chairman = { random = no }
+TITLE_ITA_King = { random = no }
+TITLE_SWE_King = { random = no }
+TITLE_NOR_King = { random = no }
+TITLE_DEN_King = { random = no }
+TITLE_POL_Prime_Minister = { random = no }
+TITLE_LIT_Prime_Minister = { random = no }
+TITLE_CZE_Prime_Minister = { random = no }
+TITLE_HUN_Prime_Minister = { random = no }
+TITLE_YUG_Prime_Minister = { random = no }
+TITLE_BUL_Prime_Minister = { random = no }
+TITLE_GRE_King = { random = no }
+TITLE_GER_Deputy_Fuhrer = { random = no }
+TITLE_AUS_President = { random = no }
+TITLE_HOL_Queen = { random = no }
+TITLE_BEL_King = { random = no }
+TITLE_FRA_President = { random = no }
+TITLE_POR_President = { random = no }
+TITLE_SWI_President = { random = no }
+TITLE_CAN_Governor_General = { random = no }
+TITLE_USA_Vice_President = { random = no }
+TITLE_AST_Governor_General = { random = no }
+TITLE_NZL_Governor_General = { random = no }
+
+all_union_headman = {
+		stability_factor = 0.05
+	}
+}
+

@@ -1,0 +1,542 @@
+guiTypes = {
+	containerWindowType = {
+		name = "open_lore_window"
+		position = { x = -140 y = -1005 }
+		size = { width = 80 height = 37 }
+		orientation = lower_RIGHT	
+		buttonType = {
+			name = "open_lore_window_button"
+			spriteType = "GFX_lore_btn_mapmode"
+			position = { x = -10 y = 9 }
+			font = "hoi_16mbs"
+			pdx_tooltip = "OPEN_CLOSE_lore_WINDOW"
+		}
+	}
+	
+	containerWindowType = {
+		name = "lore_window"
+		position = { x = -460 y = -290 }
+		size = { width = 920 height = 580 }		
+		Orientation = center
+		click_to_front = yes
+		clipping = no		
+		background = {
+			name = "lore_window_background"
+			spriteType = "GFX_lore_browser_background"
+		}		
+		containerWindowType = {
+			name = "lore_list"
+			position = { x = -442 y = -245 }
+			size = { width = 326 height = 480 }
+			margin = { top = 38 left = 8 bottom = 5 right = 5 }
+			Orientation = center
+			click_to_front = no
+			clipping = yes
+			
+			background = {
+				name = "lore_list_background"
+				spriteType = "GFX_list_lore"
+			}			
+			
+			buttonType = {
+				name = "history_of_the_revolution_lore_button"
+				quadTextureSprite ="GFX_spisok_statei_button"
+				position = { x = 5 y = 5 }
+				font = "hoi_18b"
+				text = "history_of_the_revolution_lore_tex"
+				format = center
+				pdx_tooltip = "history_of_the_revolution_lore_opisanie"				
+			}
+			buttonType = {
+				name = "history_of_the_revolution_in_ukraine_lore_button"
+				quadTextureSprite ="GFX_spisok_statei_button"
+				position = { x = 5 y = 45 }
+				font = "hoi_18b"
+				text = "history_of_the_revolution_in_ukraine_lore_tex"
+				format = center
+				pdx_tooltip = "history_of_the_revolution_in_ukraine_lore_opisanie"
+			}
+			buttonType = {
+				name = "history_of_the_revolution_in_belarus_lore_button"
+				quadTextureSprite ="GFX_spisok_statei_button"
+				position = { x = 5 y = 85 }
+				font = "hoi_18b"
+				text = "history_of_the_revolution_in_belarus_lore_tex"
+				format = center
+				pdx_tooltip = "history_of_the_revolution_in_belarus_lore_opisanie"
+			}
+			buttonType = {
+				name = "history_of_the_revolution_in_kavkaz_lore_button"
+				quadTextureSprite ="GFX_spisok_statei_button"
+				position = { x = 5 y = 125 }
+				font = "hoi_18b"
+				text = "history_of_the_revolution_in_kavkaz_lore_tex"
+				format = center
+				pdx_tooltip = "history_of_the_revolution_in_kavkaz_lore_opisanie"
+			}
+			buttonType = {
+				name = "the_situation_at_the_time_of_1936_ukrainian_ssr_lore_button"
+				quadTextureSprite ="GFX_spisok_statei_button"
+				position = { x = 5 y = 165 }
+				font = "hoi_18b"
+				text = "the_situation_at_the_time_of_1936_ukrainian_ssr_lore_tex"
+				format = center
+				pdx_tooltip = "the_situation_at_the_time_of_1936_ukrainian_ssr_lore_opisanie"
+			}
+			buttonType = {
+				name = "the_situation_at_the_time_of_1936_belarusian_ssr_lore_button"
+				quadTextureSprite ="GFX_spisok_statei_button"
+				position = { x = 5 y = 205 }
+				font = "hoi_18b"
+				text = "the_situation_at_the_time_of_1936_belarusian_ssr_lore_tex"
+				format = center
+				pdx_tooltip = "the_situation_at_the_time_of_1936_belarusian_ssr_lore_opisanie"
+			}
+			buttonType = {
+				name = "the_situation_at_the_time_of_1936_transcaucasian_sfsr_lore_button"
+				quadTextureSprite ="GFX_spisok_statei_button"
+				position = { x = 5 y = 245 }
+				font = "hoi_18b"
+				text = "the_situation_at_the_time_of_1936_transcaucasian_sfsr_lore_tex"
+				format = center
+				pdx_tooltip = "the_situation_at_the_time_of_1936_transcaucasian_sfsr_lore_opisanie"
+			}
+			buttonType = {
+				name = "remains_of_resistance_to_the_bolsheviks_abroad_lore_button"
+				quadTextureSprite ="GFX_spisok_statei_button"
+				position = { x = 5 y = 285 }
+				font = "hoi_18b"
+				text = "remains_of_resistance_to_the_bolsheviks_abroad_lore_tex"
+				format = center
+				pdx_tooltip = "remains_of_resistance_to_the_bolsheviks_abroad_lore_opisanie"
+			}
+			buttonType = {
+				name = "nextt_button"
+				quadTextureSprite ="GFX_spisok_statei_button"
+				position = { x = 5 y = 805 }
+				font = "hoi_18b"
+				text = "nextt_lore_tex"
+				format = center
+				pdx_tooltip = "nextt"
+			}			
+		}
+		
+		instantTextBoxType = {
+			name = "lore_list_title"
+			position = { x = 10 y = 57 }
+			font = "hoi_30header"
+			maxWidth = 350
+			maxHeight = 20
+			text = "lore_list_title"	
+			format = centre
+		}		
+		instantTextBoxType = {
+			name = "lore_title"
+			position = { x = 250 y = 13 }
+			font = "hoi_30header"
+			maxWidth = 350
+			maxHeight = 20
+			text = "lore_title"	
+			format = centre
+		}	
+		instantTextBoxType = {
+			name = "lore_mod_golden_age_2"
+			position = { x = 350 y = 49 }
+			textureFile = ""
+			font = "hoi_18"
+			borderSize = { x = 1 y = 1}
+			text = "lore_mod_golden_age_stripes_22"
+			maxWidth = 536
+			maxHeight = 480
+			format = left
+			scrollbarType = standardtext_slider
+			Orientation = "UPPER_LEFT"
+		}
+		
+		buttonType = {
+			name = "lore_close_button"
+			position = { x = 350 y = 542 }
+			quadTextureSprite ="GFX_button_221x34"
+			font = "hoi_18b"
+			text = "DIPLOMACY_CLOSE"
+			format = center
+			pdx_tooltip = "DIPLOMACY_CLOSE"
+			shortcut = "ESCAPE"
+		}	
+		
+	}
+########################### Лор республик
+	containerWindowType = {
+		name = "history_of_the_revolution_lore_window"
+		position = { x = -460 y = -290 }
+		size = { width = 920 height = 580 }		
+		Orientation = center
+		click_to_front = yes
+		clipping = no		
+		background = {
+			name = "lore_window_background"
+			spriteType = "GFX_lore_browser_background"
+		}		
+		instantTextBoxType = {
+			name = "history_of_the_revolution_lore_title"
+			position = { x = 250 y = 13 }
+			font = "hoi_30header"
+			maxWidth = 350
+			maxHeight = 20
+			text = "history_of_the_revolution_lore_title"	
+			format = centre
+		}		
+		instantTextBoxType = {
+			name = "history_of_the_revolution_lore_stripes"
+			position = { x = 25 y = 50 }
+			textureFile = ""
+			font = "hoi_18b"
+			borderSize = { x = 5 y = 5}
+			text = "history_of_the_revolution_lore_opisaniye"
+			maxWidth = 855
+			maxHeight = 480
+			format = left
+			scrollbarType = standardtext_slider
+			Orientation = "UPPER_LEFT"
+		}	
+		buttonType = {
+			name = "history_of_the_revolution_lore_close_button"
+			position = { x = 656 y = 542 }
+			quadTextureSprite ="GFX_button_221x34"
+			font = "hoi_18b"
+			text = "DIPLOMACY_CLOSE"
+			format = center
+			pdx_tooltip = "DIPLOMACY_CLOSE"
+			shortcut = "ESCAPE"
+		}
+	}
+	containerWindowType = {
+		name = "history_of_the_revolution_in_ukraine_lore_window"
+		position = { x = -460 y = -290 }
+		size = { width = 920 height = 580 }
+		Orientation = center
+		click_to_front = yes
+		clipping = no
+		
+		background = {
+			name = "lore_window_background"
+			spriteType = "GFX_lore_browser_background"
+		}
+		
+		instantTextBoxType = {
+			name = "history_of_the_revolution_in_ukraine_lore_title"
+			position = { x = 250 y = 13 }
+			font = "hoi_30header"
+			maxWidth = 350
+			maxHeight = 20
+			text = "history_of_the_revolution_in_ukraine_lore_title"	
+			format = centre
+		}		
+		
+		instantTextBoxType = {
+			name = "history_of_the_revolution_in_ukraine_lore_stripes"
+			position = { x = 25 y = 43 }
+			textureFile = ""
+			font = "hoi_18b"
+			borderSize = { x = 5 y = 5}
+			text = "history_of_the_revolution_in_ukraine_lore_opisaniye"			
+			maxWidth = 855
+			maxHeight = 487
+			format = left
+			scrollbarType = standardtext_slider
+			Orientation = "UPPER_LEFT"
+		}		
+		buttonType = {
+			name = "history_of_the_revolution_in_ukraine_lore_close_button"
+			position = { x = 656 y = 542 }
+			quadTextureSprite ="GFX_button_221x34"
+			font = "hoi_18b"
+			text = "DIPLOMACY_CLOSE"
+			format = center
+			pdx_tooltip = "DIPLOMACY_CLOSE"
+			shortcut = "ESCAPE"
+		}
+	}
+	containerWindowType = {
+		name = "history_of_the_revolution_in_belarus_lore_window"
+		position = { x = -460 y = -290 }
+		size = { width = 920 height = 580 }
+		Orientation = center
+		click_to_front = yes
+		clipping = no
+		
+		background = {
+			name = "lore_window_background"
+			spriteType = "GFX_lore_browser_background"
+		}
+		
+		instantTextBoxType = {
+			name = "history_of_the_revolution_in_belarus_lore_title"
+			position = { x = 250 y = 13 }
+			font = "hoi_30header"
+			maxWidth = 350
+			maxHeight = 20
+			text = "history_of_the_revolution_in_belarus_lore_title"	
+			format = centre
+		}		
+		
+		instantTextBoxType = {
+			name = "history_of_the_revolution_in_belarus_lore_stripes"
+			position = { x = 25 y = 43 }
+			textureFile = ""
+			font = "hoi_18b"
+			borderSize = { x = 5 y = 5}
+			text = "history_of_the_revolution_in_belarus_lore_opisaniye"			
+			maxWidth = 855
+			maxHeight = 487
+			format = left
+			scrollbarType = standardtext_slider
+			Orientation = "UPPER_LEFT"
+		}		
+		buttonType = {
+			name = "history_of_the_revolution_in_belarus_lore_close_button"
+			position = { x = 656 y = 542 }
+			quadTextureSprite ="GFX_button_221x34"
+			font = "hoi_18b"
+			text = "DIPLOMACY_CLOSE"
+			format = center
+			pdx_tooltip = "DIPLOMACY_CLOSE"
+			shortcut = "ESCAPE"
+		}
+	}
+	containerWindowType = {
+		name = "history_of_the_revolution_in_kavkaz_lore_window"
+		position = { x = -460 y = -290 }
+		size = { width = 920 height = 580 }
+		Orientation = center
+		click_to_front = yes
+		clipping = no
+		
+		background = {
+			name = "lore_window_background"
+			spriteType = "GFX_lore_browser_background"
+		}
+		
+		instantTextBoxType = {
+			name = "history_of_the_revolution_in_kavkaz_lore_title"
+			position = { x = 250 y = 13 }
+			font = "hoi_30header"
+			maxWidth = 350
+			maxHeight = 20
+			text = "history_of_the_revolution_in_kavkaz_lore_title"	
+			format = centre
+		}		
+		
+		instantTextBoxType = {
+			name = "history_of_the_revolution_in_kavkaz_lore_stripes"
+			position = { x = 25 y = 43 }
+			textureFile = ""
+			font = "hoi_18b"
+			borderSize = { x = 5 y = 5}
+			text = "history_of_the_revolution_in_kavkaz_lore_opisaniye"			
+			maxWidth = 855
+			maxHeight = 487
+			format = left
+			scrollbarType = standardtext_slider
+			Orientation = "UPPER_LEFT"
+		}		
+		buttonType = {
+			name = "history_of_the_revolution_in_kavkaz_lore_close_button"
+			position = { x = 656 y = 542 }
+			quadTextureSprite ="GFX_button_221x34"
+			font = "hoi_18b"
+			text = "DIPLOMACY_CLOSE"
+			format = center
+			pdx_tooltip = "DIPLOMACY_CLOSE"
+			shortcut = "ESCAPE"
+		}
+	}
+	containerWindowType = {
+		name = "the_situation_at_the_time_of_1936_ukrainian_ssr_lore_window"
+		position = { x = -460 y = -290 }
+		size = { width = 920 height = 580 }
+		Orientation = center
+		click_to_front = yes
+		clipping = no
+		
+		background = {
+			name = "lore_window_background"
+			spriteType = "GFX_lore_browser_background"
+		}
+		
+		instantTextBoxType = {
+			name = "the_situation_at_the_time_of_1936_ukrainian_ssr_lore_title"
+			position = { x = 250 y = 13 }
+			font = "hoi_30header"
+			maxWidth = 350
+			maxHeight = 20
+			text = "the_situation_at_the_time_of_1936_ukrainian_ssr_lore_title"	
+			format = centre
+		}		
+		
+		instantTextBoxType = {
+			name = "the_situation_at_the_time_of_1936_ukrainian_ssr_lore_stripes"
+			position = { x = 25 y = 43 }
+			textureFile = ""
+			font = "hoi_18b"
+			borderSize = { x = 5 y = 5}
+			text = "the_situation_at_the_time_of_1936_ukrainian_ssr_lore_opisaniye"			
+			maxWidth = 855
+			maxHeight = 487
+			format = left
+			scrollbarType = standardtext_slider
+			Orientation = "UPPER_LEFT"
+		}		
+		buttonType = {
+			name = "the_situation_at_the_time_of_1936_ukrainian_ssr_lore_close_button"
+			position = { x = 656 y = 542 }
+			quadTextureSprite ="GFX_button_221x34"
+			font = "hoi_18b"
+			text = "DIPLOMACY_CLOSE"
+			format = center
+			pdx_tooltip = "DIPLOMACY_CLOSE"
+			shortcut = "ESCAPE"
+		}
+	}
+	containerWindowType = {
+		name = "the_situation_at_the_time_of_1936_belarusian_ssr_lore_window"
+		position = { x = -460 y = -290 }
+		size = { width = 920 height = 580 }
+		Orientation = center
+		click_to_front = yes
+		clipping = no
+		
+		background = {
+			name = "lore_window_background"
+			spriteType = "GFX_lore_browser_background"
+		}
+		
+		instantTextBoxType = {
+			name = "the_situation_at_the_time_of_1936_belarusian_ssr_lore_title"
+			position = { x = 250 y = 13 }
+			font = "hoi_30header"
+			maxWidth = 350
+			maxHeight = 20
+			text = "the_situation_at_the_time_of_1936_belarusian_ssr_lore_title"	
+			format = centre
+		}		
+		
+		instantTextBoxType = {
+			name = "the_situation_at_the_time_of_1936_belarusian_ssr_lore_stripes"
+			position = { x = 25 y = 43 }
+			textureFile = ""
+			font = "hoi_18b"
+			borderSize = { x = 5 y = 5}
+			text = "the_situation_at_the_time_of_1936_belarusian_ssr_lore_opisaniye"			
+			maxWidth = 855
+			maxHeight = 487
+			format = left
+			scrollbarType = standardtext_slider
+			Orientation = "UPPER_LEFT"
+		}		
+		buttonType = {
+			name = "the_situation_at_the_time_of_1936_belarusian_ssr_lore_close_button"
+			position = { x = 656 y = 542 }
+			quadTextureSprite ="GFX_button_221x34"
+			font = "hoi_18b"
+			text = "DIPLOMACY_CLOSE"
+			format = center
+			pdx_tooltip = "DIPLOMACY_CLOSE"
+			shortcut = "ESCAPE"
+		}
+	}
+	containerWindowType = {
+		name = "the_situation_at_the_time_of_1936_transcaucasian_sfsr_lore_window"
+		position = { x = -460 y = -290 }
+		size = { width = 920 height = 580 }
+		Orientation = center
+		click_to_front = yes
+		clipping = no
+		
+		background = {
+			name = "lore_window_background"
+			spriteType = "GFX_lore_browser_background"
+		}
+		
+		instantTextBoxType = {
+			name = "the_situation_at_the_time_of_1936_transcaucasian_sfsr_lore_title"
+			position = { x = 250 y = 13 }
+			font = "hoi_30header"
+			maxWidth = 350
+			maxHeight = 20
+			text = "the_situation_at_the_time_of_1936_transcaucasian_sfsr_lore_title"	
+			format = centre
+		}		
+		
+		instantTextBoxType = {
+			name = "the_situation_at_the_time_of_1936_transcaucasian_sfsr_lore_stripes"
+			position = { x = 25 y = 43 }
+			textureFile = ""
+			font = "hoi_18b"
+			borderSize = { x = 5 y = 5}
+			text = "the_situation_at_the_time_of_1936_transcaucasian_sfsr_lore_opisaniye"			
+			maxWidth = 855
+			maxHeight = 487
+			format = left
+			scrollbarType = standardtext_slider
+			Orientation = "UPPER_LEFT"
+		}		
+		buttonType = {
+			name = "the_situation_at_the_time_of_1936_transcaucasian_sfsr_lore_close_button"
+			position = { x = 656 y = 542 }
+			quadTextureSprite ="GFX_button_221x34"
+			font = "hoi_18b"
+			text = "DIPLOMACY_CLOSE"
+			format = center
+			pdx_tooltip = "DIPLOMACY_CLOSE"
+			shortcut = "ESCAPE"
+		}
+	}
+	containerWindowType = {
+		name = "remains_of_resistance_to_the_bolsheviks_abroad_lore_window"
+		position = { x = -460 y = -290 }
+		size = { width = 920 height = 580 }
+		Orientation = center
+		click_to_front = yes
+		clipping = no
+		
+		background = {
+			name = "lore_window_background"
+			spriteType = "GFX_lore_browser_background"
+		}
+		
+		instantTextBoxType = {
+			name = "remains_of_resistance_to_the_bolsheviks_abroad_lore_title"
+			position = { x = 250 y = 13 }
+			font = "hoi_30header"
+			maxWidth = 350
+			maxHeight = 20
+			text = "remains_of_resistance_to_the_bolsheviks_abroad_lore_title"	
+			format = centre
+		}		
+		
+		instantTextBoxType = {
+			name = "remains_of_resistance_to_the_bolsheviks_abroad_lore_stripes"
+			position = { x = 25 y = 43 }
+			textureFile = ""
+			font = "hoi_18b"
+			borderSize = { x = 5 y = 5}
+			text = "remains_of_resistance_to_the_bolsheviks_abroad_lore_opisaniye"			
+			maxWidth = 855
+			maxHeight = 487
+			format = left
+			scrollbarType = standardtext_slider
+			Orientation = "UPPER_LEFT"
+		}		
+		buttonType = {
+			name = "remains_of_resistance_to_the_bolsheviks_abroad_lore_close_button"
+			position = { x = 656 y = 542 }
+			quadTextureSprite ="GFX_button_221x34"
+			font = "hoi_18b"
+			text = "DIPLOMACY_CLOSE"
+			format = center
+			pdx_tooltip = "DIPLOMACY_CLOSE"
+			shortcut = "ESCAPE"
+		}
+	}
+}

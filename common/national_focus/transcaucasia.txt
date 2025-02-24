@@ -1,0 +1,2457 @@
+focus_tree = {
+	id = transcauasia_focus
+
+	shortcut = {
+		name = ZSR_army_shortcut
+		target = ZSR_reform_the_army
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = ZSR_air_shortcut
+		target = ZSR_waf
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = ZSR_navy_shortcut
+		target = ZSR_wsf
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = ZSR_left_shortcut
+		target = ZSR_party_congress
+		scroll_wheel_factor = 1.0
+	}
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ZSR
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 10 y = 1100 }
+
+	shared_focus = REP_development_of_the_republics
+
+    focus = {
+		id = ZSR_party_congress
+		icon = GFX_goal_ZSR_party_congress
+		x = 13
+		y = 0
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+          is_in_faction_with = SOV 
+		  has_government = communism
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_party_congress"
+		country_event = { id = ZSR_bop.1 hours = 6 }
+		hidden_effect = {
+			country_event = { id = ZSR_com.1 days = 1 }
+		}
+		add_political_power = 150
+		set_power_balance = {
+				id = ZSR_kavkaz_balance
+				left_side = supreme_soviet_left_side
+				right_side = beria_right_side
+				set_default = yes
+			}
+		unlock_decision_category_tooltip = government_projects
+			}
+		}
+
+
+    focus = {
+		id = ZSR_unity_of_the_armenian_people
+		icon = GFX_r56_goal_ARM_flag
+        prerequisite = { focus = ZSR_party_congress }
+		x = 11
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_unity_of_the_armenian_people"
+		swap_ideas = {
+                remove_idea = ZSR_armenian_nationalism
+                add_idea = ZSR_armenian_nationalism_1
+			}
+			add_power_balance_value = {
+				id = ZSR_kavkaz_balance
+				value = -0.05
+			}
+		}
+	}
+
+    focus = {
+		id = ZSR_veto_on_national_conflicts
+		icon = GFX_goal_generic_defence
+        prerequisite = { focus = ZSR_party_congress }
+		x = 13
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_veto_on_national_conflicts"
+		swap_ideas = {
+                remove_idea = ZSR_the_conflict_of_peoples_in_the_party
+                add_idea = ZSR_the_conflict_of_peoples_in_the_party_1
+			}
+			add_power_balance_value = {
+				id = ZSR_kavkaz_balance
+				value = -0.05
+			}
+		}
+	}
+
+    focus = {
+		id = ZSR_law_and_order
+		icon = GFX_focus_generic_treaty
+        prerequisite = { focus = ZSR_party_congress }
+		x = 15
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_law_and_order"
+		swap_ideas = {
+                remove_idea = ZSR_azerbaijani_nationalism
+                add_idea = ZSR_azerbaijani_nationalism_1
+			}
+			add_power_balance_value = {
+				id = ZSR_kavkaz_balance
+				value = 0.1
+			}
+		}
+	}
+
+    focus = {
+		id = ZSR_equal_rights_for_armenians
+		icon = GFX_r56_goal_ARM_caucasia_is_our_homeland
+        prerequisite = { focus = ZSR_veto_on_national_conflicts }
+        prerequisite = { focus = ZSR_unity_of_the_armenian_people }
+		x = 12
+		y = 2
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_equal_rights_for_armenians"
+		swap_ideas = {
+                remove_idea = ZSR_armenian_nationalism_1
+                add_idea = ZSR_armenian_nationalism_2
+			}
+			add_power_balance_value = {
+				id = ZSR_kavkaz_balance
+				value = -0.05
+			}
+		}
+	}
+
+    focus = {
+		id = ZSR_equal_rights_for_azerbaijan
+		icon = GFX_focus_generic_concessions
+        prerequisite = { focus = ZSR_law_and_order }
+        prerequisite = { focus = ZSR_veto_on_national_conflicts }
+		x = 14
+		y = 2
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_equal_rights_for_azerbaijan"
+		swap_ideas = {
+                remove_idea = ZSR_azerbaijani_nationalism_1
+                add_idea = ZSR_azerbaijani_nationalism_2
+			}
+			add_power_balance_value = {
+				id = ZSR_kavkaz_balance
+				value = 0.1
+			}
+		}
+	}
+
+    focus = {
+		id = ZSR_freedom_equality_brotherhood
+		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
+        prerequisite = { focus = ZSR_equal_rights_for_armenians }
+		prerequisite = { focus = ZSR_equal_rights_for_azerbaijan }
+		x = 13
+		y = 3
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_freedom_equality_brotherhood"
+		complete_national_focus = REP_development_of_the_republics
+		hidden_effect = {
+			country_event = { id = ZSR_com.2 days = 1 }
+			set_country_flag = rep_republic_or_leader
+		}
+		remove_ideas = ZSR_the_conflict_of_peoples_in_the_party_1
+		remove_ideas = ZSR_armenian_nationalism_2
+		remove_ideas = ZSR_azerbaijani_nationalism_2
+		add_ideas = ZSR_friendship_of_peoples
+		add_power_balance_value = {
+			id = ZSR_kavkaz_balance
+			value = -0.05
+		}
+	}
+}
+
+    focus = {
+		id = ZSR_foreign_policy_of_the_caucasus
+		icon = GFX_goal_foreign_policy_of_the_caucasus
+        prerequisite = { focus = ZSR_freedom_equality_brotherhood }
+		x = 18
+		y = 4
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_foreign_policy_of_the_caucasus"
+		hidden_effect = {
+			country_event = { id = ZSR_com.4 days = 1 }
+		}
+        add_political_power = 50
+		}
+	}
+
+    focus = {
+		id = ZSR_condemn_the_armenian_genocide
+		icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = ZSR_foreign_policy_of_the_caucasus }
+		x = 17
+		y = 5
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_condemn_the_armenian_genocide"
+        add_political_power = 50
+        add_opinion_modifier = {
+			target = TUR
+			modifier = SOV_pressured_our_government
+        }
+        TUR = {				
+				add_political_power = -100
+		    }
+		}
+	}
+
+    focus = {
+		id = ZSR_claims_on_iranian_azerbaijan
+		icon = GFX_goal_claims_on_iranian_azerbaijan
+        prerequisite = { focus = ZSR_foreign_policy_of_the_caucasus }
+		x = 19
+		y = 5
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_claims_on_iranian_azerbaijan"
+        if = {
+				limit = {
+					420 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 420
+			}
+			if = {
+				limit = {
+					419 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 419
+			}
+		}
+	}
+
+    focus = {
+		id = ZSR_delegation_to_moscow
+		icon = GFX_goal_UKR_help_for_moscow
+        prerequisite = { focus = ZSR_claims_on_iranian_azerbaijan }
+        prerequisite = { focus = ZSR_condemn_the_armenian_genocide }
+		x = 18
+		y = 6
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_delegation_to_moscow"
+		country_event = { id = ZSR_com.7 hours = 1 }
+        SOV = {				
+				add_political_power = 50
+		    }
+		}
+	}
+
+    focus = {
+		id = ZSR_preparing_for_war
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+        prerequisite = { focus = ZSR_delegation_to_moscow }
+		x = 18
+		y = 7
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		completion_reward = {	
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_preparing_for_war"	
+			add_ideas = Preparing_for_war
+		}
+	}
+
+    focus = {
+		id = ZSR_invasion_of_turkey
+		icon = GFX_focus_generic_attack_turkey
+        prerequisite = { focus = ZSR_preparing_for_war }
+		x = 17
+		y = 8
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_invasion_of_turkey"	
+		activate_mission = capture_of_turkey
+        if = {
+				limit = {
+					354 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 354
+			}
+			if = {
+				limit = {
+					800 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 800
+            }		
+		if = {
+				limit = { 
+					TUR = {
+						OR = {
+							owns_state = 354
+						}
+					} 
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = TUR
+					expire = 0
+					generator = { 354 }
+				}
+			}
+		}
+	}
+
+    focus = {
+		id = ZSR_invasion_of_iran
+		icon = GFX_focus_generic_attack_iran
+        prerequisite = { focus = ZSR_preparing_for_war }
+		x = 19
+		y = 8
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_invasion_of_iran"	
+		activate_mission = capture_of_iran
+		if = {
+				limit = { 
+					PER = {
+						OR = {
+							owns_state = 266
+						}
+					} 
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = PER
+					expire = 0
+					generator = { 266 }
+				}
+			}
+		}
+	}
+
+    focus = {
+		id = ZSR_internal_politics_of_the_caucasus
+		icon = GFX_goal_internal_politics_of_the_caucasus
+        prerequisite = { focus = ZSR_freedom_equality_brotherhood }
+		x = 24
+		y = 4
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_internal_politics_of_the_caucasus"
+		hidden_effect = {
+			country_event = { id = ZSR_com.5 days = 1 }
+		}
+		add_political_power = 50
+		add_power_balance_value = {
+			id = ZSR_kavkaz_balance
+			value = 0.05
+		}
+	}
+}
+
+     focus = {
+		id = ZSR_control_of_christian_churches
+		icon = GFX_goal_control_of_christian_churches
+        prerequisite = { focus = ZSR_internal_politics_of_the_caucasus }
+		x = 22
+		y = 5
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_control_of_christian_churches"
+		add_stability = 0.1
+		add_power_balance_value = {
+			id = ZSR_kavkaz_balance
+			value = 0.05
+		}
+	}
+}
+
+    focus = {
+		id = ZSR_compromise_of_religions
+		icon = GFX_goal_compromise_of_religions
+        prerequisite = { focus = ZSR_internal_politics_of_the_caucasus }
+		x = 24
+		y = 5
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_control_of_christian_churches"
+		230 = { 
+			add_core_of = ROOT 
+		}
+        229 = { 
+			add_core_of = ROOT 
+		}
+		add_power_balance_value = {
+			id = ZSR_kavkaz_balance
+			value = -0.05
+		}
+	}
+}
+
+    focus = {
+		id = ZSR_control_of_islamic_mosques
+		icon = GFX_goal_control_of_islamic_mosques
+        prerequisite = { focus = ZSR_internal_politics_of_the_caucasus }
+		x = 26
+		y = 5
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_control_of_islamic_mosques"
+		add_war_support = 0.1
+		add_power_balance_value = {
+			id = ZSR_kavkaz_balance
+			value = 0.05
+		}
+	}
+}
+
+    focus = {
+		id = ZSR_industrial_reforms
+		icon = GFX_goal_industrial_reforms
+        prerequisite = { focus = ZSR_control_of_christian_churches }
+		x = 22
+		y = 6
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_industrial_reforms"
+		add_ideas = Industrial_reforms_ZSR
+		add_power_balance_value = {
+			id = ZSR_kavkaz_balance
+			value = 0.05
+		}
+	}
+}
+
+    focus = {
+		id = ZSR_united_komsomol
+		icon = GFX_goal_united_komsomol
+        prerequisite = { focus = ZSR_compromise_of_religions }
+		x = 24
+		y = 6
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_united_komsomol"
+		add_ideas = ZSR_komsomol_of_the_peoples_of_the_caucasus
+		add_power_balance_value = {
+			id = ZSR_kavkaz_balance
+			value = -0.05
+		}
+	}
+}
+
+    focus = {
+		id = ZSR_spread_of_atheism
+		icon = GFX_goal_spread_of_atheism
+        prerequisite = { focus = ZSR_control_of_islamic_mosques }
+		x = 26
+		y = 6
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_spread_of_atheism"
+		add_ideas = Spread_of_atheism_ZSR
+		add_power_balance_value = {
+			id = ZSR_kavkaz_balance
+			value = 0.05
+		}
+	}
+}
+
+    focus = {
+		id = ZSR_unity_of_peoples
+		icon = GFX_goal_unity_of_peoples
+        prerequisite = { focus = ZSR_spread_of_atheism }
+        prerequisite = { focus = ZSR_united_komsomol }
+        prerequisite = { focus = ZSR_industrial_reforms }
+		x = 24
+		y = 7
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_unity_of_peoples"
+		add_ideas = ZSR_the_peoples_of_the_caucasus_are_united
+		add_power_balance_value = {
+			id = ZSR_kavkaz_balance
+			value = -0.05
+		}
+	}
+}
+
+    focus = {
+		id = ZSR_the_great_patriotic_war
+		icon = GFX_goal_UKR_the_great_patriotic_war
+		x = 7
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+        custom_trigger_tooltip = {
+				tooltip = great_war_republics		
+				always = no
+			}
+		}
+		
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_unity_of_peoples"
+		add_timed_idea = { idea = UKR_the_great_patriotic_war_1 days = 60 }
+		}
+	}
+
+    focus = {
+		id = ZSR_give_battle_to_the_invaders
+		icon = GFX_goal_UKR_give_battle_to_the_invaders
+        prerequisite = { focus = ZSR_the_great_patriotic_war }
+		x = -2
+		y = 1
+		relative_position_id = ZSR_the_great_patriotic_war
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+        has_war_with = GER
+		not = { has_idea = UKR_the_great_patriotic_war_1 }
+		has_government = communism
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_give_battle_to_the_invaders"
+		add_ideas = UKR_death_to_the_invaders
+		}
+	}
+
+    focus = {
+		id = ZSR_we_wont_give_up
+		icon = GFX_goal_UKR_we_wont_give_up
+        prerequisite = { focus = ZSR_the_great_patriotic_war }
+		x = 0
+		y = 1
+		relative_position_id = ZSR_the_great_patriotic_war
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+        has_war_with = GER
+		not = { has_idea = UKR_the_great_patriotic_war_1 }
+		has_government = communism
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_we_wont_give_up"
+		add_ideas = UKR_well_die_but_we_wont_give_up
+		}
+	}
+
+    focus = {
+		id = ZSR_bring_back_the_deserters
+		icon = GFX_goal_UKR_bring_back_the_deserters
+        prerequisite = { focus = ZSR_the_great_patriotic_war }
+		x = 2
+		y = 1
+		relative_position_id = ZSR_the_great_patriotic_war
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+        has_war_with = GER
+		not = { has_idea = UKR_the_great_patriotic_war_1 }
+		has_government = communism
+		}
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_bring_back_the_deserters"
+		add_ideas = UKR_back_in_line
+		}
+	}
+
+    focus = {
+		id = ZSR_holy_war
+		icon = GFX_goal_UKR_holy_war
+        prerequisite = { focus = ZSR_give_battle_to_the_invaders }
+		prerequisite = { focus = ZSR_we_wont_give_up }
+		x = -1
+		y = 1
+		relative_position_id = ZSR_give_battle_to_the_invaders
+		relative_position_id = ZSR_we_wont_give_up
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+        has_war_with = GER
+		not = { has_idea = UKR_the_great_patriotic_war_1 }
+		has_government = communism
+		}
+		
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_holy_war"
+		add_ideas = UKR_the_holy_war
+		}
+	}
+
+	focus = {
+		id = ZSR_civil_milita
+		icon = GFX_goal_generic_red_milita
+		prerequisite = { focus = ZSR_bring_back_the_deserters }
+		prerequisite = { focus = ZSR_we_wont_give_up }
+		x = 1
+		y = 1
+		relative_position_id = ZSR_bring_back_the_deserters
+		relative_position_id = ZSR_we_wont_give_up
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+        has_war_with = GER
+		not = { has_idea = UKR_the_great_patriotic_war_1 }
+		has_government = communism
+		}
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_civil_milita"
+		division_template = {
+				name = "Caucasian People's Militia"
+				priority = 1
+				regiments = {
+					militia = { x = 0 y = 0 }
+		            militia = { x = 0 y = 1 }
+		            militia = { x = 1 y = 0 }
+		            militia = { x = 1 y = 1 }
+		            militia = { x = 2 y = 0 }
+		            militia = { x = 2 y = 1 }
+		            militia = { x = 3 y = 0 }
+		            militia = { x = 3 y = 1 }
+		            militia = { x = 4 y = 0 }
+		            militia = { x = 4 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 231 }
+				limit = { PREV = { has_full_control_of_state = PREV } }
+				create_unit = {
+					division = "name = \"1st milita\" division_template = \"Caucasian People's Militia\" start_experience_factor = 0.5" 
+					owner = ZSR
+				}
+				create_unit = {
+					division = "name = \"2st milita\" division_template = \"Caucasian People's Militia\" start_experience_factor = 0.5" 
+					owner = ZSR
+				}
+				create_unit = {
+					division = "name = \"3st milita\" division_template = \"Caucasian People's Militia\" start_experience_factor = 0.5" 
+					owner = ZSR
+				}
+				create_unit = {
+					division = "name = \"4th milita\" division_template = \"Caucasian People's Militia\" start_experience_factor = 0.5" 
+					owner = ZSR
+				}
+			}
+		}
+	}
+
+    ##### ВМФ
+
+	focus = {
+		id = ZSR_wsf
+		icon = GFX_goal_generic_build_navy
+		x = 29
+		y = 11
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_wsf"
+	    add_ideas = Transcaucasian_navy
+		}
+	}
+
+	focus = {
+		id = ZSR_expand_southern_bases
+		icon = GFX_focus_SOV_reinforce_southern_naval_bases
+		prerequisite = { focus = ZSR_wsf }
+		relative_position_id = ZSR_wsf
+		x = -2
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_expand_southern_bases"
+		navy_experience = 25
+		231 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ZSR_nk_navy_tssr
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = ZSR_wsf }
+		relative_position_id = ZSR_wsf
+		x = 0
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_nk_navy_tssr"
+        add_ideas = Shipbuilding
+		}
+	}
+
+	focus = {
+		id = ZSR_fleet_development
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = ZSR_wsf }
+		relative_position_id = ZSR_wsf
+		x = 2
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_fleet_development"
+			navy_experience = 25
+			231 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ZSR_submarine_development
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = ZSR_expand_southern_bases }
+		prerequisite = { focus = ZSR_nk_navy_tssr }
+		relative_position_id = ZSR_nk_navy_tssr
+		relative_position_id = ZSR_expand_southern_bases
+		x = 1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_submarine_development"
+			navy_experience = 15
+
+			add_tech_bonus = {
+				name = SOV_submarine_warfare
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+		}
+	}
+}
+
+    focus = {
+		id = ZSR_construction_of_the_surface_fleet
+		icon = GFX_focus_generic_destroyer
+		prerequisite = { focus = ZSR_fleet_development }
+		prerequisite = { focus = ZSR_nk_navy_tssr }
+		relative_position_id = ZSR_nk_navy_tssr
+		relative_position_id = ZSR_fleet_development
+		x = -1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_construction_of_the_surface_fleet"
+			navy_experience = 25
+			add_tech_bonus = {
+				name = SOV_an_oceangoing_navy
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ZSR_mine_warfare
+		icon = GFX_focus_generic_mine_warfare
+		prerequisite = { focus = ZSR_submarine_development }
+		prerequisite = { focus = ZSR_construction_of_the_surface_fleet }
+		relative_position_id = ZSR_submarine_development
+		relative_position_id = ZSR_construction_of_the_surface_fleet
+		x = -1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_mine_warfare"
+			add_ideas = SOV_mine_warfare_ns
+			add_tech_bonus = {
+				name = SOV_mine_warfare
+				bonus = 1.0
+				uses = 2
+				category = naval_mines
+		}
+	}
+}
+
+###### ВВС
+
+    focus = {
+		id = ZSR_waf
+		icon = GFX_focus_generic_aircraft_production
+		x = 23
+		y = 11
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_waf"
+		activate_mission = zsr_bob_mission_balance_aircraft_potential_of_transcaucasia
+	    air_experience = 50
+		add_ideas = Transcaucasian_air_force
+		}
+	}
+
+	focus = {
+		id = ZSR_soviet_specialists
+		icon = GFX_focus_SOV_flying_clubs
+		prerequisite = { focus = ZSR_waf }
+		relative_position_id = ZSR_waf
+		x = 1
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_soviet_specialists"
+			swap_ideas = {
+                remove_idea = Transcaucasian_air_force
+                add_idea = Transcaucasian_air_force_1
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.6
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = ZSR_construction_of_airfields
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ZSR_waf }
+		relative_position_id = ZSR_waf
+		x = -1
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_construction_of_airfields"
+						random_owned_controlled_state = {
+							limit = {
+								air_base < 9
+							}
+							add_building_construction = {
+								type = air_base
+								level = 2
+								instant_build = yes
+					}
+				}
+			}
+		}
+
+	focus = {
+		id = ZSR_service_staff
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = ZSR_construction_of_airfields }
+		relative_position_id = ZSR_construction_of_airfields
+		x = -1
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_service_staff"
+		random_owned_controlled_state = {
+							limit = {
+								air_base < 9
+							}
+							add_building_construction = {
+								type = air_base
+								level = 2
+								instant_build = yes
+					}
+				}
+			}
+		}
+
+	focus = {
+		id = ZSR_new_aircraft
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = ZSR_soviet_specialists }
+		prerequisite = { focus = ZSR_construction_of_airfields }
+		relative_position_id = ZSR_construction_of_airfields
+		relative_position_id = ZSR_soviet_specialists
+		x = -1
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_new_aircraft"
+			add_tech_bonus = {
+				name = SOV_ground_support
+				bonus = 0.75
+				uses = 2
+				category = light_fighter
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = ZSR_aircraft_manufacturing
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = ZSR_soviet_specialists }
+		relative_position_id = ZSR_soviet_specialists
+		x = 1
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_aircraft_manufacturing"
+        swap_ideas = {
+                remove_idea = Transcaucasian_air_force_1
+                add_idea = Transcaucasian_air_force_2
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.6
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = ZSR_standardized_production
+		icon =  GFX_goal_generic_air_doctrine
+		prerequisite = { focus = ZSR_new_aircraft }
+		prerequisite = { focus = ZSR_aircraft_manufacturing }
+		prerequisite = { focus = ZSR_service_staff }
+		relative_position_id = ZSR_service_staff
+		relative_position_id = ZSR_new_aircraft
+		relative_position_id = ZSR_aircraft_manufacturing
+		x = -2
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_standardized_production"
+			add_ideas = Aircraft_manufacturing
+		}
+	}
+
+#### Армия
+
+	focus = {
+		id = ZSR_reform_the_army
+		icon =  GFX_goal_reform_the_army
+		x = 9
+		y = 11
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_reform_the_army"
+		activate_mission = zsr_bob_mission_balance_military_potential_of_transcaucasia
+		hidden_effect = {
+			country_event = { id = ZSR_com.6 days = 1 }
+		}
+		army_experience = 50
+		}
+	}
+
+	focus = {
+		id = ZSR_new_military_era
+		icon = GFX_goal_new_military_era
+		prerequisite = { focus = ZSR_reform_the_army }
+		mutually_exclusive = { focus = ZSR_modern_doctrine }
+		relative_position_id = ZSR_reform_the_army
+		x = -5
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_new_military_era"
+	    add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 1.0
+			uses = 1
+			category = artillery
+		}
+		custom_effect_tooltip = ZSR_new_military_era_ns_tt
+		hidden_effect = {
+            add_dynamic_modifier = { modifier = ZSR_artillery_corps_dynamic_modifier }
+			set_variable = { ZSR_artillery_corps_training_time_factor = 0.05 }
+		    set_variable = { ZSR_artillery_corps_max_command_power = 50 }
+		    set_variable = { ZSR_artillery_corps_army_morale_factor = 0.05 }
+		}
+	}
+}
+
+	focus = {
+		id = ZSR_reform_the_officer_corps
+		icon = GFX_goal_reform_the_officer_corps
+		prerequisite = { focus = ZSR_new_military_era }
+		relative_position_id = ZSR_new_military_era
+		x = 2
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_reform_the_officer_corps"
+		custom_effect_tooltip = ZSR_reform_the_officer_corps_ns_tt
+		army_experience = 25
+		add_to_variable = { ZSR_artillery_corps_command_abilities_cost_factor = -0.1 }
+		}
+	}
+
+	focus = {
+		id = ZSR_covering_the_rear
+		icon = GFX_goal_covering_the_rear
+		prerequisite = { focus = ZSR_reform_the_officer_corps }
+		relative_position_id = ZSR_reform_the_officer_corps
+		x = 1
+		y = 2
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_covering_the_rear"
+		custom_effect_tooltip = ZSR_covering_the_rear_ns_tt
+		add_to_variable = { ZSR_artillery_corps_army_defence_factor = 0.05 }
+		add_to_variable = { ZSR_artillery_corps_land_reinforce_rate = 0.05 }
+		}
+	}
+
+	focus = {
+		id = ZSR_tank_destroyer
+		icon = GFX_goal_tank_destroyer
+		prerequisite = { focus = ZSR_reform_the_officer_corps }
+		relative_position_id = ZSR_reform_the_officer_corps
+		x = -1
+		y = 2
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_tank_destroyer"
+		add_ideas = ZSR_td_artillery
+		custom_effect_tooltip = ZSR_tank_destroyer_ns_tt
+		add_to_variable = { ZSR_artillery_corps_supply_consumption_factor = -0.05 }
+		}
+	}
+
+	focus = {
+		id = ZSR_modern_cars
+		icon = GFX_goal_modern_cars
+		prerequisite = { focus = ZSR_developing_tactics }
+		prerequisite = { focus = ZSR_reform_the_officer_corps }
+		relative_position_id = ZSR_developing_tactics
+		relative_position_id = ZSR_reform_the_officer_corps
+		x = -2
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_modern_cars"
+		add_tech_bonus = {
+			name = SOV_superior_war_machines
+			bonus = 0.75
+			uses = 2
+			category = armor
+		}
+	}
+}
+
+	focus = {
+		id = ZSR_developing_tactics
+		icon = GFX_goal_developing_tactics
+		prerequisite = { focus = ZSR_new_military_era }
+		relative_position_id = ZSR_new_military_era
+		x = -2
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_developing_tactics"
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = cat_superior_firepower
+		}
+		custom_effect_tooltip = ZSR_developing_tactics_ns_tt
+		add_to_variable = { ZSR_artillery_corps_planning_speed = 0.1 }
+		}
+	}
+
+	focus = {
+		id = ZSR_self_propelled_artillery
+		icon = GFX_goal_self_propelled_artillery
+		prerequisite = { focus = ZSR_developing_tactics }
+		relative_position_id = ZSR_developing_tactics
+		x = 1
+		y = 2
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_self_propelled_artillery"
+		add_ideas = ZSR_sp_artillery
+		custom_effect_tooltip = ZSR_self_propelled_artillery_ns_tt
+		add_to_variable = { ZSR_artillery_corps_breakthrough_factor = 0.2 }
+		}
+	}
+
+	focus = {
+		id = ZSR_assault_groups
+		icon = GFX_goal_assault_groups
+		prerequisite = { focus = ZSR_developing_tactics }
+		relative_position_id = ZSR_developing_tactics
+		x = -1
+		y = 2
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_assault_groups"
+		custom_effect_tooltip = ZSR_assault_groups_ns_tt
+		add_to_variable = { ZSR_artillery_corps_army_attack_factor = 0.05 }
+		add_to_variable = { ZSR_artillery_corps_terrain_penalty_reduction = 0.05 }
+		}
+	}
+
+	focus = {
+		id = ZSR_siege_tactics
+		icon = GFX_goal_siege_tactics
+		prerequisite = { focus = ZSR_self_propelled_artillery }
+		relative_position_id = ZSR_self_propelled_artillery
+		x = 0
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_siege_tactics"
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = cat_superior_firepower
+		}
+		add_tech_bonus = {
+			name = SOV_the_means_to_wage_war
+			bonus = 1.0
+			uses = 1
+			category = support_tech
+		}
+	}
+}
+
+	focus = {
+		id = ZSR_armor_enhancement
+		icon = GFX_goal_armor_enhancement
+		prerequisite = { focus = ZSR_tank_destroyer }
+		relative_position_id = ZSR_self_propelled_artillery
+		x = 2
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_armor_enhancement"
+		swap_ideas = {
+			remove_idea = ZSR_td_artillery
+			add_idea = ZSR_td_artillery_2
+		}
+	}
+}
+
+	focus = {
+		id = ZSR_increased_production
+		icon = GFX_goal_increased_production
+		prerequisite = { focus = ZSR_siege_tactics }
+		prerequisite = { focus = ZSR_armor_enhancement }
+		relative_position_id = ZSR_siege_tactics
+		relative_position_id = ZSR_armor_enhancement
+		x = -1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_increased_production"
+		add_ideas = ZSR_artillery_god_of_war
+		}
+	}
+
+	focus = {
+		id = ZSR_modern_doctrine
+		icon = GFX_goal_modern_doctrine
+		prerequisite = { focus = ZSR_reform_the_army }
+		mutually_exclusive = { focus = ZSR_new_military_era }
+		relative_position_id = ZSR_reform_the_army
+		x = 6
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_modern_doctrine"
+		swap_ideas = {
+			remove_idea = ZSR_old_school
+			add_idea = ZSR_old_school_1
+		}
+		add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+		    }
+		}
+	}
+
+	focus = {
+		id = ZSR_modern_military_exercises
+		icon = GFX_goal_modern_military_exercises
+		prerequisite = { focus = ZSR_modern_doctrine }
+		relative_position_id = ZSR_modern_doctrine
+		x = -3
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			has_completed_focus = ZSR_young_officers
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_modern_military_exercises"
+		add_manpower = 25000
+		custom_effect_tooltip = ZSR_modern_military_exercises_ns_tt
+		add_to_variable = { ZSR_caucasian_army_land_reinforce_rate = 0.05 }
+		}
+	}
+
+	focus = {
+		id = ZSR_retrain_generals
+		icon = GFX_goal_retrain_generals
+		prerequisite = { focus = ZSR_modern_military_exercises }
+		relative_position_id = ZSR_modern_military_exercises
+		x = 1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_retrain_generals"
+		custom_effect_tooltip = ZSR_retrain_generals_ns_tt
+		add_to_variable = { ZSR_caucasian_army_max_planning_factor = 0.1 }
+		}
+	}
+
+	focus = {
+		id = ZSR_training_in_the_mountains
+		icon = GFX_goal_training_in_the_mountains
+		prerequisite = { focus = ZSR_modern_military_exercises }
+		relative_position_id = ZSR_modern_military_exercises
+		x = -1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_training_in_the_mountains"
+		army_experience = 25
+		custom_effect_tooltip = ZSR_training_in_the_mountains_ns_tt
+		add_to_variable = { ZSR_caucasian_army_heat_attrition_factor = -0.1 }
+		}
+	}
+
+	focus = {
+		id = ZSR_improving_logistics
+		icon = GFX_goal_improving_logistics
+		prerequisite = { focus = ZSR_training_in_the_mountains }
+		prerequisite = { focus = ZSR_retrain_generals }
+		relative_position_id = ZSR_training_in_the_mountains
+		relative_position_id = ZSR_retrain_generals
+		x = -1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_improving_logistics"
+		add_tech_bonus = {
+			name = SOV_the_means_to_wage_war
+			bonus = 1.0
+			uses = 1
+			category = support_tech
+		}
+		custom_effect_tooltip = ZSR_improving_logistics_ns_tt
+		add_to_variable = { ZSR_caucasian_army_special_forces_out_of_supply_factor = -0.1 }
+		add_to_variable = { ZSR_caucasian_army_supply_node_range = 0.1 }
+		}
+	}
+
+	focus = {
+		id = ZSR_summer_uniform
+		icon = GFX_goal_summer_uniform
+		prerequisite = { focus = ZSR_training_in_the_mountains }
+		relative_position_id = ZSR_training_in_the_mountains
+		x = -1
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_summer_uniform"
+		custom_effect_tooltip = ZSR_summer_uniform_ns_tt
+		add_to_variable = { ZSR_caucasian_army_acclimatization_hot_climate_gain_factor = 0.1 }
+		}
+	}
+
+	focus = {
+		id = ZSR_young_officers
+		icon = GFX_goal_young_officers
+		prerequisite = { focus = ZSR_modern_doctrine }
+		x = 18
+		y = 13
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_young_officers"
+		remove_ideas = ZSR_old_school_1
+		custom_effect_tooltip = ZSR_young_officers_ns_tt
+		hidden_effect = {
+            add_dynamic_modifier = { modifier = ZSR_caucasian_army_dynamic_modifier }
+		    set_variable = { ZSR_caucasian_army_army_org_factor = 0.05 }
+		    set_variable = { ZSR_caucasian_army_command_power_gain = 0.1 }
+		}
+	}
+}
+
+	focus = {
+		id = ZSR_new_weapons
+		icon = GFX_goal_new_weapons
+		prerequisite = { focus = ZSR_young_officers }
+		relative_position_id = ZSR_young_officers
+		x = -2
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_new_weapons"
+		add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+		    }	
+		}
+	}
+
+	focus = {
+		id = ZSR_new_summoning_system
+		icon = GFX_goal_new_summoning_system
+		prerequisite = { focus = ZSR_young_officers }
+		relative_position_id = ZSR_young_officers
+		x = 2
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_new_summoning_system"
+		add_manpower = 25000
+		add_ideas = ZSR_modern_appeal
+		custom_effect_tooltip = ZSR_new_summoning_system_ns_tt
+		add_to_variable = { ZSR_caucasian_army_special_forces_cap = 0.05 }
+		}
+	}
+
+	focus = {
+		id = ZSR_mountain_riflemen
+		icon = GFX_goal_mountain_riflemen
+		prerequisite = { focus = ZSR_young_officers }
+		relative_position_id = ZSR_young_officers
+		x = 0
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_mountain_riflemen"
+		set_technology = {
+			tech_mountaineers = 1
+		}
+		custom_effect_tooltip = ZSR_mountain_riflemen_ns_tt
+		add_to_variable = { ZSR_caucasian_army_modifier_army_sub_unit_mountaineers_defence_factor = 0.1 }
+		add_to_variable = { ZSR_caucasian_army_modifier_army_sub_unit_mountaineers_attack_factor = 0.1 }
+		}
+	}
+
+	focus = {
+		id = ZSR_civil_war_experience
+		icon = GFX_goal_civil_war_experience
+		prerequisite = { focus = ZSR_new_weapons }
+		prerequisite = { focus = ZSR_new_summoning_system }
+		prerequisite = { focus = ZSR_mountain_riflemen }
+		relative_position_id = ZSR_new_weapons
+		relative_position_id = ZSR_new_summoning_system
+		relative_position_id = ZSR_mountain_riflemen
+		x = 0
+		y = 1
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_civil_war_experience"
+		army_experience = 50
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 1.0
+			uses = 1
+			category = cat_mountaineers_doctrine
+		}
+		custom_effect_tooltip = GRE_mountain_training_effect
+			hidden_effect = { set_technology = { mountain_warfare = 1 } }
+		}
+	}
+
+	focus = {
+		id = ZSR_specialists_in_factories
+		icon = GFX_focus_generic_industry_3
+		x = -3
+		y = 0
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_specialists_in_factories"
+	    swap_ideas = {
+                remove_idea = ZSR_decrepit_industry
+                add_idea = ZSR_decrepit_industry_1
+			}
+		}
+	}
+
+	focus = {
+		id = ZSR_restructuring_of_factories
+		icon =  GFX_goal_generic_construction
+		prerequisite = { focus = ZSR_specialists_in_factories }
+		prerequisite = { focus = ZSR_peoples_production }
+		x = -2
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_restructuring_of_factories"
+		remove_ideas = ZSR_decrepit_industry_1
+		}
+	}
+
+	focus = {
+		id = ZSR_new_technologies
+		icon =  GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = ZSR_restructuring_of_factories }
+		prerequisite = { focus = ZSR_industrialization }
+		x = -1
+		y = 2
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_new_technologies"
+		add_research_slot = 1
+	    add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1.0
+			uses = 1
+			category = industry
+		}
+	}
+}
+
+    focus = {
+		id = ZSR_peoples_production
+		icon =  GFX_focus_eng_concessions_to_the_trade_unions
+		x = -1
+		y = 0
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_peoples_production"
+		activate_mission = zsr_bob_mission_balance_industrial_potential_of_transcaucasia
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = ENG_limited_rearmament_focus_2IC
+			}
+		}
+	}
+
+    focus = {
+		id = ZSR_military_production
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 0
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = HUN_domestic_arms_industry_AF2
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_military_production"
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = HUN_domestic_arms_industry_AF2
+			}
+		}
+	}
+
+	focus = {
+		id = ZSR_industrialization
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = ZSR_military_production }
+		prerequisite = { focus = ZSR_peoples_production }
+		x = 0
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_industrialization"
+			unlock_decision_category_tooltip = economic_projects
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	}
+}
+
+    focus = {
+		id = ZSR_mountain_resources
+		icon = GFX_goal_generic_construction2
+		x = 3
+		y = 0
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_mountain_resources"
+		231 = {
+			add_resource = {
+			type = steel
+			amount = 20
+        }
+
+	    230 = {
+			add_resource = {
+			type = tungsten
+			amount = 20
+		}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ZSR_oil_production
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = ZSR_mountain_resources }
+		prerequisite = { focus = ZSR_military_production }
+		x = 2
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_oil_production"
+			232 = {
+				add_resource = {
+					type = oil
+					amount = 15
+                    }
+				}
+		if = {
+				limit = {
+					has_full_control_of_state = 232
+				}
+				232 = { 
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = SOV_synthetic_rubber
+				bonus = 0.75
+				uses = 2
+				category = cat_synth_rubber
+			}
+		}
+	}
+
+	focus = {
+		id = ZSR_rubber_production
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = ZSR_oil_production }
+		prerequisite = { focus = ZSR_industrialization }
+		x = 1
+		y = 2
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_rubber_production"
+			821 = {
+				add_resource = {
+					type = rubber
+					amount = 20
+					
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ZSR_five_year_plan
+		icon = GFX_goal_SOV_five_year_plan
+		prerequisite = { focus = ZSR_rubber_production }
+		prerequisite = { focus = ZSR_new_technologies }
+		x = 0
+		y = 3
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_five_year_plan"
+		add_ideas = ZSR_five_year_plan_kavkaz
+		}
+	}
+
+    focus = {
+		id = ZSR_help_for_the_spaniards
+		icon = GFX_focus_intervention_spain_republic
+        prerequisite = { focus = ZSR_freedom_equality_brotherhood }
+		x = 13
+		y = 4
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
+
+		available = {
+        if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPR_scw_in_progress = yes
+				if = {
+					limit = {
+						NOT = { has_global_flag = spanish_civil_war }
+					}
+					custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_country_exist_tt
+					    country_exists = SPR
+				    }
+				    custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_at_peace_tt
+						NOT = { has_war_with = SPR }
+				    }
+				}
+				else = {
+					if = {
+						limit = {
+							has_completed_focus = SOV_covert_support_for_spanish_poum
+						}
+						country_exists = SPC
+						NOT = { has_war_with = SPC }
+					}
+					else = {
+						country_exists = SPD
+						NOT = { has_war_with = SPD }
+					}
+				}
+			}
+			else = {
+				any_other_country = {
+					original_tag = SPR
+					has_civil_war = yes
+					NOT = { has_war_with = ROOT }
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+			}
+			has_government = communism
+		}
+		
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_help_for_the_spaniards"
+		add_timed_idea = { idea = SPA_spanish_civil_war_commitments days = 730 }
+		}
+	}
+
+    focus = {
+		id = ZSR_sending_equipment
+		icon = GFX_focus_ITA_garibaldi_legion
+        prerequisite = { focus = ZSR_help_for_the_spaniards }
+		x = 14
+		y = 5
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
+
+		available = {
+        if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPR_scw_in_progress = yes
+				if = {
+					limit = {
+						NOT = { has_global_flag = spanish_civil_war }
+					}
+					custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_country_exist_tt
+					    country_exists = SPR
+				    }
+				    custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_at_peace_tt
+						NOT = { has_war_with = SPR }
+				    }
+				}
+				else = {
+					if = {
+						limit = {
+							has_completed_focus = SOV_covert_support_for_spanish_poum
+						}
+						country_exists = SPC
+						NOT = { has_war_with = SPC }
+					}
+					else = {
+						country_exists = SPD
+						NOT = { has_war_with = SPD }
+					}
+				}
+			}
+			else = {
+				any_other_country = {
+					original_tag = SPR
+					has_civil_war = yes
+					NOT = { has_war_with = ROOT }
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+			}
+			has_government = communism
+		}
+		
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_sending_equipment"
+		 send_equipment = {
+			    equipment = infantry_equipment
+			    amount = 1000
+			    target = SPD
+			}
+		}
+	}
+
+focus = {
+		id = ZSR_volunteers_in_spain
+		icon = GFX_focus_SOV_support_spanish_poum
+        prerequisite = { focus = ZSR_political_recognition }
+        prerequisite = { focus = ZSR_sending_equipment }
+		x = 13
+		y = 6
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
+
+		available = {
+        if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPR_scw_in_progress = yes
+				if = {
+					limit = {
+						NOT = { has_global_flag = spanish_civil_war }
+					}
+					custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_country_exist_tt
+					    country_exists = SPR
+				    }
+				    custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_at_peace_tt
+						NOT = { has_war_with = SPR }
+				    }
+				}
+				else = {
+					if = {
+						limit = {
+							has_completed_focus = SOV_covert_support_for_spanish_poum
+						}
+						country_exists = SPC
+						NOT = { has_war_with = SPC }
+					}
+					else = {
+						country_exists = SPD
+						NOT = { has_war_with = SPD }
+					}
+				}
+			}
+			else = {
+				any_other_country = {
+					original_tag = SPR
+					has_civil_war = yes
+					NOT = { has_war_with = ROOT }
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+			}
+			has_government = communism
+		}
+		
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_volunteers_in_spain"
+		SPD = {
+            add_manpower = 50000
+            }
+		}
+	}
+
+focus = {
+		id = ZSR_political_recognition
+		icon = GFX_focus_spr_war_of_independence
+        prerequisite = { focus = ZSR_help_for_the_spaniards }
+		x = 12
+		y = 5
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
+
+		available = {
+        if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPR_scw_in_progress = yes
+				if = {
+					limit = {
+						NOT = { has_global_flag = spanish_civil_war }
+					}
+					custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_country_exist_tt
+					    country_exists = SPR
+				    }
+				    custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_at_peace_tt
+						NOT = { has_war_with = SPR }
+				    }
+				}
+				else = {
+					if = {
+						limit = {
+							has_completed_focus = SOV_covert_support_for_spanish_poum
+						}
+						country_exists = SPC
+						NOT = { has_war_with = SPC }
+					}
+					else = {
+						country_exists = SPD
+						NOT = { has_war_with = SPD }
+					}
+				}
+			}
+			else = {
+				any_other_country = {
+					original_tag = SPR
+					has_civil_war = yes
+					NOT = { has_war_with = ROOT }
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+			}
+			has_government = communism
+		}
+		
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_political_recognition"
+		 SPD = {		
+				add_popularity = {
+				ideology = communism
+				popularity = 0.1
+				}
+			}
+		}
+    }
+}
+

@@ -1,0 +1,53 @@
+spriteTypes = {
+
+    spriteType = {
+		name = "GFX_report_event_MON_choibalsan_troops"
+		texturefile = "gfx/event_pictures/MON/report_event_MON_choibalsan_troops.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_MON_soviet_ties"
+		texturefile = "gfx/event_pictures/MON/report_event_MON_soviet_ties.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_MON_diplomats_table_discussion"
+		texturefile = "gfx/event_pictures/MON/report_event_MON_diplomats_table_discussion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_MON_welcoming_parade"
+		texturefile = "gfx/event_pictures/MON/report_event_MON_welcoming_parade.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_MON_bogd_khanate_restored"
+		texturefile = "gfx/event_pictures/MON/news_event_MON_bogd_khanate_restored.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_german_mission_tibet"
+		texturefile = "gfx/event_pictures/MON/report_event_german_mission_tibet.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_ukraine_war_of_independence"
+		texturefile = "gfx/event_pictures/UKR/report_event_ukraine_war_of_independence.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_ukraine_war_of_independence"
+		texturefile = "gfx/event_pictures/UKR/report_event_ukraine_war_of_independence.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_MON_demonstration_people"
+		texturefile = "gfx/event_pictures/MON/report_event_MON_demonstration_people.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_balance_of_power_in_the_republics"
+		texturefile = "gfx/event_pictures/REP/report_event_balance_of_power_in_the_republics.dds"
+	}
+}
+

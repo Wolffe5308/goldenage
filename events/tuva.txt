@@ -1,0 +1,342 @@
+add_namespace = TAN_bn_com
+add_namespace = TAN_bn
+
+country_event = { ######### Верность Москве
+	id = TAN_bn_com.1 
+	title = TAN_bn_com.1.t
+	desc = TAN_bn_com.1.d
+	picture = GFX_report_event_stalin_01
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn_com.1"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn_com.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ####### Самостоятельное правительство
+	id = TAN_bn_com.2
+	title = TAN_bn_com.2.t
+	desc = TAN_bn_com.2.d
+	picture = GFX_report_event_generic_parliament
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn_com.2"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn_com.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ####### Политическое сотрудничество
+	id = TAN_bn_com.3
+	title = TAN_bn_com.3.t
+	desc = TAN_bn_com.3.d
+	picture = GFX_report_event_aid_pact
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn_com.3"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn_com.3.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ####### Пробуждение промышленности
+	id = TAN_bn_com.4
+	title = TAN_bn_com.4.t
+	desc = TAN_bn_com.4.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn_com.4"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn_com.4.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ####### Тувинская Народная Армия
+	id = TAN_bn_com.5
+	title = TAN_bn_com.5.t
+	desc = TAN_bn_com.5.d
+	picture = GFX_report_event_SOV_mongolia_cavalry
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn_com.5"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn_com.5.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ####### Попросить автономию
+	id = TAN_bn.6
+	title = TAN_bn.6.t
+	desc = TAN_bn.6.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn.6"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn.6.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ####### Компромисс с СССР
+	id = TAN_bn.7
+	title = TAN_bn.7.t
+	desc = TAN_bn.7.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn.7"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn.7.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ####### Подготовка к войне с СССР
+	id = TAN_bn.8
+	title = TAN_bn.8.t
+	desc = TAN_bn.8.d
+	picture = GFX_report_event_SOV_mongolia_fortify_border
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn.8"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn.8.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ####### Cоздание МИДа
+	id = TAN_bn.9
+	title = TAN_bn.9.t
+	desc = TAN_bn.9.d
+	picture = GFX_report_event_SOV_national_academy_of_sciences
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn.9"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn.9.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ####### Сибираская ФССР
+	id = TAN_bn.10
+	title = TAN_bn.10.t
+	desc = TAN_bn.10.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn.10"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn.10.a
+    ai_chance = {
+			factor = 80
+		}
+		TAN = {
+			country_event = { id = TAN_bn.11 days = 1 }
+			OVERLORD = { set_autonomy = { target = ROOT autonomy_state = autonomy_integrated_puppet } }
+			promote_character = { character = TAN_supreme_soviet ideology = marxism }
+			TAN = { transfer_state = 564 }
+			TAN = { transfer_state = 563 }
+			TAN = { transfer_state = 574 }
+            TAN = { transfer_state = 516 }
+			TAN = { transfer_state = 644 }
+			TAN = { transfer_state = 876 }
+			TAN = { transfer_state = 877 }
+			TAN = { transfer_state = 878 }
+			TAN = { transfer_state = 575 }
+			TAN = { transfer_state = 565 }
+			TAN = { transfer_state = 576 }
+			TAN = { transfer_state = 567 }
+			TAN = { transfer_state = 566 }
+			TAN = { transfer_state = 577 }
+			TAN = { transfer_state = 824 }
+			TAN = { transfer_state = 579 }
+			TAN = { transfer_state = 580 }
+			TAN = { transfer_state = 403 }
+			TAN = { transfer_state = 571 }
+			TAN = { transfer_state = 570 }
+			TAN = { transfer_state = 568 }
+			TAN = { transfer_state = 578 }
+			TAN = { transfer_state = 569 }
+			TAN = { transfer_state = 40 }
+			TAN = { transfer_state = 654 }
+			set_capital = {
+				state = 570
+				remember_old_capital = no
+			}
+		}
+	}
+
+	option = {
+		name = TAN_bn.10.b
+		ai_chance = {
+			factor = 20
+		}
+		TAN = {
+			country_event = { id = TAN_bn.12 days = 1 }
+			}
+	}
+}
+
+country_event = { ####### СССР согласился
+	id = TAN_bn.11
+	title = TAN_bn.11.t
+	desc = TAN_bn.11.d
+	picture = GFX_report_event_generic_sign_treaty2
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn.11"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn.11.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ###### СССР отказался
+	id = TAN_bn.12
+	title = TAN_bn.12.t
+	desc = TAN_bn.12.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn.12"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn.12.a
+		ai_chance = { factor = 100 }
+		add_political_power = -50
+	}
+}
+
+country_event = { ####### Дальний Восток
+	id = TAN_bn.13
+	title = TAN_bn.13.t
+	desc = TAN_bn.13.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn.13"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn.13.a
+    ai_chance = {
+			factor = 80
+		}
+		TAN = {
+			country_event = { id = TAN_bn.14 days = 1 }
+			TAN = { transfer_state = 822 }
+			TAN = { transfer_state = 875 }
+			TAN = { transfer_state = 637 }
+            TAN = { transfer_state = 874 }
+			TAN = { transfer_state = 562 }
+			TAN = { transfer_state = 560 }
+			TAN = { transfer_state = 655 }
+			TAN = { transfer_state = 561 }
+			TAN = { transfer_state = 657 }
+			TAN = { transfer_state = 409 }
+			TAN = { transfer_state = 408 }
+		}
+	}
+
+	option = {
+		name = TAN_bn.13.b
+		ai_chance = {
+			factor = 20
+		}
+		TAN = {
+			country_event = { id = TAN_bn.15 days = 1 }
+			}
+	}
+}
+
+country_event = { ####### СССР согласился
+	id = TAN_bn.14
+	title = TAN_bn.14.t
+	desc = TAN_bn.14.d
+	picture = GFX_report_event_generic_sign_treaty2
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn.14"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn.14.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ###### СССР отказался
+	id = TAN_bn.15
+	title = TAN_bn.15.t
+	desc = TAN_bn.15.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn.15"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn.15.a
+		ai_chance = { factor = 100 }
+		add_political_power = -50
+	}
+}
+
+country_event = { ####### Урал
+	id = TAN_bn.16
+	title = TAN_bn.16.t
+	desc = TAN_bn.16.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn.16"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn.16.a
+    ai_chance = {
+			factor = 80
+		}
+		TAN = {
+			country_event = { id = TAN_bn.17 days = 1 }
+			TAN = { transfer_state = 653 }
+			TAN = { transfer_state = 572 }
+			TAN = { transfer_state = 582 }
+            TAN = { transfer_state = 573 }
+			TAN = { transfer_state = 398 }
+			TAN = { transfer_state = 581 }
+		}
+	}
+
+	option = {
+		name = TAN_bn.16.b
+		ai_chance = {
+			factor = 20
+		}
+		TAN = {
+			country_event = { id = TAN_bn.18 days = 1 }
+			}
+	}
+}
+
+country_event = { ####### СССР согласился
+	id = TAN_bn.17
+	title = TAN_bn.17.t
+	desc = TAN_bn.17.d
+	picture = GFX_report_event_generic_sign_treaty2
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn.17"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn.17.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ###### СССР отказался
+	id = TAN_bn.18
+	title = TAN_bn.18.t
+	desc = TAN_bn.18.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event TAN_bn.18"}
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_bn.18.a
+		ai_chance = { factor = 100 }
+		add_political_power = -50
+	}
+}
+

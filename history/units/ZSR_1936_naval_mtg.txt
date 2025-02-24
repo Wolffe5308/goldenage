@@ -1,0 +1,26 @@
+﻿
+units= {
+
+
+	### Black Sea Fleet -- Грузия
+	fleet = {
+		name = "Chernomorskiy Flot Kavkaza"
+		naval_base = 3653 # Грузия
+		task_force = {				
+			name = "Chernomorskiy Flot Kavkaza"
+			location = 3653 # Грузия
+			ship = { name = "Krasnya Gruzia" definition = battleship start_experience_factor = 0.2 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ZSR version_name = "Kavkaz Class" } } }
+			ship = { name = "Krasni Kavkaz" definition = light_cruiser start_experience_factor = 0.2 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ZSR version_name = "Kavkaz Class" } } }
+			ship = { name = "Krasny Erevan" definition = light_cruiser start_experience_factor = 0.2 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ZSR version_name = "Kavkaz Class" } } }
+			ship = { name = "Krasny Baku" definition = light_cruiser start_experience_factor = 0.2 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ZSR version_name = "Kavkaz Class" } } }
+		}	
+		task_force = {	
+			name = "Chernomorskiy Podvodniy Flot Kavkaza"
+			location = 3653 # Грузия
+			ship = { name = "L-4 Garibaldian" definition = submarine start_experience_factor = 0.2 equipment = { ship_hull_submarine_1 = { amount = 1 owner = ZSR version_name = "Series Leninist" } } }			
+			ship = { name = "L-6 Carbonari" definition = submarine start_experience_factor = 0.2 equipment = { ship_hull_submarine_1 = { amount = 1 owner = ZSR version_name = "Series Leninist" } } }			
+			ship = { name = "M-35" definition = submarine start_experience_factor = 0.2 equipment = { ship_hull_submarine_1 = { amount = 1 owner = ZSR version_name = "Series Leninist" } } }			
+			ship = { name = "М-36" definition = submarine start_experience_factor = 0.2 equipment = { ship_hull_submarine_1 = { amount = 1 owner = ZSR version_name = "Series Leninist" } } }			
+		}	
+	}
+}

@@ -1,0 +1,114 @@
+﻿capital = 330
+
+oob = "MON_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	basic_train = 1
+}
+
+add_ideas = {
+	limited_conscription
+	Disorganized_army
+	Agrarian_country
+	MON_struggle_for_power
+}
+
+set_party_name = {
+	ideology = neutrality
+	long_name = MON_great_mongolia_monarxists_long
+	name = MON_great_mongolia_monarxists
+}
+
+recruit_character = MON_anandyn_amar
+recruit_character = MON_darizavyn_losol
+recruit_character = MON_banzarjavyn_baasanjav
+recruit_character = MON_shirnengiin_ayuush
+recruit_character = MON_dorjjavyn_luvsansharav
+recruit_character = MON_dansranbilegiin_dogsom
+recruit_character = MON_issa_pliev
+recruit_character = MON_jamsrang_tseren
+recruit_character = MON_tsendiin_olzvoy
+recruit_character = MON_damchaagiin_demberel
+recruit_character = MON_khorloogiin_choibalsan
+recruit_character = MON_gelegdorjiin_demid
+recruit_character = MON_shagdaryn_gongor
+recruit_character = MON_genepil
+recruit_character = MON_zhamyangiyn_lhagvasuren
+recruit_character = MON_lodongiin_dandar
+recruit_character = MON_ilya_baldinov
+
+1939.1.1 = {
+
+	add_political_power = 1198
+	add_command_power = 100
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = construction_effort_2
+	complete_national_focus = production_effort_2
+	complete_national_focus = infrastructure_effort
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	oob = "MON_1939"
+	set_technology = {
+		support_weapons = 1
+		gw_artillery = 1
+		
+		#doctrines
+		air_superiority = 1
+		
+		mass_assault = 1
+		pocket_defence = 1
+		defence_in_depth = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	communism = 85
+	neutrality = 15
+}
+
+1939.1.1 = {
+	add_ideas = {
+		limited_conscription
+	}
+
+	recruit_character = MON_khorloogiin_choibalsan
+	promote_character = MON_khorloogiin_choibalsan
+	retire_character = MON_anandyn_amar
+}

@@ -1,0 +1,2811 @@
+focus_tree = {
+	id = belarus_focus
+
+	shortcut = {
+		name = BLR_army_shortcut
+		target = BLR_officer_training
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = BLR_air_shortcut
+		target = BLR_waf
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = BLR_navy_shortcut
+		target = BLR_wsf
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = BLR_left_shortcut
+		target = BLR_new_party
+		scroll_wheel_factor = 1.0
+	}
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = BLR
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 10 y = 1000 }
+
+	shared_focus = REP_development_of_the_republics
+
+    focus = {
+		id = BLR_waf
+		icon = GFX_focus_generic_aircraft_production
+		x = 15
+		y = 11
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_waf"
+		activate_mission = blr_bob_mission_balance_aircraft_potential_of_belarus
+        add_manpower = 20000
+	    air_experience = 50
+		add_ideas = Belarusian_air_force
+		}
+	}
+
+    focus = {
+		id = BLR_soviet_specialists
+		icon = GFX_focus_SOV_flying_clubs
+		prerequisite = { focus = BLR_waf }
+		x = 16
+		y = 12
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_soviet_specialists"
+			swap_ideas = {
+                remove_idea = Belarusian_air_force
+                add_idea = Belarusian_air_force_1
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.6
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+    focus = {
+		id = BLR_construction_of_airfields
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BLR_waf }
+		x = 14
+		y = 12
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_construction_of_airfields"
+        random_owned_controlled_state = {
+							limit = {
+								air_base < 9
+							}
+							add_building_construction = {
+								type = air_base
+								level = 2
+								instant_build = yes
+					}
+				}
+			}
+		}
+
+    focus = {
+		id = BLR_service_staff
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = BLR_construction_of_airfields }
+		x = 13
+		y = 13
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_service_staff"
+		random_owned_controlled_state = {
+							limit = {
+								air_base < 9
+							}
+							add_building_construction = {
+								type = air_base
+								level = 2
+								instant_build = yes
+					}
+				}
+			}
+		}
+
+    focus = {
+		id = BLR_new_aircraft
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = BLR_soviet_specialists }
+		prerequisite = { focus = BLR_construction_of_airfields }
+		x = 15
+		y = 13
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_new_aircraft"
+			add_tech_bonus = {
+				name = SOV_ground_support
+				bonus = 0.75
+				uses = 2
+				category = light_fighter
+				category = cas_bomber
+			}
+		}
+	}
+
+    focus = {
+		id = BLR_aircraft_manufacturing
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = BLR_soviet_specialists }
+		x = 17
+		y = 13
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_aircraft_manufacturing"
+        swap_ideas = {
+                remove_idea = Belarusian_air_force_1
+                add_idea = Belarusian_air_force_2
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.6
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+    focus = {
+		id = BLR_standardized_production
+		icon =  GFX_goal_generic_air_doctrine
+		prerequisite = { focus = BLR_new_aircraft }
+		prerequisite = { focus = BLR_aircraft_manufacturing }
+		prerequisite = { focus = BLR_service_staff }
+		x = 15
+		y = 14
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_standardized_production"
+			add_ideas = Aircraft_manufacturing
+		}
+	}
+
+	focus = {
+		id = BLR_officer_training
+		icon = GFX_goal_TAN_recruit_officers
+		x = 4
+		y = 11
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_officer_training"
+		activate_mission = blr_bob_mission_balance_military_potential_of_belarus
+		hidden_effect = {
+			country_event = { id = BLR_generic.1 days = 1 }
+		}
+		army_experience = 25
+	}
+}
+
+	focus = {
+		id = BLR_military_competition
+		icon = GFX_goal_TAN_start_training_divisions
+		prerequisite = { focus = BLR_regular_army focus = BLR_peoples_army }
+		relative_position_id = BLR_officer_training
+		x = -1
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_military_competition"
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = BLR_doctrine_development
+		icon = GFX_goal_BLR_doctrine_development
+		prerequisite = { focus = BLR_regular_army focus = BLR_peoples_army }
+		relative_position_id = BLR_officer_training
+		x = 1
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_doctrine_development"
+			custom_effect_tooltip = BLR_belarusian_doctrine_effect_tt
+			hidden_effect = { set_technology = { BLR_belarusian_doctrine_tech = 1 } }
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+		    }
+		}
+	}
+
+	focus = {
+		id = BLR_army_stabilization
+		icon = GFX_goal_BLR_army_stabilization
+		prerequisite = { focus = BLR_doctrine_development }
+		prerequisite = { focus = BLR_military_competition }
+		relative_position_id = BLR_military_competition
+		relative_position_id = BLR_doctrine_development
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_army_stabilization"
+			army_experience = 25
+			add_tech_bonus = {
+				name = SOV_the_means_to_wage_war
+				bonus = 1.0
+				uses = 1
+				category = support_tech
+			}
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+		    }
+		}
+	}
+
+	focus = {
+		id = BLR_peoples_army
+		icon = GFX_goal_BLR_peoples_army
+		mutually_exclusive = { focus = BLR_regular_army }
+		prerequisite = { focus = BLR_officer_training }
+		relative_position_id = BLR_officer_training
+		x = 4
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_peoples_army"
+		remove_dynamic_modifier = { modifier = BLR_belarusian_army_dynamic_modifier }
+		custom_effect_tooltip = BLR_peoples_army_ns_tt
+		hidden_effect = {
+            add_dynamic_modifier = { modifier = BLR_peoples_militia_dynamic_modifier }
+		    add_to_variable = { BLR_peoples_militia_army_morale_factor = 0.05 }
+		    add_to_variable = { BLR_peoples_militia_conscription = 0.05 }
+		}
+	}
+}
+
+	focus = {
+		id = BLR_weapons_for_the_militia
+		icon = GFX_goal_BLR_weapons_for_the_militia
+		prerequisite = { focus = BLR_peoples_army }
+		relative_position_id = BLR_peoples_army
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_weapons_for_the_militia"
+		add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 1.0
+			uses = 1
+			category = infantry_weapons
+		}
+	}
+}
+
+	focus = {
+		id = BLR_organize_the_people
+		icon = GFX_goal_BLR_organize_the_people
+		prerequisite = { focus = BLR_peoples_army }
+		relative_position_id = BLR_peoples_army
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_organize_the_people"
+		custom_effect_tooltip = BLR_organize_the_people_ns_tt
+		add_to_variable = { BLR_peoples_militia_land_reinforce_rate = 0.05 }
+		add_to_variable = { BLR_peoples_militia_modifier_army_sub_unit_militia_max_org_factor = 0.1 }
+		}
+	}
+
+	focus = {
+		id = BLR_guerrilla_methods
+		icon = GFX_goal_BLR_guerrilla_methods
+		prerequisite = { focus = BLR_peoples_army }
+		relative_position_id = BLR_peoples_army
+		x = 3
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_guerrilla_methods"
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = cat_mass_assault
+		}
+		custom_effect_tooltip = BLR_guerrilla_methods_ns_tt
+		add_to_variable = { BLR_peoples_militia_modifier_army_equipment_capture = 0.05 }
+		add_to_variable = { BLR_peoples_militia_modifier_army_no_supply_grace = 48 }
+		add_to_variable = { BLR_peoples_militia_modifier_army_supply_factor = 0.05 }
+		add_to_variable = { BLR_peoples_militia_modifier_army_pocket_penalty = -0.1 }
+		}
+	}
+
+	focus = {
+		id = BLR_pride_to_serve
+		icon =  GFX_goal_BLR_pride_to_serve
+		prerequisite = { focus = BLR_weapons_for_the_militia }
+		prerequisite = { focus = BLR_organize_the_people }
+		relative_position_id = BLR_weapons_for_the_militia
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_pride_to_serve"
+			custom_effect_tooltip = BLR_pride_to_serve_ns_tt
+			add_to_variable = { BLR_peoples_militia_modifier_army_sub_unit_militia_attack_factor = 0.2 }
+			add_to_variable = { BLR_peoples_militia_modifier_army_sub_unit_militia_defence_factor = 0.2 }
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = cat_mass_assault
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_recruit_training
+		icon =  GFX_goal_BLR_recruit_training
+		prerequisite = { focus = BLR_organize_the_people }
+		prerequisite = { focus = BLR_guerrilla_methods }
+		relative_position_id = BLR_weapons_for_the_militia
+		x = 3
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_recruit_training"
+			add_tech_bonus = {
+				name = SOV_the_means_to_wage_war
+				bonus = 1.0
+				uses = 1
+				category = support_tech
+			}
+			add_manpower = 25000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = BLR_the_people_defend_the_country
+		icon =  GFX_goal_BLR_the_people_defend_the_country
+		prerequisite = { focus = BLR_pride_to_serve }
+		prerequisite = { focus = BLR_recruit_training }
+        relative_position_id = BLR_pride_to_serve
+		relative_position_id = BLR_recruit_training
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_the_people_defend_the_country"
+			custom_effect_tooltip = BLR_the_people_defend_the_country_ns_tt
+			add_to_variable = { BLR_peoples_militia_max_dig_in_factor = 0.05 }
+			add_to_variable = { BLR_peoples_militia_land_bunker_effectiveness_factor = 0.05 }
+		}
+	}
+
+	focus = {
+		id = BLR_regular_army
+		icon = GFX_goal_BLR_regular_army
+		mutually_exclusive = { focus = BLR_peoples_army }
+		prerequisite = { focus = BLR_officer_training }
+		relative_position_id = BLR_officer_training
+		x = -4
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_regular_army"
+		custom_effect_tooltip = BLR_regular_army_ns_tt
+		add_to_variable = { BLR_belarusian_army_army_org_factor = 0.05 }
+		add_to_variable = { BLR_belarusian_army_planning_speed = 0.1 }
+		add_to_variable = { BLR_belarusian_army_army_attack_factor = 0.05 }
+		add_to_variable = { BLR_belarusian_army_army_defence_factor = 0.05 }
+		}
+	}
+
+	focus = {
+		id = BLR_anti_air_defense
+		icon = GFX_goal_BLR_anti_air_defense
+		prerequisite = { focus = BLR_regular_army }
+		relative_position_id = BLR_regular_army
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_anti_air_defense"
+		custom_effect_tooltip = BLR_anti_air_defense_ns_tt
+		add_to_variable = { BLR_belarusian_army_experience_gain_army_factor = 0.05 }
+		add_to_variable = { BLR_belarusian_army_army_org_factor = 0.05 }
+		add_to_variable = { BLR_belarusian_army_enemy_army_bonus_air_superiority_factor = -0.05 }
+		add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 1.0
+			uses = 1
+			category = cat_anti_air
+		}
+	}
+}
+
+	focus = {
+		id = BLR_anti_tank_guns
+		icon = GFX_goal_BLR_anti_tank_guns
+		prerequisite = { focus = BLR_anti_air_defense }
+		relative_position_id = BLR_anti_air_defense
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_anti_tank_guns"
+		add_ideas = BLR_shield_and_sword
+		add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 1.0
+			uses = 1
+			category = cat_anti_tank
+		}
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = cat_superior_firepower
+		}
+	}
+}
+
+	focus = {
+		id = BLR_production_katyusha
+		icon = GFX_goal_BLR_production_katyusha
+		prerequisite = { focus = BLR_anti_tank_guns }
+		prerequisite = { focus = BLR_military_conveyor }
+		relative_position_id = BLR_military_conveyor
+		relative_position_id = BLR_anti_tank_guns
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_production_katyusha"
+		mio:BLR_mogilev_automobile_plant_organization = {
+			add_mio_funds = 500
+		}
+		custom_effect_tooltip = BLR_production_katyusha_ns_tt
+		add_to_variable = { BLR_belarusian_army_motorized_attack_factor = 0.05 }
+		add_to_variable = { BLR_belarusian_army_motorized_defence_factor = 0.05 }
+		add_ideas = BLR_katyusha
+		}
+	}
+
+	focus = {
+		id = BLR_artillery_upgrade
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = BLR_regular_army }
+		relative_position_id = BLR_regular_army
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = BLR_artillery_upgrade_ns_tt
+			add_to_variable = { BLR_belarusian_army_planning_speed = 0.1 }
+			add_to_variable = { BLR_belarusian_army_army_artillery_defence_factor = 0.15 }
+			add_to_variable = { BLR_belarusian_army_army_artillery_attack_factor = 0.15 }
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = artillery
+		    }
+		}
+	}
+
+	focus = {
+		id = BLR_weapons_of_war
+		icon = GFX_goal_BLR_weapons_of_war
+		prerequisite = { focus = BLR_artillery_upgrade }
+		relative_position_id = BLR_artillery_upgrade
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_weapons_of_war"
+            custom_effect_tooltip = BLR_weapons_of_war_ns_tt
+			add_to_variable = { BLR_belarusian_army_planning_speed = 0.1 }
+			add_to_variable = { BLR_belarusian_army_army_attack_factor = 0.05 }
+		    add_to_variable = { BLR_belarusian_army_army_defence_factor = 0.05 }
+			add_to_variable = { BLR_belarusian_army_breakthrough_factor = 0.05 }
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = cat_superior_firepower
+		    }
+		}
+	}
+
+	focus = {
+		id = BLR_military_conveyor
+		icon = GFX_goal_BLR_military_conveyor
+		prerequisite = { focus = BLR_artillery_upgrade }
+		prerequisite = { focus = BLR_anti_air_defense }
+		relative_position_id = BLR_artillery_upgrade
+		relative_position_id = BLR_anti_air_defense
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_military_conveyor"
+			mio:BLR_mogilev_automobile_plant_organization = {
+				add_mio_funds = 500
+			}
+			custom_effect_tooltip = BLR_military_conveyor_ns_tt
+			add_to_variable = { BLR_belarusian_army_experience_gain_army_factor = 0.1 }
+			add_to_variable = { BLR_belarusian_army_army_org_factor = 0.1 }
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+		    }
+		}
+	}
+
+	focus = {
+		id = BLR_artillery_god_of_war
+		icon = GFX_goal_BLR_artilery_god_of_war
+		prerequisite = { focus = BLR_military_conveyor }
+		prerequisite = { focus = BLR_weapons_of_war }
+		relative_position_id = BLR_military_conveyor
+		relative_position_id = BLR_weapons_of_war
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_artillery_god_of_war"
+			mio:BLR_mogilev_automobile_plant_organization = {
+				add_mio_funds = 500
+			}
+			custom_effect_tooltip = BLR_artillery_god_of_war_ns_tt
+			add_to_variable = { BLR_belarusian_army_planning_speed = 0.1 }
+			add_to_variable = { BLR_belarusian_army_army_attack_factor = 0.05 }
+		    add_to_variable = { BLR_belarusian_army_army_defence_factor = 0.05 }
+			add_ideas = BLR_artillery_production
+		}
+	}
+
+	focus = {
+		id = BLR_development_of_belarus
+		icon = GFX_goal_generic_production
+		x = 13
+		y = 0
+		cost = 5
+
+		available = {
+			OR = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_development_of_belarus"
+			activate_mission = blr_bob_mission_balance_industrial_potential_of_belarus
+			swap_ideas = {
+                remove_idea = BLR_ruined_industry
+                add_idea = BLR_ruined_industry_1
+			}
+			add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1.0
+			uses = 1
+			category = industry
+		}
+	}
+}
+
+	focus = {
+		id = BLR_infrastructure_effort
+		icon = GFX_goal_generic_construction
+		mutually_exclusive = { focus = BLR_market_economy }
+		x = 11
+		y = 0
+		cost = 5
+
+		available = {
+			OR = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_infrastructure_effort"
+			if = {
+				limit = {
+					204 = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+				204 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					194 = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+				194 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					
+				}
+			}
+		}
+	}
+}
+
+	focus = {
+		id = BLR_finish_five_year_plan
+		icon = GFX_goal_SOV_five_year_plan
+		prerequisite = { focus = BLR_development_of_belarus }
+		prerequisite = { focus = BLR_infrastructure_effort }
+		relative_position_id = BLR_development_of_belarus
+		relative_position_id = BLR_infrastructure_effort
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {
+			OR = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_finish_five_year_plan"
+			remove_ideas = BLR_ruined_industry_1
+		}
+	}
+
+    focus = {
+		id = BLR_new_five_year_plan
+		icon = GFX_goal_reichsautobahn
+		prerequisite = { focus = BLR_finish_five_year_plan }
+		relative_position_id = BLR_finish_five_year_plan
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			OR = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_new_five_year_plan"
+			add_ideas = BLR_five_year_plan_belarus
+			unlock_decision_category_tooltip = development_of_industrial_regions
+		}
+	}
+
+	focus = {
+		id = BLR_industrial_modernization
+		icon = GFX_focus_spa_the_spanish_miracle
+		prerequisite = { focus = BLR_new_five_year_plan }
+		relative_position_id = BLR_new_five_year_plan
+		x = -3
+		y = 1
+		cost = 10
+
+		available = {
+			OR = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_industrial_modernization"
+			swap_ideas = {
+                remove_idea = BLR_five_year_plan_belarus
+                add_idea = BLR_five_year_plan_belarus_2
+		    }
+		}
+	}
+
+	focus = {
+		id = BLR_improvement_of_working_conditions
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = BLR_industrial_modernization }
+		relative_position_id = BLR_industrial_modernization
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			OR = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_improvement_of_working_conditions"
+			swap_ideas = {
+                remove_idea = BLR_five_year_plan_belarus_2
+                add_idea = BLR_five_year_plan_belarus_3
+		    }
+		}
+	}
+
+	focus = {
+		id = BLR_steel_mining
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = BLR_new_five_year_plan }
+		relative_position_id = BLR_new_five_year_plan
+		x = -1
+		y = 1
+		cost = 5
+	
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_steel_mining"
+		206 = {
+				add_resource = {
+					type = steel
+					amount = 20
+					}
+				}
+			}
+		}
+	
+	focus = {
+		id = BLR_mining
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = BLR_new_five_year_plan }
+		relative_position_id = BLR_new_five_year_plan
+		x = 1
+		y = 1
+		cost = 5
+	
+		available = {
+			OR = {
+				has_government = communism
+				has_government = social_democrat
+			}
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_mining"
+			add_ideas = Mining
+		}
+	}
+	
+	focus = {
+			id = BLR_belarusian_state_institutions
+			icon = GFX_focus_research2
+			prerequisite = { focus = BLR_steel_mining }
+			prerequisite = { focus = BLR_mining }
+			relative_position_id = BLR_steel_mining
+			relative_position_id = BLR_mining
+			x = -1
+			y = 1
+			cost = 10
+	
+			available = {
+				OR = {
+					has_government = communism
+					has_government = social_democrat
+				}
+			}
+	
+			ai_will_do = {
+				factor = 5
+			}
+	
+			completion_reward = {
+				log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_belarusian_state_institutions"
+				add_research_slot = 1
+			}
+		}
+
+	focus = {
+		id = BLR_military_industry_of_belarus
+		icon = GFX_focus_generic_reorient_production
+		prerequisite = { focus = BLR_infrastructure_effort focus = BLR_market_economy }
+		x = 4
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_military_industry_of_belarus"
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_construction_of_military_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BLR_infrastructure_effort focus = BLR_market_economy }
+		x = 6
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_construction_of_military_factories"
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_civil_industry_construction
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = BLR_military_industry_of_belarus }
+		relative_position_id = BLR_military_industry_of_belarus
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_civil_industry_construction"
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_building_in_belarus
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = BLR_construction_of_military_factories }
+		relative_position_id = BLR_construction_of_military_factories
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_building_in_belarus"
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_development_of_western_belarus
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = BLR_civil_industry_construction }
+		prerequisite = { focus = BLR_building_in_belarus }
+		relative_position_id = BLR_civil_industry_construction
+		relative_position_id = BLR_building_in_belarus
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {
+			controls_state = 96
+			controls_state = 95
+			controls_state = 94
+			controls_state = 97
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_development_of_western_belarus"
+		96 = {
+			add_extra_state_shared_building_slots = 2
+		}
+		95 = {
+			add_extra_state_shared_building_slots = 2
+		}
+		94 = {
+			add_extra_state_shared_building_slots = 2
+		}
+		97 = {
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+}
+
+	focus = {
+		id = BLR_military_industry
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = BLR_development_of_western_belarus }
+		relative_position_id = BLR_development_of_western_belarus
+		x = -2
+		y = 1
+		cost = 5
+
+		available = {
+			controls_state = 96
+			controls_state = 95
+			controls_state = 94
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_military_industry"
+		94 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		95 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		96 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+	focus = {
+		id = BLR_building_infrastructure_in_the_west
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = BLR_development_of_western_belarus }
+		relative_position_id = BLR_development_of_western_belarus
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			controls_state = 96
+			controls_state = 95
+			controls_state = 94
+			controls_state = 97
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_building_infrastructure_in_the_west"
+		94 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		95 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		96 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		97 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+	focus = {
+		id = BLR_construction_of_factories
+		icon = GFX_focus_generic_low_cost_housing
+		prerequisite = { focus = BLR_development_of_western_belarus }
+		relative_position_id = BLR_development_of_western_belarus
+		x = 2
+		y = 1
+		cost = 5
+
+		available = {
+			controls_state = 96
+			controls_state = 95
+			controls_state = 94
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_construction_of_factories"
+		94 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		95 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		96 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+	focus = {
+		id = BLR_market_economy
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		mutually_exclusive = { focus = BLR_infrastructure_effort }
+		x = -1
+		y = 0
+		cost = 5
+
+		available = {
+			NOT = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_market_economy"
+			swap_ideas = {
+                remove_idea = BLR_ruined_industry
+                add_idea = BLR_ruined_industry_1
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_privatization
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = BLR_market_economy }
+		relative_position_id = BLR_market_economy
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_privatization"
+			remove_ideas = BLR_ruined_industry_1
+		}
+	}
+
+	focus = {
+		id = BLR_foreign_investment
+		icon = GFX_focus_GER_customs_union
+		prerequisite = { focus = BLR_market_economy }
+		relative_position_id = BLR_market_economy
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_foreign_investment"
+			add_tech_bonus = {
+				name = BRA_industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_private_universities
+		icon = GFX_focus_research
+		prerequisite = { focus = BLR_foreign_investment }
+		relative_position_id = BLR_foreign_investment
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_private_universities"
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = BLR_economic_reforms
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = BLR_privatization }
+		prerequisite = { focus = BLR_foreign_investment }
+		relative_position_id = BLR_privatization
+		relative_position_id = BLR_foreign_investment
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_economic_reforms"
+			add_ideas = BLR_belarusian_economy
+		}
+	}
+
+	focus = {
+		id = BLR_road_construction
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = BLR_economic_reforms }
+		relative_position_id = BLR_economic_reforms
+		x = -2
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_road_construction"
+			add_ideas = BLR_road_construction_idea
+		}
+	}
+
+	focus = {
+		id = BLR_development_of_electronics
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = BLR_economic_reforms }
+		relative_position_id = BLR_economic_reforms
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_development_of_electronics"
+			add_tech_bonus = {
+				name = BRA_electronics_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_search_for_resources
+		icon = GFX_focus_generic_central_planning
+		prerequisite = { focus = BLR_economic_reforms }
+		relative_position_id = BLR_economic_reforms
+		x = 2
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_search_for_resources"
+			swap_ideas = {
+				remove_idea = BLR_belarusian_economy
+				add_idea = BLR_belarusian_economy_2
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_complete_victory_of_capitalism
+		icon = GFX_focus_generic_currency_reforms
+		prerequisite = { focus = BLR_road_construction }
+		prerequisite = { focus = BLR_development_of_electronics }
+		prerequisite = { focus = BLR_search_for_resources }
+		relative_position_id = BLR_road_construction
+		relative_position_id = BLR_development_of_electronics
+		relative_position_id = BLR_search_for_resources
+		x = -2
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = {
+                has_government = communism
+			    has_government = social_democrat
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_complete_victory_of_capitalism"
+			swap_ideas = {
+				remove_idea = BLR_belarusian_economy_2
+				add_idea = BLR_belarusian_economy_3
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_wsf
+		icon = GFX_goal_generic_build_navy
+		x = 22
+		y = 11
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+        any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_wsf"
+		add_ideas = BLR_navy
+		}
+	}
+
+	focus = {
+		id = BLR_expand_north_bases
+		icon = GFX_focus_SOV_reinforce_western_naval_bases
+		prerequisite = { focus = BLR_wsf }
+		x = 20
+		y = 12
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_expand_north_bases"
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_fleet_development
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = BLR_wsf }
+		x = 24
+		y = 12
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_fleet_development"
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_nk_navy_bssr
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = BLR_wsf }
+		x = 22
+		y = 12
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_nk_navy_bssr"
+            add_ideas = Shipbuilding
+		}
+	}
+
+	focus = {
+		id = BLR_submarine_development
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = BLR_expand_north_bases }
+		prerequisite = { focus = BLR_nk_navy_bssr }
+		x = 21
+		y = 13
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_submarine_development"
+			navy_experience = 15
+
+			add_tech_bonus = {
+				name = SOV_submarine_warfare
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+		}
+	}
+}
+
+    focus = {
+		id = BLR_construction_of_the_surface_fleet
+		icon = GFX_focus_generic_destroyer
+		prerequisite = { focus = BLR_fleet_development }
+		prerequisite = { focus = BLR_nk_navy_bssr }
+		x = 23
+		y = 13
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_construction_of_the_surface_fleet"
+			navy_experience = 25
+			add_tech_bonus = {
+				name = SOV_an_oceangoing_navy
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_mine_warfare
+		icon = GFX_focus_generic_mine_warfare
+		prerequisite = { focus = BLR_submarine_development }
+		prerequisite = { focus = BLR_construction_of_the_surface_fleet }
+		x = 22
+		y = 14
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_mine_warfare"
+			add_ideas = SOV_mine_warfare_ns
+
+			add_tech_bonus = {
+				name = SOV_mine_warfare
+				bonus = 1.0
+				uses = 2
+				category = naval_mines
+		}
+	}
+}
+
+    focus = {
+		id = BLR_new_party
+		icon = GFX_goal_BLR_new_party
+		x = 21
+		y = 0
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+          is_in_faction_with = SOV 
+		  has_government = communism
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_new_party"
+		country_event = { id = BLR_bop.1 hours = 6 }
+		set_power_balance = {
+			id = BLR_communist_balance
+			left_side = blr_supreme_soviet_left_side
+			right_side = ponomarenko_right_side
+			set_default = yes
+		}
+		country_event = { id = BLR_com.1 days = 3 }
+		add_political_power = 150
+		unlock_decision_category_tooltip = building_a_new_party
+	}
+}
+
+    focus = {
+		id = BLR_negotiations_with_protesters
+		icon = GFX_goal_BLR_negotiations_with_protesters
+		prerequisite = { focus = BLR_new_party }
+		x = 20
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_negotiations_with_protesters"
+		swap_ideas = {
+			remove_idea = BLR_popular_riots
+            add_idea = BLR_popular_riots_1
+		}
+		add_power_balance_value = {
+			id = BLR_communist_balance
+			value = 0.1
+		}
+	}
+}
+
+    focus = {
+		id = BLR_disperse_the_rest
+		icon = GFX_goal_BLR_disperse_the_rest
+		prerequisite = { focus = BLR_negotiations_with_protesters }
+		x = 20
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_disperse_the_rest"
+		swap_ideas = {
+			remove_idea = BLR_popular_riots_1
+            add_idea = BLR_popular_riots_2
+		}
+		add_power_balance_value = {
+			id = BLR_communist_balance
+			value = 0.1
+		}
+	}
+}
+
+    focus = {
+		id = BLR_komsomol
+		icon = GFX_focus_NOR_moscows_education_centers
+		prerequisite = { focus = BLR_new_party }
+		x = 22
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_komsomol"
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			add_power_balance_value = {
+				id = BLR_communist_balance
+				value = -0.05
+			}
+		}
+	}
+}
+
+    focus = {
+		id = BLR_peoples_newspaper
+		icon = GFX_goal_BLR_people's_newspaper
+		prerequisite = { focus = BLR_komsomol }
+		x = 22
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_peoples_newspaper"
+		add_political_power = 50
+		add_power_balance_value = {
+			id = BLR_communist_balance
+			value = -0.05
+		}
+	}
+}
+
+    focus = {
+		id = BLR_restoring_order
+		icon = GFX_goal_BLR_restoring_order
+		prerequisite = { focus = BLR_peoples_newspaper }
+        prerequisite = { focus = BLR_disperse_the_rest }
+		x = 21
+		y = 3
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_restoring_order"
+		complete_national_focus = REP_development_of_the_republics
+		hidden_effect = {
+			country_event = { id = BLR_com.2 days = 1 }
+			set_country_flag = rep_republic_or_leader
+		}
+		remove_ideas = BLR_popular_riots_2
+	}
+}
+
+    focus = {
+		id = BLR_internal_policy_of_belarus
+		icon = GFX_goal_BLR_domestic_policy_of_belarus
+		prerequisite = { focus = BLR_restoring_order }
+		x = 16
+		y = 4
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_internal_policy_of_belarus"
+		hidden_effect = {
+			country_event = { id = BLR_com.3 days = 1 }
+		}
+		add_political_power = 100
+		add_power_balance_value = {
+			id = BLR_communist_balance
+			value = 0.05
+		}
+	}
+}
+
+    focus = {
+		id = BLR_recruitment_to_partisan_troops
+		icon = GFX_goal_generic_red_milita
+		prerequisite = { focus = BLR_internal_policy_of_belarus }
+		x = 17
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_recruitment_to_partisan_troops"
+        BLR_vasily_korzh = {
+            add_corps_commander_role = {
+                    traits = { cautious war_hero trickster }
+                    skill = 3
+                    attack_skill = 3
+                    defense_skill = 1
+                    planning_skill = 3
+                    logistics_skill = 3
+                }
+            }
+		add_ideas = BLR_partisan_army
+		division_template = {
+				name = "Belarusian Partisan"
+				priority = 1
+				regiments = {
+					militia = { x = 0 y = 0 }
+		            militia = { x = 0 y = 1 }
+		            militia = { x = 1 y = 0 }
+		            militia = { x = 1 y = 1 }
+		            militia = { x = 2 y = 0 }
+		            militia = { x = 2 y = 1 }
+		            militia = { x = 3 y = 0 }
+		            militia = { x = 3 y = 1 }
+		            militia = { x = 4 y = 0 }
+		            militia = { x = 4 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 206 }
+				limit = { PREV = { has_full_control_of_state = PREV } }
+				create_unit = {
+					division = "name = \"1st Vitebsk partisan brigade\" division_template = \"Belarusian Partisan\" start_experience_factor = 0.5" 
+					owner = BLR
+				}
+				create_unit = {
+					division = "name = \"1st Gomel partisan brigade\" division_template = \"Belarusian Partisan\" start_experience_factor = 0.5" 
+					owner = BLR
+				}
+				create_unit = {
+					division = "name = \"1st Minsk partisan brigade\" division_template = \"Belarusian Partisan\" start_experience_factor = 0.5" 
+					owner = BLR
+				}
+				create_unit = {
+					division = "name = \"1st Bobruisk partisan brigade\" division_template = \"Belarusian Partisan\" start_experience_factor = 0.5" 
+					owner = BLR
+				}
+				add_power_balance_value = {
+					id = BLR_communist_balance
+					value = 0.05
+				}
+			}
+		}
+	}
+
+    focus = {
+		id = BLR_military_commissariats
+		icon = GFX_goal_BLR_military_commissariats
+		prerequisite = { focus = BLR_internal_policy_of_belarus }
+		x = 15
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_military_commissariats"
+		add_manpower = 50000
+		add_power_balance_value = {
+			id = BLR_communist_balance
+			value = -0.05
+		}
+	}
+}
+
+    focus = {
+		id = BLR_partisan_komsomol
+		icon = GFX_goal_BLR_partisan_komsomol
+		prerequisite = { focus = BLR_military_commissariats }
+		prerequisite = { focus = BLR_recruitment_to_partisan_troops }
+		x = 16
+		y = 6
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_partisan_komsomol"
+		add_country_leader_trait = head_of_the_central_headquarters_of_the_partisan_movement
+		swap_ideas = {
+			remove_idea = BLR_partisan_army
+            add_idea = BLR_partisan_army_1
+		}
+		add_power_balance_value = {
+			id = BLR_communist_balance
+			value = -0.05
+		}
+	}
+}
+
+    focus = {
+		id = BLR_war_propoganda
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = BLR_military_commissariats }
+		x = 14
+		y = 6
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_war_propoganda"
+		add_ideas = BLR_war_propoganda_of_belarus
+		add_power_balance_value = {
+			id = BLR_communist_balance
+			value = 0.05
+		}
+	}
+}
+
+    focus = {
+		id = BLR_partisan_exercises
+		icon = GFX_goal_BLR_partisan_exercises
+		prerequisite = { focus = BLR_recruitment_to_partisan_troops }
+		x = 18
+		y = 6
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_partisan_exercises"
+		army_experience = 25
+		add_power_balance_value = {
+			id = BLR_communist_balance
+			value = 0.05
+		}
+	}
+}
+
+    focus = {
+		id = BLR_state_and_people_are_united
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = BLR_war_propoganda }
+		prerequisite = { focus = BLR_partisan_komsomol }
+		prerequisite = { focus = BLR_partisan_exercises }
+		x = 16
+		y = 7
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_state_and_people_are_united"
+		swap_ideas = {
+			remove_idea = BLR_partisan_army_1
+            add_idea = BLR_partisan_army_2
+		}
+		add_power_balance_value = {
+			id = BLR_communist_balance
+			value = 0.05
+		}
+	}
+}
+
+    focus = {
+		id = BLR_foreign_policy_of_belarus
+		icon = GFX_goal_BLR_foreign_policy_of_belarus
+		prerequisite = { focus = BLR_restoring_order }
+		x = 21
+		y = 4
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_foreign_policy_of_belarus"
+		hidden_effect = {
+			country_event = { id = BLR_com.4 days = 1 }
+		}
+		add_political_power = 100
+	}
+}
+
+    focus = {
+		id = BLR_undermine_morale_in_poland
+		icon = GFX_goal_UKR_destabilize_the_situation_in_poland
+		prerequisite = { focus = BLR_foreign_policy_of_belarus }
+		x = 20
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_undermine_morale_in_poland"
+		POL = {		
+			add_war_support = -0.05
+		}
+	}
+}
+
+    focus = {
+		id = BLR_western_scientists
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = BLR_undermine_morale_in_poland }
+		prerequisite = { focus = BLR_delegation_to_western_countries }
+		x = 21
+		y = 6
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_undermine_morale_in_poland"
+		add_ideas = BLR_western_scientists_blr
+	}
+}
+
+    focus = {
+		id = BLR_delegation_to_western_countries
+		icon = GFX_goal_BLR_delegation_to_west
+		prerequisite = { focus = BLR_foreign_policy_of_belarus }
+		x = 22
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_undermine_morale_in_poland"
+		every_other_country = {
+				limit = {
+					is_major = yes
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+					NOT = { has_war_with = ROOT }
+				}
+				add_opinion_modifier = { target = BLR modifier = SOV_anti_fascist_policies_good } 
+			}
+
+			every_other_country = {
+				limit = {
+					is_major = yes
+					has_government = fascism
+				}
+				add_opinion_modifier = { target = BLR modifier = SOV_anti_fascist_policies_bad } 
+		}
+	}
+}
+
+    focus = {
+		id = BLR_military_advisers
+		icon = GFX_goal_BLR_military_advisers
+		prerequisite = { focus = BLR_western_scientists }
+		x = 19
+		y = 7
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_military_advisers"
+		BLR = {
+			army_experience = 25
+        }
+
+        ENG = {
+			army_experience = 25
+        }
+
+        FRA = {
+			army_experience = 25
+		}
+	}
+}
+
+focus = {
+		id = BLR_treaty_with_lithuania
+		icon = GFX_goal_BLR_treaty_with_lithuania
+		prerequisite = { focus = BLR_western_scientists }
+		x = 21
+		y = 7
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_treaty_with_lithuania"
+		diplomatic_relation = {
+						country = LIT
+						relation = non_aggression_pact
+						active = yes
+					}
+				}
+			}
+
+	focus = {
+		id = BLR_anti_hitler_coalition
+		icon = GFX_goal_BLR_anti_hitler_coalition
+		prerequisite = { focus = BLR_western_scientists }
+		x = 23
+		y = 7
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_anti_hitler_coalition"
+		BLR = {
+			add_timed_idea = { idea = SOV_face_western_fascism_ns days = 365 }
+        }
+
+        ENG = {
+			add_timed_idea = { idea = SOV_face_western_fascism_ns days = 365 }
+        }
+
+        FRA = {
+			    add_timed_idea = { idea = SOV_face_western_fascism_ns days = 365 }
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_the_great_patriotic_war
+		icon = GFX_goal_UKR_the_great_patriotic_war
+		x = 21
+		y = 8
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		available = {
+        custom_trigger_tooltip = {
+				tooltip = great_war_republics		
+				always = no
+			}
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_the_great_patriotic_war"
+		add_timed_idea = { idea = UKR_the_great_patriotic_war_1 days = 60 }
+		}
+	}
+
+	focus = {
+		id = BLR_give_battle_to_the_invaders
+		icon = GFX_goal_UKR_give_battle_to_the_invaders
+		prerequisite = { focus = BLR_the_great_patriotic_war }
+		x = 19
+		y = 9
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		available = {
+        has_war_with = GER
+		has_government = communism
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_give_battle_to_the_invaders"
+		add_ideas = UKR_death_to_the_invaders
+		}
+	}
+
+	focus = {
+		id = BLR_we_wont_give_up
+		icon = GFX_goal_UKR_we_wont_give_up
+		prerequisite = { focus = BLR_the_great_patriotic_war }
+		x = 21
+		y = 9
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		available = {
+        has_war_with = GER
+		has_government = communism
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_we_wont_give_up"
+		add_ideas = UKR_well_die_but_we_wont_give_up
+		}
+	}
+
+	focus = {
+		id = BLR_bring_back_the_deserters
+		icon = GFX_goal_UKR_bring_back_the_deserters
+		prerequisite = { focus = BLR_the_great_patriotic_war }
+		x = 23
+		y = 9
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		available = {
+        has_war_with = GER
+		has_government = communism
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_bring_back_the_deserters"
+		add_ideas = UKR_back_in_line
+		}
+	}
+
+	focus = {
+		id = BLR_holy_war
+		icon = GFX_goal_UKR_holy_war
+		prerequisite = { focus = BLR_give_battle_to_the_invaders }
+		prerequisite = { focus = BLR_bring_back_the_deserters }
+		prerequisite = { focus = BLR_we_wont_give_up }
+		x = 21
+		y = 10
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		available = {
+        has_war_with = GER
+		has_government = communism
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_holy_war"
+		add_ideas = UKR_the_holy_war
+		}
+	}
+
+	focus = {
+		id = BLR_help_for_the_spaniards
+		icon = GFX_focus_intervention_spain_republic
+		prerequisite = { focus = BLR_restoring_order }
+		x = 25
+		y = 4
+		cost = 5
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		available = {
+        if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPR_scw_in_progress = yes
+				if = {
+					limit = {
+						NOT = { has_global_flag = spanish_civil_war }
+					}
+					custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_country_exist_tt
+					    country_exists = SPR
+				    }
+				    custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_at_peace_tt
+						NOT = { has_war_with = SPR }
+				    }
+				}
+				else = {
+					if = {
+						limit = {
+							has_completed_focus = SOV_covert_support_for_spanish_poum
+						}
+						country_exists = SPC
+						NOT = { has_war_with = SPC }
+					}
+					else = {
+						country_exists = SPD
+						NOT = { has_war_with = SPD }
+					}
+				}
+			}
+			else = {
+				any_other_country = {
+					original_tag = SPR
+					has_civil_war = yes
+					NOT = { has_war_with = ROOT }
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+			}
+			has_government = communism
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_help_for_the_spaniards"
+		add_timed_idea = { idea = SPA_spanish_civil_war_commitments days = 730 }
+		}
+	}
+
+	focus = {
+		id = BLR_sending_equipment
+		icon = GFX_focus_ITA_garibaldi_legion
+		prerequisite = { focus = BLR_help_for_the_spaniards }
+		x = 1
+		y = 1
+		cost = 5
+        relative_position_id = BLR_help_for_the_spaniards
+		ai_will_do = {
+			factor = 6
+		}
+
+		available = {
+        if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPR_scw_in_progress = yes
+				if = {
+					limit = {
+						NOT = { has_global_flag = spanish_civil_war }
+					}
+					custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_country_exist_tt
+					    country_exists = SPR
+				    }
+				    custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_at_peace_tt
+						NOT = { has_war_with = SPR }
+				    }
+				}
+				else = {
+					if = {
+						limit = {
+							has_completed_focus = SOV_covert_support_for_spanish_poum
+						}
+						country_exists = SPC
+						NOT = { has_war_with = SPC }
+					}
+					else = {
+						country_exists = SPD
+						NOT = { has_war_with = SPD }
+					}
+				}
+			}
+			else = {
+				any_other_country = {
+					original_tag = SPR
+					has_civil_war = yes
+					NOT = { has_war_with = ROOT }
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+			}
+			has_government = communism
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_sending_equipment"
+		send_equipment = {
+			    equipment = infantry_equipment
+			    amount = 1000
+			    target = SPD
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_volunteers_in_spain
+		icon = GFX_focus_SOV_support_spanish_poum
+		prerequisite = { focus = BLR_help_for_the_spaniards }
+		x = -1
+		y = 1
+		cost = 5
+        relative_position_id = BLR_help_for_the_spaniards
+		ai_will_do = {
+			factor = 6
+		}
+
+		available = {
+        if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPR_scw_in_progress = yes
+				if = {
+					limit = {
+						NOT = { has_global_flag = spanish_civil_war }
+					}
+					custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_country_exist_tt
+					    country_exists = SPR
+				    }
+				    custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_at_peace_tt
+						NOT = { has_war_with = SPR }
+				    }
+				}
+				else = {
+					if = {
+						limit = {
+							has_completed_focus = SOV_covert_support_for_spanish_poum
+						}
+						country_exists = SPC
+						NOT = { has_war_with = SPC }
+					}
+					else = {
+						country_exists = SPD
+						NOT = { has_war_with = SPD }
+					}
+				}
+			}
+			else = {
+				any_other_country = {
+					original_tag = SPR
+					has_civil_war = yes
+					NOT = { has_war_with = ROOT }
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+			}
+			has_government = communism
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_volunteers_in_spain"
+		SPD = {
+            add_manpower = 10000
+            }
+		}
+	}
+
+	focus = {
+		id = BLR_political_recognition
+		icon = GFX_focus_spr_war_of_independence
+		prerequisite = { focus = BLR_sending_equipment }
+		prerequisite = { focus = BLR_volunteers_in_spain }
+		x = -1
+		y = 1
+		cost = 5
+        relative_position_id = BLR_volunteers_in_spain
+		relative_position_id = BLR_sending_equipment
+		ai_will_do = {
+			factor = 6
+		}
+
+		available = {
+        if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPR_scw_in_progress = yes
+				if = {
+					limit = {
+						NOT = { has_global_flag = spanish_civil_war }
+					}
+					custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_country_exist_tt
+					    country_exists = SPR
+				    }
+				    custom_trigger_tooltip = {
+					    tooltip = POR_spr_tooltip_at_peace_tt
+						NOT = { has_war_with = SPR }
+				    }
+				}
+				else = {
+					if = {
+						limit = {
+							has_completed_focus = SOV_covert_support_for_spanish_poum
+						}
+						country_exists = SPC
+						NOT = { has_war_with = SPC }
+					}
+					else = {
+						country_exists = SPD
+						NOT = { has_war_with = SPD }
+					}
+				}
+			}
+			else = {
+				any_other_country = {
+					original_tag = SPR
+					has_civil_war = yes
+					NOT = { has_war_with = ROOT }
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+			}
+			has_government = communism
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_political_recognition"
+		SPD = {		
+				add_popularity = {
+				ideology = communism
+				popularity = 0.05
+				}
+			}
+		}
+	}
+}
+    
+
+

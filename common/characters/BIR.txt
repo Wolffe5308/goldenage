@@ -1,0 +1,171 @@
+characters={
+    BIR_iosif_izrailevich={
+		name=BIR_iosif_izrailevich
+		portraits={
+			civilian={
+				large="GFX_iosif_izrailevich"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	BIR_grigory_stern={
+		name=BIR_grigory_stern
+		portraits={
+			civilian={
+				large=GFX_portrait_sov_aleksandr_cherepanov
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer cavalry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = BIR_grigory_stern
+			ledger = army
+			allowed = {
+				original_tag = BIR
+			}
+			traits = {
+				military_theorist
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = BIR_grigory_stern
+			allowed = {
+					original_tag = BIR
+				}
+				traits = {
+					army_chief_offensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+	    }
+
+	BIR_yakov_smushkevich={
+		name=BIR_yakov_smushkevich
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/bir/advisors/idea_advisor_BIR_yakov_smushkevich.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BIR_yakov_smushkevich
+			ledger = air
+			allowed = {
+				original_tag = BIR
+			}
+			traits = {
+				air_air_combat_training_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		advisor={
+			slot = theorist
+			cost = 100
+			idea_token = BIR_yakov_smushkevich
+			ledger = air
+			allowed = {
+				original_tag = BIR
+			}
+			traits = {
+				air_warfare_theorist
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = BIR_yakov_smushkevich
+			allowed = {
+				original_tag = BIR
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+
+	BIR_semyon_dimanstein={
+		name=BIR_semyon_dimanstein
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/bir/advisors/idea_advisor_BIR_semyon_dimanstein.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BIR_semyon_dimanstein
+			allowed = {
+				original_tag = BIR
+			}
+			traits = {
+				minister_of_peasants
+			}
+		}
+	}
+
+	BIR_lev_mekhlis={
+		name=BIR_lev_mekhlis
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/bir/advisors/idea_advisor_BIR_lev_mekhlis.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BIR_lev_mekhlis
+			allowed = {
+				original_tag = BIR
+			}
+			traits = {
+				war_industrialist
+			}
+		}
+	}
+
+	BIR_solomon_lozovsky={
+		name=BIR_solomon_lozovsky
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/bir/advisors/idea_advisor_BIR_solomon_lozovsky.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BIR_solomon_lozovsky
+			allowed = {
+				original_tag = BIR
+			}
+			traits = {
+				trade_unionist_com_prof
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,39 @@
+guiTypes = {
+	containerWindowType = {
+		name ="mainmenu_panel_upperleft"
+		position = { x=0 y =-1 }
+		show_position = { x=0 y =-1 }
+		animation_type = decelerated
+		size = { width = 256 height = 768 }
+
+		iconType = {
+			name ="frontend_game_logo"
+			spriteType = "GFX_frontend_game_logo"
+			position = { x= 20 y = 20 }
+		}
+		ButtonType = {
+			name ="frontend_goldenage_discord_logo"
+			spriteType = "GFX_goldenage_discord_logo"
+			position = { x = 20 y = 180 }
+			clicksound = click_default
+			pdx_tooltip = "GA_MAIN_MENU_LINK"
+			web_link = "https://discord.gg/TbebQDfx8x"
+		}
+		ButtonType = {
+			name ="frontend_goldenage_youtube_logo"
+			spriteType = "GFX_goldenage_youtube_logo"
+			position = { x = 150 y = 180 }
+			clicksound = click_default
+			pdx_tooltip = "GA_MAIN_MENU_LINK"
+			web_link = "https://www.youtube.com/@uplexproject8861"
+		}
+		ButtonType = {
+			name ="frontend_goldenage_boosty_logo"
+			spriteType = "GFX_goldenage_boosty_logo"
+			position = { x = 270 y = 180 }
+			clicksound = click_default
+			pdx_tooltip = "GA_MAIN_MENU_LINK"
+			web_link = "https://boosty.to/danwork"
+		}
+	}
+}

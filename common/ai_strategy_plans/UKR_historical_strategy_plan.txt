@@ -1,0 +1,110 @@
+UKR_historical_plan = {
+	name = "UKR historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = UKR
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = UKR_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = UKR_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = UKR_ai_behavior
+				option = UKR_HISTORICAL
+			}
+		}
+	}
+	abort = {
+		is_subject = no
+	}
+
+	ai_national_focuses = {
+		#1936
+		UKR_expand_party
+		UKR_domestic_politics
+		UKR_economic_reforms
+		UKR_political_mobility
+		UKR_special_troops
+
+		#1937
+		UKR_new_shots
+		UKR_party_projects
+		UKR_development_of_ukraine
+		UKR_army_reforms
+
+		#1938
+		UKR_the_call_of_peasants_to_the_collective_farms
+		UKR_expand_collective_farms
+		UKR_peasant_organization
+
+		#1939
+		UKR_anti_fascist_rhetoric
+		UKR_destabilize_the_situation_in_poland
+		UKR_raise_moldovan_separatism
+		UKR_foreign_policy
+		UKR_cooperation_with_the_west
+		UKR_accept_refugees
+		UKR_joint_training
+
+		#1940
+		UKR_ukrainian_waf
+		UKR_increase_in_the_army
+		UKR_cossacks_in_service
+		UKR_solve_problems_in_the_army
+		UKR_army_exercises
+		UKR_organize_the_cossacks
+
+		#1941
+		UKR_the_great_patriotic_war
+		UKR_give_battle_to_the_invaders
+		UKR_we_wont_give_up
+		UKR_bring_back_the_deserters
+		UKR_holy_war
+
+		#1942
+		UKR_civil_milita
+		UKR_end_of_reforms
+
+		#1943
+		UKR_standardized_production
+		UKR_mine_warfare
+
+		#1944
+		
+		
+		#1945
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	focus_factors = {
+		UKR_expand_party = 300
+		UKR_terrorist_attack_at_the_congress = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

@@ -1,0 +1,56 @@
+defined_text = {
+	name = GetAppropriateUkrainianArmyNsName
+	text = {
+		localization_key = UKR_modify_ukrainian_army_ns_name_default
+	}
+}
+
+defined_text = {
+	name = GetAppropriateArmoredForcesNsName
+	text = {
+		localization_key = UKR_modify_armored_forces_ns_name_default
+	}
+}
+
+defined_text = {
+    name = UKR_industrialization_loc
+    text = {
+        trigger = {
+            check_variable = { UKR_industrialization_score < 10 }
+        }
+        localization_key = UKR_score_1
+    }
+    text = {
+        trigger = {
+            check_variable = { UKR_industrialization_score < 30 }
+        }
+        localization_key = UKR_score_2
+    }
+    text = {
+        trigger = {
+            check_variable = { UKR_industrialization_score < 45 }
+        }
+        localization_key = UKR_score_3
+    }
+    text = {
+        trigger = {
+            check_variable = { UKR_industrialization_score < 60 }
+        }
+        localization_key = UKR_score_4
+    }
+    text = {
+        trigger = {
+            check_variable = { UKR_industrialization_score < 75 }
+        }
+        localization_key = UKR_score_5
+    }
+    text = {
+        trigger = {
+            check_variable = { UKR_industrialization_score < 90 }
+        }
+        localization_key = UKR_score_6
+    }
+    text = {
+        localization_key = UKR_score_7
+    }
+}

@@ -1,0 +1,26 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_lore_btn_mapmode"
+		texturefile = "gfx/interface/lore_btn_mapmode.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_knopka_lore_icon"
+		texturefile = "gfx/interface/lore/lore_button.dds"
+	}	
+	spriteType = {
+		name = "GFX_lore_browser_background"
+		texturefile = "gfx/interface/lore/lore_browser_background.dds"
+	}
+	spriteType = {
+		name = "GFX_list_lore"
+		texturefile = "gfx/interface/lore/list_lore.dds"
+	}
+	textSpriteType = {
+        name = "GFX_spisok_statei_button"
+        textureFile = "gfx/interface/lore/spisok_statei_button.dds"
+        noOfFrames = 3
+        effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+    }
+}

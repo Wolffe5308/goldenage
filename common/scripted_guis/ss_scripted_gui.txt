@@ -1,0 +1,16 @@
+scripted_gui = {
+	ss_ui = {
+	
+		context_type = decision_category 
+		
+		window_name = "ss_ui_window"
+
+		visible = { always = yes}
+		
+	
+		
+	}
+	
+
+	
+}

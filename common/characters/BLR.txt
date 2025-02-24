@@ -1,0 +1,473 @@
+characters={
+    BLR_panteleimon_ponomarenko={
+		name=BLR_panteleimon_ponomarenko
+		portraits={
+			civilian={
+				large="GFX_Portrait_Ponomarenko"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BLR_radislau_astrouski = {
+		name = BLR_radislau_astrouski
+		portraits = {
+			civilian = {
+				large = GFX_portrait_BLR_radaslau_astrouski
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1965.3.1"
+			id = -1
+			traits = { anti_communist conservative_nationalist }
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1965.3.1"
+			id = -1
+			traits = { anti_communist conservative_nationalist }
+		}
+	}
+	BLR_anton_lutskevich={
+		name=BLR_anton_lutskevich
+		portraits={
+			civilian={
+				large="GFX_portrait_ponomarenko"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BLR_supreme_soviet = {
+		name = BLR_supreme_soviet
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BLR/portrait_SOV_supreme_soviet.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			traits = { strong_party_discipline }
+			expire = "1965.1.1.1"
+		}
+	}
+	BLR_nikolay_goloded={ ############# Глава правительства 1927-1937
+		name=BLR_nikolay_goloded
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/blr/advisors/idea_advisor_BLR_ieronim_uborevich.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = BLR_nikolay_goloded
+			cost = 0
+			can_be_fired = no
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				has_government = communism
+			}
+			on_add = {
+				ROOT = {
+			        set_country_flag = BLR_communist_head_of_goverment
+				}
+			}
+			traits = { head_of_government_communist_advisor silent_workhorse }
+		}
+	}
+	BLR_ieronim_uborevich={
+		name=BLR_ieronim_uborevich
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/blr/advisors/idea_advisor_BLR_ieronim_uborevich.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BLR_ieronim_uborevich
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				has_completed_focus = BLR_new_party
+				has_country_flag = BLR_communist_head_of_goverment
+			}
+			traits = {
+				minister_of_defense
+			}
+		}
+	}
+	BLR_georgy_molchanov={
+		name=BLR_georgy_molchanov
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/blr/advisors/idea_advisor_BLR_georgy_molchanov.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BLR_georgy_molchanov
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				has_completed_focus = BLR_new_party
+				has_country_flag = BLR_communist_head_of_goverment
+			}
+			traits = {
+				minister_of_the_interior_abate
+				head_of_the_nkvd_zsr
+			}
+		}
+	}
+	BLR_alexander_chervyakov={
+		name=BLR_alexander_chervyakov
+		portraits={
+			civilian={
+				large="GFX_Portrait_Alexander_Chervyakov"
+				small="gfx/interface/ideas/blr/advisors/idea_advisor_BLR_alexander_chervyakov.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BLR_alexander_chervyakov
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				has_completed_focus = BLR_new_party
+				NOT = {
+					has_idea = BLR_D_Alexander_Chervyakov
+				}
+			}
+			traits = {
+				chairman_of_the_CEC 
+			}
+		}
+	}
+	BLR_artemy_lyubovich={
+		name=BLR_artemy_lyubovich
+		portraits={
+			civilian={
+				small="GFX_idea_europe_generic_2"
+				small="gfx/interface/ideas/blr/advisors/idea_advisor_BLR_artemy_lyubovich.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BLR_artemy_lyubovich
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				has_completed_focus = BLR_new_party
+				has_country_flag = BLR_communist_head_of_goverment
+			}
+			traits = {
+				captain_of_industry
+			}
+		}
+	}
+	BLR_ivan_surta={
+		name=BLR_ivan_surta
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/blr/advisors/idea_advisor_BLR_ivan_surta.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BLR_ivan_surta
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				has_completed_focus = BLR_new_party
+				has_country_flag = BLR_communist_head_of_goverment
+			}
+			traits = {
+				people's_commissar_of_health
+			}
+		}
+	}
+    BLR_vasily_blykher={
+		name=BLR_vasily_blykher
+		portraits={
+			civilian={
+				large=GFX_portrait_vasily_blykher
+				small="gfx/interface/ideas/blr/advisors/idea_advisor_BLR_vasily_blykher.dds"
+			}
+		}
+		advisor = {
+		slot = theorist
+			idea_token = BLR_vasily_blykher
+			ledger = army
+			cost = 100
+			allowed = {
+				original_tag = BLR
+			}	
+			traits = {
+				military_theorist
+			}
+		}
+		field_marshal = {
+			traits = { old_guard career_officer infantry_officer organizer }
+			skill=3
+			attack_skill=2
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-3
+		}
+	}
+    BLR_nikolai_krylov={
+		name=BLR_nikolai_krylov
+		portraits={
+			civilian={
+				large=GFX_portrait_nikolay_krylov
+				small="gfx/interface/ideas/blr/advisors/idea_advisor_BLR_nikolay_krylov.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = BLR_nikolai_krylov
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		field_marshal = {
+			traits = { infantry_officer  trait_reckless }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-3
+		}
+	}
+	BLR_vasily_korzh={
+		name=BLR_vasily_korzh
+		portraits={
+			civilian={
+				large=GFX_portrait_SOV_vasily_korzh
+				small="gfx/interface/ideas/blr/advisors/idea_advisor_BLR_vasily_korzh.dds"
+			}
+		}
+	}
+    BLR_ivan_maslennikov={
+		name=BLR_ivan_maslennikov
+		portraits={
+			civilian={
+				large=GFX_portrait_ivan_maslennikov
+				small="gfx/interface/ideas/blr/advisors/idea_advisor_BLR_mikhail_shumilov.dds"
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist cavalry_officer }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    BLR_mikhail_shumilov={
+		name=BLR_mikhail_shumilov
+		portraits={
+			civilian={
+				large=GFX_portrait_mikhail_shumilov
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    BLR_vasily_gordov={
+		name=BLR_vasily_gordov
+		portraits={
+			civilian={
+				large=GFX_portrait_vasily_gordov
+				small="gfx/interface/ideas/blr/advisors/idea_advisor_BLR_vasily_gordov.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = BLR_vasily_gordov
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist infantry_officer old_guard }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    BLR_pavel_batov={
+		name=BLR_pavel_batov
+		portraits={
+			civilian={
+				large=GFX_portrait_pavel_batov
+				small="gfx/interface/ideas/blr/advisors/idea_advisor_BLR_pavel_batov.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = BLR_pavel_batov
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer armor_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+    BLR_aleksandr_lizyukov={
+		name=BLR_aleksandr_lizyukov
+		portraits={
+			civilian={
+				large=GFX_Portrait_Aleksandr_Lizyukov
+				small="gfx/interface/ideas/blr/advisors/idea_advisor_BLR_aleksandr_lizyukov.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = BLR_aleksandr_lizyukov
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		corps_commander = {
+			traits = { armor_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-3
+		}
+	}
+	BLR_stepan_krasovsky={
+		name=BLR_stepan_krasovsky
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/blr/advisors/idea_advisor_BLR_stepan_krasovsky.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BLR_stepan_krasovsky
+			ledger = air
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				has_completed_focus = BLR_new_party
+				has_completed_focus = BLR_waf
+			}
+			traits = {
+				air_air_combat_training_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		advisor={
+			slot = theorist
+			cost = 100
+			idea_token = BLR_stepan_krasovsky_theorist
+			ledger = air
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				has_completed_focus = BLR_new_party
+				has_completed_focus = BLR_waf
+			}
+			traits = {
+				air_warfare_theorist
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = BLR_stepan_krasovsky_air_chief
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				has_completed_focus = BLR_new_party
+				has_completed_focus = BLR_waf
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}

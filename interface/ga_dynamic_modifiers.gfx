@@ -1,0 +1,17 @@
+spriteTypes = {
+    
+   	spriteType = {
+		name = "GFX_idea_BLR_belarusian_army"
+		texturefile = "gfx/interface/ideas/blr/blr_belarusian_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ZSR_caucasian_army"
+		texturefile = "gfx/interface/ideas/zsr/zsr_caucasian_army.dds"
+	}
+
+    spriteType = {
+		name = "GFX_idea_UKR_ukraine_army"
+		texturefile = "gfx/interface/ideas/ukr/ukraine_army.dds"
+	}
+}

@@ -1,0 +1,15 @@
+is_head_of_government = {
+	custom_trigger_tooltip = {
+		tooltip = is_head_of_government
+		has_advisor_role = head_of_government
+		is_hired_as_advisor = yes
+
+		#make sure they're not just hired as another slot
+		NOT = { not_already_hired_except_as = political_advisor }
+		NOT = { not_already_hired_except_as = army_chief }
+		NOT = { not_already_hired_except_as = navy_chief }
+		NOT = { not_already_hired_except_as = air_chief }
+		NOT = { not_already_hired_except_as = high_command }
+		NOT = { not_already_hired_except_as = theorist }
+	}
+}

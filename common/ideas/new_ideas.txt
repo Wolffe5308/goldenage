@@ -1,0 +1,4216 @@
+ideas = {
+
+	country = {
+
+		Disorganized_army = {
+
+			name = Disorganized_army
+
+			picture = disorganized_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = -0.15
+				army_defence_factor = -0.1
+				army_org_factor = -0.15
+			}
+		}
+
+		UKR_destroyed_collective_farms = {
+
+			name = UKR_destroyed_collective_farms
+
+			picture = ukr_destroyed_collective_farms
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.25
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+
+		UKR_destroyed_collective_farms_1 = {
+
+			name = UKR_destroyed_collective_farms
+
+			picture = ukr_destroyed_collective_farms
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.2
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+
+		UKR_destroyed_collective_farms_alt = {
+
+			name = UKR_destroyed_collective_farms
+
+			picture = ukr_destroyed_collective_farms
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.05
+				consumer_goods_factor = 0.05
+	            global_building_slots_factor = 0.1
+			}
+		}
+
+		UKR_destroyed_collective_farms_2 = {
+
+			name = UKR_destroyed_collective_farms
+
+			picture = ukr_destroyed_collective_farms
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.15
+				consumer_goods_factor = 0.05
+				global_building_slots_factor = -0.1
+			}
+		}
+
+		UKR_ukrainian_collective_farms = {
+
+			name = UKR_ukrainian_collective_farms
+
+			picture = ukrainian_kolchoz
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.1
+				global_building_slots_factor = -0.1
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		UKR_ukrainian_collective_farms_alt = {
+
+			name = UKR_ukrainian_collective_farms
+
+			picture = ukrainian_kolchoz
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.2
+				global_building_slots_factor = 0.1
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		UKR_ukrainian_red_cossacks = {
+
+			name = UKR_ukrainian_red_cossacks
+			picture = UKR_ukrainian_red_cossacks
+
+			removal_cost = -1
+
+			modifier = {
+				unit_cavalry_design_cost_factor = -0.25
+			}
+		}
+
+		UKR_ukrainian_red_cossacks_1 = {
+
+			name = UKR_ukrainian_red_cossacks
+			picture = UKR_ukrainian_red_cossacks
+
+			removal_cost = -1
+
+			modifier = {
+				unit_cavalry_design_cost_factor = -0.25
+				army_speed_factor = 0.05
+			}
+		}
+
+		UKR_ukrainian_red_cossacks_2 = {
+
+			name = UKR_ukrainian_red_cossacks
+			picture = UKR_ukrainian_red_cossacks
+
+			removal_cost = -1
+
+			modifier = {
+				unit_cavalry_design_cost_factor = -0.25
+				army_speed_factor = 0.05
+                org_loss_when_moving = -0.05
+			}
+		}
+
+		UKR_low_level_of_education = {
+
+			name = UKR_low_level_of_education
+
+			picture = ukr_low_level_of_education
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = -0.15
+			}
+		}
+
+		UKR_low_level_of_education_1 = {
+
+			name = UKR_low_level_of_education
+
+			picture = ukr_low_level_of_education
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = -0.1
+			}
+		}
+
+		UKR_normal_level_of_education = {
+
+			name = UKR_normal_level_of_education
+
+			picture = ukrainian_research
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		UKR_small_industry = {
+
+			name = UKR_small_industry
+
+			picture = ukr_small_industry
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				line_change_production_efficiency_factor = -0.1
+			}
+		}
+
+		UKR_small_industry_communist = {
+
+			name = UKR_small_industry_communist
+
+			picture = ukr_small_industry
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.1
+				line_change_production_efficiency_factor = -0.1
+			}
+		}
+
+		UKR_small_industry_communist_2 = {
+
+			name = UKR_small_industry_communist
+
+			picture = ukr_small_industry
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.05
+				line_change_production_efficiency_factor = -0.05
+			}
+		}
+
+		UKR_small_industry_communist_3 = {
+
+			name = UKR_small_industry
+
+			picture = ukr_small_industry
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+
+		UKR_small_industry_socdem = {
+
+			name = UKR_small_industry_socdem
+
+			picture = ukr_small_industry
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.1
+				line_change_production_efficiency_factor = -0.1
+			}
+		}
+
+		UKR_small_industry_socdem_2 = {
+
+			name = UKR_small_industry_socdem
+
+			picture = ukr_small_industry
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.025
+				production_factory_efficiency_gain_factor = -0.075
+				line_change_production_efficiency_factor = -0.075
+			}
+		}
+
+		UKR_professional_advisors = {
+
+			name = UKR_professional_advisors
+
+			picture = ukr_professional_advisors
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.025
+				political_power_gain = -0.25
+			}
+		}
+
+		UKR_strong_party = {
+
+			name = UKR_strong_party
+
+			picture = ukr_strong_party
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.05
+				political_power_factor = 0.15
+			}
+		}
+
+		UKR_strong_party_1 = {
+
+			name = UKR_strong_party
+
+			picture = ukr_strong_party
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				stability_factor = 0.1
+				political_power_factor = 0.15
+			}
+		}
+
+		UKR_strong_party_2 = {
+
+			name = UKR_strong_party
+
+			picture = ukr_strong_party
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				stability_factor = 0.1
+				political_power_factor = 0.15
+				economy_cost_factor = -0.30
+			}
+		}
+
+		UKR_strong_party_3 = {
+
+			name = UKR_strong_party
+
+			picture = ukr_strong_party
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				stability_factor = 0.1
+				political_power_factor = 0.15
+				economy_cost_factor = -0.30
+				political_advisor_cost_factor = -0.3
+			}
+		}
+
+		UKR_depleted_army = {
+
+			name = UKR_depleted_army
+
+			picture = ukr_depleted_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.05
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_morale_factor = -0.1
+				army_speed_factor = -0.1
+			}
+		}
+
+		UKR_depleted_army_1 = {
+
+			name = UKR_depleted_army
+
+			picture = ukr_depleted_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.05
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_morale_factor = -0.1
+				army_speed_factor = -0.1
+			}
+		}
+
+		UKR_depleted_army_2 = {
+
+			name = UKR_depleted_army
+
+			picture = ukr_depleted_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.1
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_morale_factor = -0.05
+				army_speed_factor = -0.1
+			}
+		}
+
+		UKR_unorganized_cossacks = {
+
+			name = UKR_unorganized_cossacks
+
+			picture = unorganized_cossacks
+
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = -0.05
+				cavalry_attack_factor = -0.2
+				cavalry_defence_factor = -0.2
+				army_org_factor = -0.1
+			}
+		}
+
+		UKR_unorganized_cossacks_1 = {
+
+			name = UKR_unorganized_cossacks
+
+			picture = unorganized_cossacks
+
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = -0.05
+				cavalry_attack_factor = -0.1
+				cavalry_defence_factor = -0.1
+				army_org_factor = -0.05
+			}
+		}
+
+		UKR_ukrainian_cossacks = {
+
+			name = UKR_ukrainian_cossacks
+
+			picture = cossacks
+
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = 0.2
+				cavalry_defence_factor = 0.2
+				army_org_factor = 0.05
+			}
+		}
+
+		UKR_ukrainian_cossacks_2 = {
+
+			name = UKR_ukrainian_cossacks
+
+			picture = cossacks
+
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = 0.2
+				cavalry_defence_factor = 0.2
+				army_org_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+
+		UKR_the_great_patriotic_war_1 = {
+
+			name = UKR_the_great_patriotic_war
+
+			picture = the_great_patriotic_war_sov
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
+				army_speed_factor = -0.1
+			}
+
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = -0.1
+				breakthrough_bonus_against = -0.1
+			}
+		}
+
+		UKR_death_to_the_invaders = {
+
+			name = UKR_death_to_the_invaders
+
+			picture = death_to_the_invaders
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.1
+			}
+		}
+
+		UKR_well_die_but_we_wont_give_up = {
+
+			name = UKR_well_die_but_we_wont_give_up
+
+			picture = well_die_but_we_wont_give_up
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = GER
+				breakthrough_bonus_against = 0.1
+			}
+		}
+
+		UKR_back_in_line = {
+
+			name = UKR_back_in_line
+
+			picture = back_in_line
+
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.05
+			}
+		}
+
+		UKR_the_holy_war = {
+
+			name = UKR_the_holy_war
+
+			picture = the_holy_war
+
+			removal_cost = -1
+
+			modifier = {
+				max_dig_in = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		UKR_fear_of_politicians = {
+
+			name = UKR_fear_of_politicians
+
+			picture = fear_of_politicians
+
+			removal_cost = -1
+
+			modifier = {
+			political_power_gain = -0.25
+			political_advisor_cost_factor = 0.7
+			economy_cost_factor = 0.7
+			}
+		}
+
+		UKR_bribed_generals = {
+
+			name = UKR_bribed_generals
+
+			picture = bribed_generals
+
+			removal_cost = -1
+
+			modifier = {
+			command_power_gain = 0.15
+			}
+		}
+
+		UKR_holy_guard = {
+
+			name = UKR_holy_guard
+
+			picture = holy_guard
+
+			removal_cost = -1
+
+			modifier = {
+			army_org_factor = 0.05
+			army_defence_factor = 0.1
+			}
+		}
+
+		UKR_repressed_communists = {
+
+			name = UKR_repressed_communists
+
+			picture = repressed_communists
+
+			removal_cost = -1
+
+			modifier = {
+			communism_drift = -0.1
+			weekly_manpower = -100
+			stability_weekly_factor = 0.001
+			}
+		}
+
+		UKR_ukrainian_state = {
+
+			name = UKR_ukrainian_state
+
+			picture = ukrainian_state
+
+			removal_cost = -1
+
+			modifier = {
+			neutrality_drift = 0.1
+			stability_weekly_factor = 0.001
+			}
+		}
+
+		UKR_new_ukrainian_economy = {
+
+			name = UKR_new_ukrainian_economy
+
+			picture = new_ukrainian_economy
+
+			removal_cost = -1
+
+			modifier = {
+			    consumer_goods_factor = 0.05
+				line_change_production_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		UKR_ukrainian_corporate_state = {
+
+			name = UKR_ukrainian_corporate_state
+
+			picture = ukrainian_corporate_state
+
+			removal_cost = -1
+
+			modifier = {
+			    consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		UKR_ideological_fanaticism = {
+
+			name = UKR_ideological_fanaticism
+
+			picture = ukr_ideological_fanaticism
+
+			removal_cost = -1
+
+			modifier = {
+			war_support_factor = 0.05
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.05
+			}
+		}
+
+		UKR_bet_on_the_bourgeoisie_and_large_landowners_idea = {
+
+			name = UKR_bet_on_the_bourgeoisie_and_large_landowners_idea
+
+			picture = ukr_bet_on_the_bourgeoisie_and_large_landowners_idea
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_advisor_cost_factor = -0.1
+				stability_factor = -0.05
+			}
+		}
+
+		UKR_national_cultural_policy_idea = {
+
+			name = UKR_national_cultural_policy_idea
+
+			picture = ukr_national_cultural_policy_idea
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		MOL_moldovian_army = {
+
+			name = MOL_moldovian_army
+
+			picture = moldovian_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+
+		MOL_moldovian_army_1 = {
+
+			name = MOL_moldovian_army
+
+			picture = moldovian_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				conscription = 0.05
+			}
+		}
+
+		MOL_moldovian_army_2 = {
+
+			name = MOL_moldovian_army
+
+			picture = moldovian_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				conscription = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		MOL_fortress_country = {
+
+			name = MOL_fortress_country
+
+			picture = mol_fortress_country
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.1
+			}
+		}
+
+		MOL_divided_nation = {
+
+			name = MOL_divided_nation
+
+			picture = mol_divided_nation
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.1
+			}
+		}
+
+		SR_soviet_republic = {
+
+			name = SR_soviet_republic
+
+			picture = sr_soviet_republic
+
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = 0.1
+				stability_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = SOV
+                cic_to_target_factor = -0.1
+				mic_to_target_factor = -0.1
+				extra_trade_to_target_factor = 0.1
+				trade_cost_for_target_factor = -0.8
+			}
+		}
+
+		ZSR_decrepit_industry = {
+
+			name = ZSR_decrepit_industry
+
+			picture = ZSR_decrepit_industry
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+                production_speed_buildings_factor = -0.1
+			}
+		}
+
+		ZSR_decrepit_industry_1 = {
+
+			name = ZSR_decrepit_industry
+
+			picture = ZSR_decrepit_industry
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+                production_speed_buildings_factor = -0.05
+			}
+		}
+
+		ZSR_old_school = {
+
+			name = ZSR_old_school
+
+			picture = ZSR_old_school
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				army_speed_factor = -0.05
+				land_reinforce_rate = -0.05
+				command_power_gain = 0.1
+			}
+		}
+
+		ZSR_old_school_1 = {
+
+			name = ZSR_old_school
+
+			picture = ZSR_old_school
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				army_speed_factor = -0.05
+				land_reinforce_rate = 0.05
+				command_power_gain = 0.1
+			}
+		}
+
+		ZSR_modern_appeal = {
+
+			name = ZSR_modern_appeal
+
+			picture = modern_appeal
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.05
+			}
+		}
+
+		ZSR_artillery_god_of_war = {
+
+			name = ZSR_artillery_god_of_war
+
+			picture = artillery_god_of_war
+
+			removal_cost = -1
+
+			equipment_bonus = {
+			light_tank_artillery_chassis = {
+				instant = yes
+				build_cost_ic = -0.05
+			}
+			medium_tank_artillery_chassis = {
+				instant = yes
+				build_cost_ic = -0.05
+			}
+			light_tank_destroyer_chassis = {
+				instant = yes
+				build_cost_ic = -0.05
+			}
+			medium_tank_destroyer_chassis = {
+				instant = yes
+				build_cost_ic = -0.05
+			}
+		}
+	}
+
+	ZSR_sp_artillery = {
+
+		name = ZSR_sp_artillery
+
+		picture = zsr_sp_artillery
+
+		removal_cost = -1
+
+		equipment_bonus = {
+			light_tank_artillery_chassis = {
+				soft_attack = 0.05
+			}
+			medium_tank_artillery_chassis = {
+				soft_attack = 0.05
+			}
+		}
+	}
+
+	ZSR_td_artillery = {
+
+		name = ZSR_td_artillery
+
+		picture = zsr_td_artillery
+
+		removal_cost = -1
+
+		equipment_bonus = {
+			light_tank_destroyer_chassis = {
+				reliability = 0.05
+			}
+			medium_tank_destroyer_chassis = {
+				reliability = 0.05
+			}
+		}
+	}
+
+	ZSR_td_artillery_2 = {
+
+		name = ZSR_td_artillery
+
+		picture = ZSR_artillery_god_of_war
+
+		removal_cost = -1
+
+		equipment_bonus = {
+			light_tank_destroyer_chassis = {
+				reliability = 0.05
+				armor_value = 0.05
+			}
+			medium_tank_destroyer_chassis = {
+				reliability = 0.05
+				armor_value = 0.05
+			}
+		}
+	}
+
+		ZSR_the_conflict_of_peoples_in_the_party = {
+
+			name = ZSR_the_conflict_of_peoples_in_the_party
+
+			picture = ZSR_the_conflict_of_peoples_in_the_party
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.3
+				stability_factor = -0.3
+				political_power_factor = -0.20
+			}
+		}
+
+		ZSR_the_conflict_of_peoples_in_the_party_1 = {
+
+			name = ZSR_the_conflict_of_peoples_in_the_party
+
+			picture = ZSR_the_conflict_of_peoples_in_the_party
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.2
+				stability_factor = -0.2
+				political_power_factor = -0.20
+			}
+		}
+
+		ZSR_armenian_nationalism = {
+
+			name = ZSR_armenian_nationalism
+
+			picture = ZSR_armenian_nationalism
+
+			removal_cost = -1
+
+			modifier = {
+				compliance_gain = -0.01
+			    compliance_growth = -0.2
+			}
+		}
+
+		ZSR_armenian_nationalism_1 = {
+
+			name = ZSR_armenian_nationalism
+
+			picture = ZSR_armenian_nationalism
+
+			removal_cost = -1
+
+			modifier = {
+				compliance_gain = -0.01
+			    compliance_growth = -0.1
+			}
+		}
+
+		ZSR_armenian_nationalism_2 = {
+
+			name = ZSR_armenian_nationalism
+
+			picture = ZSR_armenian_nationalism
+
+			removal_cost = -1
+
+			modifier = {
+				compliance_gain = -0.01
+			}
+		}
+
+		ZSR_azerbaijani_nationalism = {
+
+			name = ZSR_azerbaijani_nationalism
+
+			picture = ZSR_azerbaijani_nationalism
+
+			removal_cost = -1
+
+			modifier = {
+				compliance_gain = -0.01
+			    compliance_growth = -0.2
+			}
+		}
+
+		ZSR_azerbaijani_nationalism_1 = {
+
+			name = ZSR_azerbaijani_nationalism
+
+			picture = ZSR_azerbaijani_nationalism
+
+			removal_cost = -1
+
+			modifier = {
+				compliance_gain = -0.01
+			    compliance_growth = -0.1
+			}
+		}
+
+		ZSR_azerbaijani_nationalism_2 = {
+
+			name = ZSR_azerbaijani_nationalism
+
+			picture = ZSR_azerbaijani_nationalism
+
+			removal_cost = -1
+
+			modifier = {
+				compliance_gain = -0.01
+			}
+		}
+
+		ZSR_caucasian_soviet_exercises = {
+
+			name = ZSR_caucasian_soviet_exercises
+
+			picture = caucasian_exercises
+
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.05
+				training_time_factor = 0.05
+			}
+		}
+
+		Industrial_reforms_ZSR = {
+
+			name = Industrial_reforms_ZSR
+
+			picture = industrial_reforms_ZSR
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+                production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		ZSR_komsomol_of_the_peoples_of_the_caucasus = {
+
+			name = ZSR_komsomol_of_the_peoples_of_the_caucasus
+
+			picture = komsomol_of_the_peoples_of_the_caucasus
+
+			removal_cost = -1
+
+			modifier = {
+				political_advisor_cost_factor = -0.2
+				economy_cost_factor = -0.2
+			}
+		}
+
+		Spread_of_atheism_ZSR = {
+
+			name = Spread_of_atheism_ZSR
+
+			picture = spread_of_atheism_ZSR
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.2
+				research_speed_factor = 0.1
+			}
+		}
+
+		ZSR_the_peoples_of_the_caucasus_are_united = {
+
+			name = ZSR_the_peoples_of_the_caucasus_are_united
+
+			picture = the_peoples_of_the_caucasus_are_united
+
+			removal_cost = -1
+
+			modifier = {
+			   monthly_population = 0.2
+			}
+		}
+
+		ZSR_friendship_of_peoples = {
+
+			name = ZSR_friendship_of_peoples
+
+			picture = friendship_of_peoples
+
+			removal_cost = -1
+
+			modifier = {
+			   political_power_factor = 0.15
+			   war_support_factor = 0.1
+			   stability_factor = 0.1
+			}
+		}
+
+		ZSR_five_year_plan_kavkaz = {
+
+			name = ZSR_five_year_plan_kavkaz
+
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+			   production_speed_buildings_factor = 0.05
+			   production_factory_efficiency_gain_factor = 0.1
+			   line_change_production_efficiency_factor = 0.1
+	           global_building_slots = 0.1
+			   industrial_capacity_factory = 0.05
+			}
+		}
+
+		Transcaucasian_navy = {
+
+			name = Transcaucasian_navy
+
+			picture = ukrainian_navy
+
+			removal_cost = -1
+
+			modifier = {
+				refit_ic_cost = -0.1
+				refit_speed = 0.1
+				repair_speed_factor = 0.1
+			}
+		}
+
+		Transcaucasian_air_force = {
+
+			name = Transcaucasian_air_force
+
+			picture = Air_Corps_of_the_Mongolian_Peoples_Republic
+
+			removal_cost = -1
+
+			modifier = {
+				air_accidents_factor = -0.1
+				air_weather_penalty = -0.1
+				air_training_xp_gain_factor = 0.1 
+			}
+		}
+
+		Transcaucasian_air_force_1 = {
+
+			name = Transcaucasian_air_force
+
+			picture = Air_Corps_of_the_Mongolian_Peoples_Republic
+
+			removal_cost = -1
+
+			modifier = {
+				air_accidents_factor = -0.1
+				air_weather_penalty = -0.1
+				air_training_xp_gain_factor = 0.1 
+				air_attack_factor = 0.1
+				air_defence_factor = 0.15
+				air_range_factor = 0.2
+			}
+		}
+
+		Transcaucasian_air_force_2 = {
+
+			name = Transcaucasian_air_force
+
+			picture = Air_Corps_of_the_Mongolian_Peoples_Republic
+
+			removal_cost = -1
+
+			modifier = {
+				air_accidents_factor = -0.1
+				air_weather_penalty = -0.1
+				air_training_xp_gain_factor = 0.1 
+				air_attack_factor = 0.1
+				air_defence_factor = 0.15
+				air_range_factor = 0.2
+				air_fuel_consumption_factor = -0.05
+				air_agility_factor = 0.05
+			}
+		}
+
+		Belarusian_air_force = {
+
+			name = Belarusian_air_force
+
+			picture = Air_Corps_of_the_Mongolian_Peoples_Republic
+
+			removal_cost = -1
+
+			modifier = {
+				air_accidents_factor = -0.1
+				air_weather_penalty = -0.1
+				air_training_xp_gain_factor = 0.1
+			}
+		}
+
+		Belarusian_air_force_1 = {
+
+			name = Belarusian_air_force
+
+			picture = Air_Corps_of_the_Mongolian_Peoples_Republic
+
+			removal_cost = -1
+
+			modifier = {
+				air_accidents_factor = -0.1
+				air_weather_penalty = -0.1
+				air_training_xp_gain_factor = 0.1 
+				air_attack_factor = 0.1
+				air_defence_factor = 0.15
+				air_range_factor = 0.2 
+			}
+		}
+
+		Belarusian_air_force_2 = {
+
+			name = Belarusian_air_force
+
+			picture = Air_Corps_of_the_Mongolian_Peoples_Republic
+
+			removal_cost = -1
+
+			modifier = {
+				air_accidents_factor = -0.1
+				air_weather_penalty = -0.1
+				air_training_xp_gain_factor = 0.1 
+				air_attack_factor = 0.1
+				air_defence_factor = 0.15
+				air_range_factor = 0.2
+				air_fuel_consumption_factor = -0.05
+				air_agility_factor = 0.05 
+			}
+		}
+
+		BLR_popular_riots = {
+
+			name = BLR_popular_riots
+
+			picture = blr_popular_riots
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.3
+				monthly_population = -0.15
+				stability_factor = -0.1
+			}
+		}
+
+		BLR_popular_riots_1 = {
+
+			name = BLR_popular_riots
+
+			picture = blr_popular_riots
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.2
+				monthly_population = -0.15
+				stability_factor = -0.05
+			}
+		}
+
+		BLR_popular_riots_2 = {
+
+			name = BLR_popular_riots
+
+			picture = blr_popular_riots
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.1
+				monthly_population = -0.05
+			}
+		}
+
+		BLR_ruined_industry = {
+
+			name = BLR_ruined_industry
+
+			picture = blr_ruined_industry
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		BLR_ruined_industry_1 = {
+
+			name = BLR_ruined_industry
+
+			picture = blr_ruined_industry
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		BLR_shield_and_sword = {
+
+			name = BLR_shield_and_sword
+
+			picture = blr_shield_and_sword
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				anti_tank_equipment = {
+					hard_attack = 0.1
+					ap_attack = 0.05
+				}
+			}
+		}
+
+		BLR_artillery_production = {
+
+			name = BLR_artillery_production
+
+			picture = blr_artillery_production
+
+			removal_cost = -1
+
+			equipment_bonus = {
+			artillery_equipment = {
+				instant = yes
+                build_cost_ic = -0.05
+			}
+			anti_tank_equipment = {
+				instant = yes
+                build_cost_ic = -0.05		
+			}
+			anti_air_equipment = {
+				instant = yes
+                build_cost_ic = -0.05		
+			}
+		}
+	}
+
+	    BLR_katyusha = {
+
+			name = BLR_katyusha
+
+			picture = blr_katyusha
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				rocket_artillery_equipment = {
+				instant = yes
+                build_cost_ic = -0.05
+			}
+			motorized_rocket_equipment = {
+				instant = yes
+                build_cost_ic = -0.05		
+			}
+			motorized_equipment = {
+				instant = yes
+				build_cost_ic = -0.05		
+		    }
+		}
+	}
+
+		BLR_completed_education_reform = {
+
+			name = BLR_completed_education_reform
+
+			picture = blr_completed_education_reform
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		BLR_navy = {
+
+			name = BLR_navy
+
+			picture = ukrainian_navy
+
+			removal_cost = -1
+
+			modifier = {
+				refit_ic_cost = -0.1
+				refit_speed = 0.1
+				repair_speed_factor = 0.1
+			}
+		}
+
+		BLR_partisan_army = {
+
+			name = BLR_partisan_army
+
+			picture = partisan_army
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_damage_to_garrison_on_our_occupied_states = 0.1
+				modifier_army_sub_unit_militia_max_org_factor = 0.05
+			}
+		}
+
+		BLR_partisan_army_1 = {
+
+			name = BLR_partisan_army
+
+			picture = partisan_army
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_damage_to_garrison_on_our_occupied_states = 0.1
+				command_power_gain = 0.15
+				modifier_army_sub_unit_militia_max_org_factor = 0.05
+				modifier_army_sub_unit_militia_attack_factor = 0.05
+			}
+		}
+
+		BLR_partisan_army_2 = {
+
+			name = BLR_partisan_army
+
+			picture = partisan_army
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_damage_to_garrison_on_our_occupied_states = 0.1
+				command_power_gain = 0.15
+				modifier_army_sub_unit_militia_max_org_factor = 0.05
+				modifier_army_sub_unit_militia_attack_factor = 0.05
+				modifier_army_sub_unit_militia_defence_factor = 0.05
+			}
+		}
+
+		BLR_war_propoganda_of_belarus = {
+
+			name = BLR_war_propoganda_of_belarus
+
+			picture = war_propoganda_of_belarus
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+
+		BLR_western_scientists_blr = {
+
+			name = BLR_western_scientists_blr
+
+			picture = western_scientists_blr
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		BLR_belarusian_comrades = {
+
+			name = BLR_belarusian_comrades
+
+			picture = belarusian_comrades
+
+			removal_cost = -1
+
+			modifier = {
+				land_reinforce_rate = 0.02
+			}
+		}
+
+		BLR_five_year_plan_belarus = {
+
+			name = BLR_five_year_plan_belarus
+
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		BLR_five_year_plan_belarus_2 = {
+
+			name = BLR_five_year_plan_belarus
+
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+
+		BLR_five_year_plan_belarus_3 = {
+
+			name = BLR_five_year_plan_belarus
+
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05
+                global_building_slots_factor = 0.1
+			}
+		}
+
+		BLR_belarusian_economy = {
+
+			name = BLR_belarusian_economy
+
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+
+		BLR_belarusian_economy_2 = {
+
+			name = BLR_belarusian_economy
+
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				line_change_production_efficiency_factor = 0.1
+				local_resources_factor = 0.15
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		BLR_belarusian_economy_3 = {
+
+			name = BLR_belarusian_economy
+
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				line_change_production_efficiency_factor = 0.1
+				local_resources_factor = 0.15
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.1
+				global_building_slots_factor = 0.05
+			}
+		}
+
+		BLR_road_construction_idea = {
+
+			name = BLR_road_construction_idea
+
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+				production_speed_rail_way_factor = 0.05
+				production_speed_supply_node_factor = 0.1
+			}
+		}
+
+		Mining = {
+
+			name = Mining
+
+			picture = mining
+
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = 0.2
+			}
+		}
+
+		Ukr_five_year_plan_1 = {
+
+			name = Ukr_five_year_plan
+            on_add = { log = "[GetDateText]: [Root.GetName]: add idea Ukr_five_year_plan_1" }
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.15
+                production_factory_max_efficiency_factor = -0.15
+                production_factory_efficiency_gain_factor = -0.15
+                line_change_production_efficiency_factor = -0.15
+                production_speed_buildings_factor = -0.15
+                global_building_slots_factor = -0.15
+			}
+		}
+
+		Ukr_five_year_plan_2 = {
+
+			name = Ukr_five_year_plan
+            on_add = { log = "[GetDateText]: [Root.GetName]: add idea Ukr_five_year_plan_2" }
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.15
+                industrial_capacity_factory = -0.1
+                production_factory_max_efficiency_factor = -0.1
+                production_factory_efficiency_gain_factor = -0.1
+                line_change_production_efficiency_factor = -0.1
+                production_speed_buildings_factor = -0.1
+                global_building_slots_factor = -0.1
+			}
+		}
+
+		Ukr_five_year_plan_3 = {
+
+			name = Ukr_five_year_plan
+            on_add = { log = "[GetDateText]: [Root.GetName]: add idea Ukr_five_year_plan_3" }
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+                industrial_capacity_factory = -0.05
+                production_factory_max_efficiency_factor = -0.05
+                production_factory_efficiency_gain_factor = -0.05
+                line_change_production_efficiency_factor = -0.05
+                production_speed_buildings_factor = -0.05
+                global_building_slots_factor = -0.05
+			}
+		}
+
+		Ukr_five_year_plan_4 = {
+
+			name = Ukr_five_year_plan
+            on_add = { log = "[GetDateText]: [Root.GetName]: add idea Ukr_five_year_plan_4" }
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		Ukr_five_year_plan_5 = {
+
+			name = Ukr_five_year_plan
+            on_add = { log = "[GetDateText]: [Root.GetName]: add idea Ukr_five_year_plan_5" }
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+                production_factory_max_efficiency_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+                line_change_production_efficiency_factor = 0.05
+                production_speed_buildings_factor = 0.05
+			}
+		}
+
+		Ukr_five_year_plan_6 = {
+
+			name = Ukr_five_year_plan
+            on_add = { log = "[GetDateText]: [Root.GetName]: add idea Ukr_five_year_plan_6" }
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.05
+                production_factory_max_efficiency_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+                line_change_production_efficiency_factor = 0.05
+                production_speed_buildings_factor = 0.05
+				global_building_slots_factor = 0.05
+			}
+		}
+
+		Ukr_five_year_plan_7 = {
+
+			name = Ukr_five_year_plan
+            on_add = { log = "[GetDateText]: [Root.GetName]: add idea Ukr_five_year_plan_7" }
+			picture = ukr_five_year_plan
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.05
+                production_factory_max_efficiency_factor = 0.1
+                production_factory_efficiency_gain_factor = 0.1
+                line_change_production_efficiency_factor = 0.1
+                production_speed_buildings_factor = 0.05
+				global_building_slots_factor = 0.15
+			}
+		}
+
+		Quality_production = {
+
+			name = Quality_production
+
+			picture = quality_production
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		Workplaces = {
+
+			name = Workplaces
+
+			picture = workplaces
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		European_refugees = {
+
+			name = European_refugees
+
+			picture = european_refugees
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+			}
+		}
+
+		Quality_control = {
+
+			name = Quality_control
+
+			picture = test_icon
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		Fight_against_fascism = {
+
+			name = Fight_against_fascism
+
+			picture = offensive_plan
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = -0.1
+			}
+		}
+
+		Moldovan_separatism = {
+
+			name = Moldovan_separatism
+
+			picture = moldovan_separatism
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.1
+				stability_factor = -0.1
+				political_power_factor = -0.15
+			}
+		}
+
+		Special_forses = {
+
+			name = Special_forses
+
+			picture = special_forses
+
+			removal_cost = -1
+
+			modifier = {
+				special_forces_cap = 0.3
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
+			}
+		}
+
+		Ukrainian_navy = {
+
+			name = Ukrainian_navy
+
+			picture = ukrainian_navy
+
+			removal_cost = -1
+
+			modifier = {
+				refit_ic_cost = -0.1
+				refit_speed = 0.1
+				repair_speed_factor = 0.1
+			}
+		}
+
+		Shipbuilding = {
+
+			name = Shipbuilding
+
+			picture = shipbuilding
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				capital_ship = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		Ukrainian_air_force = {
+
+			name = Ukrainian_air_force
+
+			picture = Air_Corps_of_the_Mongolian_Peoples_Republic
+
+			removal_cost = -1
+
+			modifier = {
+				air_accidents_factor = -0.1
+				air_weather_penalty = -0.1
+				air_training_xp_gain_factor = 0.1 
+			}
+		}
+
+		Ukrainian_air_force_1 = {
+
+			name = Ukrainian_air_force
+
+			picture = ukrainian_air_force
+
+			removal_cost = -1
+
+			modifier = {
+				air_accidents_factor = -0.1
+				air_weather_penalty = -0.1
+				air_training_xp_gain_factor = 0.1 
+				air_attack_factor = 0.1
+				air_defence_factor = 0.15
+				air_range_factor = 0.2
+			}
+		}
+
+		Ukrainian_air_force_2 = {
+
+			name = Ukrainian_air_force
+
+			picture = ukrainian_air_force
+
+			removal_cost = -1
+
+			modifier = {
+				air_accidents_factor = -0.1
+				air_weather_penalty = -0.1
+				air_training_xp_gain_factor = 0.1 
+				air_attack_factor = 0.1
+				air_defence_factor = 0.15
+				air_range_factor = 0.2
+				air_fuel_consumption_factor = -0.05
+				air_agility_factor = 0.05
+			}
+		}
+
+		Aircraft_manufacturing = {
+
+			name = Aircraft_manufacturing
+
+			picture = aircraft_manufacturing
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				small_plane_airframe_1 = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				small_plane_cas_airframe_1 = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+
+		Volunteers_from_ukraine = {
+
+			name = Volunteers_from_ukraine
+
+			picture = volunteers_from_ukraine
+
+			removal_cost = -1
+
+            modifier = {
+				conscription = 0.05
+			}
+		}
+
+		Officers_from_ukraine = {
+
+			name = Officers_from_ukraine
+
+			picture = officers_from_ukraine
+
+			removal_cost = -1
+
+            modifier = {
+				army_org_factor = 0.05
+			}
+		}
+
+		Humanitarian_aid = {
+
+			name = Humanitarian_aid
+
+			picture = tuvan_fur_coats
+
+			removal_cost = -1
+
+            modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+
+		Our_military_vehicles = {
+
+			name = Our_military_vehicles
+
+			picture = our_military_vehicles
+
+			removal_cost = -1
+
+            equipment_bonus = {
+            medium_tank_chassis = {
+				instant = yes
+                build_cost_ic = -0.05
+			}
+			light_tank_chassis = {
+				instant = yes
+                build_cost_ic = -0.05
+			}
+			motorized_equipment = {
+				instant = yes
+                build_cost_ic = -0.05		
+			}
+		}
+	}
+		
+		purge_intheranksofthe_administration = {
+
+			name = purge_intheranksofthe_administration
+
+			picture = government_purge
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				drift_defence_factor = -0.2
+			}
+		}
+			purge_inthe_army = {
+
+			name = purge_inthe_army
+
+			picture = purge_in_the_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.05
+				command_power_gain = -0.15
+				high_command_cost_factor = 0.10
+			}
+		}
+		
+		Mongolian_Peoples_Army = {
+
+			name = Mongolian_Peoples_Army
+
+			picture = mongolian_peoples_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.1
+				army_speed_factor = 0.1
+				army_org_factor = 0.1
+				command_power_gain = 0.05
+			}
+		}
+
+		mongolian_xinjiang_cooperation = {
+
+			name = mongolian_xinjiang_cooperation
+
+			picture = mongolian_xinjiang_cooperation
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+
+		mongolian_xinjiang_cooperation_2 = {
+
+			name = mongolian_xinjiang_cooperation
+
+			picture = mongolian_xinjiang_cooperation
+
+			removal_cost = -1
+
+			modifier = {
+	            political_power_gain = 0.05
+				cavalry_attack_factor = 0.05
+				cavalry_defence_factor = 0.05
+				unit_cavalry_design_cost_factor = -0.25
+			}
+		}
+
+		mongolian_xinjiang_cooperation_3 = {
+
+			name = mongolian_xinjiang_cooperation
+
+			picture = mongolian_xinjiang_cooperation
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.05
+				cavalry_attack_factor = 0.05
+				cavalry_defence_factor = 0.05
+				unit_cavalry_design_cost_factor = -0.25
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
+
+		BR_comrades = {
+
+            name = BR_comrades
+
+            picture = MON_br_comrades
+
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = -0.025
+                conscription_factor = 0.02
+                cavalry_attack_factor = 0.05
+            }
+        }
+		
+		Agrarian_country = {
+
+			name = Agrarian_country
+
+			picture = Agrarian_country
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.2
+				line_change_production_efficiency_factor = -0.2
+			}
+		}
+		
+		Military_production = {
+
+			name = Military_production
+
+			picture = military_production
+
+			removal_cost = -1
+			
+				equipment_bonus = {
+                artillery_equipment = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+                support_equipment = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+                infantry_equipment = {
+                    instant = yes
+                    build_cost_ic = -0.1
+				}
+			}
+		}
+		Civil_proceedings = {
+
+			name = Civil_proceedings
+
+			picture = civil_proceedings
+
+			removal_cost = -1
+			
+		modifier = {
+		        production_speed_infrastructure_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		Military_production_1 = {
+
+			name = Military_production
+
+			picture = military_production
+
+			removal_cost = -1
+			
+				equipment_bonus = {
+                artillery_equipment = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+                support_equipment = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+                infantry_equipment = {
+                    instant = yes
+                    build_cost_ic = -0.1
+				}
+				motorized_equipment = {
+				    instant = yes
+                    build_cost_ic = -0.1
+				}
+			}
+		}
+		
+		MON_Industrialization_1 = {
+
+			name = MON_Industrialization_1
+
+			picture = MON_Industrialization
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.15
+				line_change_production_efficiency_factor = -0.2
+			}
+		}
+		
+		MON_Industrialization_2 = {
+
+			name = MON_Industrialization_1
+
+			picture = MON_Industrialization
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.1
+				line_change_production_efficiency_factor = -0.2
+			}
+		}
+		
+		MON_Industrialization_3 = {
+
+			name = MON_Industrialization_1
+
+			picture = MON_Industrialization
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+				production_speed_buildings_factor = -0.05
+				line_change_production_efficiency_factor = -0.2
+			}
+		}
+		
+		MON_Industrialization_4 = {
+
+			name = MON_Industrialization_1
+
+			picture = MON_Industrialization
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.15
+				line_change_production_efficiency_factor = -0.1
+				local_resources_factor = 0.1
+			}
+		}
+		
+		MON_Industrialization_5 = {
+
+			name = MON_Industrialization_1
+
+			picture = MON_Industrialization
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.15
+				local_resources_factor = 0.2
+			}
+		}
+		
+		MON_Industrialization_6 = {
+
+			name = MON_Industrialization_1
+
+			picture = MON_Industrialization
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.1
+				line_change_production_efficiency_factor = -0.1
+				local_resources_factor = 0.1
+			}
+		}
+		
+		MON_Industrialization_7 = {
+
+			name = MON_Industrialization_1
+
+			picture = MON_Industrialization
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+				production_speed_buildings_factor = -0.05
+				local_resources_factor = 0.2
+			}
+		}
+		
+		MON_Industrialization_8 = {
+
+			name = MON_Industrialization_1
+
+			picture = MON_Industrialization
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.1
+				local_resources_factor = 0.2
+			}
+		}
+		
+		MON_Industrialization_9 = {
+
+			name = MON_Industrialization_1
+
+			picture = MON_Industrialization
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+				production_speed_buildings_factor = -0.05
+				line_change_production_efficiency_factor = -0.1
+				local_resources_factor = 0.1
+			}
+		}
+		
+		MON_Industrialization = {
+
+			name = MON_Industrialization
+
+			picture = MON_Industrialization
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.15
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.15
+				local_resources_factor = 0.3
+			}
+		}
+		
+		MON_struggle_for_power = {
+
+			name = MON_struggle_for_power
+
+			picture = MON_struggle_for_power
+
+			removal_cost = -1
+
+			modifier = {
+				surrender_limit = -0.2
+				political_advisor_cost_factor = 0.5
+				unit_leader_as_advisor_cp_cost_factor = 0.5
+				political_power_factor = -0.5
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				stability_weekly_factor = -0.005
+			}
+		}
+
+        MON_struggle_for_power_1 = {
+
+			name = MON_struggle_for_power
+
+			picture = MON_struggle_for_power
+
+			removal_cost = -1
+
+			modifier = {
+				political_advisor_cost_factor = 0.5
+				unit_leader_as_advisor_cp_cost_factor = 0.5
+				political_power_factor = -0.5
+				stability_factor = -0.3
+				war_support_factor = -0.3
+			}
+		}
+
+		MON_struggle_for_power_2 = {
+
+			name = MON_struggle_for_power
+
+			picture = MON_struggle_for_power
+
+			removal_cost = -1
+
+			modifier = {
+				political_advisor_cost_factor = 0.5
+				political_power_factor = -0.5
+				stability_factor = -0.3
+			}
+		}
+
+		Temples_destroyed  = {
+
+			name = Temples_destroyed
+
+			picture = struggle_for_independence
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+
+		Property_of_aristocrats_nationalized  = {
+
+			name = Property_of_aristocrats_nationalized
+
+			picture = property_of_aristocrats_nationalized
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		Resurgence_of_the_monarchy  = {
+
+			name = Resurgence_of_the_monarchy
+
+			picture = resurgence_of_the_monarchy
+
+			removal_cost = -1
+
+			modifier = {
+				neutrality_drift = 0.1
+			}
+		}
+
+		Aristocracy  = {
+
+			name = Aristocracy
+
+			picture = property_of_aristocrats_nationalized
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		Empire_ambitions  = {
+
+			name = Empire_ambitions
+
+			picture = empire_ambitions
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.1
+                army_attack_factor = 0.1
+                army_defence_factor = 0.1
+                conscription = 0.1
+                army_morale_factor = 0.1
+			}
+		}
+
+		Old_order  = {
+
+			name = Old_order
+
+			picture = old_order
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.05
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+		
+		MON_art_bonus = {
+
+			name = MON_art_bonus
+
+			picture = artillery_god_of_war
+
+			removal_cost = -1
+
+			modifier = {
+			army_artillery_attack_factor = 0.04
+			army_artillery_defence_factor = 0.04
+			army_infantry_defence_factor = 0.02
+			army_infantry_attack_factor = 0.02
+			}
+		}
+		
+		MON_art_production = {
+
+			name = MON_art_production
+
+			picture = civil_proceedings
+
+			removal_cost = -1
+
+			  equipment_bonus = {
+					artillery_equipment = {
+						instant = yes
+						build_cost_ic = -0.1
+				}
+				rocket_artillery_equipment = {
+                    instant = yes
+                    build_cost_ic = -0.1
+				}
+				}
+		}
+
+		Mongolian_imperial_army  = {
+
+			name = Mongolian_imperial_army
+
+			picture = mongolian_imperial_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				winter_attrition_factor = -0.15
+				out_of_supply_factor = -0.1
+				supply_node_range = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_speed_factor = 0.05
+				command_power_gain = 0.05
+			}
+		}
+
+		Legacy_of_genghis_khan  = {
+
+			name = Legacy_of_genghis_khan
+
+			picture = legacy_of_genghis_khan
+
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = 0.2
+				cavalry_defence_factor = 0.2
+			}
+		}
+
+		Imperial_retinue  = {
+
+			name = Imperial_retinue
+
+			picture = imperial_retinue
+
+			removal_cost = -1
+
+			modifier = {
+				political_advisor_cost_factor = -0.5
+			}
+		}
+
+		Monopoly  = {
+
+			name = Monopoly
+
+			picture = monopoly
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				local_resources_factor = 0.3
+			}
+		}
+
+		Oligarchy  = {
+
+			name = Oligarchy
+
+			picture = oligarchy
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+
+		Greatness_of_the_mongol_empire  = {
+
+			name = Greatness_of_the_mongol_empire
+
+			picture = greatness_of_the_mongol_empire
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+			}
+		}
+		
+		Thearistocrats_are_destroyed = {
+
+			name = Thearistocrats_are_destroyed
+
+			picture = thearistocrats_are_destroyed
+
+			removal_cost = -1
+
+			modifier = {
+				political_advisor_cost_factor = -0.1
+			}
+		}
+		
+			
+	    Improve_quality_medicine = {
+
+			name = Improve_quality_medicine
+
+			picture = tuvan_fur_coats
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.15
+			}
+		}
+		The_Power_of_the_Small_Hural = {
+
+			name = The_Power_of_the_Small_Hural
+
+			picture = MON_the_Power_of_the_Small_Hural
+
+			removal_cost = -1
+
+			modifier = {
+				political_advisor_cost_factor = -0.1
+				political_power_factor = 0.1
+			}
+		}
+		
+		The_Power_of_the_Small_Hural1 = {
+
+			name = The_Power_of_the_Small_Hural
+
+			picture = MON_the_Power_of_the_Small_Hural
+
+			removal_cost = -1
+
+			modifier = {
+				political_advisor_cost_factor = -0.1
+				drift_defence_factor = 0.5
+				political_power_factor = 0.1
+			}
+		}
+		The_Power_of_the_Small_Hural2 = {
+
+			name = The_Power_of_the_Small_Hural
+
+			picture = MON_the_Power_of_the_Small_Hural
+
+			removal_cost = -1
+
+			modifier = {
+				political_advisor_cost_factor = -0.1
+				drift_defence_factor = 0.5
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				political_power_factor = 0.1
+			}
+		}
+
+		Joint_economic_program = {
+
+			name = Joint_economic_program
+
+			picture = joint_economic_program
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		Preparing_for_war = {
+
+			name = Preparing_for_war
+
+			picture = assembly_abroad
+
+			removal_cost = -1
+
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				mobilization_speed = 0.05
+			}
+		}
+
+		Preparing_for_war_1 = {
+
+			name = Preparing_for_war
+
+			picture = assembly_abroad
+
+			removal_cost = -1
+
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				mobilization_speed = 0.05
+				heat_attrition_factor = -0.1
+			}
+		}
+
+		War_with_japan = {
+
+			name = War_with_japan
+
+			picture = crushing_blow
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
+
+		Offensive_plan = {
+
+			name = Offensive_plan
+
+			picture = offensive_plan
+
+			removal_cost = -1
+
+			modifier = {
+				max_planning = 0.1
+			}
+		}
+		
+		Air_Corps_of_the_Mongolian_Peoples_Republic = {
+
+			name = Air_Corps_of_the_Mongolian_Peoples_Republic
+
+			picture = Air_Corps_of_the_Mongolian_Peoples_Republic
+
+			removal_cost = -1
+
+			modifier = {
+				air_attack_factor = 0.1
+				air_defence_factor = 0.15
+				air_range_factor = 0.15
+			}
+		}
+		
+		Disorganized_army1 = {
+		
+			name = Disorganized_army
+
+			picture = Disorganized_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.05
+				army_org_factor = -0.1
+			}
+		}
+		
+		Disorganized_army2 = {
+
+			name = Disorganized_army
+
+			picture = Disorganized_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = -0.1
+				army_org_factor = -0.05
+			}
+		}
+		
+		Disorganized_army3 = {
+
+			name = Disorganized_army
+
+			picture = Disorganized_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_defence_factor = -0.05
+				army_org_factor = -0.1
+			}
+		}
+		
+		Disorganized_army4 = {
+
+			name = Disorganized_army
+
+			picture = Disorganized_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.05
+			}
+		}
+
+		Mongolian_technique_mon = {
+
+			name = Mongolian_technique_mon
+
+			picture = mongolian_technique
+
+			removal_cost = -1
+
+			equipment_bonus = {
+            light_tank_chassis = {
+				    instant = yes
+                    build_cost_ic = -0.05
+			}
+			armored_car_equipment = {
+				    instant = yes
+                    build_cost_ic = -0.05
+			}
+			motorized_equipment = {
+				    instant = yes
+                    build_cost_ic = -0.05		
+			}
+		}
+	}
+
+		Tank_exercises_mon = {
+
+			name = Tank_exercises_mon
+
+			picture = tanks
+
+			removal_cost = -1
+
+			modifier = {
+				army_armor_attack_factor = 0.05
+	            army_armor_defence_factor = 0.05
+			}
+		}
+
+		TAN_government_purge = {
+
+			name = TAN_government_purge
+
+			picture = government_purge
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.15
+				production_speed_buildings_factor = -0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		TAN_purge_in_the_army = {
+
+			name = TAN_purge_in_the_army
+
+			picture = purge_in_the_army
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = -0.05
+				war_support_factor = -0.15
+				command_power_gain = -0.15
+				high_command_cost_factor = 0.2
+			}
+		}
+
+		TAN_boost_the_birth_rate = {
+
+			name = TAN_boost_the_birth_rate
+
+			picture = boost_the_birth_rate
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.05
+			}
+		}
+
+		TAN_help_for_the_soviets_from_tuva = {
+
+			name = TAN_help_for_the_soviets_from_tuva
+
+			picture = help_for_the_soviets_from_tuva
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+
+		TAN_tuva_mongolian_training = {
+
+			name = TAN_tuva_mongolian_training
+
+			picture = tuva_mongolian_training
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.1
+		        army_core_attack_factor = 0.1
+			}
+		}
+
+		TAN_tuvan_advisers = {
+
+			name = TAN_tuvan_advisers
+
+			picture = tuvan_advisers
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				max_command_power = 50
+			}
+		}
+
+		TAN_tuvan_volunteers = {
+
+			name = TAN_tuvan_volunteers
+
+			picture = tuvan_volunteers
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				land_reinforce_rate = 0.05
+			}
+		}
+
+		TAN_field_medical_posts_from_tuva = {
+
+			name = TAN_field_medical_posts_from_tuva
+
+			picture = field_medical_posts_from_tuva
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.05
+			}
+		}
+
+		TAN_tuvan_fur_coats = {
+
+			name = TAN_tuvan_fur_coats
+
+			picture = tuvan_fur_coats
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				winter_attrition_factor = -0.05
+			}
+		}
+
+		TAN_crushing_blow = {
+
+			name = TAN_crushing_blow
+
+			picture = crushing_blow
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
+
+		TAN_struggle_for_independence = {
+
+			name = TAN_struggle_for_independence
+
+			picture = struggle_for_independence
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				autonomy_gain = 1.0
+			}
+		}
+
+		TAN_preparation_for_war_with_bolshevism_tan = {
+
+			name = TAN_preparation_for_war_with_bolshevism_tan
+
+			picture = preparation_for_war_with_bolshevism
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.2
+			}
+		}
+
+		TAN_preparation_for_war_with_bolshevism_2 = {
+
+			name = TAN_preparation_for_war_with_bolshevism_tan
+
+			picture = preparation_for_war_with_bolshevism
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.2
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+			}
+		}
+
+		TAN_preparation_for_war_with_bolshevism_3 = {
+
+			name = TAN_preparation_for_war_with_bolshevism_tan
+
+			picture = preparation_for_war_with_bolshevism
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.2
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		TAN_bribe_the_soviet_general_staff = {
+
+			name = TAN_bribe_the_soviet_general_staff
+
+			picture = TAN_bribe_the_soviet_general_staff
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
+
+		TAN_siberian_people's_army = {
+
+			name = TAN_siberian_people's_army
+
+			picture = TAN_siberian_peoples_army
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		TAN_development_of_siberia = {
+
+			name = TAN_development_of_siberia
+
+			picture = TAN_development_of_siberia
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+                production_factory_max_efficiency_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+                global_building_slots_factor = 0.1
+                production_speed_buildings_factor = 0.05
+			}
+		}
+
+		PRC_soviet_military_advisers_sov = {
+
+			name = PRC_soviet_military_advisers_sov
+
+			picture = test_icon
+
+			allowed = { original_tag = PRC }
+
+			removal_cost = -1
+
+			modifier = {
+				land_reinforce_rate = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		PRC_industrial_aid_from_the_ussr_sov = {
+
+			name = PRC_industrial_aid_from_the_ussr_sov
+
+			picture = test_icon
+
+			allowed = { original_tag = PRC }
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.05
+			}
+		}
+
+		PRC_soviet_agricultural_machinery_sov = {
+
+			name = PRC_soviet_agricultural_machinery_sov
+
+			picture = test_icon
+
+			allowed = { original_tag = PRC }
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+
+		PRC_soviet_scientific_groups_sov = {
+
+			name = PRC_soviet_scientific_groups_sov
+
+			picture = test_icon
+
+			allowed = { original_tag = PRC }
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		PRC_new_red_lighthouse_asia = {
+
+			name = PRC_new_red_lighthouse_asia
+
+			picture = test_icon
+
+			allowed = { original_tag = PRC }
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.5
+				communism_drift = 0.1
+			}
+		}
+
+		PRC_new_cadres_will_decide_everything_prc = {
+
+			name = PRC_new_cadres_will_decide_everything_prc
+
+			picture = new_cadres_will_decide_everything
+
+			allowed = { original_tag = PRC }
+
+			removal_cost = -1
+
+			modifier = {
+				command_power_gain = 0.15
+			}
+		}
+
+		PRC_chinese-mongolian_developments = {
+
+			name = PRC_chinese-mongolian_developments
+
+			picture = chinese-mongolian_developments
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				production_speed_supply_node_factor = 0.2
+			}
+		}
+		
+		PRC_chinese-mongolian_exercises = {
+
+			name = PRC_chinese-mongolian_exercises
+
+			picture = chinese-mongolian_exercises
+
+			removal_cost = -1
+
+			modifier = {
+				attrition = -0.1
+				army_morale = 10
+			}
+		}
+		
+		PRC_soviet_specialists = {
+
+			name = PRC_soviet_specialists
+
+			picture = soviet_specialists
+			
+			on_add = {
+			    add_political_power = -150
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_speed_factor = 0.1
+			}
+		}
+		
+		PRC_chinese_resources = {
+
+			name = PRC_chinese_resources
+
+			picture = chinese_resources
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				local_resources_factor = 0.3
+			}
+		}
+	    
+		PRC_ideology_control_prc = {
+
+			name = PRC_ideology_control_prc
+
+			picture = ideology_control_pic
+
+			allowed = { original_tag = PRC }
+
+			removal_cost = -1
+
+			modifier = {
+				political_advisor_cost_factor = -0.15
+				war_support_weekly = 0.01
+				economy_cost_factor = -0.15
+				drift_defence_factor = 0.5
+			}
+		}
+		
+		PRC_politicized_officers_prc = {
+
+			name = PRC_politicized_officers_prc
+
+			picture = politicized_officers
+
+			allowed = { original_tag = PRC }
+
+			removal_cost = -1
+
+			modifier = {
+				command_power_gain = 0.15
+				army_org_factor = 0.08
+			}
+		}
+
+		SOV_cossack_army = {
+
+			name = SOV_cossack_army
+
+			picture = cossack_army
+
+			allowed = { original_tag = SOV }
+
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = -0.20
+				cavalry_defence_factor = -0.20
+				army_org_factor = -0.05
+				army_speed_factor = 0.05
+			}
+		}
+
+		SOV_cossack_army_1 = {
+
+			name = SOV_cossack_army
+
+			picture = cossack_army
+
+			allowed = { original_tag = SOV }
+
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = -0.10
+				cavalry_defence_factor = -0.10
+				army_org_factor = -0.05
+				army_speed_factor = 0.05
+			}
+		}
+
+		SOV_cossack_army_2 = {
+
+			name = SOV_cossack_army
+
+			picture = cossack_army
+
+			allowed = { original_tag = SOV }
+
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = -0.10
+				cavalry_defence_factor = -0.10
+				army_org_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+
+		SOV_cossack_army_3 = {
+
+			name = SOV_cossack_army
+
+			picture = cossack_army
+
+			allowed = { original_tag = SOV }
+
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = -0.10
+				cavalry_defence_factor = -0.10
+				army_org_factor = 0.05
+				army_speed_factor = 0.05
+				command_power_gain_mult = 0.1
+			}
+		}
+
+		SOV_cossack_army_4 = {
+
+			name = SOV_cossack_army
+
+			picture = cossack_army
+
+			allowed = { original_tag = SOV }
+
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = -0.10
+				cavalry_defence_factor = -0.10
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_org_factor = 0.05
+				army_speed_factor = 0.05
+				command_power_gain_mult = 0.1
+			}
+		}
+
+		SOV_cossack_army_5 = {
+
+			name = SOV_cossack_army
+
+			picture = cossack_army
+
+			allowed = { original_tag = SOV }
+
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = 0.05
+				cavalry_defence_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_org_factor = 0.05
+				army_speed_factor = 0.05
+				command_power_gain_mult = 0.1
+			}
+		}
+
+		SOV_free_germany_committee = {
+
+			name = SOV_free_germany_committee
+
+			picture = free_germany_committee
+
+			allowed = { original_tag = SOV }
+
+			removal_cost = -1
+
+			modifier = {
+				compliance_gain = 0.01
+			    compliance_growth = 0.1
+			}
+		}
+
+		SOV_free_germany_committee_2 = {
+
+			name = SOV_free_germany_committee
+
+			picture = free_germany_committee
+
+			allowed = { original_tag = SOV }
+
+			removal_cost = -1
+
+			modifier = {
+				compliance_gain = 0.01
+			    compliance_growth = 0.1
+				max_command_power = 10
+				experience_gain_army = 0.05
+			}
+		}
+
+		SOV_training_courses = {
+
+			name = SOV_training_courses
+
+			picture = SOV_training_courses
+
+			allowed = { original_tag = SOV }
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.05
+				conscription_factor = 0.1
+			}
+		}
+
+		POL_collectivization_sov = {
+
+			name = POL_collectivization_sov
+
+			picture = test_icon
+
+			allowed = { original_tag = POL }
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.15
+                consumer_goods_factor = -0.05
+                line_change_production_efficiency_factor = 0.1
+			}
+		}
+
+		POL_trade_union_sov = {
+
+			name = POL_trade_union_sov
+
+			picture = test_icon
+
+			allowed = { original_tag = POL }
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				global_building_slots_factor = 0.1
+			}
+		}
+
+		POL_trade_union_sov_2 = {
+
+			name = POL_trade_union_sov
+
+			picture = test_icon
+
+			allowed = { original_tag = POL }
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				global_building_slots_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		POL_work_brigade_sov = {
+
+			name = POL_work_brigade_sov
+
+			picture = test_icon
+
+			allowed = { original_tag = POL }
+
+			removal_cost = -1
+
+			modifier = {
+				industry_repair_factor = 0.25
+			    industry_free_repair_factor = 0.25
+			    industry_air_damage_factor = -0.1
+			}
+		}
+
+		POL_polish_people's_army_sov = {
+
+			name = POL_polish_people's_army_sov
+
+			picture = test_icon
+
+			allowed = { original_tag = POL }
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		
+		PRC_a_little_purge_in_the_army = {
+
+			name = PRC_a_little_purge_in_the_army
+
+			picture = а_little_purge_in_the_army
+
+			allowed = { original_tag = PRC }
+			
+			on_add = {
+			    add_political_power = -150
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				enemy_operative_intel_extraction_rate = -0.15
+				command_power_gain = -0.4
+				political_power_gain = -0.15
+			}
+		}
+
+		TAN_nascent_economy = {
+
+			name = TAN_nascent_economy
+
+			picture = nascent_economy
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.15
+				production_speed_infrastructure_factor = -0.2
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		TAN_nascent_economy_1 = {
+
+			name = TAN_nascent_economy_1
+
+			picture = nascent_economy
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.05	
+				production_speed_infrastructure_factor = -0.2
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		TAN_nascent_economy_2 = {
+
+			name = TAN_nascent_economy_2
+
+			picture = nascent_economy
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.05	
+				production_speed_infrastructure_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		TAN_nascent_economy_3 = {
+
+			name = TAN_nascent_economy_3
+
+			picture = nascent_economy
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05	
+				production_speed_infrastructure_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		TAN_nascent_economy_4 = {
+
+			name = TAN_nascent_economy_4
+
+			picture = nascent_economy
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05	
+				production_speed_infrastructure_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				global_building_slots_factor = 0.1
+			}
+		}
+
+		TAN_agricultural_country = {
+
+			name = TAN_agricultural_country
+
+			picture = agricultural_country
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.50
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_rail_way_factor = -0.1
+				production_speed_supply_node_factor = -0.05
+			}
+		}
+
+		TAN_agricultural_country_1 = {
+
+			name = TAN_agricultural_country_1
+
+			picture = agricultural_country
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.50
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_rail_way_factor = -0.1
+				production_speed_supply_node_factor = -0.05
+			}
+		}
+
+		TAN_agricultural_country_2 = {
+
+			name = TAN_agricultural_country_2
+
+			picture = agricultural_country
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.50
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_rail_way_factor = -0.1
+				production_speed_supply_node_factor = -0.05
+			}
+		}
+
+        TAN_agricultural_country_3 = {
+
+			name = TAN_agricultural_country_3
+
+			picture = agricultural_country
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.50
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				production_speed_supply_node_factor = 0.05
+			}
+		}
+
+		TAN_agricultural_country_4 = {
+
+			name = TAN_agricultural_country_4
+
+			picture = agricultural_country
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				economy_cost_factor = -0.15
+				monthly_population = 0.50
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				production_speed_supply_node_factor = 0.05
+			}
+		}
+
+		TAN_legacy_army = {
+
+			name = TAN_legacy_army
+
+			picture = legacy_army
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.15
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				army_morale_factor = -0.05
+				cavalry_attack_factor = 0.2
+				cavalry_defence_factor = 0.2
+			}
+		}
+
+		TAN_legacy_army_1 = {
+
+			name = TAN_legacy_army_1
+
+			picture = legacy_army
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				army_morale_factor = -0.05
+				cavalry_attack_factor = 0.2
+				cavalry_defence_factor = 0.2
+			}
+		}
+
+		TAN_legacy_army_2 = {
+
+			name = TAN_legacy_army_2
+
+			picture = legacy_army
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				army_morale_factor = 0.05
+				cavalry_attack_factor = 0.2
+				cavalry_defence_factor = 0.2
+			}
+		}
+
+		TAN_legacy_army_3 = {
+
+			name = TAN_legacy_army_3
+
+			picture = legacy_army
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_morale_factor = 0.05
+				cavalry_attack_factor = 0.2
+				cavalry_defence_factor = 0.2
+			}
+		}
+
+		TAN_tuvan_peopl_army = {
+
+			name = TAN_tuvan_peopl_army
+
+			picture = tuvan_peopl_army
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_morale_factor = 0.05
+				cavalry_attack_factor = 0.2
+				cavalry_defence_factor = 0.2
+				winter_attrition_factor = -0.15
+			}
+		}
+
+		TAN_pro_soviet_government = {
+
+			name = TAN_pro_soviet_government
+
+			picture = pro_soviet_government
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.5
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.3
+				stability_factor = -0.2
+				political_power_factor = -0.15
+			}
+		}
+
+		TAN_pro_soviet_government_1 = {
+
+			name = TAN_pro_soviet_government
+
+			picture = pro_soviet_government
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.5
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.3
+				stability_factor = -0.1
+				political_power_factor = -0.15
+			}
+		}
+
+		TAN_pro_soviet_government_2 = {
+
+			name = TAN_pro_soviet_government
+
+			picture = pro_soviet_government
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.5
+				political_advisor_cost_factor = -0.1
+				war_support_factor = 0.3
+				stability_factor = 0.05
+				political_power_factor = 0.1
+			}
+		}
+
+		TAN_mushtra = {
+
+			name = TAN_mushtra
+
+			picture = mushtra
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.05
+				army_org_factor = 0.05
+				conscription_factor = 0.1
+				weekly_manpower = 300
+			}
+		}
+
+		TAN_assembly_abroad	 = {
+
+			name = TAN_assembly_abroad
+
+			picture = assembly_abroad
+
+			allowed = { original_tag = TAN }
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+                infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+			}
+		}
+	}
+		BIR_jewish_army = {
+
+			name = BIR_jewish_army
+
+			picture = BIR_jewish_army
+
+			allowed = { original_tag = BIR }
+
+			removal_cost = -1
+
+			modifier = {
+				modifier_army_sub_unit_militia_max_org_factor = 0.05
+				modifier_army_sub_unit_militia_attack_factor = 0.05
+				modifier_army_sub_unit_militia_defence_factor = 0.05
+			}
+		}
+
+		BIR_jewish_army_1 = {
+
+			name = BIR_jewish_army
+
+			picture = BIR_jewish_army
+
+			allowed = { original_tag = BIR }
+
+			removal_cost = -1
+
+			modifier = {
+				modifier_army_sub_unit_militia_max_org_factor = 0.05
+				modifier_army_sub_unit_militia_attack_factor = 0.05
+				modifier_army_sub_unit_militia_defence_factor = 0.05
+				army_org_factor = 0.05
+				command_power_gain = 0.05
+			}
+		}
+
+		BIR_jewish_army_2 = {
+
+			name = BIR_jewish_army
+
+			picture = BIR_jewish_army
+
+			allowed = { original_tag = BIR }
+
+			removal_cost = -1
+
+			modifier = {
+				modifier_army_sub_unit_militia_max_org_factor = 0.05
+				modifier_army_sub_unit_militia_attack_factor = 0.05
+				modifier_army_sub_unit_militia_defence_factor = 0.05
+				army_org_factor = 0.05
+				command_power_gain = 0.05
+				army_core_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+			}
+		}
+
+		BIR_everything_for_the_front = {
+
+			name = BIR_everything_for_the_front
+
+			picture = BIR_everything_for_the_front
+
+			allowed = { original_tag = BIR }
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+                infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+			    }
+			}
+		}
+
+		BIR_refugees = {
+
+			name = BIR_refugees
+
+			picture = BIR_refugees
+
+			allowed = { original_tag = BIR }
+
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = 50
+			}
+		}
+
+		BIR_birobidzhan_industry = {
+
+			name = BIR_birobidzhan_industry
+
+			picture = BIR_birobidzhan_industry
+
+			allowed = { original_tag = BIR }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		BIR_birobidzhan_industry_1 = {
+
+			name = BIR_birobidzhan_industry
+
+			picture = BIR_birobidzhan_industry
+
+			allowed = { original_tag = BIR }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		BIR_soviet_jewish_collective_farms = {
+
+			name = BIR_soviet_jewish_collective_farms
+
+			picture = BIR_soviet_jewish_collective_farms
+
+			allowed = { original_tag = BIR }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		BIR_star_of_birobidzhan = {
+
+			name = BIR_star_of_birobidzhan
+
+			picture = BIR_star_of_birobidzhan
+
+			allowed = { original_tag = BIR }
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		BIR_jewish_anti_fascist_committee = {
+
+			name = BIR_jewish_anti_fascist_committee
+
+			picture = BIR_jewish_anti_fascist_comitet
+
+			allowed = { original_tag = BIR }
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+    }
+}
+	

@@ -1,0 +1,47 @@
+spriteTypes = {
+	spriteType = { #Соц. демы
+        name = "GFX_ideology_social_democrat_group"
+        texturefile = gfx/interface/ideologies/social_democrat_group.dds
+    }
+    spriteType = {
+        name = "GFX_ideology_socialism"
+        texturefile = gfx/interface/ideologies/social_democrat_group.dds
+    }
+    spriteType = {
+        name = "GFX_ideology_democratic_socialism"
+        texturefile = gfx/interface/ideologies/democratic_socialism.dds
+    }
+    spriteType = { #Либералы
+        name = "GFX_ideology_liberal_group"
+        texturefile = gfx/interface/ideologies/liberal_group.dds
+    }
+    spriteType = {
+        name = "GFX_ideology_agrarianism"
+        texturefile = gfx/interface/ideologies/agrarianism.dds
+    }
+    spriteType = { #Анархисты
+        name = "GFX_ideology_anarchist_communism"
+        texturefile = gfx/interface/ideologies/anarchist_communism.dds
+    }
+    spriteType = {
+        name = "GFX_ideology_anarchist_syndicalist"
+        texturefile = gfx/interface/ideologies/anarchist_syndicalist.dds
+    }
+    spriteType = { #Фашисты
+        name = "GFX_ideology_nazism"
+        texturefile = gfx/interface/ideologies/nazism.dds
+    }
+    spriteType = {
+        name = "GFX_ideology_gen_nazism"
+        texturefile = gfx/interface/ideologies/gen_nazism.dds
+    }
+    spriteType = {
+        name = "GFX_ideology_falangism"
+        texturefile = gfx/interface/ideologies/falangism.dds
+    }
+    spriteType = {
+        name = "GFX_ideology_rexism"
+        texturefile = gfx/interface/ideologies/rexism.dds
+    }
+}
+

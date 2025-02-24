@@ -1,0 +1,150 @@
+﻿l_english:
+    # GUI Localisation, do not edit!
+ first_leader_title:0 "[ROOT.GetFirstTitle]"
+ second_leader_title:0 "[ROOT.GetSecondTitle]"
+ dual_leader_name:0 "[ROOT.GetDualLeaderName]"
+ DEFAULT_TITLE:0 "Vacant"
+ DEFAULT_FIRST_TITLE:0 "Leader"
+ DESCRIPTION_TEST:0 "His Majesty"
+ second_leader_tt:0 "§Y[ROOT.GetDualLeaderName]§!"
+ first_leader_diplo_tt:0 "§Y[From.GetLeader]§!\n[From.GetFirstTitle] of [From.GetNameDef]"
+ second_leader_diplo_tt:0 "§Y[From.GetDualLeaderName]§!\n[From.GetSecondTitle] of [From.GetNameDef]"
+ dual_leader_desc_tt:0 "§g[From.GetDualLeaderDesc]§!"
+ first_leader_desc_tt:0 "§g[From.GetFirstLeaderDesc]§!"
+# Nation Specific Localisation
+  #TITLE
+  #USSR
+  TITLE_SOV_Chairman:0 "§WChairman§!"
+  TITLE_SOV_GENERAL_SECRETARY:0 "§WGeneral Secretary§!"
+  #Ukraine
+  TITLE_UKR_FIRST_SECRETARY:0 "§WFirst Secretary of the CC§!"
+  TITLE_UKR_Chairman:0 "§WChairman§!"
+  #Caucausian
+  TITLE_ZSR_FIRST_SECRETARY:0 "§WFirst Secretary of the CC§!"
+  TITLE_ZSR_Chairman:0 "§WChairman§!"
+  #Belarus
+  TITLE_BLR_FIRST_SECRETARY:0 "§WFirst Secretary of the CC§!"
+  TITLE_BLR_Chairman:0 "§WChairman§!"
+  #Italy
+  TITLE_ITA_DUCE:0 "§WDuce§!"
+  TITLE_ITA_King:0 "§WKing§!"
+  #Sweden
+  TITLE_SWE_PRIME_MINISTER:0 "§WPrime Minister§!"
+  TITLE_SWE_King:0 "§WKing§!"
+  #Norway
+  TITLE_NOR_PRIME_MINISTER:0 "§WPrime Minister§!"
+  TITLE_NOR_King:0 "§WKing§!"
+  #Denmark
+  TITLE_DEN_PRIME_MINISTER:0 "§WPrime Minister§!"
+  TITLE_DEN_King:0 "§WKing§!"
+  #Poland
+  TITLE_POL_PRESIDENT:0 "§WPresident§!"
+  TITLE_POL_Prime_Minister:0 "§WPrime Minister§!"
+  #Lithuania
+  TITLE_LIT_PRESIDENT:0 "§WPresident§!"
+  TITLE_LIT_Prime_Minister:0 "§WPrime Minister§!"
+  #Czechoslovakia
+  TITLE_CZE_PRESIDENT:0 "§WPresident§!"
+  TITLE_CZE_Prime_Minister:0 "§WPrime Minister§!"
+  #Hungary
+  TITLE_HUN_REGENT:0 "§WRegent§!"
+  TITLE_HUN_Prime_Minister:0 "§WPrime Minister§!"
+  #Yugoslavia
+  TITLE_YUG_REGENT:0 "§WRegent§!"
+  TITLE_YUG_Prime_Minister:0 "§WPrime Minister§!"
+  #Bulgaria
+  TITLE_BUL_TSAR:0 "§WTsar§!"
+  TITLE_BUL_Prime_Minister:0 "§WPrime Minister§!"
+  #Greece
+  TITLE_GRE_PRIME_MINISTER:0 "§WPrime Minister§!"
+  TITLE_GRE_King:0 "§WKing§!"
+  #Germany
+  TITLE_GER_FUHRER:0 "§WFuhrer§!"
+  TITLE_GER_Deputy_Fuhrer:0 "§WDeputy Fuhrer§!"
+  #Austria
+  TITLE_AUS_CHANCELLOR:0 "§WChancellor§!"
+  TITLE_AUS_President:0 "§WPresident§!"
+  #Netherlands
+  TITLE_HOL_PRIME_MINISTER:0 "§WPrime Minister§!"
+  TITLE_HOL_Queen:0 "§WQueen§!"
+  #Belgium
+  TITLE_BEL_PRIME_MINISTER:0 "§WPrime Minister§!"
+  TITLE_BEL_King:0 "§WKing§!"
+  #France
+  TITLE_FRA_PRIME_MINISTER:0 "§WPrime Minister§!"
+  TITLE_FRA_President:0 "§WPresident§!"
+  #Portugal
+  TITLE_POR_PRIME_MINISTER:0 "§WPrime Minister§!"
+  TITLE_POR_President:0 "§WPresident§!"
+  #Switzerland
+  TITLE_SWI_CONFEDERATE_GOVERNMENT:0 "§WПравительство конфедерации§!"
+  TITLE_SWI_President:0 "§WPresident§!"
+  #Canada
+  TITLE_CAN_PRIME_MINISTER:0 "§WPrime Minister§!"
+  TITLE_CAN_Governor_General:0 "§WGovernor-general§!"
+  #USA
+  TITLE_USA_PRESIDENT:0 "§WPresident§!"
+  TITLE_USA_Vice_President:0 "§WVice President§!"
+  #Australia
+  TITLE_AST_PRIME_MINISTER:0 "§WPrime Minister§!"
+  TITLE_AST_Governor_General:0 "§WGovernor-general§!"
+  #New Zeland
+  TITLE_NZL_PRIME_MINISTER:0 "§WPrime Minister§!"
+  TITLE_NZL_Governor_General:0 "§WGovernor-general§!"
+  #LEADERS
+  #USSR
+  SOV_D_Mikhail_Kalinin:0 "Mikhail Kalinin"
+  SOV_D_Mikhail_Kalinin_desc:0 "Grandfather Kalinin"
+  #Ukraine
+  UKR_D_Grigory_Petrovsky:0 "Grigory Petrovsky"
+  #Caucausian
+  ZSR_D_Sultan_Mufidzade:0 "Sultan Mufidzade"
+  #Belarus
+  BLR_D_Alexander_Chervyakov:0 "Alexander Chervyakov"
+  #Italy
+  ITA_D_Vittorio_Emanuele:0 "Vittorio Emanuele"
+  #Sweden
+  SWE_D_Gustaf_V:0 "Gustaf V"
+  #Norway
+  NOR_D_Haakon_VII:0 "Haakon VII"
+  #Denmark
+  DEN_D_Christian_X:0 "Christian X"
+  #Poland
+  POL_D_Felician_Skladkovsky:0 "Felicjan Składkowski"
+  #Lithuania
+  LIT_D_Juozas_Tubelis:0 "Juozas Tūbelis"
+  #Czechoslovakia
+  CZE_D_Milan_Hodza:0 "Milan Hodža"
+  #Hungry
+  HUN_D_Gyula_Gombos:0 "Gyula Gombos"
+  #Yugoslavia
+  YUG_D_Milan_Stojadinovic:0 "Milan Stojadinović"
+  #Bulgaria
+  BUL_D_Georgi_Kyoseivanov:0 "Georgi Kyoseivanov"
+  #Greece
+  GRE_D_George_II:0 "George II"
+  #Germany
+  GER_D_Rudolf_Hess:0 "Rudolf Hess"
+  #Austria
+  AUS_D_Wilhelm_Miklas:0 "Wilhelm Miklas"
+  #Netherlands
+  HOL_D_Wilhelmina:0 "Wilhelmina"
+  #Belgium
+  BEL_D_Leopold_III:0 "Leopold III"
+  #France
+  FRA_D_Albert_Francois:0 "François Albert"
+  #Portugal
+  POR_D_Antonio_Carmona:0 "Antonio Carmona"
+  #Switzerland
+  SWI_D_Albert_Meyer:0 "Albert Meyer"
+  #Canada
+  CAN_D_John_Buchan:0 "John Buchan"
+  #USA
+  USA_D_John_Garner:0 "John Garner"
+  #Australia
+  AST_D_Alexander_Hore_Ruthven:0 "Alexander Hore-Ruthven"
+  #New Zeland
+  NZL_D_George_Monckton_Arundell:0 "George Monckton-Arundell"
+  #TRAITS
+  all_union_headman:0 "All-Union Headman"
+   

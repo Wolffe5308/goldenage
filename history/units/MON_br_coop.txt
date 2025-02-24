@@ -1,0 +1,28 @@
+division_template = {
+	name = "Buryat's forces"
+	is_locked = yes
+
+	division_names_group = MON_BR_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st Buryat division"
+		location = 1791
+		division_template = "Buryat's forces"
+	}
+	division = {
+		name = "2nd Buryat division"
+		location = 7676
+		division_template = "Buryat's forces"
+	}
+}

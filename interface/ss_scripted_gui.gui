@@ -1,0 +1,88 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "ss_ui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 500 height= 230 }
+		background = {
+		position = { x = 0 y = -16 }
+		name = "Background"
+		spriteType = "GFX_ss_background_gui"}
+		
+		instantTextBoxType = {
+			name ="ss_text_box"
+			position = { x = 165 y = 16 }
+			font = "hoi4_typewriter16"
+			text = "nazi_recruitment_desc"
+			format = center
+			maxWidth = 318
+			
+		}
+
+
+		containerWindowType = {
+			name = "ss_ui_window_2"
+			position = { x = 5 y = 0 }
+			size = { width = 50 height= 64 }
+
+					iconType = {
+					name = "ss_loyalty"
+					spriteType = "GFX_ss_runes_gui"
+					position = { x = 200 y = 146 }
+				
+				
+				}
+
+					iconType = {
+					name = "ss_loyalty_container"
+					spriteType = "GFX_generic_text_bg_48"
+					position = { x = 200 y = 194 }
+
+				}
+				
+					instantTextBoxType = {
+					name ="ss_loyalty_output"
+					position = { x = 200 y = 198 }
+					font = "hoi_18mbs"
+					text = "ss_loyalty_output_text"
+					format = center
+					maxWidth = 50
+					pdx_tooltip = ss_loyalty_tooltip
+
+				}
+			
+			}
+
+			iconType = {
+			name = "ss_decoration_daggers"
+			spriteType = "GFX_diplo_war_large_icon"
+			position = { x = 300 y = 146 }
+		}
+		
+			iconType = {
+			name = "heer_loyalty"
+			spriteType = "GFX_ss_balkenkrauz_gui"
+			position = { x = 400 y = 146 }
+		}
+		
+			iconType = {
+			name = "heer_loyalty_container"
+			spriteType = "GFX_generic_text_bg_48"
+			position = { x = 400 y = 194 }
+		}
+		
+			instantTextBoxType = {
+			name ="heer_loyalty_output"
+			position = { x = 400 y = 198 }
+			font = "hoi_18mbs"
+			text = "heer_loyalty_output_text"
+			format = center
+			maxWidth = 50
+			pdx_tooltip = heer_loyalty_tooltip
+
+		}			
+	
+	}
+}
+
+

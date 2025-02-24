@@ -1,0 +1,445 @@
+characters={
+	MON_anandyn_amar={
+		name=MON_anandyn_amar
+		portraits={
+			civilian={
+				large="GFX_portrait_mon_anandyn_amar"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MON_darizavyn_losol={
+		name=MON_darizavyn_losol
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/mon/advisors/idea_advisor_MON_darizavyn_losol.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_darizavyn_losol
+			allowed = {
+				original_tag = MON
+			}
+			available = {
+				has_completed_focus = MON_1
+			}
+			traits = {
+				ecomonist_publicist
+			}
+		}
+	}
+	MON_ilya_baldinov={
+		name= MON_ilya_baldinov
+		portraits={
+			civilian={
+				large=GFX_portrait_SOV_vasily_korzh
+			}
+		}
+	}
+	MON_banzarjavyn_baasanjav={
+		name=MON_banzarjavyn_baasanjav
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/mon/advisors/idea_advisor_MON_banzarjavyn_baasanjav.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_banzarjavyn_baasanjav
+			allowed = {
+				original_tag = MON
+			}
+			available = {
+				has_completed_focus = MON_1
+			}
+			traits = {
+				left_trade_unionist
+			}
+		}
+	}
+	MON_shirnengiin_ayuush={
+		name=MON_shirnengiin_ayuush
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/mon/advisors/idea_advisor_MON_shirnengiin_ayuush.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_shirnengiin_ayuush
+			allowed = {
+				original_tag = MON
+			}
+			available = {
+				has_completed_focus = MON_1
+			}
+			traits = {
+				editor
+			}
+		}
+	}
+	MON_dorjjavyn_luvsansharav={
+		name=MON_dorjjavyn_luvsansharav
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/mon/advisors/idea_advisor_MON_dorjjavyn_luvsansharav.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_dorjjavyn_luvsansharav
+			allowed = {
+				original_tag = MON
+			}
+			available = {
+				has_completed_focus = MON_1
+			}
+			traits = {
+				SWI_intelligence_officer
+			}
+		}
+	}
+	MON_dansranbilegiin_dogsom={
+		name=MON_dansranbilegiin_dogsom
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/mon/advisors/idea_advisor_MON_dansranbilegiin_dogsom.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_dansranbilegiin_dogsom
+			allowed = {
+				original_tag = MON
+			}
+			available = {
+				has_completed_focus = MON_1
+			}
+			traits = {
+				popular_figurehead
+			}
+		}
+	}
+	MON_fu_shangzhi={
+		name=MON_fu_shangzhi
+		portraits={
+			civilian={
+				large=GFX_portrait_Fu_Shangzhi
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1947.1.1.12"
+			id=-1
+		}
+	}
+	MON_songgotu_kangan={
+		name=MON_songgotu_kangan
+		portraits={
+			civilian={
+				large=GFX_portrait_Songgotu_Kangan
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			traits={ armaments_organizer }
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+	MON_khorloogiin_choibalsan={
+		name=MON_khorloogiin_choibalsan
+		portraits={
+			civilian={
+				large=GFX_portrait_khorloogiin_choibalsan
+				small="gfx/interface/ideas/mon/advisors/idea_MON_choibalsan_political.dds"
+			}
+		}
+		field_marshal = {
+			traits = { cavalry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+        }
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_khorloogiin_choibalsan
+			allowed = {
+				original_tag = MON
+			}
+			available = {
+				has_completed_focus = MON_1
+			}
+			traits = {
+				SWI_diplomat 
+				minister_of_the_interior_abate
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MON_khorloogiin_choibalsan
+			allowed = {
+					original_tag = MON
+				}
+				traits = {
+					army_chief_morale_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+		country_leader={
+			ideology=stalinism
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+	MON_gelegdorjiin_demid={
+		name=MON_gelegdorjiin_demid
+		portraits={
+			civilian={
+				large=GFX_portrait_gelegdorjiin_demid
+				small="gfx/interface/ideas/mon/advisors/idea_advisor_MON_gelegdorjiin_demid.dds"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	MON_zhamyangiyn_lhagvasuren={
+		name=MON_zhamyangiyn_lhagvasuren
+		portraits={
+			civilian={
+				large=GFX_portrait_zhamyangiyn_lkhagvasuren
+				small="gfx/interface/ideas/mon/advisors/idea_advisor_MON_zhamyangiyn_lhagvasuren.dds"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	MON_lodongiin_dandar={
+		name=MON_lodongiin_dandar
+		portraits={
+			civilian={
+				large=GFX_portrait_MON_lodongiin_dandar
+				small="gfx/interface/ideas/mon/advisors/idea_advisor_MON_lodongiin_dandar.dds"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer trait_reckless }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	MON_jamsrang_tseren={
+		name=MON_jamsrang_tseren
+		portraits={
+			civilian={
+				large=GFX_portrait_jamsrang_tseren
+				small="gfx/interface/ideas/mon/advisors/idea_MON_jamsrang_tseren.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = MON_jamsrang_tseren
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected cavalry_officer caring_leader }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	MON_shagdaryn_gongor={
+		name=MON_shagdaryn_gongor
+		portraits={
+			civilian={
+				large=GFX_portrait_shagdaryn_gongor
+				small="gfx/interface/ideas/mon/advisors/idea_advisor_MON_shagdaryn_gongor.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MON_shagdaryn_gongor
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				army_CombinedArms_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer armor_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	MON_tsendiin_olzvoy={
+		name=MON_tsendiin_olzvoy
+		portraits={
+			civilian={
+				large=GFX_portrait_tsendiin_olzvoy
+				small="gfx/interface/ideas/mon/advisors/idea_advisor_MON_tsendiin_olzvoy.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MON_tsendiin_olzvoy
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer harsh_leader trait_reckless }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	MON_damchaagiin_demberel={
+		name=MON_damchaagiin_demberel
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/mon/advisors/idea_advisor_pilot_asia_8.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MON_damchaagiin_demberel
+			ledger = air
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				air_air_combat_training_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		advisor={
+			slot = theorist
+			cost = 75
+			idea_token = MON_damchaagiin_demberel_theorist
+			ledger = air
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				air_warfare_theorist
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = MON_damchaagiin_demberel_air_chief
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+			cost = 75
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	MON_genepil={
+		name=MON_genepil
+		portraits={
+			civilian={
+				large=GFX_portrait_genepil
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+	MON_issa_pliev={
+        name=MON_issa_pliev
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/mon/advisors/idea_MON_issa_pliyev.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = MON_issa_pliev
+			ledger = army
+				allowed = {
+					original_tag = MON
+				}
+				available = {
+			has_completed_focus = MON_mil_focus_1
+			}
+			traits = {
+				military_theorist
+			}
+		}
+	}
+}

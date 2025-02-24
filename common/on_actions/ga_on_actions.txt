@@ -1,0 +1,16 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_possible_country = {
+				#Party Popularity Setup
+				if = {
+					limit = { has_variable = political_power_ideology }
+					map_party_popularity_PP_gain_to_ideology = yes
+				}
+				else = {
+					default_party_popularity_PP_gain = yes
+				}
+			}
+		}
+	}
+}

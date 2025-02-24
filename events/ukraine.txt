@@ -1,0 +1,983 @@
+add_namespace = UKR_Ev
+add_namespace = UKR_generic
+add_namespace = UKR_com
+add_namespace = UKR_bop
+add_namespace = UKR_industrialization
+
+country_event = { # Индустриализация
+	id = UKR_industrialization.1
+	title = UKR_industrialization.1.t
+	desc = UKR_industrialization.1.d
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event UKR_industrialization.1 option UKR_industrialization.1.a"
+		name = UKR_industrialization.1.a
+		set_country_flag = UKR_industrialisation_in_progress
+		unlock_decision_category_tooltip = UKR_industrialisation_category
+		activate_mission = UKR_industrialisation_mission
+	}
+}
+
+country_event = {
+	id = UKR_Ev.1
+	title = UKR_Ev.1.t
+	desc = UKR_Ev.1.d
+	picture = GFX_report_event_fighters
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.1"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.1.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				is_faction_leader = no
+			}
+			set_rule = { can_create_factions = yes }
+			create_faction = Blacksea_league
+		}
+	}
+
+}
+
+
+country_event = {
+	id = UKR_Ev.2
+	title = UKR_Ev.2.t
+	desc = UKR_Ev.2.d
+	picture = GFX_report_event_fighters
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.2"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.2.a
+		ai_chance = {
+			factor = 50
+            modifier = {
+                factor = 0
+                has_game_rule = { rule = UKR_ai_behavior option = UKR_SKOROPADSKY }
+            }
+		}
+		promote_character = UKR_pavel_skoropadskiy
+		set_party_name = { 
+			ideology = neutrality
+			long_name = UKR_House_of_the_Skoropadskys_long
+			name = UKR_House_of_the_Skoropadskys
+		}
+	}
+	option = {
+		name = UKR_Ev.2.b
+		ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0
+				has_game_rule = { rule = UKR_ai_behavior option = UKR_HABSBURG }
+            }
+		}
+		promote_character = UKR_vasil_vyshivany
+		set_party_name = { 
+			ideology = neutrality
+			long_name = UKR_House_of_Habsburg_Lorraine_long
+			name = UKR_House_of_Habsburg_Lorraine
+		}
+		set_party_name = { 
+			ideology = fascism
+			long_name = UKR_House_of_Habsburg_Lorraine_long
+			name = UKR_House_of_Habsburg_Lorraine
+		}
+	}
+}
+
+country_event = {
+	id = UKR_Ev.3
+	title = UKR_Ev.3.t
+	desc = UKR_Ev.3.d
+	picture = GFX_report_event_polish_tanks_01
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.3"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.3.a
+		ai_chance = {
+			factor = 85
+		}
+		UKR = {
+			add_to_faction = ROOT
+			ROOT = {
+				add_ai_strategy = {
+					type = alliance
+					id = "UKR"
+					value = 200
+				}
+			}
+			country_event = { id = UKR_Ev.4 days = 1 }
+			UKR = { transfer_state = 80 }
+			UKR = { transfer_state = 766 }
+		}
+	}
+
+	option = {
+		name = UKR_Ev.3.b
+		ai_chance = {
+			factor = 15
+		}
+		UKR = {
+			country_event = { id = UKR_Ev.5 days = 1 }
+			create_wargoal = {
+				type = annex_everything
+				target = ROM
+				expire = 0
+			}
+		}
+	}
+}
+
+country_event = {
+	id = UKR_Ev.4
+	title = UKR_Ev.4.t
+	desc = UKR_Ev.4.d
+	picture = GFX_report_event_romania_poland_visit
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.4"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.4.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = UKR_Ev.5
+	title = UKR_Ev.5.t
+	desc = UKR_Ev.5.d
+	picture = GFX_report_event_romania_poland_visit
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.5"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.5.a
+		ai_chance = { factor = 100 }
+		effect_tooltip = {
+			UKR = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROOT
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = UKR_Ev.9
+	title = UKR_Ev.9.t
+	desc = UKR_Ev.9.d
+	picture = GFX_report_event_polish_tanks_01
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.9"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.9.a
+		ai_chance = {
+			factor = 85
+		}
+		if = {
+			limit = {
+				has_character = POL_karl_albrecht
+			}
+			promote_character = POL_karl_albrecht
+		}
+		UKR = {
+			country_event = { id = UKR_Ev.10 days = 1 }
+			UKR = { transfer_state = 89 }
+			UKR = { transfer_state = 91 }
+			UKR = { transfer_state = 93 }
+			UKR = { transfer_state = 88 }
+			88 = { 
+				add_core_of = ROOT 
+			}
+		}
+	}
+	
+	option = {
+		name = UKR_Ev.9.b
+		ai_chance = {
+			factor = 15
+		}
+		UKR = {
+			country_event = { id = UKR_Ev.11 days = 1 }
+		}
+	}
+}
+	country_event = {
+	id = UKR_Ev.10
+	title = UKR_Ev.10.t
+	desc = UKR_Ev.10.d
+	picture = GFX_report_event_romania_poland_visit
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.10"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.10.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = UKR_Ev.11
+	title = UKR_Ev.11.t
+	desc = UKR_Ev.11.d
+	picture = GFX_report_event_romania_poland_visit
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.11"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.11.a
+		ai_chance = { factor = 100 }
+		create_wargoal = {
+				type = annex_everything
+				target = POL
+				expire = 0
+			}
+	}
+}
+
+country_event = {
+	id = UKR_Ev.12
+	title = UKR_Ev.12.t
+	desc = UKR_Ev.12.d
+	picture = GFX_report_event_polish_tanks_01
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.12"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.12.a
+		ai_chance = {
+			factor = 85
+		}
+		UKR = {
+			country_event = { id = UKR_Ev.13 days = 1 }
+			UKR = { transfer_state = 73 }
+		}
+	}
+	
+	option = {
+		name = UKR_Ev.12.b
+		ai_chance = {
+			factor = 15
+		}
+		UKR = {
+			country_event = { id = UKR_Ev.14 days = 1 }
+			create_wargoal = {
+				type = annex_everything
+				target = CZE
+				expire = 0
+			}
+		}
+	}
+}
+	country_event = {
+	id = UKR_Ev.13
+	title = UKR_Ev.13.t
+	desc = UKR_Ev.13.d
+	picture = GFX_report_event_romania_poland_visit
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.13"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.13.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = UKR_Ev.14
+	title = UKR_Ev.14.t
+	desc = UKR_Ev.14.d
+	picture = GFX_report_event_romania_poland_visit
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.14"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.14.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = UKR_Ev.15
+	title = UKR_Ev.15.t	
+	desc = UKR_Ev.15.d
+	picture = GFX_report_event_fighters
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.15"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.15.a
+		ai_chance = {
+            base = 5
+            modifier = {
+                factor = 0
+                OR = {
+                    has_game_rule = { rule = UKR_ai_behavior option = UKR_SKOROPADSKY }
+					has_game_rule = { rule = UKR_ai_behavior option = UKR_HABSBURG }
+                }
+            }
+		}
+		promote_character = UKR_provisional_ukrainian_government
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		set_party_name = { 
+			ideology = neutrality
+			long_name = UKR_provisional_government_long
+			name = UKR_provisional_government
+		}
+	}
+	option = {
+		name = UKR_Ev.15.b
+		ai_chance = { factor = 0 }
+		promote_character = UKR_stepan_bandera
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		set_party_name = { 
+			ideology = fascism
+			long_name = UKR_fascism_party_long
+			name = UKR_fascism_party
+		}
+	}
+}
+country_event = {
+	id = UKR_Ev.16
+	title = UKR_Ev.16.t
+	desc = UKR_Ev.16.d
+	picture = GFX_report_event_romania_poland_visit
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.16"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.16.a
+		ai_chance = { factor = 100 }
+		kill_country_leader = yes
+		promote_character = UKR_supreme_soviet
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = communism
+			long_name = UKR_communist_emergency_party_long
+			name = UKR_communist_emergency_party
+		}
+	}
+}
+
+country_event = {
+	id = UKR_Ev.17
+	title = UKR_Ev.17.t
+	desc = UKR_Ev.17.d
+	picture = GFX_report_event_romania_poland_visit
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.17"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.17.a
+		ai_chance = { factor = 100 }
+		start_civil_war = {
+			ideology = neutrality
+			size = 0.9
+			states = {
+				194 241 204
+			}
+		}
+	}
+}
+
+country_event = { ##### Расширить Партию
+	id = UKR_com.1
+	title = UKR_com.1.t
+	desc = UKR_com.1.d
+	picture = GFX_report_event_ukraine_war_of_independence
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_com.1"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_com.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ##### Внутреняя политика
+	id = UKR_com.2
+	title = UKR_com.2.t
+	desc = UKR_com.2.d
+	picture = GFX_report_event_ukraine_war_of_independence
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_com.2"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_com.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ##### Взаимодействие с СССР
+	id = UKR_com.3
+	title = UKR_com.3.t
+	desc = UKR_com.3.d
+	picture = GFX_report_event_ukraine_war_of_independence
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_com.3"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_com.3.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ##### Внешняя политика
+	id = UKR_com.4
+	title = UKR_com.4.t
+	desc = UKR_com.4.d
+	picture = GFX_report_event_romania_poland_visit
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_com.4"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_com.4.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ##### Червонное казачество
+	id = UKR_com.5
+	title = UKR_com.5.t
+	desc = UKR_com.5.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_com.5"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_com.5.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ##### Развитие Украины
+	id = UKR_generic.1
+	title = UKR_generic.1.t
+	desc = UKR_generic.1.d
+	picture = GFX_report_event_romania_poland_visit
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_generic.1"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_generic.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ##### Армейские реформы
+	id = UKR_generic.2
+	title = UKR_generic.2.t
+	desc = UKR_generic.2.d
+	picture = GFX_report_event_ukraine_war_of_independence
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_generic.2"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_generic.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { ##### Возращение монархистов
+	id = UKR_Ev.18
+	title = UKR_Ev.18.t
+	desc = UKR_Ev.18.d
+	picture = GFX_report_event_romania_poland_visit
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.18"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.18.a
+		ai_chance = { factor = 100 }
+		UKR_pavlo_shandruk = {
+            add_corps_commander_role = {
+				traits = { ranger infantry_officer }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+            }
+        }
+		UKR_vsevolod_petrov = {
+            add_corps_commander_role = {
+                traits = { cavalry_officer }
+                skill = 3
+                attack_skill = 2
+                defense_skill = 2
+                planning_skill = 2
+                logistics_skill = 2
+            }
+        }
+		UKR_alexander_udovichenko = {
+            add_corps_commander_role = {
+                traits = { cavalry_officer }
+                skill = 3
+                attack_skill = 2
+                defense_skill = 2
+                planning_skill = 3
+                logistics_skill = 3
+            }
+        }
+	}
+}
+
+country_event = { ##### Баланс сил
+	id = UKR_bop.1
+	title = UKR_bop.1.t
+	desc = UKR_bop.1.d
+	picture = GFX_report_event_balance_of_power_in_the_republics
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_bop.1"}
+	is_triggered_only = yes
+
+	option = { #Федерализация
+	    name = UKR_bop.1.a
+	    ai_chance = {
+			factor = 0
+	    }
+	    trigger = {
+	    }
+		add_power_balance_modifier = {
+			id = UKR_communist_balance
+			modifier = UKR_communist_balance_supreme_soviet
+		}
+    }
+    option = { #Централизация
+	    name = UKR_bop.1.b
+	    ai_chance = {
+			factor = 50
+	    }
+	    trigger = {
+	    }
+	    add_power_balance_modifier = {
+			id = UKR_communist_balance
+			modifier = UKR_communist_balance_khrushchev
+	    }
+    }
+	option = { #Оставить все как есть
+	    name = UKR_bop.1.c 
+		ai_chance = {
+			factor = 50
+	    }
+	}
+}
+
+country_event = { ##### Баланс сил
+	id = UKR_bop.2
+	title = UKR_bop.2.t
+	desc = UKR_bop.2.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_bop.2"}
+	is_triggered_only = yes
+
+	option = {
+	    name = UKR_bop.2.a
+	    ai_chance = {
+			factor = 100
+	    }
+	    trigger = {
+	    }
+		add_power_balance_value = {
+			id = UKR_communist_balance
+			value = 0.1
+		}
+    }
+}
+
+country_event = { ##### Баланс сил
+	id = UKR_bop.3
+	title = UKR_bop.3.t
+	desc = UKR_bop.3.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_bop.3"}
+	is_triggered_only = yes
+
+	option = {
+	    name = UKR_bop.3.a
+	    ai_chance = {
+			factor = 100
+	    }
+	    trigger = {
+	    }
+		add_power_balance_value = {
+			id = UKR_communist_balance
+			value = -0.1
+		}
+    }
+}
+
+country_event = { #Декоммунизация
+	id = UKR_Ev.19
+	title = UKR_Ev.19.t
+	desc = UKR_Ev.19.d
+	picture = GFX_report_event_romania_poland_visit
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.19"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.19.a
+		ai_chance = {
+            base = 100
+		}
+		228 = {
+			set_state_name = STATE_228_LUGANSK
+			set_province_name = { id = 9461 name = VICTORY_POINTS_9461_LUGANSK }
+		}
+        227 = {
+			set_state_name = STATE_227_DONETSK
+			set_province_name = { id = 6474 name = VICTORY_POINTS_6474_DONETSK }
+		}
+		199 = {
+			set_state_name = STATE_199_KHMELNITSKY
+			set_province_name = { id = 3457 name = VICTORY_POINTS_3457_KHMELNITSKY }
+		}
+	}
+
+    option = {
+		name = UKR_Ev.19.b
+		ai_chance = {
+            base = 0
+		}
+	}
+}
+
+country_event = { #Захват западной Украина (И возможно Беларуси)
+	id = UKR_Ev.20
+	title = UKR_Ev.20.t
+	desc = UKR_Ev.20.d
+	picture = GFX_report_event_romania_poland_visit
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.20"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.20.a
+		ai_chance = {
+            base = 100
+		}
+		random_list = {
+			40 = {
+				SOV = {
+					declare_war_on = {
+					target = UKR
+					type = take_state_focus
+					generator = { 201 199 198 202 203 193 225 221 228 227 226 200 196 197 203 259 192 }
+					}
+				}
+			}
+			60 = {
+				transfer_state = 93
+				transfer_state = 91
+				transfer_state = 89
+			}
+		}
+	}
+	option = {
+		name = UKR_Ev.20.b
+		ai_chance = {
+            base = 0
+		}
+	}
+}
+
+country_event = {#Договор с немцами
+	id = UKR_Ev.21
+	title = UKR_Ev.21.t
+	desc = UKR_Ev.21.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.21"}
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 80
+		}
+		name = UKR_Ev.21.a
+		UKR = {
+			country_event = UKR_Ev.22
+		}
+	}
+    option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = UKR_Ev.21.b
+		UKR = {
+			country_event = UKR_Ev.23
+		}
+	}
+}
+
+country_event = {#Германия согласна
+	id = UKR_Ev.22
+	title = UKR_Ev.22.t
+	desc = UKR_Ev.22.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.22"}
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = UKR_Ev.22.a
+		add_political_power = 25
+		add_war_support = 0.05
+		hidden_effect = {
+			set_country_flag = the_agreement_was_signed
+		}
+	}
+}
+
+country_event = {#Германия отказала
+	id = UKR_Ev.23
+	title = UKR_Ev.23.t
+	desc = UKR_Ev.23.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.23"}
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = UKR_Ev.23.a
+		add_political_power = -25
+		add_war_support = -0.05
+	}
+}
+
+country_event = {#Сечевые стрельцы
+	id = UKR_Ev.24
+	title = UKR_Ev.24.t
+	desc = UKR_Ev.24.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.24"}
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = UKR_Ev.24.a
+		division_template = {
+			name = "Sich riflemen"
+			priority = 1
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 0 y = 3 }
+			}
+			support = {
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 91 }
+			limit = { PREV = { has_full_control_of_state = PREV } }
+			create_unit = {
+				division = "name = \"Ukrainski Sichovi strilczi\" division_template = \"Sich riflemen\" start_experience_factor = 0.5" 
+				owner = PREV
+			}
+			create_unit = {
+				division = "name = \"Ukrainski Sichovi strilczi\" division_template = \"Sich riflemen\" start_experience_factor = 0.5" 
+				owner = PREV
+			}
+		}
+	}
+}
+
+country_event = {#Делегация в Польшу
+	id = UKR_Ev.25
+	title = UKR_Ev.25.t
+	desc = UKR_Ev.25.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.25"}
+	is_triggered_only = yes
+
+	option = {
+		name = UKR_Ev.25.a
+		ai_chance = {
+			factor = 80
+		}
+		UKR = {
+			add_to_faction = ROOT
+			transfer_state = 93
+			transfer_state = 91
+			transfer_state = 89
+			ROOT = {
+				add_ai_strategy = {
+					type = alliance
+					id = "UKR"
+					value = 200
+				}
+			}
+			country_event = { id = UKR_Ev.26 days = 1 }
+		}
+	}
+
+	option = {
+		name = UKR_Ev.25.b
+		ai_chance = {
+			factor = 20
+		}
+		UKR = {
+			country_event = { id = UKR_Ev.27 days = 1 }
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = POL
+				expire = 0
+			}
+		}
+	}
+}
+
+country_event = {#Польша согласилась
+	id = UKR_Ev.26
+	title = UKR_Ev.26.t
+	desc = UKR_Ev.26.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.26"}
+	is_triggered_only = yes
+
+	option = {
+	name = UKR_Ev.26.a
+	ai_chance = {
+		factor = 100
+	}
+	add_political_power = 25
+	}
+}
+
+country_event = {#Польша отказалась
+	id = UKR_Ev.27
+	title = UKR_Ev.27.t
+	desc = UKR_Ev.27.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.27"}
+	is_triggered_only = yes
+
+	option = {
+	name = UKR_Ev.27.a
+	ai_chance = {
+		factor = 100
+	}
+	add_political_power = -25
+	add_war_support = -0.05
+	}
+}
+
+country_event = {#Делегация
+	id = UKR_Ev.28
+	title = UKR_Ev.28.t
+	desc = UKR_Ev.28.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.28"}
+	is_triggered_only = yes
+
+	option = {
+	name = UKR_Ev.28.a
+	ai_chance = {
+		factor = 80
+	}
+	UKR = {
+		add_to_faction = ROOT
+		ROOT = {
+			add_ai_strategy = {
+				type = alliance
+				id = "UKR"
+				value = 200
+			}
+		}
+		country_event = { id = UKR_Ev.29 days = 1 }
+	}
+}
+
+option = {
+	name = UKR_Ev.28.b
+	ai_chance = {
+		factor = 20
+	}
+	UKR = {
+		country_event = { id = UKR_Ev.30 days = 1 }
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = PREV
+			expire = 0
+		    }
+		}
+	}
+}
+
+country_event = {#Согласие
+	id = UKR_Ev.29
+	title = UKR_Ev.29.t
+	desc = UKR_Ev.29.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.29"}
+	is_triggered_only = yes
+
+	option = {
+	name = UKR_Ev.29.a
+	ai_chance = {
+		factor = 100
+	}
+	add_political_power = 25
+	}
+}
+
+country_event = {#Отказ
+	id = UKR_Ev.30
+	title = UKR_Ev.30.t	
+	desc = UKR_Ev.30.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.30"}
+	is_triggered_only = yes
+
+	option = {
+	name = UKR_Ev.30.a
+	ai_chance = {
+		factor = 100
+	}
+	add_political_power = -25
+	add_war_support = -0.05
+	}
+}
+
+country_event = {#УОС - Отечество
+	id = UKR_Ev.31
+	title = UKR_Ev.31.t	
+	desc = UKR_Ev.31.d
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event UKR_Ev.31"}
+	is_triggered_only = yes
+
+	option = {
+	name = UKR_Ev.31.a
+	ai_chance = {
+		factor = 0
+	}
+	   add_political_power = 25
+	}
+
+	option = {
+	name = UKR_Ev.31.b
+	ai_chance = {
+		factor = 100
+	}
+	set_country_flag = alexander_grekov_was_appointed_to_the_post_of_chief_of_the_general_staff
+	add_war_support = 0.05
+	   UKR_alexander_grekov = {
+		add_corps_commander_role = {
+				traits = { infantry_officer }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+		    }
+	    }
+	}
+}

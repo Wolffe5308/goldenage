@@ -1,0 +1,97 @@
+add_namespace = Wnews
+news_event = {
+	id = Wnews.1
+	title = Wnews.1.t
+	desc = Wnews.1.d
+	picture = GFX_news_event_019
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event Wnews.1"}
+	is_triggered_only = yes
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wnews.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+news_event = {
+	id = Wnews.2
+	title = Wnews.2.t
+	desc = Wnews.2.d
+	picture = GFX_news_event_bulgarian_partisans
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event Wnews.2"}
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wnews.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+news_event = {
+	id = Wnews.3
+	title = Wnews.3.t
+	desc = Wnews.3.d
+	picture = GFX_news_event_stalin_meeting
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event Wnews.3"}
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wnews.3.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+news_event = { ############## Возрождение Монгольской Империи
+	id = Wnews.4
+	title = Wnews.4.t
+	desc = Wnews.4.d
+	picture = GFX_news_event_generic_rally
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event Wnews.4"}
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wnews.4.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+news_event = { ############## Захват власти в Монголии
+	id = Wnews.5
+	title = Wnews.5.t
+	desc = Wnews.5.d
+	picture = GFX_news_event_fascist_militia
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event Wnews.5"}
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wnews.5.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+news_event = { ############## Тува становится независимой
+	id = Wnews.6
+	title = Wnews.6.t
+	desc = Wnews.6.d
+	picture = GFX_news_event_fascist_militia
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event Wnews.6"}
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wnews.6.a
+		ai_chance = { factor = 100 }
+	}
+}

@@ -1,0 +1,44 @@
+BLR_belarusian_army_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_BLR_belarusian_army
+
+	#INITIAL
+	army_org_factor = BLR_belarusian_army_army_org_factor #-0.15
+	experience_gain_army_factor = BLR_belarusian_army_experience_gain_army_factor #-0.1
+	planning_speed = BLR_belarusian_army_planning_speed #-0.25
+	army_attack_factor = BLR_belarusian_army_army_attack_factor #-0.1
+	army_defence_factor = BLR_belarusian_army_army_defence_factor #-0.1
+
+
+	#FUTURE
+	enemy_army_bonus_air_superiority_factor = BLR_belarusian_army_enemy_army_bonus_air_superiority_factor #
+	army_artillery_defence_factor = BLR_belarusian_army_army_artillery_defence_factor #
+	army_artillery_attack_factor = BLR_belarusian_army_army_artillery_attack_factor #
+	breakthrough_factor = BLR_belarusian_army_breakthrough_factor #
+	motorized_attack_factor = BLR_belarusian_army_motorized_attack_factor #
+	motorized_defence_factor = BLR_belarusian_army_motorized_defence_factor #
+
+}
+
+BLR_peoples_militia_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_BLR_peoples_militia
+
+	#INITIAL
+	army_morale_factor = BLR_peoples_militia_army_morale_factor #0.05
+	conscription = BLR_peoples_militia_conscription #0.05
+
+	#FUTURE
+	land_reinforce_rate = BLR_peoples_militia_land_reinforce_rate
+	equipment_capture = BLR_peoples_militia_modifier_army_equipment_capture
+    no_supply_grace = BLR_peoples_militia_modifier_army_no_supply_grace
+    supply_factor = BLR_peoples_militia_modifier_army_supply_factor
+    pocket_penalty = BLR_peoples_militia_modifier_army_pocket_penalty
+	modifier_army_sub_unit_militia_max_org_factor = BLR_peoples_militia_modifier_army_sub_unit_militia_max_org_factor #
+	modifier_army_sub_unit_militia_defence_factor = BLR_peoples_militia_modifier_army_sub_unit_militia_defence_factor #
+	modifier_army_sub_unit_militia_attack_factor = BLR_peoples_militia_modifier_army_sub_unit_militia_attack_factor #
+	max_dig_in_factor = BLR_peoples_militia_max_dig_in_factor #
+	land_bunker_effectiveness_factor = BLR_peoples_militia_land_bunker_effectiveness_factor #
+}

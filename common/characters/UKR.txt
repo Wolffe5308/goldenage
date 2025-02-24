@@ -1,0 +1,903 @@
+characters={
+    UKR_nikita_khrushev={
+		name=UKR_nikita_khrushev
+		portraits={
+			civilian={
+				large=GFX_Portrait_Nikita_Khrushev
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			expire="1948.1.1.12"
+			traits = { member_of_the_troika }
+			id=-1
+		}
+	}
+    UKR_stepan_bandera={
+		name=UKR_stepan_bandera
+		portraits={
+			civilian={
+				large=GFX_portrait_stepan_bandera
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+	UKR_vladimir_vinnichenko={
+		name=UKR_vladimir_vinnichenko
+		portraits={
+			civilian={
+				large=GFX_portrait_nikita_khrushev
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+	UKR_supreme_soviet = {
+		name = UKR_supreme_soviet
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SOV_supreme_soviet
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits = { strong_party_discipline }
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+	UKR_provisional_ukrainian_government={
+		name=UKR_provisional_ukrainian_government
+		portraits={
+			civilian={
+				large=GFX_Portrait_Provisional_Ukrainian_Government
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+    UKR_pavel_skoropadskiy={
+		name=UKR_pavel_skoropadskiy
+		portraits={
+			civilian={
+				large=GFX_Portrait_Pavel_Skoropadskiy
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+	UKR_vasil_vyshivany={
+		name=UKR_vasil_vyshivany
+		portraits = {
+			army = {
+				large = GFX_portrait_UKR_vasyl_vyshyvany
+				small = GFX_portrait_UKR_vasyl_vyshyvany_small
+			}
+			civilian = {
+				large = GFX_portrait_UKR_vasyl_vyshyvany
+			}
+		}
+		field_marshal = {
+			traits = { infantry_leader organizer inspirational_leader aggressive_assaulter }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id = -1
+			visible = {
+				OR = {
+					has_completed_focus = wuw_HUN_reenlist_the_sich_riflemen
+					has_completed_focus = wuw_HUN_revenge_for_the_brusilov_offensive
+				}
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+	UKR_panas_lyubchenko={ ############# Глава правительства 1934-1937
+		name=UKR_panas_lyubchenko
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_pavel_postyshev.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = UKR_panas_lyubchenko
+			cost = 0
+			can_be_fired = no
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_government = communism
+			}
+			on_add = {
+			    ROOT = {
+			        set_country_flag = UKR_communist_head_of_goverment
+				}
+			}
+			traits = { head_of_government_communist_advisor UKR_left_socialist_revolutionary }
+		}
+	}
+	UKR_pavel_postyshev={ ############# Советник коммунист
+		name=UKR_pavel_postyshev
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_pavel_postyshev.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_pavel_postyshev
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_new_shots
+				has_country_flag = UKR_communist_head_of_goverment
+			}
+			traits = {
+				ecomonist_publicist 
+			}
+		}
+	}
+	UKR_sergey_savchenko={ ############# Советник коммунист
+		name=UKR_sergey_savchenko
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_sergey_savchenko.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_sergey_savchenko
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_expand_party
+				has_country_flag = UKR_communist_head_of_goverment
+			}
+			traits = {
+				war_industrialist
+			}
+		}
+	}
+	UKR_vsevolod_balitsky={ ############# Советник коммунист
+		name=UKR_vsevolod_balitsky
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_vsevolod_balitsky.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_vsevolod_balitsky
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_expand_party
+				has_country_flag = UKR_communist_head_of_goverment
+			}
+			traits = {
+				head_of_the_nkvd_zsr
+			}
+		}
+	}
+	UKR_kirill_sukhomlin={ ############# Советник коммунист
+		name=UKR_kirill_sukhomlin
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_kirill_sukhomlin.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_kirill_sukhomlin
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_expand_party
+				has_country_flag = UKR_communist_head_of_goverment
+			}
+			traits = {
+				captain_of_industry
+			}
+		}
+	}
+	UKR_vasilenko_sergeevich={ ############# Советник коммунист
+		name=UKR_vasilenko_sergeevich
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_vasilenko_sergeevich.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_vasilenko_sergeevich
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_expand_party
+				has_country_flag = UKR_communist_head_of_goverment
+			}
+			traits = {
+				financial_expert
+			}
+		}
+	}
+	UKR_pavel_lobanov={ ############# Советник коммунист
+		name=UKR_pavel_lobanov
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_vasilenko_sergeevich.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_pavel_lobanov
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_advisors_from_moscow
+				has_country_flag = UKR_communist_head_of_goverment
+			}
+			traits = {
+				minister_of_peasants
+			}
+		}
+	}
+	UKR_metropolitan_konstantin={ ############### Советник монархист
+		name=UKR_metropolitan_konstantin
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_metropolitan_konstantin.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_metropolitan_konstantin
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_arm_the_faithful
+				has_completed_focus = UKR_skoropadskys_power
+			}
+			traits = {
+				patriarch_of_kyiv_and_all_rus
+			}
+		}
+	}
+	UKR_metropolitan_andrey={ ############### Митрополит при Габсбурге
+		name=UKR_metropolitan_andrey
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_ukr_metropolit_andrey.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_metropolitan_andrey
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_arm_the_faithful
+				has_completed_focus = UKR_coronation_of_the_king
+			}
+			traits = {
+				metropolitan_of_galicia_and_archbishop_of_lvov
+			}
+		}
+	}
+	UKR_ivan_poltavets_ostryanitsa={ ############### Советник монархист
+		name=UKR_ivan_poltavets_ostryanitsa
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_ivan_poltavets_ostryanitsa.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_ivan_poltavets_ostryanitsa
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_monarchists_take_over
+			}
+			traits = {
+				royalist_bulldog
+			}
+		}
+	}
+	UKR_vyacheslav_lipinsky={ ############### Советник монархист
+		name=UKR_vyacheslav_lipinsky
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_vyacheslav_lipinsky.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_vyacheslav_lipinsky
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_monarchists_take_over
+			}
+			traits = {
+				ideological_crusader
+			}
+		}
+	}
+	UKR_yuri_lipa={ ############### Создатель концепции Черноморской доктрины
+		name=UKR_yuri_lipa
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_ukr_yuri_lipa.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_yuri_lipa
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_black_sea_doctrine
+			}
+			traits = {
+				SWI_militaristic_nationalist 
+			}
+		}
+	}
+	UKR_sidor_kovpak={
+		name=UKR_sidor_kovpak
+		portraits={
+			civilian={
+				large=GFX_portrait_SOV_sidor_kovpak
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_sidor_kovpak.dds"
+			}
+		}
+	}
+	UKR_kliment_voroshilov={
+		name=UKR_kliment_voroshilov
+		portraits={
+			civilian={
+				large=GFX_Portrait_Soviet_Kliment_Voroshilov
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_kliment_voroshilov.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = UKR_kliment_voroshilov
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		advisor={
+			cost = 50			
+			slot = theorist
+			idea_token = UKR_kliment_voroshilov
+			ledger = army
+			allowed = {
+				original_tag = UKR
+			}	
+			traits = {
+				military_theorist
+			}
+		}
+		field_marshal = {
+			traits = { old_guard inflexible_strategist politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+	UKR_semyon_timoshenko={
+		name=UKR_semyon_timoshenko
+		portraits={
+			civilian={
+				large=GFX_portrait_SOV_semyon_timoshenko
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_semyon_timoshenko.dds"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected career_officer cavalry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-3
+		}
+	}
+	UKR_ilya_galkawi={
+		name=UKR_ilya_galkawi
+		portraits={
+			civilian={
+				large=GFX_Portrait_Ilya_Galkawi
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-3
+		}
+	}
+	UKR_grigory_kulik={
+		name=UKR_grigory_kulik
+		portraits={
+			civilian={
+				large=GFX_Portrait_Soviet_Grigory_Kulik
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_grigory_kulik.dds"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard inflexible_strategist politically_connected career_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-3
+		}
+	}
+	UKR_rodion_malinovsky={
+		name=UKR_rodion_malinovsky
+		portraits={
+			civilian={
+				large=GFX_Portrait_Soviet_Rodion_Malinovsky
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_rodion_malinovsky.dds"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard politically_connected career_officer cautious }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-3
+		}
+	}
+	UKR_ivan_chernyakhovsky={
+		name=UKR_ivan_chernyakhovsky
+		portraits={
+			civilian={
+				large=GFX_portrait_SOV_ivan_chernyakhovsky
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_ivan_chernyakhovsky.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = UKR_ivan_chernyakhovsky
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		corps_commander = {
+			traits = { armor_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-3
+		}
+	}
+	UKR_nikolai_vatutin={
+		name=UKR_nikolai_vatutin
+		portraits={
+			civilian={
+				large=GFX_Portrait_Soviet_Nikolai_Fyodorovich_Vatutin
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_nikolai_vatutin.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = UKR_nikolai_vatutin
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		corps_commander = {
+			traits = { reckless infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-3
+		}
+	}
+	UKR_mykhailo_omelianovych_pavlenko = {
+
+		name = UKR_mykhailo_omelianovych_pavlenko
+
+		portraits = {
+			army = {
+				large = GFX_portrait_UKR_mykhailo_omelianovych_pavlenko
+				small = GFX_portrait_UKR_mykhailo_omelianovych_pavlenko_small
+			}
+		}
+
+		field_marshal = {
+			traits = { winter_specialist cavalry_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		
+	}
+	UKR_pavlo_shandruk = {
+
+		name = UKR_pavlo_shandruk
+
+		portraits = {
+			army = {
+				large = GFX_portrait_UKR_pavlo_shandruk
+				small = GFX_portrait_UKR_pavlo_shandruk_small
+			}
+		}
+	}
+	UKR_alexander_grekov={
+		name=UKR_alexander_grekov
+		portraits={
+			civilian={
+				large=GFX_Portrait_Alexander_Grekov
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_alexander_grekov.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = UKR_alexander_grekov
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			available = {
+				has_country_flag = alexander_grekov_was_appointed_to_the_post_of_chief_of_the_general_staff
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	UKR_vsevolod_petrov={
+		name=UKR_vsevolod_petrov
+		portraits={
+			civilian={
+				large=GFX_Portrait_Soviet_Grigory_Kulik
+			}
+		}
+	}
+	UKR_alexander_udovichenko={
+		name=UKR_alexander_udovichenko
+		portraits={
+			civilian={
+				large=GFX_Portrait_Soviet_Grigory_Kulik
+			}
+		}
+	}
+	UKR_pavel_dybenko={
+		name=UKR_pavel_dybenko
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_pavel_dybenko.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = UKR_pavel_dybenko
+			ledger = navy
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_expand_party
+				has_completed_focus = UKR_wsf
+			}
+			traits = {
+				navy_capital_ship_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		advisor={
+			slot = navy_chief
+			cost = 100
+			idea_token = UKR_pavel_dybenko
+			ledger = navy
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_expand_party
+				has_completed_focus = UKR_wsf
+			}
+			traits = {
+				navy_chief_reform_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = UKR_pavel_dybenko
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_expand_party
+				has_completed_focus = UKR_wsf
+			}
+			traits = {
+				naval_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+		UKR_mikhailo_pogotovko={
+			name=UKR_mikhailo_pogotovko
+			portraits={
+				civilian={
+					small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_mikhailo_pogotovko.dds"
+				}
+			}
+			advisor = {
+				slot = high_command
+				idea_token = UKR_mikhailo_pogotovko
+				ledger = air
+				allowed = {
+					original_tag = UKR
+				}
+				available = {
+					has_completed_focus = UKR_change_of_government
+					has_completed_focus = UKR_ukrainian_waf
+				}
+				traits = {
+					air_air_superiority_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 8
+				}
+			}
+			advisor={
+				slot = theorist
+				cost = 100
+				idea_token = UKR_mikhailo_pogotovko
+				ledger = air
+				allowed = {
+					original_tag = UKR
+				}
+				available = {
+					has_completed_focus = UKR_change_of_government
+					has_completed_focus = UKR_ukrainian_waf
+				}
+				traits = {
+					air_warfare_theorist
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			advisor={
+				slot = air_chief
+				idea_token = UKR_mikhailo_pogotovko
+				allowed = {
+					original_tag = UKR
+				}
+				available = {
+					has_completed_focus = UKR_change_of_government
+					has_completed_focus = UKR_ukrainian_waf
+				}
+				traits = {
+					air_chief_ground_support_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 10
+				}
+			}
+		}
+		UKR_andrey_pokrovsky={
+			name=UKR_andrey_pokrovsky
+			portraits={
+				civilian={
+					small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_andrey_pokrovsky.dds"
+				}
+			}
+			advisor = {
+				slot = high_command
+				idea_token = UKR_andrey_pokrovsky
+				ledger = navy
+				allowed = {
+					original_tag = UKR
+				}
+				available = {
+					has_completed_focus = UKR_change_of_government
+					has_completed_focus = UKR_wsf
+				}
+				traits = {
+					navy_submarine_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 8
+				}
+			}
+			advisor={
+				slot = navy_chief
+				cost = 100
+				idea_token = UKR_andrey_pokrovsky
+				ledger = navy
+				allowed = {
+					original_tag = UKR
+				}
+				available = {
+					has_completed_focus = UKR_change_of_government
+					has_completed_focus = UKR_wsf
+				}
+				traits = {
+					navy_chief_commerce_raiding_1
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			advisor={
+				slot = theorist
+				idea_token = UKR_andrey_pokrovsky
+				allowed = {
+					original_tag = UKR
+				}
+				available = {
+					has_completed_focus = UKR_change_of_government
+					has_completed_focus = UKR_wsf
+				}
+				traits = {
+					naval_theorist
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 10
+				}
+			}
+		}
+        UKR_sergey_rudenko={
+			name=UKR_sergey_rudenko
+			portraits={
+				civilian={
+					small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_sergey_rudenko.dds"
+				}
+			}
+			advisor = {
+				slot = high_command
+				idea_token = UKR_sergey_rudenko
+				ledger = air
+				allowed = {
+					original_tag = UKR
+				}
+				available = {
+					has_completed_focus = UKR_expand_party
+					has_completed_focus = UKR_ukrainian_waf
+				}
+				traits = {
+					air_close_air_support_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 8
+				}
+			}
+			advisor={
+				slot = theorist
+				cost = 100
+				idea_token = UKR_sergey_rudenko
+				ledger = air
+				allowed = {
+					original_tag = UKR
+				}
+				available = {
+					has_completed_focus = UKR_expand_party
+					has_completed_focus = UKR_ukrainian_waf
+				}
+				traits = {
+					air_warfare_theorist
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			advisor={
+				slot = air_chief
+				idea_token = UKR_sergey_rudenko
+				allowed = {
+					original_tag = UKR
+				}
+				available = {
+					has_completed_focus = UKR_expand_party
+					has_completed_focus = UKR_ukrainian_waf
+				}
+				traits = {
+					air_chief_ground_support_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 10
+				}
+			}
+		}
+}

@@ -1,0 +1,73 @@
+﻿l_english:
+
+ BOP_TOOLTIP:1 "The §Y[root.GetPowerBalanceName]§! is currently [?.root.power_balance_value|0%H] on the side of §Y[root.GetActiveSideName]§!"
+ BOP_TOOLTIP_TREND:0 "The balance of power is currently trending towards the side of §Y[root.GetTrendingSideName]§! by [root.GetBopTrendTextIcon][root.GetChangeRateDesc].\n[root.GetPowerBalanceModDesc]"
+ BOP_TOOLTIP_STABLE:1 "The balance of power is currently stable."
+ BOP_LEFT_SIDE_TOOLTIP:0 "[root.GetLeftSideName]"
+ BOP_RIGHT_SIDE_TOOLTIP:0 "[root.GetRightSideName]"
+ BOP_ACTIVE_RANGE_DESC:0 "[root.GetActiveRangeName]"
+ BOP_ACTIVE_RANGE_TOOLTIP:0 "[root.GetActiveRangeModDesc][root.GetActiveRangeRuleDesc]"
+
+ BOP_CHANGE_RATE_DAILY:2 "$VALUE|2%H$ per day"
+ BOP_CHANGE_RATE_WEEKLY:2 "$VALUE|2%H$ per week"
+
+ BOP_RANGE_DESC:0 "$NAME|Y$\nRange: $MIN|%Y$ - $MAX|%Y$\n$MODIFIER$\n$RULE$\n$ACTIVATION_EFFECT$\n$DEACTIVATION_EFFECT$"
+ BOP_RANGE_MODIFIER:0 "§YModifiers:§!\n$DESC$"
+ BOP_RANGE_RULE:0 "§YRules:§!\n$DESC$"
+ BOP_RANGE_ACTIVATION_EFFECT:0 "\n§YActivation effect:§!\n$DESC$"
+ BOP_RANGE_DEACTIVATION_EFFECT:0 "\n§YDeactivation effect:§!\n$DESC$"
+ 
+ BOP_PERCENTAGE:0 "$VALUE|0%$"
+ BOP_LEVELS:0 "$UNLOCKED$/$TOTAL$"
+ 
+ BOP_STATIC_MODIFIER:0 "$NAME|H$"
+ 
+ ZSR_kavkaz_balance:0 "Balance of Power"
+ supreme_soviet_left_side:0 "Supreme Soviet"
+ supreme_soviet_left_side_influence:0 "Supreme Soviet has influence"
+ supreme_soviet_left_side_low:0 "Low power Soviet"
+ supreme_soviet_left_side_dominance:0 "Dominant power Soviet"
+ supreme_soviet_left_side_absolute:0 "Absolute power Soviet"
+ mid_range:0 "The balance of power in politics"
+ beria_right_side:0 "Chairman"
+ beria_right_side_influence:0 "Chairman has influence"
+ beria_right_side_low:0 "Low power of chairman"
+ beria_right_side_dominance:0 "Dominant power of chairman"
+ beria_right_side_absolute:0 "Absolute power of chairman"
+
+ UKR_communist_balance:0 "Balance of Power"
+ ukr_supreme_soviet_left_side:0 "Supreme Soviet"
+ ukr_supreme_soviet_left_side_influence:0 "Supreme Soviet has influence"
+ ukr_supreme_soviet_left_side_low:0 "Low power Soviet"
+ ukr_supreme_soviet_left_side_dominance:0 "Dominant power Soviet"
+ ukr_supreme_soviet_left_side_absolute:0 "Absolute power Soviet"
+ ukr_mid_range:0 "The balance of power in politics"
+ khrushchev_right_side:0 "Chairman"
+ khrushchev_right_side_influence:0 "Chairman has influence"
+ khrushchev_right_side_low:0 "Low power of chairman"
+ khrushchev_right_side_dominance:0 "Dominant power of chairman"
+ khrushchev_right_side_absolute:0 "Absolute power of chairman"
+
+ BLR_communist_balance:0 "Balance of Power"
+ blr_supreme_soviet_left_side:0 "Supreme Soviet"
+ blr_supreme_soviet_left_side_influence:0 "Supreme Soviet has influence"
+ blr_supreme_soviet_left_side_low:0 "Low power Soviet"
+ blr_supreme_soviet_left_side_dominance:0 "Dominant power Soviet"
+ blr_supreme_soviet_left_side_absolute:0 "Absolute power Soviet"
+ blr_mid_range:0 "The balance of power in politics"
+ ponomarenko_right_side:0 "Chairman"
+ ponomarenko_right_side_influence:0 "Chairman has influence"
+ ponomarenko_right_side_low:0 "Low power of chairman"
+ ponomarenko_right_side_dominance:0 "Dominant power of chairman"
+ ponomarenko_right_side_absolute:0 "Absolute power of chairman"
+
+ UKR_communist_balance_supreme_soviet:0 "Federalization"
+ UKR_communist_balance_khrushchev:0 "Centralization"
+
+ BLR_communist_balance_supreme_soviet:0 "Federalization"
+ BLR_communist_balance_ponamarenko:0 "Centralization"
+
+ ZSR_communist_balance_supreme_soviet:0 "Federalization"
+ ZSR_communist_balance_beria:0 "Centralization"
+
+ 

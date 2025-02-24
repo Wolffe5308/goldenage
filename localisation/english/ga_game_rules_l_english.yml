@@ -1,0 +1,28 @@
+﻿l_english:
+#Tuva
+TAN_AI_BEHAVIOR:0 "@TAN Tannu-Tuva"
+RULE_HISTORICAL_TAN_AI_DESC:0 "Tannu-Tuva remains in the sphere of influence of the USSR, which will develop its relations with the countries of the Comintern. After a while, he will enter the war against Japan."
+RULE_OPTION_TAN_OPPOSITION_TO_THE_KREMLIN:0 "Opposition to the Kremlin"
+RULE_OPTION_TAN_OPPOSITION_TO_THE_KREMLIN_DESC:0 "Tannu-Tuva will try to get out of the sphere of influence of the USSR, developing its own alliance. In the future, she will try to attack the USSR and destroy Stalinism."
+
+#Mongolia
+MON_AI_BEHAVIOR:0 "@MON Mongolia"
+RULE_HISTORICAL_MON_AI_DESC:0 "Choibolsan will try to become the leader of Mongolia, who will pursue a pro-Soviet policy. After a while, Mongolia will enter the war against Japan."
+RULE_OPTION_MON_MONGOLIAN_EMPIRE:0 "Mongol Empire"
+RULE_OPTION_MON_MONGOLIAN_EMPIRE_DESC:0 "Mongolia will try to overthrow the socialist regime and bring monarchists to power. After a while, Mongolia will revive the Mongol Empire."
+
+#Belarus
+BLR_AI_BEHAVIOR:0 "@BLR Belarusian SSR"
+RULE_HISTORICAL_BLR_AI_DESC:0 "Belarus remains a republic of the USSR, which will try to reunite all Belarusians with the help of the USSR. The country will also take part in World War II."
+
+#Ukraine
+UKR_AI_BEHAVIOR:0 "@UKR Ukrainian SSR"
+RULE_HISTORICAL_UKR_AI_DESC:0 "Ukraine remains a republic of the USSR, which will try to reunite all Ukrainians with the help of the USSR. The country will also take part in World War II."
+RULE_OPTION_UKR_SKOROPADSKY:0 "Coronation of the Skoropadsky"
+RULE_OPTION_UKR_SKOROPADSKY_DESC:0 "In Ukraine, there will be a coup of monarchists who will try to crown Pavel Skoropadsky. The country will also try to create a Black Sea league."
+RULE_OPTION_UKR_HABSBURG:0 "Coronation of the Habsburg"
+RULE_OPTION_UKR_HABSBURG_DESC:0 "In Ukraine, there will be a coup of monarchists who will try to crown Wilhelm of Habsburg. The country will also try to restore influence in the countries of the former Austria-Hungary."
+
+#Kavkaz
+ZSR_AI_BEHAVIOR:0 "@ZSR Transcaucasian SFSR"
+RULE_HISTORICAL_ZSR_AI_DESC:0 "Transcaucasia remains a republic of the USSR, which will try to reunite all the Caucasian peoples with the help of the USSR. The country will also take part in World War II."

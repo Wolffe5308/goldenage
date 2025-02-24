@@ -1,0 +1,111 @@
+TAN_historical_plan = {
+	name = "TAN historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = TAN
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = TAN_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = TAN_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = TAN_ai_behavior
+				option = TAN_HISTORICAL
+			}
+		}
+	}
+	abort = {
+		is_subject = no
+	}
+
+	ai_national_focuses = {
+		#1936
+		TAN_loyalty_to_moscow
+		TAN_party_power
+		TAN_purge_in_the_party
+		TAN_industry_awakening
+		TAN_recruit_workers
+		TAN_select_area
+
+		#1937
+		TAN_purge_in_the_ranks_of_officers
+		TAN_search_for_enemies_of_the_people
+		TAN_independent_government
+
+		#1938
+		TAN_eliminate_homelessness
+		TAN_full_legitimacy
+		TAN_tuvan_peoples_army
+		TAN_command_reforms
+		TAN_military_training
+		TAN_start_rearmament
+
+		#1939
+		TAN_war_propaganda
+		TAN_leader_of_the_proletariat
+		TAN_political_cooperation
+		TAN_cooperation_with_the_ussr
+		TAN_cooperation_with_china
+		TAN_cooperation_with_mongolia
+
+		#1940
+		TAN_military_exercises_of_the_comintern
+        TAN_tuvan_infrastructure
+		TAN_workplaces
+		TAN_tuvan_industry
+
+		#1941
+		TAN_investment_in_education
+		TAN_Investment_in_equipment
+
+		#1942
+		TAN_partial_industrialization
+        TAN_final_military_reforms
+		TAN_abroad
+
+		#1943
+		TAN_building_institutions
+		TAN_placement_of_industry
+
+		#1944
+		TAN_mining
+		
+		#1945
+		TAN_assistance_in_the_expulsion_of_japanese_fascists
+		TAN_military_aid_to_mongolia
+		TAN_military_aid_for_the_ussr
+		TAN_liberation_of_chinese_lands
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	focus_factors = {
+		TAN_loyalty_to_moscow = 300
+		TAN_fight_back_moscow = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

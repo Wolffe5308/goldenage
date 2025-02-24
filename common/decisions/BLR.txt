@@ -1,0 +1,632 @@
+
+reunite_the_belarussian_people = {
+
+    reunite_western_belarussian = {
+
+    icon = generic_form_nation
+
+        available = {
+			has_government = communism
+			94 = { is_owned_and_controlled_by = SOV }
+			95 = { is_owned_and_controlled_by = SOV }
+			96 = { is_owned_and_controlled_by = SOV }
+            97 = { is_owned_and_controlled_by = SOV }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions reunite_western_belarussian"
+        BLR = {
+		if = {
+		    limit = { SOV = { owns_state = 94 controls_state = 94 } }
+		    transfer_state = 94
+		}
+		if = {
+			limit = { SOV = { owns_state = 95 controls_state = 95 } }
+		    transfer_state = 95
+		}
+		if = {
+			limit = { SOV = { owns_state = 96 controls_state = 96 } }
+			transfer_state = 96
+        }
+        if = {
+			limit = { SOV = { owns_state = 97 controls_state = 97 } }
+			transfer_state = 97
+		}
+	}
+}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = BLR
+			}
+		}
+	}
+}
+
+development_of_industrial_regions = {
+
+    civil_sector = {
+
+    icon = generic_factory
+
+		fire_only_once = no
+
+		modifier = {
+			production_speed_industrial_complex_factor = 0.05
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 50
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = BLR
+			}
+		}
+	}
+}
+
+development_of_industrial_regions = {
+
+    military_sector = {
+
+    icon = generic_industry
+
+		fire_only_once = no
+
+		modifier = {
+			production_speed_arms_factory_factor = 0.05
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 50
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = BLR
+			}
+		}
+	}
+}
+
+development_of_industrial_regions = {
+
+    oil_refining_sector = {
+
+    icon = oil
+
+		fire_only_once = no
+
+		modifier = {
+			fuel_gain_factor_from_states = 0.05
+            production_oil_factor = 0.05
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 50
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = BLR
+			}
+		}
+	}
+}
+
+development_of_industrial_regions = {
+
+    railway_brigade = {
+
+    icon = generic_wreckers
+
+		fire_only_once = no
+
+		modifier = {
+			production_speed_infrastructure_factor = 0.05
+            production_speed_rail_way_factor = 0.05
+			production_speed_supply_node_factor = 0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 50
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = BLR
+			}
+		}
+	}
+}
+
+building_a_new_party = {
+
+    communist_propaganda = {
+
+    icon = generic_political_discourse
+
+		fire_only_once = no
+
+		modifier = {
+			communism_drift = 0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = BLR
+			}
+		}
+	}
+}
+
+building_a_new_party = {
+
+    agitation = {
+
+    icon = eng_propaganda_campaigns
+
+		fire_only_once = no
+
+		modifier = {
+			stability_weekly = 0.001
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 50
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = BLR
+			}
+		}
+	}
+}
+
+building_a_new_party = {
+
+    encourage_the_generals = {
+
+    icon = generic_army_support
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+
+		modifier = {
+			command_power_gain_mult = 0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 50
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = BLR
+			}
+		}
+	}
+}
+
+building_a_new_party = {
+
+    politicization_of_the_army = {
+
+    icon = generic_military
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+
+		modifier = {
+			minimum_training_level = -0.05
+			training_time_factor	 = -0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 50
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = BLR
+			}
+		}
+	}
+}
+
+BLR_belarus_balance_category = {
+
+give_the_leader_new_powers_blr = {  
+
+		icon = eng_blackshirt_speech
+
+		priority = 100
+
+		days_remove = 60
+		days_re_enable = 90
+
+		cost = 50
+
+		fire_only_once = no
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision give_the_leader_new_powers_blr"
+			add_stability = 0.02
+			add_power_balance_value = {
+				id = BLR_communist_balance
+				value = 0.05
+			}
+		}
+	}
+}
+
+BLR_belarus_balance_category = {
+
+hold_a_review_of_troops_with_awards_blr = {  
+
+		icon = generic_military
+
+		priority = 100
+
+		days_remove = 60
+		days_re_enable = 90
+
+		cost = 50
+
+		fire_only_once = no
+
+		modifier = {
+			grant_medal_cost_factor = -0.5
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision hold_a_review_of_troops_with_awards_blr"
+			add_war_support = 0.02
+			add_power_balance_value = {
+				id = BLR_communist_balance
+				value = 0.05
+			}
+		}
+	}
+}
+
+BLR_belarus_balance_category = {
+
+hold_competitions_for_workers_at_enterprises_blr = {  
+
+		icon = generic_factory
+
+		priority = 100
+
+		days_remove = 60
+		days_re_enable = 90
+
+		fire_only_once = no
+
+		cost = 50
+
+		modifier = {
+			production_factory_start_efficiency_factor = 0.05
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision hold_competitions_for_workers_at_enterprises_blr"
+			add_power_balance_value = {
+				id = BLR_communist_balance
+				value = 0.1
+			}
+		}
+	}
+}
+
+BLR_belarus_balance_category = {
+
+expand_the_supreme_soviet_blr = {  
+
+		icon = SOV_place_hq
+
+		priority = 40
+
+		days_remove = 60
+		days_re_enable = 60
+
+		cost = 25
+
+		fire_only_once = no
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision expand_the_supreme_soviet_blr"
+			add_command_power = 2.0
+			add_power_balance_value = {
+				id = BLR_communist_balance
+				value = -0.1
+			}
+		}
+	}
+}
+
+BLR_belarus_balance_category = {
+
+hunt_for_corrupt_officials_blr = {  
+
+		icon = gre_investment_decisions
+
+		priority = 40
+
+		days_remove = 60
+		days_re_enable = 90
+
+		cost = 50
+
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = -0.05 
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision hunt_for_corrupt_officials_blr"
+			add_power_balance_value = {
+				id = BLR_communist_balance
+				value = -0.15
+			}
+		}
+	}
+}
+
+BLR_belarus_balance_category = {
+
+develop_komsomol_blr = {  
+
+		icon = generic_civil_support
+
+		priority = 40
+
+		days_remove = 60
+		days_re_enable = 90
+
+		fire_only_once = no
+
+		cost = 50
+
+		modifier = {
+			political_power_factor = 0.1
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision develop_komsomol_blr"
+			add_power_balance_value = {
+				id = BLR_communist_balance
+				value = -0.1
+			}
+		}
+	}
+}
+
+BLR_belarus_balance_category = {
+
+blr_bob_mission_balance_military_potential_of_belarus = {  
+		
+		icon = generic_army_support
+		
+		priority = 40
+		
+		fire_only_once = yes
+        is_good = no
+        selectable_mission = no
+        days_mission_timeout = 730
+		
+		available = {
+			num_of_military_factories > 15
+			has_army_manpower = { size > 300000 }
+        }
+
+		allowed = {
+			always=no
+		}
+
+		visible = {
+			has_completed_focus = BLR_new_party
+			has_completed_focus = BLR_officer_training
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions blr_bob_mission_balance_military_potential_of_belarus"
+			country_event = BLR_bop.2 
+			army_experience = 25
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.25
+				uses = 1
+				category = land_doctrine
+		    }
+		}
+		
+        timeout_effect = {
+			country_event = BLR_bop.3
+            add_war_support = -0.05
+			add_political_power = -25
+        }
+	}
+}
+
+BLR_belarus_balance_category = {
+
+	blr_bob_mission_balance_industrial_potential_of_belarus = {  
+			
+			icon = generic_merge_plant_materiel
+			
+			priority = 40
+			
+			fire_only_once = yes
+			is_good = no
+			selectable_mission = no
+			days_mission_timeout = 730
+			
+			available = {
+				num_of_civilian_factories > 15
+				has_tech = improved_machine_tools
+                OR = {
+					has_tech = concentrated_industry2
+					has_tech = dispersed_industry2
+				} 
+			}
+
+			allowed = {
+				always=no
+			}
+	
+			visible = {
+				has_completed_focus = BLR_new_party
+				has_completed_focus = BLR_development_of_belarus
+			}
+	
+			complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions bob_mission_balance"
+			country_event = BLR_bop.2
+			add_political_power = 25
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = industry
+				category = electronics
+			}
+		}
+			
+		timeout_effect = {
+			country_event = BLR_bop.3
+			add_stability = -0.05
+			add_political_power = -25
+		}
+	}
+}
+
+BLR_belarus_balance_category = {
+
+	blr_bob_mission_balance_aircraft_potential_of_belarus = {  
+			
+			icon = generic_merge_plant_aircraft
+			
+			priority = 40
+			
+			fire_only_once = yes
+			is_good = no
+			selectable_mission = no
+			days_mission_timeout = 730
+			
+			available = {
+				has_equipment = { small_plane_airframe_1 > 300 }
+				has_equipment = { small_plane_cas_airframe_1 > 200 }
+			}
+
+			allowed = {
+				always=no
+			}
+	
+			visible = {
+				has_completed_focus = BLR_new_party
+				has_completed_focus = BLR_waf
+			}
+	
+			complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions blr_bob_mission_balance_aircraft_potential_of_belarus" 
+			country_event = BLR_bop.2
+			add_political_power = 25
+			add_war_support = 0.05
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+			}
+		}
+			
+		timeout_effect = {
+			country_event = BLR_bop.3
+			add_war_support = -0.05
+			add_political_power = -25
+		}
+	}
+}

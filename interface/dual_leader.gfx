@@ -1,0 +1,111 @@
+spriteTypes = {
+
+    spriteType = {
+		name = "GFX_header_bg_political"
+		texturefile = "gfx/interface/header_bg_political.dds"
+	}
+
+	spriteType = {
+		name = "GFX_diplo_header_bg"
+		texturefile = "gfx/interface/diplo_header_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_bg_blank"
+		texturefile = "gfx/interface/portrait_bg_blank.dds"
+	}
+
+	spriteType = {
+		name = "GFX_diplo_leader_frame_2"
+		texturefile = "gfx/interface/diplo_leader_frame_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_bg_transparent"
+		texturefile = "gfx/interface/portrait_bg_transparent.dds"
+	}
+
+	spriteType = {
+		name = "GFX_diplo_tab_extender"
+		texturefile = "gfx/interface/diplo_tab_extender.dds"
+	}
+
+	textSpriteType = {
+		name = "GFX_button_148x31"
+		texturefile = "gfx/interface/button_148x31.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	# Country Specific Portraits
+
+	spriteType = {
+		name = "GFX_SOV_mikhail_kalinin"
+		texturefile = "gfx/dual_leaders/SOV/SOV_mikhail_kalinin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BLR_alexander_chervyakov"
+		texturefile = "gfx/dual_leaders/BLR/BLR_alexander_chervyakov.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ITA_vittorio_emanuele"
+		texturefile = "gfx/dual_leaders/ITA/ITA_vittorio_emanuele.dds"
+	}
+
+	spriteType = {
+		name = "GFX_SWE_gustaf_v"
+		texturefile = "gfx/dual_leaders/SWE/SWE_gustaf_v.dds"
+	}
+
+	spriteType = {
+		name = "GFX_DEN_christian_x"
+		texturefile = "gfx/dual_leaders/DEN/DEN_christian_x.dds"
+	}
+
+	spriteType = {
+		name = "GFX_YUG_milan_stojadinovic"
+		texturefile = "gfx/dual_leaders/YUG/YUG_milan_stojadinovic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_HUN_gyula_gombos"
+		texturefile = "gfx/dual_leaders/HUN/HUN_gyula_gombos.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BUL_georgi_kyoseivanov"
+		texturefile = "gfx/dual_leaders/BUL/BUL_georgi_kyoseivanov.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GRE_george_ii"
+		texturefile = "gfx/dual_leaders/GRE/GRE_george_ii.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_rudolf_hess"
+		texturefile = "gfx/dual_leaders/GER/GER_rudolf_hess.dds"
+	}
+
+	spriteType = {
+		name = "GFX_AUS_wilhelm_miklas"
+		texturefile = "gfx/dual_leaders/AUS/AUS_wilhelm_miklas.dds"
+	}
+
+	spriteType = {
+		name = "GFX_SWI_albert_meyer"
+		texturefile = "gfx/dual_leaders/SWI/SWI_albert_meyer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BEL_leopold_iii"
+		texturefile = "gfx/dual_leaders/BEL/BEL_leopold_iii.dds"
+	}
+
+	spriteType = {
+		name = "GFX_HOL_wilhelmina"
+		texturefile = "gfx/dual_leaders/HOL/HOL_wilhelmina.dds"
+	}
+}

@@ -1,0 +1,15 @@
+spriteTypes = {
+
+    spriteType = {
+		name = "GFX_goldenage_discord_logo"
+		texturefile = "gfx/interface/main_menu_gui/goldenage_discord_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_goldenage_boosty_logo"
+		texturefile = "gfx/interface/main_menu_gui/goldenage_boosty_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_goldenage_youtube_logo"
+		texturefile = "gfx/interface/main_menu_gui/goldenage_youtube_logo.dds"
+	}
+}

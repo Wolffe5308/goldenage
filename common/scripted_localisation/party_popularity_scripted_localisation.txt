@@ -1,0 +1,386 @@
+### Party Popularity ###
+defined_text = {
+	name = GetPopIcon
+	text = {
+		trigger = {
+			has_variable = political_power_ideology
+		}
+		localization_key = "GFX_[?political_power_ideology.GetTokenKey]_small"
+	}
+	text = {
+		localization_key = "GFX_[?current_party_ideology_group.GetTokenKey]_small"
+	}
+}
+
+defined_text = {
+	name = GetPopularityTooltipDesc
+	text = {
+		trigger = {
+			has_government = fascism
+		}
+		localization_key = fascism_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = neutrality
+		}
+		localization_key = neutrality_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = democratic
+		}
+		localization_key = democratic_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = liberal
+		}
+		localization_key = liberal_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = social_democrat
+		}
+		localization_key = social_democrat_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = communism
+		}
+		localization_key = communism_subtype_desc
+	}
+	text = {
+		trigger = {
+			has_government = anarchism
+		}
+		localization_key = anarchism_subtype_desc
+	}
+}
+defined_text = {
+	name = GetPopularityPercent
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+		}
+		localization_key = party_popularity_value_mapped
+	}
+	text = {
+		localization_key = party_popularity_value_default
+	}
+}
+defined_text = {
+	name = GetPopularityPPGain
+	text = {
+		trigger = {
+			OR = {
+				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+			}
+		}
+		localization_key = party_popularity_tooltip_long
+	}
+	text = {
+		localization_key = empty
+	}
+}
+defined_text = {
+	name = GetPopularityPPGainValue
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+		}
+		localization_key = party_popularity_gain_value_mapped
+	}
+	text = {
+		trigger = {
+			NOT = { has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier } }
+		}
+		localization_key = party_popularity_gain_value_disabled
+	}
+	text = {
+		localization_key = party_popularity_gain_value_default
+	}
+}
+defined_text = {
+	name = GetHasCoalition
+	text = {
+		trigger = { has_variable = coalition_partners^num }
+		localization_key = party_pop_coalition
+	}
+	text = {
+		localization_key = empty
+	}
+}
+defined_text = {
+	name = GetCoalitionFascism
+	text = {
+		trigger = {
+			NOT = {
+				has_government = fascism
+				check_variable = { political_power_ideology = token:fascism }
+			}
+			is_in_array = { ROOT.coalition_partners = token:fascism }
+		}
+		localization_key = party_pop_coalition_fascism
+	}
+	text = {
+		localization_key = empty
+	}
+}
+defined_text = {
+	name = GetCoalitionNeutrality
+	text = {
+		trigger = {
+			NOT = {
+				has_government = neutrality
+				check_variable = { political_power_ideology = token:neutrality }
+			}
+			is_in_array = { ROOT.coalition_partners = token:neutrality }
+		}
+		localization_key = party_pop_coalition_neutrality
+	}
+	text = {
+		localization_key = empty
+	}
+}
+defined_text = {
+	name = GetCoalitionDemocratic
+	text = {
+		trigger = {
+			NOT = {
+				has_government = democratic
+				check_variable = { political_power_ideology = token:democratic }
+			}
+			is_in_array = { ROOT.coalition_partners = token:democratic }
+		}
+		localization_key = party_pop_coalition_democratic
+	}
+	text = {
+		localization_key = empty
+	}
+}
+defined_text = {
+	name = GetCoalitionLiberal
+	text = {
+		trigger = {
+			NOT = {
+				has_government = liberal
+				check_variable = { political_power_ideology = token:liberal }
+			}
+			is_in_array = { ROOT.coalition_partners = token:liberal }
+		}
+		localization_key = party_pop_coalition_liberal
+	}
+	text = {
+		localization_key = empty
+	}
+}
+defined_text = {
+	name = GetCoalitionSocialDemocrat
+	text = {
+		trigger = {
+			NOT = {
+				has_government = social_democrat
+				check_variable = { political_power_ideology = token:social_democrat }
+			}
+			is_in_array = { ROOT.coalition_partners = token:social_democrat }
+		}
+		localization_key = party_pop_coalition_social_democrat
+	}
+	text = {
+		localization_key = empty
+	}
+}
+defined_text = {
+	name = GetCoalitionCommunism
+	text = {
+		trigger = {
+			NOT = {
+				has_government = communism
+				check_variable = { political_power_ideology = token:communism }
+			}
+			is_in_array = { ROOT.coalition_partners = token:communism }
+		}
+		localization_key = party_pop_coalition_communism
+	}
+	text = {
+		localization_key = empty
+	}
+}
+defined_text = {
+	name = GetCoalitionAnarchism
+	text = {
+		trigger = {
+			NOT = {
+				has_government = anarchism
+				check_variable = { political_power_ideology = token:anarchism }
+			}
+			is_in_array = { ROOT.coalition_partners = token:anarchism }
+		}
+		localization_key = party_pop_coalition_anarchism
+	}
+	text = {
+		localization_key = empty
+	}
+}
+defined_text = {
+	name = GetCoalitionAddTooltip
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:fascism }
+		}
+		localization_key = add_to_coalition_fascism
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:neutrality }
+		}
+		localization_key = add_to_coalition_neutrality
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:democratic }
+		}
+		localization_key = add_to_coalition_democratic
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:liberal }
+		}
+		localization_key = add_to_coalition_liberal
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:social_democrat }
+		}
+		localization_key = add_to_coalition_social_democrat
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:communism }
+		}
+		localization_key = add_to_coalition_communism
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:anarchism }
+		}
+		localization_key = add_to_coalition_anarchism
+	}
+}
+defined_text = {
+	name = GetCoalitionRemoveTooltip
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:fascism }
+		}
+		localization_key = remove_from_coalition_fascism
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:neutrality }
+		}
+		localization_key = remove_from_coalition_neutrality
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:democratic }
+		}
+		localization_key = remove_from_coalition_democratic
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:liberal }
+		}
+		localization_key = remove_from_coalition_liberal
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:social_democrat }
+		}
+		localization_key = remove_from_coalition_social_democrat
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:communism }
+		}
+		localization_key = remove_from_coalition_communism
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:anarchism }
+		}
+		localization_key = remove_from_coalition_anarchism
+	}
+}
+defined_text = {
+	name = GetCoalitionPPGain_Fascism
+	text = {
+		trigger = {
+			set_temp_variable = { coalition_pp_gain = party_popularity@fascism }
+			multiply_temp_variable = { coalition_pp_gain = coalition_stability?0.5 }
+		}
+		localization_key = party_pop_coalition_pp_gain
+	}
+}
+defined_text = {
+	name = GetCoalitionPPGain_Neutrality
+	text = {
+		trigger = {
+			set_temp_variable = { coalition_pp_gain = party_popularity@neutrality }
+			multiply_temp_variable = { coalition_pp_gain = coalition_stability?0.5 }
+		}
+		localization_key = party_pop_coalition_pp_gain
+	}
+}
+defined_text = {
+	name = GetCoalitionPPGain_Democratic
+	text = {
+		trigger = {
+			set_temp_variable = { coalition_pp_gain = party_popularity@democratic }
+			multiply_temp_variable = { coalition_pp_gain = coalition_stability?0.5 }
+		}
+		localization_key = party_pop_coalition_pp_gain
+	}
+}
+defined_text = {
+	name = GetCoalitionPPGain_Liberal
+	text = {
+		trigger = {
+			set_temp_variable = { coalition_pp_gain = party_popularity@liberal }
+			multiply_temp_variable = { coalition_pp_gain = coalition_stability?0.5 }
+		}
+		localization_key = party_pop_coalition_pp_gain
+	}
+}
+defined_text = {
+	name = GetCoalitionPPGain_SocialDemocrat
+	text = {
+		trigger = {
+			set_temp_variable = { coalition_pp_gain = party_popularity@social_democrat }
+			multiply_temp_variable = { coalition_pp_gain = coalition_stability?0.5 }
+		}
+		localization_key = party_pop_coalition_pp_gain
+	}
+}
+defined_text = {
+	name = GetCoalitionPPGain_Communism
+	text = {
+		trigger = {
+			set_temp_variable = { coalition_pp_gain = party_popularity@communism }
+			multiply_temp_variable = { coalition_pp_gain = coalition_stability?0.5 }
+		}
+		localization_key = party_pop_coalition_pp_gain
+	}
+}
+defined_text = {
+	name = GetCoalitionPPGain_Anarchism
+	text = {
+		trigger = {
+			set_temp_variable = { coalition_pp_gain = party_popularity@anarchism }
+			multiply_temp_variable = { coalition_pp_gain = coalition_stability?0.5 }
+		}
+		localization_key = party_pop_coalition_pp_gain
+	}
+}

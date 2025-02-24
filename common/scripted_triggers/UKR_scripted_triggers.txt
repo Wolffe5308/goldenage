@@ -1,0 +1,10 @@
+UKR_industrialization_score_check = {
+    custom_trigger_tooltip = {
+        tooltip = UKR_industrialization_score_check
+        check_variable = {
+            var = UKR_industrialization_score
+            value = UKR_score_check
+            compare = greater_than_or_equals
+        }
+    }
+}

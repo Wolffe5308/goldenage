@@ -1,0 +1,7 @@
+UKR_industrialization_score = {
+    if = {
+        limit = { has_active_mission = UKR_industrialisation_mission }
+        custom_effect_tooltip = UKR_add_industrial_score_tt
+    }
+    add_to_variable = { UKR_industrialization_score = UKR_influence_change }
+}

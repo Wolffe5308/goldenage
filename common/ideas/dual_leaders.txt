@@ -1,0 +1,525 @@
+ideas = {
+    hidden_ideas = {
+		#USSR-СССР
+        SOV_D_Mikhail_Kalinin = {
+			picture = SOV_mikhail_kalinin
+			allowed = {
+				tag = SOV
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1946.6.3
+				NOT = {
+					has_country_flag = Mikhail_Kalinin_unavailable
+				}
+			}
+			traits = {
+				TITLE_SOV_Chairman
+				all_union_headman
+			}
+		}
+		#UKR-Украина
+        UKR_D_Grigory_Petrovsky = {
+			picture = UKR_grigory_petrovsky
+			allowed = {
+				tag = UKR
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1950.6.3
+				NOT = {
+					has_country_flag = Grigory_Petrovsky_unavailable
+				}
+			}
+			traits = {
+				TITLE_UKR_Chairman
+			}
+		}
+		#ZSR-Кавказ
+        ZSR_D_Sultan_Mufidzade = {
+			picture = ZSR_sultan_mufidzade
+			allowed = {
+				tag = ZSR
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1950.6.3
+				NOT = {
+					has_country_flag = Sultan_Mufidzade_unavailable
+				}
+			}
+			traits = {
+				TITLE_ZSR_Chairman
+			}
+		}
+		#BLR-Беларусь
+        BLR_D_Alexander_Chervyakov = {
+			picture = BLR_alexander_chervyakov
+			allowed = {
+				tag = BLR
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1950.6.3
+				NOT = {
+					has_country_flag = Alexander_Chervyakov_unavailable
+				}
+			}
+			traits = {
+				TITLE_BLR_Chairman
+			}
+		}
+		#ITA-Италия
+		ITA_D_Vittorio_Emanuele = {
+			picture = ITA_vittorio_emanuele
+			allowed = {
+				tag = ITA
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1946.4.30
+				NOT = {
+					has_country_flag = Vittorio_Emanuele_unavailable
+				}
+			}
+			traits = {
+				TITLE_ITA_King
+			}
+		}
+		#SWE-Швеция
+		SWE_D_Gustaf_V = {
+			picture = SWE_gustaf_v
+			allowed = {
+				tag = SWE
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1946.4.30
+				NOT = {
+					has_country_flag = Gustaf_V_unavailable
+				}
+			}
+			traits = {
+				TITLE_SWE_King
+			}
+		}
+		#NOR-Норвегия
+		NOR_D_Haakon_VII = {
+			picture = NOR_haakon_vii
+			allowed = {
+				tag = NOR
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1946.4.30
+				NOT = {
+					has_country_flag = Haakon_VII_unavailable
+				}
+			}
+			traits = {
+				TITLE_NOR_King
+			}
+		}
+		#DEN-Дания
+		DEN_D_Christian_X = {
+			picture = DEN_christian_x
+			allowed = {
+				tag = DEN
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1946.4.30
+				NOT = {
+					has_country_flag = Haakon_VII_unavailable
+				}
+			}
+			traits = {
+				TITLE_DEN_King
+			}
+		}
+		#POL-Польша
+		POL_D_Felician_Skladkovsky = {
+			picture = POL_felician_skladkovsky
+			allowed = {
+				tag = POL
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1940.4.30
+				NOT = {
+					has_country_flag = Felician_Skladkovsky_unavailable
+				}
+			}
+			traits = {
+				TITLE_POL_Prime_Minister
+			}
+		}
+		#LIT-Литва
+		LIT_D_Juozas_Tubelis = {
+			picture = LIT_juozas_tubelis
+			allowed = {
+				tag = LIT
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1938.3.24
+				NOT = {
+					has_country_flag = Juozas_Tubelis_unavailable
+				}
+			}
+			traits = {
+				TITLE_LIT_Prime_Minister
+			}
+		}
+		#CZE-Чехословакия
+		CZE_D_Milan_Hodza = {
+			picture = CZE_milan_hodza
+			allowed = {
+				tag = CZE
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1938.9.25
+				NOT = {
+					has_country_flag = Milan_Hodza_unavailable
+				}
+			}
+			traits = {
+				TITLE_CZE_Prime_Minister
+			}
+		}
+		#HUN-Венгрия
+		HUN_D_Gyula_Gombos = {
+			picture = HUN_gyula_gombos
+			allowed = {
+				tag = HUN
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1936.10.6
+				NOT = {
+					has_country_flag = Gyula_Gombos_unavailable
+				}
+			}
+			traits = {
+				TITLE_HUN_Prime_Minister
+			}
+		}
+		#YUG-Югославия
+		YUG_D_Milan_Stojadinovic = {
+			picture = YUG_milan_stojadinovic
+			allowed = {
+				tag = YUG
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1939.2.5
+				NOT = {
+					has_country_flag = Milan_Stojadinovic_unavailable
+				}
+			}
+			traits = {
+				TITLE_YUG_Prime_Minister
+			}
+		}
+		#BUL-Болгария
+		BUL_D_Georgi_Kyoseivanov = {
+			picture = BUL_georgi_kyoseivanov
+			allowed = {
+				tag = BUL
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1940.2.16
+				NOT = {
+					has_country_flag = Georgi_Kyoseivanov_unavailable
+				}
+			}
+			traits = {
+				TITLE_BUL_Prime_Minister
+			}
+		}
+		#GRE-Греция
+		GRE_D_George_II = {
+			picture = GRE_george_ii
+			allowed = {
+				tag = GRE
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1947.4.1
+				NOT = {
+					has_country_flag = George_II_unavailable
+				}
+			}
+			traits = {
+				TITLE_GRE_King
+			}
+		}
+		#GER-Германия
+		GER_D_Rudolf_Hess = {
+			picture = GER_rudolf_hess
+			allowed = {
+				tag = GER
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1941.5.12
+				NOT = {
+					has_country_flag = Rudolf_Hess_unavailable
+				}
+			}
+			traits = {
+				TITLE_GER_Deputy_Fuhrer
+			}
+		}
+		#AUS-Австрия
+		AUS_D_Wilhelm_Miklas = {
+			picture = AUS_wilhelm_miklas
+			allowed = {
+				tag = AUS
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1939.30.12
+				NOT = {
+					has_country_flag = Wilhelm_Miklas_unavailable
+				}
+			}
+			traits = {
+				TITLE_AUS_President
+			}
+		}
+		#HOL-Нидерланды
+		HOL_D_Wilhelmina = {
+			picture = HOL_wilhelmina
+			allowed = {
+				tag = HOL
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1948.9.4
+				NOT = {
+					has_country_flag = Wilhelmina_unavailable
+				}
+			}
+			traits = {
+				TITLE_HOL_Queen
+			}
+		}
+        #BEL-Бельгия
+		BEL_D_Leopold_III = {
+			picture = BEL_leopold_iii
+			allowed = {
+				tag = BEL
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1951.6.16
+				NOT = {
+					has_country_flag = Leopold_III_unavailable
+				}
+			}
+			traits = {
+				TITLE_BEL_King
+			}
+		}
+		#FRA-Франция
+		FRA_D_Albert_Francois = {
+			picture = FRA_albert_francois
+			allowed = {
+				tag = FRA
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1940.6.11
+				NOT = {
+					has_country_flag = Albert_Francois_unavailable
+				}
+			}
+			traits = {
+				TITLE_FRA_President
+			}
+		}
+		#POR-Португалия
+		POR_D_Antonio_Carmona = {
+			picture = POR_antonio_carmona
+			allowed = {
+				tag = POR
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1951.4.18
+				NOT = {
+					has_country_flag = Antonio_Carmona_unavailable
+				}
+			}
+			traits = {
+				TITLE_POR_President
+			}
+		}
+		#SWI-Швейцария
+		SWI_D_Albert_Meyer = {
+			picture = SWI_albert_meyer
+			allowed = {
+				tag = SWI
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1936.12.31
+				NOT = {
+					has_country_flag = Albert_Meyer_unavailable
+				}
+			}
+			traits = {
+				TITLE_SWI_President
+			}
+		}
+		#CAN-Канада
+		CAN_D_John_Buchan = {
+			picture = CAN_john_buchan
+			allowed = {
+				tag = CAN
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1940.2.11
+				NOT = {
+					has_country_flag = John_Buchan_unavailable
+				}
+			}
+			traits = {
+				TITLE_CAN_Governor_General
+			}
+		}
+		#USA-США
+		USA_D_John_Garner = {
+			picture = USA_john_garner
+			allowed = {
+				tag = USA
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1941.1.20
+				NOT = {
+					has_country_flag = John_Garner_unavailable
+				}
+			}
+			traits = {
+				TITLE_USA_Vice_President
+			}
+		}
+		#AST-Австралия
+		AST_D_Alexander_Hore_Ruthven = {
+			picture = AST_alexander_hore_ruthven
+			allowed = {
+				tag = AST
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1945.1.30
+				NOT = {
+					has_country_flag = Alexander_Hore_Ruthven_unavailable
+				}
+			}
+			traits = {
+				TITLE_AST_Governor_General
+			}
+		}
+		#NZL-Новая Зеландия
+		NZL_D_George_Monckton_Arundell = {
+			picture = NZL_george_monckton_arundell
+			allowed = {
+				tag = NZL
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1941.2.3
+				NOT = {
+					has_country_flag = George_Monckton_Arundell_unavailable
+				}
+			}
+			traits = {
+				TITLE_NZL_Governor_General
+			}
+		}
+    }
+}

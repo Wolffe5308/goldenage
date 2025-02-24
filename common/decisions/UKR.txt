@@ -1,0 +1,1752 @@
+UKR_industrialisation_category = {
+UKR_industrialisation_mission = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		available = { always = no }
+		allowed = { always = no } #manually activated by ukraine_landreform.1
+		selectable_mission = no
+		is_good = yes
+		days_mission_timeout = 1200
+		priority = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete UKR_industrialisation_mission"
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout UKR_industrialisation_mission"
+			custom_effect_tooltip = UKR_completion_info
+			hidden_effect = {
+				set_country_flag = UKR_industrialisation_done
+				clr_country_flag = UKR_industrialisation_in_progress
+			}
+			if = { #Leftist Spirits
+				limit = {
+					OR = {
+						has_government = communism
+						has_government = social_democrat
+					}
+				}
+
+				if = {
+					limit = { check_variable = { UKR_industrialization_score < 10 } }
+					add_ideas = Ukr_five_year_plan_1
+				}
+				else_if = {
+					limit = { check_variable = { UKR_industrialization_score < 30 } }
+					add_ideas = Ukr_five_year_plan_2
+				}
+				else_if = {
+					limit = { check_variable = { UKR_industrialization_score < 45 } }
+					add_ideas = Ukr_five_year_plan_3
+				}
+				else_if = {
+					limit = { check_variable = { UKR_industrialization_score < 60 } }
+					add_ideas = Ukr_five_year_plan_4
+				}
+				else_if = {
+					limit = { check_variable = { UKR_industrialization_score < 75 } }
+					add_ideas = Ukr_five_year_plan_5
+				}
+				else_if = {
+					limit = { check_variable = { UKR_industrialization_score < 90 } }
+					add_ideas = Ukr_five_year_plan_6
+				}
+				else_if = {
+					limit = { check_variable = { UKR_industrialization_score > 89 } }
+					add_ideas = Ukr_five_year_plan_7
+				}
+			}
+		}
+	}
+
+	UKR_industry_subsidies = {
+		icon = GFX_decision_hol_attract_foreign_investors
+
+		visible = { has_active_mission = UKR_industrialisation_mission }
+
+		cost = 50
+		days_remove = 30
+		days_re_enable = 90
+		fire_only_once = no
+
+		modifier = {
+			political_power_gain = -0.1
+			production_speed_buildings_factor = 0.05
+		}
+
+		ai_will_do = { factor = 100 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UKR_industry_subsidies"
+			set_temp_variable = { UKR_influence_change = 3 }
+			UKR_industrialization_score = yes
+		}
+	}
+
+	UKR_road_kyiv_minsk = {
+		icon = GFX_decision_generic_train
+
+		visible = { has_active_mission = UKR_industrialisation_mission }
+
+		cost = 50
+		days_remove = 120
+		fire_only_once = yes
+
+		available = {
+			NOT = {
+				has_country_flag = UKR_railway_in_progress
+			}
+			has_full_control_of_state = 202
+			OR = {
+                is_in_faction_with = BLR
+			BLR = {
+				    has_full_control_of_state = 194
+				    has_full_control_of_state = 204
+				    has_full_control_of_state = 206
+			    }
+			}
+		}
+
+		highlight_states = {
+            highlight_state_targets = {
+                state = 202
+				state = 194
+				state = 204
+				state = 206
+            }
+        }
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		ai_will_do = { factor = 100 }
+
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete UKR_road_kyiv_minsk"
+			set_country_flag = UKR_railway_in_progress
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UKR_road_kyiv_minsk"
+			set_country_flag = UKR_road_kyiv_minsk_has_completed
+			clr_country_flag = UKR_railway_in_progress
+			194 = {
+			    add_building_construction = {
+				    type = supply_node
+				    province = 6232
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			build_railway = {
+				level = 2
+				path = { 525 3543 9568 11453 6232 215 11313 3759 11216 11370 }
+			}
+			set_temp_variable = { UKR_influence_change = 3 }
+			UKR_industrialization_score = yes
+		}
+	}
+
+	UKR_southern_railway = {
+		icon = GFX_decision_generic_train
+
+		visible = { has_active_mission = UKR_industrialisation_mission }
+
+		cost = 50
+		days_remove = 120
+		fire_only_once = yes
+
+		available = {
+			NOT = {
+				has_country_flag = UKR_railway_in_progress
+			}
+			has_full_control_of_state = 192
+			has_full_control_of_state = 197
+			has_full_control_of_state = 196
+		}
+
+		highlight_states = {
+            highlight_state_targets = {
+                state = 192
+				state = 197
+				state = 196
+            }
+        }
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		ai_will_do = { factor = 100 }
+
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete UKR_southern_railway"
+			set_country_flag = UKR_railway_in_progress
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UKR_southern_railway"
+			set_country_flag = UKR_southern_railway_has_completed
+			clr_country_flag = UKR_railway_in_progress
+			197 = {
+			    add_building_construction = {
+				    type = supply_node
+				    province = 11683
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			build_railway = {
+				level = 2
+				path = { 11670 3738 11683 3755 737 721 }
+			}
+			set_temp_variable = { UKR_influence_change = 3 }
+			UKR_industrialization_score = yes
+		}
+	}
+
+	UKR_eastern_railway = {
+		icon = GFX_decision_generic_train
+
+		visible = { has_active_mission = UKR_industrialisation_mission }
+
+		cost = 50
+		days_remove = 120
+		fire_only_once = yes
+
+		available = {
+			NOT = {
+				has_country_flag = UKR_railway_in_progress
+			}
+			has_full_control_of_state = 228
+			has_full_control_of_state = 227
+			has_full_control_of_state = 221
+		}
+
+		highlight_states = {
+            highlight_state_targets = {
+                state = 228
+				state = 227
+				state = 221
+            }
+        }
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		ai_will_do = { factor = 100 }
+
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete UKR_eastern_railway"
+			set_country_flag = UKR_railway_in_progress
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UKR_eastern_railway"
+			set_country_flag = UKR_eastern_railway_has_completed
+			clr_country_flag = UKR_railway_in_progress
+			228 = {
+			    add_building_construction = {
+				    type = supply_node
+				    province = 9461
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			build_railway = {
+				level = 2
+				path = { 9461 6519 11487 11541 3409 9446 6493 }
+			}
+			set_temp_variable = { UKR_influence_change = 3 }
+			UKR_industrialization_score = yes
+		}
+	}
+
+	UKR_northern_railway = {
+		icon = GFX_decision_generic_train
+
+		visible = { has_active_mission = UKR_industrialisation_mission }
+
+		cost = 50
+		days_remove = 120
+		fire_only_once = yes
+
+		available = {
+			NOT = {
+				has_country_flag = UKR_railway_in_progress
+			}
+			has_full_control_of_state = 193
+			has_full_control_of_state = 225
+			has_full_control_of_state = 221
+		}
+
+		highlight_states = {
+            highlight_state_targets = {
+                state = 193
+				state = 225
+				state = 221
+            }
+        }
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		ai_will_do = { factor = 100 }
+
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete UKR_northern_railway"
+			set_country_flag = UKR_railway_in_progress
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UKR_northern_railway"
+			set_country_flag = UKR_northern_railway_has_completed
+			clr_country_flag = UKR_railway_in_progress
+			193 = {
+			    add_building_construction = {
+				    type = supply_node
+				    province = 11489
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			build_railway = {
+				level = 2
+				path = { 11489 11425 463 11462 3520 501 11397 }
+			}
+			set_temp_variable = { UKR_influence_change = 3 }
+			UKR_industrialization_score = yes
+		}
+	}
+
+	UKR_industry_in_the_west = {
+		icon = GFX_decision_generic_merge_plant_materiel
+
+		visible = { has_active_mission = UKR_industrialisation_mission }
+
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = UKR_road_kyiv_minsk_has_completed
+			has_full_control_of_state = 199
+			has_full_control_of_state = 198
+		}
+
+		highlight_states = {
+            highlight_state_targets = {
+                state = 199
+                state = 198
+            }
+        }
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = { factor = 100 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UKR_industry_in_the_west"
+			199 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			198 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_temp_variable = { UKR_influence_change = 5 }
+			UKR_industrialization_score = yes
+		}
+	}
+
+	UKR_oil_industry_of_kherson = {
+		icon = GFX_decision_oil
+
+		visible = { has_active_mission = UKR_industrialisation_mission }
+
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = UKR_southern_railway_has_completed
+			has_full_control_of_state = 196
+		}
+
+		highlight_states = {
+            highlight_state_targets = {
+                state = 196
+            }
+        }
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = { factor = 100 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UKR_oil_industry_of_kherson"
+			196 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = oil
+					amount = 15
+				}
+			}
+			set_temp_variable = { UKR_influence_change = 5 }
+			UKR_industrialization_score = yes
+		}
+	}
+
+	UKR_black_sea_shipyards = {
+		icon = GFX_decision_generic_merge_plant_ship
+
+		visible = { has_active_mission = UKR_industrialisation_mission }
+
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = UKR_southern_railway_has_completed
+			has_full_control_of_state = 192
+			has_full_control_of_state = 197
+			has_full_control_of_state = 196
+		}
+
+		highlight_states = {
+            highlight_state_targets = {
+                state = 192
+				state = 197
+				state = 196
+            }
+        }
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = { factor = 100 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UKR_black_sea_shipyards"
+			192 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			197 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			196 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_temp_variable = { UKR_influence_change = 5 }
+			UKR_industrialization_score = yes
+		}
+	}
+
+	UKR_construction_of_the_dnieper_hydroelectric_power_station = {
+		icon = GFX_decision_generic_electricity
+
+		visible = { has_active_mission = UKR_industrialisation_mission }
+
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = UKR_eastern_railway_has_completed
+			has_full_control_of_state = 226
+		}
+
+		highlight_states = {
+            highlight_state_targets = {
+                state = 226
+            }
+        }
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = { factor = 100 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove construction_of_the_dnieper_hydroelectric_power_station"
+			226 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 11437
+					}
+				}
+			}
+			set_temp_variable = { UKR_influence_change = 5 }
+			UKR_industrialization_score = yes
+		}
+	}
+
+	UKR_industrialization_of_donbass = {
+		icon = GFX_decision_generic_factory
+
+		visible = { has_active_mission = UKR_industrialisation_mission }
+
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = UKR_eastern_railway_has_completed
+			has_full_control_of_state = 228
+			has_full_control_of_state = 227
+		}
+
+		highlight_states = {
+            highlight_state_targets = {
+                state = 228
+                state = 227
+            }
+        }
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = { factor = 100 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UKR_industrialization_of_donbass"
+			228 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			227 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_temp_variable = { UKR_influence_change = 5 }
+			UKR_industrialization_score = yes
+		}
+	}
+
+	UKR_steel_mills_in_the_east = {
+		icon = GFX_decision_steel
+
+		visible = { has_active_mission = UKR_industrialisation_mission }
+
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = UKR_eastern_railway_has_completed
+			has_full_control_of_state = 200
+			has_full_control_of_state = 226
+			has_full_control_of_state = 227
+			has_full_control_of_state = 221
+		}
+
+		highlight_states = {
+            highlight_state_targets = {
+                state = 200
+                state = 226
+				state = 227
+				state = 221
+            }
+        }
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = { factor = 100 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UKR_steel_mills_in_the_east"
+			200 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+			226 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+			227 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
+			221 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+			set_temp_variable = { UKR_influence_change = 5 }
+			UKR_industrialization_score = yes
+		}
+	}
+
+	UKR_northern_industry = {
+		icon = GFX_decision_generic_industry
+
+		visible = { has_active_mission = UKR_industrialisation_mission }
+
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = UKR_northern_railway_has_completed
+			has_full_control_of_state = 225
+			has_full_control_of_state = 193
+		}
+
+		highlight_states = {
+            highlight_state_targets = {
+                state = 225
+                state = 193
+            }
+        }
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = { factor = 100 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UKR_northern_industry"
+			193 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			225 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_temp_variable = { UKR_influence_change = 5 }
+			UKR_industrialization_score = yes
+		}
+	}
+}
+
+ukrainian_economy = {
+
+    involve_land_surveyors = {
+
+    icon = generic_factory
+
+		fire_only_once = no
+
+		modifier = {
+			production_speed_buildings_factor = 0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = UKR
+			}
+		}
+	}
+}
+
+ukrainian_economy = {
+
+    housing_for_workers = {
+
+    icon = generic_factory
+
+		fire_only_once = no
+
+		modifier = {
+			monthly_population = 0.15
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = UKR
+			}
+		}
+	}
+}
+
+ukrainian_economy = {
+
+    improvement_of_working_conditions = {
+
+    icon = generic_factory
+
+		fire_only_once = no
+
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.05
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = UKR
+			}
+		}
+	}
+}
+
+ukrainian_economy = {
+
+    increase_holidays = {
+
+    icon = generic_factory
+
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.05
+            stability_factor = 0.1
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = UKR
+			}
+		}
+	}
+}
+
+party_projects = {
+
+    civil_industry_of_ukraine = {
+
+    icon = generic_factory
+
+		fire_only_once = no
+
+		modifier = {
+            production_speed_industrial_complex_factor = 0.05
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = UKR
+			}
+		}
+	}
+}
+
+party_projects = {
+
+    military_potential_of_ukraine = {
+
+    icon = generic_industry
+
+		fire_only_once = no
+
+		modifier = {
+            production_speed_arms_factory_factor = 0.05
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 50
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = UKR
+			}
+		}
+	}
+}
+
+party_projects = {
+
+    ukrainian_shipbuilding = {
+
+    icon = generic_merge_plant_ship
+
+		fire_only_once = no
+
+		modifier = {
+            production_speed_dockyard_factor = 0.05
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 25
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = UKR
+			}
+		}
+	}
+}
+
+party_projects = {
+
+    encouraging_the_ukrainian_military = {
+
+    icon = generic_military
+
+		fire_only_once = no
+
+		modifier = {
+            army_defence_factor = 0.01
+			army_org_factor = 0.05
+			army_speed_factor = 0.05
+		}
+
+		days_remove = 90
+		days_re_enable = 7
+
+		cost = 50
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = UKR
+			}
+		}
+	}
+}
+
+reunite_the_ukrainian_people = {
+
+    reunite_western_ukrainians = {
+
+    icon = generic_form_nation
+
+        available = {
+			has_government = communism
+			93 = { is_owned_and_controlled_by = SOV }
+			91 = { is_owned_and_controlled_by = SOV }
+			89 = { is_owned_and_controlled_by = SOV }
+			
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions reunite_western_ukrainians"
+        UKR = {
+					if = {
+						limit = { SOV = { owns_state = 89 controls_state = 89 } }
+						transfer_state = 89
+					}
+					if = {
+						limit = { SOV = { owns_state = 91 controls_state = 91 } }
+						transfer_state = 91
+					}
+					if = {
+						limit = { SOV = { owns_state = 93 controls_state = 93 } }
+						transfer_state = 93
+					
+		}
+	}
+}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = UKR
+			}
+		}
+	}
+}
+
+reunite_the_ukrainian_people = {
+
+    reunite_south_ukrainians = {
+
+    icon = generic_form_nation
+
+        available = {
+			has_government = communism
+			80 = { is_owned_and_controlled_by = SOV }
+			766 = { is_owned_and_controlled_by = SOV }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions reunite_south_ukrainians"
+        UKR = {
+			if = {
+				limit = { SOV = { owns_state = 80 controls_state = 80 } }
+				transfer_state = 80
+			}
+			if = {
+				limit = { SOV = { owns_state = 766 controls_state = 766 } }
+				transfer_state = 766
+		}
+	}
+}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = UKR
+			}
+		}
+	}
+}
+
+reunite_the_ukrainian_people = {
+
+    reunite_tiraspol = {
+
+    icon = generic_form_nation
+
+        available = {
+			has_government = communism
+			78 = { is_owned_and_controlled_by = MOL }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions reunite_tiraspol"
+        UKR = {
+			if = {
+				limit = { MOL = { owns_state = 834 controls_state = 834 } }
+				transfer_state = 834
+		}
+	}
+}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = UKR
+			}
+		}
+	}
+}
+
+restore_kievan_rus = {
+
+    restore_kievan_rus_ukr = {
+
+    icon = generic_form_nation
+
+        available = {
+			has_government = neutrality
+			controls_state = 240
+			controls_state = 220
+			controls_state = 222
+			controls_state = 223
+			controls_state = 258
+			controls_state = 254
+			controls_state = 253
+			controls_state = 351
+			controls_state = 214
+			controls_state = 213
+			controls_state = 215
+			controls_state = 216
+			controls_state = 264
+			controls_state = 195
+			controls_state = 208
+			controls_state = 209
+			controls_state = 263
+			controls_state = 210
+			controls_state = 246
+			controls_state = 242
+			controls_state = 244
+			controls_state = 243
+			controls_state = 224
+			controls_state = 205
+			controls_state = 219
+			controls_state = 194
+			controls_state = 241
+			controls_state = 206
+			controls_state = 204
+			controls_state = 207
+			controls_state = 834
+			controls_state = 94
+			controls_state = 95
+			controls_state = 96
+			controls_state = 78
+			controls_state = 79
+			controls_state = 247
+			controls_state = 248
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions restore_kievan_rus_ukr"
+		set_cosmetic_tag = UKR_KIEVAN_RUS
+        UKR = {
+			add_state_core = 240
+		    add_state_core = 220
+			add_state_core = 222
+			add_state_core = 258
+			add_state_core = 254
+			add_state_core = 253
+			add_state_core = 244
+			add_state_core = 351
+			add_state_core = 223
+			add_state_core = 214
+			add_state_core = 213
+			add_state_core = 215
+			add_state_core = 216
+			add_state_core = 264
+			add_state_core = 195
+			add_state_core = 208
+			add_state_core = 209
+			add_state_core = 263
+			add_state_core = 210
+			add_state_core = 246
+			add_state_core = 242
+			add_state_core = 243
+			add_state_core = 224
+			add_state_core = 205
+			add_state_core = 219
+			add_state_core = 194
+			add_state_core = 241
+			add_state_core = 206
+			add_state_core = 204
+			add_state_core = 207
+			add_state_core = 834
+			add_state_core = 94
+			add_state_core = 95
+			add_state_core = 96
+			add_state_core = 78
+			add_state_core = 79
+			add_state_core = 247
+			add_state_core = 248
+	}
+}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = UKR
+			}
+		}
+	}
+}
+
+UKR_ukraine_balance_category= {
+
+give_the_leader_new_powers_ukr = {  
+
+		icon = eng_blackshirt_speech
+
+		priority = 100
+
+		days_remove = 60
+		days_re_enable = 90
+
+		cost = 50
+
+		fire_only_once = no
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision give_the_leader_new_powers_ukr"
+			add_stability = 0.02
+			add_power_balance_value = {
+				id = UKR_communist_balance
+				value = 0.05
+			}
+		}
+	}
+}
+
+UKR_ukraine_balance_category = {
+
+hold_a_review_of_troops_with_awards_ukr = {  
+
+		icon = generic_military
+
+		priority = 100
+
+		days_remove = 60
+		days_re_enable = 90
+
+		cost = 50
+
+		fire_only_once = no
+
+		modifier = {
+			grant_medal_cost_factor = -0.5
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision hold_a_review_of_troops_with_awards_ukr"
+			add_war_support = 0.02
+			add_power_balance_value = {
+				id = UKR_communist_balance
+				value = 0.05
+			}
+		}
+	}
+}
+
+UKR_ukraine_balance_category = {
+
+hold_competitions_for_workers_at_enterprises_ukr = {  
+
+		icon = generic_factory
+
+		priority = 100
+
+		days_remove = 60
+		days_re_enable = 90
+
+		fire_only_once = no
+
+		cost = 50
+
+		modifier = {
+			production_factory_start_efficiency_factor = 0.05
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision hold_competitions_for_workers_at_enterprises_ukr"
+			add_power_balance_value = {
+				id = UKR_communist_balance
+				value = 0.1
+			}
+		}
+	}
+}
+
+UKR_ukraine_balance_category = {
+
+expand_the_supreme_soviet_ukr = {  
+
+		icon = SOV_place_hq
+
+		priority = 40
+
+		days_remove = 60
+		days_re_enable = 60
+
+		cost = 25
+
+		fire_only_once = no
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision expand_the_supreme_soviet_ukr"
+			add_command_power = 2.0
+			add_power_balance_value = {
+				id = UKR_communist_balance
+				value = -0.1
+			}
+		}
+	}
+}
+
+UKR_ukraine_balance_category = {
+
+hunt_for_corrupt_officials_ukr = {  
+
+		icon = gre_investment_decisions
+
+		priority = 40
+
+		days_remove = 60
+		days_re_enable = 90
+
+		cost = 50
+
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = -0.05 
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision hunt_for_corrupt_officials_ukr"
+			add_power_balance_value = {
+				id = UKR_communist_balance
+				value = -0.15
+			}
+		}
+	}
+}
+
+UKR_ukraine_balance_category = {
+
+develop_komsomol_ukr = {  
+
+		icon = generic_civil_support
+
+		priority = 40
+
+		days_remove = 60
+		days_re_enable = 90
+
+		fire_only_once = no
+
+		cost = 50
+
+		modifier = {
+			political_power_factor = 0.1
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision develop_komsomol_ukr"
+			add_power_balance_value = {
+				id = UKR_communist_balance
+				value = -0.1
+			}
+		}
+	}
+}
+
+UKR_ukraine_balance_category = {
+
+	ukr_bob_mission_balance_military_potential_of_ukraine = {  
+			
+		icon = generic_army_support
+		
+		priority = 40
+		
+		fire_only_once = yes
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 730
+		
+		available = {
+			num_of_military_factories > 20
+			has_army_manpower = { size > 400000 }
+		}
+	
+		allowed = {
+			always=no
+		}
+	
+		visible = {
+			has_completed_focus = UKR_expand_party
+			has_completed_focus = UKR_development_of_ukraine
+		}
+	
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions ukr_bob_mission_balance_military_potential_of_ukraine"
+			country_event = UKR_bop.2
+			army_experience = 25
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.25
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		
+		timeout_effect = {
+			country_event = UKR_bop.3
+			add_war_support = -0.05
+			add_political_power = -25
+			}
+		}
+	}
+	
+UKR_ukraine_balance_category = {
+	
+	ukr_bob_mission_balance_industrial_potential_of_ukraine = {  
+			
+			icon = generic_merge_plant_materiel
+			
+			priority = 40
+			
+			fire_only_once = yes
+			is_good = no
+			selectable_mission = no
+			days_mission_timeout = 730
+			
+			available = {
+				num_of_civilian_factories > 20
+				has_tech = improved_machine_tools
+				OR = {
+					has_tech = concentrated_industry2
+					has_tech = dispersed_industry2
+				} 
+			}
+	
+			allowed = {
+				always=no
+			}
+		
+			visible = {
+				has_completed_focus = UKR_expand_party
+				has_completed_focus = UKR_army_reforms
+			}
+	
+			complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions ukr_bob_mission_balance_industrial_potential_of_ukraine"
+			country_event = UKR_bop.2
+			add_political_power = 25
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = industry
+				category = electronics
+			}
+		}
+			
+		timeout_effect = {
+			country_event = UKR_bop.3
+			add_stability = -0.05
+			add_political_power = -25
+		}
+	}
+}
+	
+UKR_ukraine_balance_category = {
+	
+	ukr_bob_mission_balance_aircraft_potential_of_ukraine = {  
+			
+			icon = generic_merge_plant_aircraft
+			
+			priority = 40
+			
+			fire_only_once = yes
+			is_good = no
+			selectable_mission = no
+			days_mission_timeout = 730
+			
+			available = {
+				has_equipment = { small_plane_airframe_1 > 300 }
+				has_equipment = { small_plane_cas_airframe_1 > 200 }
+			}
+	
+			allowed = {
+				always=no
+			}
+		
+			visible = {
+				has_completed_focus = UKR_expand_party
+				has_completed_focus = UKR_ukrainian_waf
+			}
+	
+			complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions ukr_bob_mission_balance_aircraft_potential_of_ukraine" 
+			country_event = UKR_bop.2
+			add_political_power = 25
+			add_war_support = 0.05
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+			}
+		}
+			
+		timeout_effect = {
+			country_event = UKR_bop.3
+			add_war_support = -0.05
+			add_political_power = -25
+		}
+	}
+}
+
+UKR_reunion_of_the_people_ger = {
+	
+	reunite_western_ukrainians_king = {
+
+		icon = generic_form_nation
+
+		visible = {
+			has_country_flag = the_agreement_was_signed
+		}
+	
+			available = {
+				93 = { is_owned_and_controlled_by = GER }
+				91 = { is_owned_and_controlled_by = GER }
+				89 = { is_owned_and_controlled_by = GER }
+				
+			}
+	
+			fire_only_once = yes
+	
+			complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions reunite_western_ukrainians_king"
+			UKR = {
+			if = {
+				limit = { GER = { owns_state = 89 controls_state = 89 } }
+				transfer_state = 89
+			}
+			if = {
+				limit = { GER = { owns_state = 91 controls_state = 91 } }
+				transfer_state = 91
+			}
+			if = {
+				limit = { GER = { owns_state = 93 controls_state = 93 } }
+			    transfer_state = 93	
+			}
+		}
+	}
+	
+			ai_will_do = {
+				base = 1000
+				modifier = {
+					add = 1
+					has_stability < 0.4
+				}
+				modifier = {
+					factor = 1000
+					original_tag = UKR
+				}
+			}
+		}
+	}
+
+UKR_cooperation_with_the_oun = {
+	
+		volunteer_nationalists = {
+	
+		icon = eng_blackshirt_march
+	
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 90
+		cost = 50
+		
+		modifier = {
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.05
+			mobilization_speed = 0.1
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision volunteer_nationalists"
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 1000
+				original_tag = UKR
+			}
+		}
+	}
+}
+
+UKR_cooperation_with_the_oun = {
+	
+	political_influence = {
+
+	icon = eng_propaganda_campaigns
+
+	fire_only_once = no
+	days_remove = 60
+	days_re_enable = 90
+	cost = 50
+	
+	modifier = {
+		political_power_gain = 0.05
+	}
+
+	remove_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision political_influence"
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+	
+	    ai_will_do = {
+		    base = 1000
+		    modifier = {
+			add = 1
+			has_stability < 0.4
+		}
+		modifier = {
+			factor = 1000
+			original_tag = UKR
+		    }
+		}
+	}
+}
+
+UKR_cooperation_with_the_oun = {
+	
+	nationalists_in_government = {
+
+	icon = generic_political_discourse
+
+	fire_only_once = no
+	days_remove = 60
+	days_re_enable = 90
+	cost = 50
+	
+	modifier = {
+		economy_cost_factor = -0.15
+		trade_laws_cost_factor = -0.15
+		mobilization_laws_cost_factor = -0.15
+	}
+
+	remove_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision nationalists_in_government"
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+	
+	    ai_will_do = {
+		    base = 1000
+		    modifier = {
+			add = 1
+			has_stability < 0.4
+		}
+		modifier = {
+			factor = 1000
+			original_tag = UKR
+		    }
+		}
+	}
+}
+
+UKR_cooperation_with_the_oun = {
+	
+	economic_reforms_oun = {
+
+	icon = gre_paying_ifc_debt
+
+	fire_only_once = no
+	days_remove = 60
+	days_re_enable = 90
+	cost = 50
+	
+	modifier = {
+		production_factory_efficiency_gain_factor = 0.05
+		consumer_goods_factor = 0.05
+	}
+
+	remove_effect = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision economic_reforms"
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+	
+	    ai_will_do = {
+		    base = 1000
+		    modifier = {
+			add = 1
+			has_stability < 0.4
+		}
+		modifier = {
+			factor = 1000
+			original_tag = UKR
+		    }
+		}
+	}
+}
+
+UKR_occupation_obstruction = {
+
+	UKR_taking_back_our_lands = {  
+	
+		icon = generic_operation
+
+		fire_only_once = yes
+
+		days_remove = 7
+
+		cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decisions UKR_taking_back_our_lands"
+			country_event = UKR_Ev.20
+		}
+	}
+}

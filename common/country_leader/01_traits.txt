@@ -1,0 +1,221 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+leader_traits = {
+
+	favorite_of_the_peoples = {
+		random = no
+		army_core_defence_factor = 0.05
+		army_core_attack_factor = 0.05
+        stability_factor = 0.20
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	member_of_the_troika = {
+		random = no
+		subversive_activites_upkeep = -0.5
+		resistance_damage_to_garrison = -0.05
+		agency_upgrade_time = -0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	head_of_the_central_headquarters_of_the_partisan_movement = {
+		random = no
+		compliance_gain = 0.01
+		compliance_growth = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	patriarch_of_kyiv_and_all_rus = {  
+		random = no
+		sprite = 13
+        stability_factor = 0.1
+		army_morale_factor = 0.1
+		compliance_growth_on_our_occupied_states = -0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	metropolitan_of_galicia_and_archbishop_of_lvov = {  
+		random = no
+		sprite = 13
+        stability_factor = 0.1
+		army_morale_factor = 0.1
+		compliance_growth_on_our_occupied_states = -0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	hetman_of_all_ukraine = {
+		random = no
+        war_support_factor = 0.1
+		army_core_defence_factor = 0.05
+		army_core_attack_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	habsburg_lorraine = {
+		random = no
+        stability_factor = 0.1
+		compliance_gain = 0.01
+		compliance_growth = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+    leader_of_the_proletariat = {
+		random = no
+		political_power_factor = 0.15
+        stability_factor = 0.20
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	grand_empress = {
+		random = no
+		political_power_factor = 0.15
+        stability_factor = 0.20
+		army_attack_factor = 0.1
+		army_defence_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chairman_of_the_CEC = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+        stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	people's_commissar_of_health = {
+		random = no
+		sprite = 13
+		army_morale_factor = 0.05
+        stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	minister_of_defense = {
+		random = no
+		sprite = 13
+		army_core_attack_factor = 0.05
+        army_core_defence_factor = 0.05
+		production_speed_arms_factory_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	trade_unionist_com_prof = {
+		random = no
+		sprite = 13
+		industrial_capacity_factory = 0.1
+		production_factory_max_efficiency_factor = 0.1
+		line_change_production_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	head_of_the_nkvd_zsr = {
+		random = no
+		sprite = 13
+		subversive_activites_upkeep = -0.5
+		operative_slot = 1
+	    root_out_resistance_effectiveness_factor = 0.1
+		resistance_damage_to_garrison = -0.05
+		agency_upgrade_time = -0.15
+		decryption_factor = 0.1
+		army_intel_factor = 0.3
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Глава правительства - Head of Government
+	head_of_government_communist_advisor = {
+		random = no
+		sprite = 13
+		communism_drift = 0.01
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	UKR_left_socialist_revolutionary = {
+		random = no
+		war_support_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	SOV_nikolay_shvernik_1 = {
+		sprite = 10
+		random = no
+		production_factory_efficiency_gain_factor = 0.05
+		line_change_production_efficiency_factor = -0.1
+		industrial_capacity_factory = 0.05
+		custom_modifier_tooltip = SOV_nikolay_shvernik_1_tt
+	}
+
+	SOV_nikolay_shvernik_2 = {
+		random = no
+		sprite = 13
+		required_garrison_factor = -0.25
+		non_core_manpower = 0.025
+		autonomy_gain = -0.1
+	}
+	
+	SOV_vyacheslav_malyshev_1 = {
+		sprite = 10
+		random = no
+		production_factory_start_efficiency_factor = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		ai_will_do = {
+			factor = 0.1
+			# modifier = {
+			# 	has_completed_focus = SOV_the_centre
+			# 	factor = 10
+			# }
+		}
+	}
+}
+	

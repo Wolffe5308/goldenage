@@ -1,0 +1,806 @@
+# For the Duel Leader Title, Leader Names, and custom portrait!
+
+defined_text = {#FIRST TITLE
+	name = GetFirstTitle
+	text = {
+        trigger = {
+            tag = SOV
+            has_country_leader = {
+				character = SOV_iosif_stalin
+				ruling_only = yes
+			}
+        }
+        localization_key = TITLE_SOV_GENERAL_SECRETARY
+    }
+    text = {
+        trigger = {
+            tag = UKR
+            OR = {
+                has_government = communism
+            }
+        }
+        localization_key = TITLE_UKR_FIRST_SECRETARY
+    }
+    text = {
+        trigger = {
+            tag = ZSR
+            OR = {
+                has_government = communism
+            }
+        }
+        localization_key = TITLE_ZSR_FIRST_SECRETARY
+    }
+    text = {
+        trigger = {
+            tag = BLR
+            OR = {
+                has_government = communism
+            }
+        }
+        localization_key = TITLE_BLR_FIRST_SECRETARY
+    }
+    text = {
+        trigger = {
+            tag = ITA
+            OR = {
+                has_country_leader = {
+                    character = ITA_benito_mussolini
+                    ruling_only = yes
+                }
+                has_country_leader = {
+                    character = ITA_italo_balbo
+                    ruling_only = yes
+                }
+                has_country_leader = {
+                    character = ITA_dino_grandi
+                    ruling_only = yes
+                }
+            }
+        }
+        localization_key = TITLE_ITA_DUCE
+    }
+    text = {
+        trigger = {
+            tag = SWE
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+            }
+        }
+        localization_key = TITLE_SWE_PRIME_MINISTER
+    }
+    text = {
+        trigger = {
+            tag = NOR
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+            }
+        }
+        localization_key = TITLE_NOR_PRIME_MINISTER
+    }
+    text = {
+        trigger = {
+            tag = DEN
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+            }
+        }
+        localization_key = TITLE_DEN_PRIME_MINISTER
+    }
+    text = {
+        trigger = {
+            tag = POL
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+                has_government = neutrality
+            }
+        }
+        localization_key = TITLE_POL_PRESIDENT
+    }
+    text = {
+        trigger = {
+            tag = LIT
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+                has_government = neutrality
+            }
+        }
+        localization_key = TITLE_LIT_PRESIDENT
+    }
+    text = {
+        trigger = {
+            tag = CZE
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+            }
+        }
+        localization_key = TITLE_CZE_PRESIDENT
+    }
+    text = {
+        trigger = {
+            tag = HUN
+            has_country_leader = {
+				character = HUN_miklos_horthy
+				ruling_only = yes
+			}
+        }
+        localization_key = TITLE_HUN_REGENT
+    }
+    text = {
+        trigger = {
+            tag = YUG
+            has_country_leader = {
+				character = YUG_prince_paul
+				ruling_only = yes
+			}
+        }
+        localization_key = TITLE_YUG_REGENT
+    }
+    text = {
+        trigger = {
+            tag = BUL
+            OR = {
+                has_country_leader = {
+                    character = BUL_boris_iii
+                    ruling_only = yes
+                }
+                has_country_leader = {
+                    character = BUL_ferdinand_i
+                    ruling_only = yes
+                }
+            }
+        }
+        localization_key = TITLE_BUL_TSAR
+    }
+    text = {
+        trigger = {
+            tag = GRE
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+                has_government = neutrality
+            }
+        }
+        localization_key = TITLE_GRE_PRIME_MINISTER
+    }
+    text = {
+        trigger = {
+            tag = GER
+            has_government = fascism
+        }
+        localization_key = TITLE_GER_FUHRER
+    }
+    text = {
+        trigger = {
+            tag = AUS
+            OR = {
+                has_government = fascism
+                has_government = neutrality
+                has_government = democratic
+                has_government = social_democrat
+            }
+        }
+        localization_key = TITLE_AUS_CHANCELLOR
+    }
+    text = {
+        trigger = {
+            tag = HOL
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+            }
+        }
+        localization_key = TITLE_HOL_PRIME_MINISTER
+    }
+    text = {
+        trigger = {
+            tag = BEL
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+            }
+        }
+        localization_key = TITLE_BEL_PRIME_MINISTER
+    }
+    text = {
+        trigger = {
+            tag = FRA
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+            }
+        }
+        localization_key = TITLE_FRA_PRIME_MINISTER
+    }
+    text = {
+        trigger = {
+            tag = POR
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+                has_government = neutrality
+            }
+        }
+        localization_key = TITLE_POR_PRIME_MINISTER
+    }
+    text = {
+        trigger = {
+            tag = SWI
+            OR = {
+                has_country_leader = {
+                    character = SWI_federal_assembly
+                    ruling_only = yes
+                }
+                has_country_leader = {
+                    character = SWI_federal_council
+                    ruling_only = yes
+                }
+            }
+        }
+        localization_key = TITLE_SWI_CONFEDERATE_GOVERNMENT
+    }
+    text = {
+        trigger = {
+            tag = CAN
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+                has_government = neutrality
+            }
+        }
+        localization_key = TITLE_CAN_PRIME_MINISTER
+    }
+    text = {
+        trigger = {
+            tag = USA
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+            }
+        }
+        localization_key = TITLE_USA_PRESIDENT
+    }
+    text = {
+        trigger = {
+            tag = AST
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+            }
+        }
+        localization_key = TITLE_AST_PRIME_MINISTER
+    }
+    text = {
+        trigger = {
+            tag = NZL
+            OR = {
+                has_government = democratic
+                has_government = liberal
+                has_government = social_democrat
+            }
+        }
+        localization_key = TITLE_NZL_PRIME_MINISTER
+    }
+	text = {
+		localization_key = DEFAULT_FIRST_TITLE
+	}
+}
+
+defined_text = {#SECOND TITLE
+	name = GetSecondTitle
+	text = {
+        trigger = {
+            has_idea_with_trait = TITLE_SOV_Chairman
+        }
+        localization_key = TITLE_SOV_Chairman
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_UKR_Chairman
+        }
+        localization_key = TITLE_UKR_Chairman
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_ZSR_Chairman
+        }
+        localization_key = TITLE_ZSR_Chairman
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_BLR_Chairman
+        }
+        localization_key = TITLE_BLR_Chairman
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_ITA_King
+        }
+        localization_key = TITLE_ITA_King
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_SWE_King
+        }
+        localization_key = TITLE_SWE_King
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_NOR_King
+        }
+        localization_key = TITLE_NOR_King
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_DEN_King
+        }
+        localization_key = TITLE_DEN_King
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_POL_Prime_Minister
+        }
+        localization_key = TITLE_POL_Prime_Minister
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_LIT_Prime_Minister
+        }
+        localization_key = TITLE_LIT_Prime_Minister
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_CZE_Prime_Minister
+        }
+        localization_key = TITLE_CZE_Prime_Minister
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_HUN_Prime_Minister
+        }
+        localization_key = TITLE_HUN_Prime_Minister
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_YUG_Prime_Minister
+        }
+        localization_key = TITLE_YUG_Prime_Minister
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_BUL_Prime_Minister
+        }
+        localization_key = TITLE_BUL_Prime_Minister
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_GRE_King
+        }
+        localization_key = TITLE_GRE_King
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_GER_Deputy_Fuhrer
+        }
+        localization_key = TITLE_GER_Deputy_Fuhrer
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_AUS_President
+        }
+        localization_key = TITLE_AUS_President
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_HOL_Queen
+        }
+        localization_key = TITLE_HOL_Queen
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_BEL_King
+        }
+        localization_key = TITLE_BEL_King
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_FRA_President
+        }
+        localization_key = TITLE_FRA_President
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_POR_President
+        }
+        localization_key = TITLE_POR_President
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_SWI_President
+        }
+        localization_key = TITLE_SWI_President
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_CAN_Governor_General
+        }
+        localization_key = TITLE_CAN_Governor_General
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_USA_Vice_President
+        }
+        localization_key = TITLE_USA_Vice_President
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_AST_Governor_General
+        }
+        localization_key = TITLE_AST_Governor_General
+    }
+    text = {
+        trigger = {
+            has_idea_with_trait = TITLE_NZL_Governor_General
+        }
+        localization_key = TITLE_NZL_Governor_General
+    }
+}
+
+defined_text = {#Имя второго лидера
+	name = GetDualLeaderName
+	text = { 
+        trigger = {
+            has_idea = SOV_D_Mikhail_Kalinin
+        }
+        localization_key = SOV_D_Mikhail_Kalinin
+    }
+    text = { 
+        trigger = {
+            has_idea = UKR_D_Grigory_Petrovsky
+        }
+        localization_key = UKR_D_Grigory_Petrovsky
+    }
+    text = { 
+        trigger = {
+            has_idea = ZSR_D_Sultan_Mufidzade
+        }
+        localization_key = ZSR_D_Sultan_Mufidzade
+    }
+    text = { 
+        trigger = {
+            has_idea = BLR_D_Alexander_Chervyakov
+        }
+        localization_key = BLR_D_Alexander_Chervyakov
+    }
+    text = { 
+        trigger = {
+            has_idea = ITA_D_Vittorio_Emanuele
+        }
+        localization_key = ITA_D_Vittorio_Emanuele
+    }
+    text = { 
+        trigger = {
+            has_idea = SWE_D_Gustaf_V
+        }
+        localization_key = SWE_D_Gustaf_V
+    }
+    text = { 
+        trigger = {
+            has_idea = NOR_D_Haakon_VII
+        }
+        localization_key = NOR_D_Haakon_VII
+    }
+    text = { 
+        trigger = {
+            has_idea = DEN_D_Christian_X
+        }
+        localization_key = DEN_D_Christian_X
+    }
+    text = { 
+        trigger = {
+            has_idea = POL_D_Felician_Skladkovsky
+        }
+        localization_key = POL_D_Felician_Skladkovsky
+    }
+    text = { 
+        trigger = {
+            has_idea = LIT_D_Juozas_Tubelis
+        }
+        localization_key = LIT_D_Juozas_Tubelis
+    }
+    text = { 
+        trigger = {
+            has_idea = CZE_D_Milan_Hodza
+        }
+        localization_key = CZE_D_Milan_Hodza
+    }
+    text = { 
+        trigger = {
+            has_idea = HUN_D_Gyula_Gombos
+        }
+        localization_key = HUN_D_Gyula_Gombos
+    }
+    text = { 
+        trigger = {
+            has_idea = YUG_D_Milan_Stojadinovic
+        }
+        localization_key = YUG_D_Milan_Stojadinovic
+    }
+    text = { 
+        trigger = {
+            has_idea = BUL_D_Georgi_Kyoseivanov
+        }
+        localization_key = BUL_D_Georgi_Kyoseivanov
+    }
+    text = { 
+        trigger = {
+            has_idea = GRE_D_George_II
+        }
+        localization_key = GRE_D_George_II
+    }
+    text = { 
+        trigger = {
+            has_idea = GER_D_Rudolf_Hess
+        }
+        localization_key = GER_D_Rudolf_Hess
+    }
+    text = { 
+        trigger = {
+            has_idea = AUS_D_Wilhelm_Miklas
+        }
+        localization_key = AUS_D_Wilhelm_Miklas
+    }
+    text = { 
+        trigger = {
+            has_idea = HOL_D_Wilhelmina
+        }
+        localization_key = HOL_D_Wilhelmina
+    }
+    text = { 
+        trigger = {
+            has_idea = BEL_D_Leopold_III
+        }
+        localization_key = BEL_D_Leopold_III
+    }
+    text = { 
+        trigger = {
+            has_idea = FRA_D_Albert_Francois
+        }
+        localization_key = FRA_D_Albert_Francois
+    }
+    text = { 
+        trigger = {
+            has_idea = POR_D_Antonio_Carmona
+        }
+        localization_key = POR_D_Antonio_Carmona
+    }
+    text = { 
+        trigger = {
+            has_idea = SWI_D_Albert_Meyer
+        }
+        localization_key = SWI_D_Albert_Meyer
+    }
+    text = { 
+        trigger = {
+            has_idea = CAN_D_John_Buchan
+        }
+        localization_key = CAN_D_John_Buchan
+    }
+    text = { 
+        trigger = {
+            has_idea = USA_D_John_Garner
+        }
+        localization_key = USA_D_John_Garner
+    }
+    text = { 
+        trigger = {
+            has_idea = AST_D_Alexander_Hore_Ruthven
+        }
+        localization_key = AST_D_Alexander_Hore_Ruthven
+    }
+    text = { 
+        trigger = {
+            has_idea = NZL_D_George_Monckton_Arundell
+        }
+        localization_key = NZL_D_George_Monckton_Arundell
+    }
+    text = {
+		localization_key = DEFAULT_TITLE
+	}
+}
+
+defined_text = {#Портрет второго лидера
+    name = GetDualLeaderPortrait
+	text = {
+        trigger = {
+            has_idea = SOV_D_Mikhail_Kalinin
+        }
+        localization_key = GFX_SOV_mikhail_kalinin
+    }
+    text = {
+        trigger = {
+            has_idea = BLR_D_Alexander_Chervyakov
+        }
+        localization_key = GFX_BLR_alexander_chervyakov
+    }
+    text = {
+        trigger = {
+            has_idea = ITA_D_Vittorio_Emanuele
+        }
+        localization_key = GFX_ITA_vittorio_emanuele
+    }
+    text = {
+        trigger = {
+            has_idea = SWE_D_Gustaf_V
+        }
+        localization_key = GFX_SWE_gustaf_v
+    }
+    text = {
+        trigger = {
+            has_idea = NOR_D_Haakon_VII
+        }
+        localization_key = GFX_NOR_haakon_vii
+    }
+    text = {
+        trigger = {
+            has_idea = DEN_D_Christian_X
+        }
+        localization_key = GFX_DEN_christian_x
+    }
+    text = {
+        trigger = {
+            has_idea = POL_D_Felician_Skladkovsky
+        }
+        localization_key = GFX_POL_felician_skladkovsky
+    }
+    text = {
+        trigger = {
+            has_idea = LIT_D_Juozas_Tubelis
+        }
+        localization_key = GFX_LIT_juozas_tubelis
+    }
+    text = {
+        trigger = {
+            has_idea = CZE_D_Milan_Hodza
+        }
+        localization_key = GFX_CZE_milan_hodza
+    }
+    text = {
+        trigger = {
+            has_idea = HUN_D_Gyula_Gombos
+        }
+        localization_key = GFX_HUN_gyula_gombos
+    }
+    text = {
+        trigger = {
+            has_idea = YUG_D_Milan_Stojadinovic
+        }
+        localization_key = GFX_YUG_milan_stojadinovic
+    }
+    text = {
+        trigger = {
+            has_idea = BUL_D_Georgi_Kyoseivanov
+        }
+        localization_key = GFX_BUL_georgi_kyoseivanov
+    }
+    text = {
+        trigger = {
+            has_idea = GRE_D_George_II
+        }
+        localization_key = GFX_GRE_george_ii
+    }
+    text = {
+        trigger = {
+            has_idea = GER_D_Rudolf_Hess
+        }
+        localization_key = GFX_GER_rudolf_hess
+    }
+    text = {
+        trigger = {
+            has_idea = AUS_D_Wilhelm_Miklas
+        }
+        localization_key = GFX_AUS_wilhelm_miklas
+    }
+    text = {
+        trigger = {
+            has_idea = HOL_D_Wilhelmina
+        }
+        localization_key = GFX_HOL_wilhelmina
+    }
+    text = {
+        trigger = {
+            has_idea = BEL_D_Leopold_III
+        }
+        localization_key = GFX_BEL_leopold_iii
+    }
+    text = {
+        trigger = {
+            has_idea = FRA_D_Albert_Francois
+        }
+        localization_key = GFX_FRA_albert_francois
+    }
+    text = {
+        trigger = {
+            has_idea = POR_D_Antonio_Carmona
+        }
+        localization_key = GFX_POR_antonio_carmona
+    }
+    text = {
+        trigger = {
+            has_idea = SWI_D_Albert_Meyer
+        }
+        localization_key = GFX_SWI_albert_meyer
+    }
+    text = {
+        trigger = {
+            has_idea = CAN_D_John_Buchan
+        }
+        localization_key = GFX_CAN_john_buchan
+    }
+    text = {
+        trigger = {
+            has_idea = USA_D_John_Garner
+        }
+        localization_key = GFX_USA_john_garner
+    }
+    text = {
+        trigger = {
+            has_idea = AST_D_Alexander_Hore_Ruthven
+        }
+        localization_key = GFX_AST_alexander_hore_ruthven
+    }
+    text = {
+        trigger = {
+            has_idea = NZL_D_George_Monckton_Arundell
+        }
+        localization_key = GFX_NZL_george_monckton_arundell
+    }
+	text = {
+		localization_key = "GFX_portrait_bg_blank"
+	}
+}
+
+defined_text = {#Описание второго лидера
+    name = GetDualLeaderDesc
+	text = { 
+        trigger = {
+            has_idea = SOV_D_Mikhail_Kalinin
+        }
+        localization_key = SOV_D_Mikhail_Kalinin_desc
+    }
+    text = {
+        trigger = {
+            has_idea = ITA_D_Vittorio_Emanuele
+        }
+        localization_key = ITA_D_Vittorio_Emanuele_desc
+    }
+}
+
+defined_text = {
+    name = GetDualLeaderTrait
+    text = {
+        trigger = {
+            has_idea_with_trait = all_union_headman
+        }
+        localization_key = SOV_D_Mikhail_Kalinin_trait
+    }
+}

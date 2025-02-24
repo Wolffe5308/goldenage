@@ -1,0 +1,26 @@
+﻿
+units= {
+
+	### Black Sea Fleet -- Грузия
+	fleet = {
+		name = "Chernomorskiy Flot Kavkaza"
+		naval_base = 3653 # Грузия
+		task_force = {				
+			name = "Chernomorskiy Flot Kavkaza"
+			location = 3653 # Грузия
+			ship = { name = "Krasnya Gruzia" definition = battleship equipment = { battleship_1 = { amount = 1 owner = ZSR  } } }
+			ship = { name = "Krasni Kavkaz" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ZSR  } } }
+			ship = { name = "Krasny Erevan" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ZSR  } } }
+			ship = { name = "Krasny Baku" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ZSR  } } }
+		}	
+		task_force = {	
+			name = "Chernomorskiy Podvodniy Flot Kavkaza"
+			location = 3653 # Грузия
+			ship = { name = "L-4 Garibaldian" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZSR  } } }			
+			ship = { name = "L-6 Carbonari" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZSR  } } }			
+			ship = { name = "M-35" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZSR  } } }			
+			ship = { name = "М-36" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZSR  } } }			
+		}	
+	}
+}
+
