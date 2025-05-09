@@ -448,52 +448,52 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_BLR_army_stabilization"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_army_stabilization.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_army_stabilization.png"			
 	}
 
 	SpriteType = {
 		name = "GFX_goal_BLR_doctrine_development"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_doctrine_development.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_doctrine_development.png"			
 	}
 
 	SpriteType = {
 		name = "GFX_goal_BLR_peoples_army"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_peoples_army.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_peoples_army.png"			
 	}
 
 	SpriteType = {
 		name = "GFX_goal_BLR_weapons_for_the_militia"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_weapons_for_the_militia.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_weapons_for_the_militia.png"			
 	}
 
 	SpriteType = {
 		name = "GFX_goal_BLR_organize_the_people"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_organize_the_people.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_organize_the_people.png"			
 	}
 
 	SpriteType = {
 		name = "GFX_goal_BLR_guerrilla_methods"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_guerrilla_methods.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_guerrilla_methods.png"			
 	}
 
 	SpriteType = {
 		name = "GFX_goal_BLR_pride_to_serve"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_pride_to_serve.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_pride_to_serve.png"			
 	}
 
 	SpriteType = {
 		name = "GFX_goal_BLR_the_people_defend_the_country"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_the_people_defend_the_country.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_the_people_defend_the_country.png"			
 	}
 
 	SpriteType = {
 		name = "GFX_goal_BLR_regular_army"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_regular_army.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_regular_army.png"			
 	}
 
 	SpriteType = {
 		name = "GFX_goal_BLR_anti_air_defense"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_anti_air_defense.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_anti_air_defense.png"			
 	}
 
 	SpriteType = {
@@ -503,7 +503,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_BLR_production_katyusha"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_production_katyusha.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_production_katyusha.png"			
 	}
 
 	SpriteType = {

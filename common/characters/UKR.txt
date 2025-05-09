@@ -269,6 +269,94 @@ characters={
 			}
 		}
 	}
+	UKR_yakov_livshits={ ############# Советник коммунист (левая оппозиция)
+		name=UKR_yakov_livshits
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_yakov_livshits.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_yakov_livshits
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_expand_party
+				has_country_flag = UKR_communist_head_of_goverment
+			}
+			traits = {
+				peoples_commissar_of_railways
+			}
+		}
+	}
+	UKR_khristian_rakovsky={ ############# Советник коммунист (левая оппозиция)
+		name=UKR_khristian_rakovsky
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_khristian_rakovsky.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_khristian_rakovsky
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_expand_party
+				has_country_flag = UKR_communist_head_of_goverment
+			}
+			traits = {
+				communist_orator
+			}
+		}
+	}
+	UKR_george_pyatakov={ ############# Советник коммунист (левая оппозиция)
+		name=UKR_george_pyatakov
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_georgy_pyatakov.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_george_pyatakov
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_expand_party
+				has_country_flag = UKR_communist_head_of_goverment
+			}
+			traits = {
+				deputy_peoples_commissar_of_heavy_industry
+			}
+		}
+	}
+	UKR_andrei_bubnov={ ############# Советник коммунист (дем. централист)
+		name=UKR_andrei_bubnov
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/ukr/advisors/idea_advisor_UKR_andrei_bubnov.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UKR_andrei_bubnov
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				has_completed_focus = UKR_expand_party
+				has_country_flag = UKR_communist_head_of_goverment
+			}
+			traits = {
+				dem_centralist
+			}
+		}
+	}
 	UKR_metropolitan_konstantin={ ############### Советник монархист
 		name=UKR_metropolitan_konstantin
 		portraits={

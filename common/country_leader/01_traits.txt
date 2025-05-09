@@ -167,26 +167,6 @@ leader_traits = {
 		}
 	}
 
-	#Глава правительства - Head of Government
-	head_of_government_communist_advisor = {
-		random = no
-		sprite = 13
-		communism_drift = 0.01
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	UKR_left_socialist_revolutionary = {
-		random = no
-		war_support_factor = 0.05
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
 	SOV_nikolay_shvernik_1 = {
 		sprite = 10
 		random = no
@@ -211,10 +191,65 @@ leader_traits = {
 		production_factory_max_efficiency_factor = 0.05
 		ai_will_do = {
 			factor = 0.1
-			# modifier = {
-			# 	has_completed_focus = SOV_the_centre
-			# 	factor = 10
-			# }
+		}
+	}
+
+	peoples_commissar_of_railways = {
+		sprite = 10
+		random = no
+		equipment_bonus = {
+			train_equipment = {
+				build_cost_ic = 0.05
+				armor_value = 0.1
+			}
+		}
+		production_speed_rail_way_factor = 0.05
+		production_speed_supply_node_factor = 0.05
+		fuel_gain_factor = 0.05
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+
+	deputy_peoples_commissar_of_heavy_industry = {
+		sprite = 10
+		random = no
+		production_speed_industrial_complex_factor = 0.05
+		line_change_production_efficiency_factor = -0.05
+		production_factory_efficiency_gain_factor = 0.05
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+
+	dem_centralist = {
+		sprite = 13
+		random = no
+		communism_drift = 0.03
+		social_democrat_drift = 0.02
+        party_popularity_stability_factor = 0.2
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+
+	#Глава правительства - Head of Government
+	head_of_government_communist_advisor = {
+		random = no
+		sprite = 13
+		communism_drift = 0.01
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	UKR_left_socialist_revolutionary = {
+		random = no
+		war_support_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
 		}
 	}
 }

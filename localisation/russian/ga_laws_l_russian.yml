@@ -1,0 +1,43 @@
+﻿l_russian:
+### Глава правительства ###
+ head_of_government_slot: "Глава правительства"
+ head_of_government: "Глава правительства"
+ 
+ is_head_of_government: "Является главой правительства"
+ is_head_of_government_NOT: "Не является главой правительства"
+
+ laws: "Законы"
+ government: "Правительство"
+
+ political_system: "Политическая система"
+ unitary_state: "Унитарное государство"
+ federation: "Федерация"
+ confederation: "Конфедерация"
+ 
+ form_of_government: "Форма правления"
+ presidential_republic: "Президентская республика"
+ parliamentary_republic: "Парламентская республика"
+ constitutional_monarchy: "Конституционная монархия"
+ absolute_monarchy: "Абсолютная монархия"
+ theocracy: "Теократия"
+ dictatorship: "Диктатура"
+ soviets: "Советы"
+
+ economic_system: "Экономическая система"
+ corporatism: "Корпоративизм"
+ market_economy: "Рыночная экономика"
+ state_capitalism: "Государственный капитализм"
+ welfare_state: "Государство всеобщего благосостояния"
+ mixed_economy: "Смешанная экономика"
+ planned_economy: "Плановая экономика"
+
+ press: "Пресса"
+ state_press: "Государственная пресса"
+ limited_censorship: "Ограниченная цензура"
+ free_press: "Свободная пресса"
+
+ education: "Образование"
+ subsidized_higher_education: "Субсидируемое высшее образование"
+ subsidized_basic_education: "Субсидируемое базовое образование"
+ basic_education_system: "Базовая система образования"
+ private_education: "Частное образование"

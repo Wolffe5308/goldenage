@@ -16041,7 +16041,6 @@ focus_tree = {
 				popularity = 0.05
 			}
 			add_ideas = ITA_italian_irredentism_ns
-			#TODO_Manu: Might need to remove some/all of the claims below due to overlap with other focuses
 			add_named_threat = { threat = 4 name = ITA_italian_irredentism } #Comes from the old Claims in Yugoslavia focus
 			if = {
 				limit = {
@@ -16059,14 +16058,15 @@ focus_tree = {
 				}
 				add_state_claim = 105 #MONTENEGRO
 			}
-			add_state_claim = 268 #DJIBUTI
+			add_state_claim = 268 #DJIBUTI/FRENCH SOMALILAND
 			add_state_claim = 269 #BRITISH SOMALILAND
 			add_state_claim = 735 #SAVOY
-			add_state_claim = 856 #VAR
-			add_state_claim = 185 #CORFU
+			add_state_claim = 851 #VAR
+			#add_state_claim = 185 #CORFU
 			add_state_claim = 1 #CORSICA
 			add_state_claim = 116 #MALTA
 			add_state_claim = 846 #TICINO
+			add_state_claim = 853 #LJUBLJANA
 
 			if = {
 				limit = {

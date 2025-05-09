@@ -198,6 +198,50 @@ characters={
 			}
 		}
 	}
+	ZSR_vagharshak_ter_vaganyan={ #Левая оппозиция
+		name=ZSR_vagharshak_ter_vaganyan
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_vagharshak_ter_vaganyan.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ZSR_vagharshak_ter_vaganyan
+			allowed = {
+				original_tag = ZSR
+			}
+			available = {
+				has_completed_focus = ZSR_party_congress
+				has_country_flag = ZSR_communist_head_of_goverment
+			}
+			traits = {
+				trade_unionist_com_prof
+			}
+		}
+	}
+	ZSR_alexander_dogadov={ #Правая оппозиция
+		name=ZSR_alexander_dogadov
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/zsr/advisors/idea_advisor_ZSR_alexander_dogadov.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ZSR_alexander_dogadov
+			allowed = {
+				original_tag = ZSR
+			}
+			available = {
+				has_completed_focus = ZSR_party_congress
+				has_country_flag = ZSR_communist_head_of_goverment
+			}
+			traits = {
+				trade_unionist_com_prof
+			}
+		}
+	}
     ZSR_bagramyan_ivan={
 		name=ZSR_bagramyan_ivan
 		portraits={

@@ -2,7 +2,7 @@
 state = {
 	id = 192
 	name = "STATE_192"
-	manpower = 1286238 #1 8th removed due to Balta-Tiraspol
+	manpower = 1469986 #1 8th removed due to Balta-Tiraspol
 	
 	state_category = city
 
@@ -10,6 +10,9 @@ state = {
 		owner = UKR
 		victory_points = {
 			11670 25
+		}
+		victory_points = {
+			3757 5
 		}
 		buildings = {
 			infrastructure = 3 #was: 5
@@ -25,13 +28,13 @@ state = {
 		add_core_of = UKR
 		1939.1.1 = {
 			buildings = {
-				industrial_complex = 2
+				industrial_complex = 4
 			}
 		}
 	}
 
 	provinces = {
-		  3575 3738 9698 9714 11670 11703 
+		  3575 3738 9698 9714 11670 11703 741 754 3757 9576
 	}
 
 	local_supplies = 6.0 

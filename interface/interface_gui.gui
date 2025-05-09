@@ -35,5 +35,13 @@ guiTypes = {
 			pdx_tooltip = "GA_MAIN_MENU_LINK"
 			web_link = "https://boosty.to/danwork"
 		}
+		ButtonType = {
+			name ="frontend_RMK_logo"
+			spriteType = "GFX_RMK_logo"
+			position = { x = 1500 y = -20 }
+			clicksound = click_default
+			pdx_tooltip = "GA_MAIN_MENU_LINK"
+			web_link = "https://discord.gg/Yn4NpKUHaV"
+		}
 	}
 }

@@ -2351,8 +2351,8 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-                democratic > 0.95
-				liberal > 0.95
+                democratic > 0.45
+				liberal > 0.45
 			}
 		}
 		bypass = {
@@ -2480,8 +2480,8 @@ focus_tree = {
 				has_war_support > 0.3
 			}
 			OR = {
-				democratic > 0.95
-				liberal > 0.95
+				democratic > 0.45
+				liberal > 0.45
 			}
 		}
 		continue_if_invalid = yes
@@ -2535,8 +2535,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			OR = {
-				democratic > 0.95
-				liberal > 0.95
+				democratic > 0.45
+				liberal > 0.45
 			}
 		}
 		completion_reward = {

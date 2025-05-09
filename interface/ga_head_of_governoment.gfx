@@ -1,7 +1,0 @@
-spriteTypes = {
-	
-	spriteType = {
-		name = "GFX_idea_slot_head_of_government"
-		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
-	}
-}

@@ -1,0 +1,25 @@
+state={
+	id=1023
+	name="STATE_1023"
+	
+	history={
+		owner = ZSR
+		victory_points = {
+			6997 3 
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ZSR
+		add_core_of = AZR
+	#	add_core_of = ARM
+
+	}
+	provinces={
+		6997 
+	}
+	manpower=10000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

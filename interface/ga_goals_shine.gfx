@@ -1674,11 +1674,11 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_BLR_army_stabilization_shine"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_army_stabilization.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_army_stabilization.png"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_army_stabilization.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_army_stabilization.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1690,8 +1690,8 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_army_stabilization.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_army_stabilization.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1706,11 +1706,11 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_BLR_doctrine_development_shine"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_doctrine_development.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_doctrine_development.png"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_doctrine_development.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_doctrine_development.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1722,8 +1722,8 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_doctrine_development.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_doctrine_development.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1738,11 +1738,11 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_BLR_peoples_army_shine"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_peoples_army.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_peoples_army.png"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_peoples_army.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_peoples_army.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1754,8 +1754,8 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_peoples_army.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_peoples_army.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1770,11 +1770,11 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_BLR_weapons_for_the_militia_shine"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_weapons_for_the_militia.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_weapons_for_the_militia.png"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_weapons_for_the_militia.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_weapons_for_the_militia.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1786,8 +1786,8 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_weapons_for_the_militia.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_weapons_for_the_militia.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1802,11 +1802,11 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_BLR_organize_the_people_shine"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_organize_the_people.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_organize_the_people.png"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_organize_the_people.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_organize_the_people.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1818,8 +1818,8 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_organize_the_people.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_organize_the_people.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1834,11 +1834,11 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_BLR_guerrilla_methods_shine"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_guerrilla_methods.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_guerrilla_methods.png"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_guerrilla_methods.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_guerrilla_methods.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1850,8 +1850,8 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_guerrilla_methods.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_guerrilla_methods.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1866,11 +1866,11 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_BLR_pride_to_serve_shine"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_pride_to_serve.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_pride_to_serve.png"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_pride_to_serve.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_pride_to_serve.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1882,8 +1882,8 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_pride_to_serve.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_pride_to_serve.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1898,11 +1898,11 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_BLR_the_people_defend_the_country_shine"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_the_people_defend_the_country.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_the_people_defend_the_country.png"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_the_people_defend_the_country.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_the_people_defend_the_country.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1914,8 +1914,8 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_the_people_defend_the_country.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_the_people_defend_the_country.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1930,11 +1930,11 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_BLR_regular_army_shine"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_regular_army.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_regular_army.png"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_regular_army.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_regular_army.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1946,8 +1946,8 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_regular_army.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_regular_army.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1962,11 +1962,11 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_BLR_anti_air_defense_shine"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_anti_air_defense.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_anti_air_defense.png"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_anti_air_defense.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_anti_air_defense.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -1978,8 +1978,8 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_anti_air_defense.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_anti_air_defense.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -2026,11 +2026,11 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_BLR_production_katyusha_shine"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_production_katyusha.dds"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_production_katyusha.png"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_production_katyusha.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_production_katyusha.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds
@@ -2042,8 +2042,8 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_production_katyusha.dds"			
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/goals/blr/goal_BLR_production_katyusha.png"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
 			animationtime = 0.75				# in seconds

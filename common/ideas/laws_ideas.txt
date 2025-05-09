@@ -1,0 +1,552 @@
+ideas = {
+
+    political_system = { #Политический строй
+        law = yes
+        use_list_view = yes
+
+        unitary_state = {
+
+            available = {
+                NOT = { has_government = anarchism }
+            }
+
+            cost = 150
+
+            modifier = {
+                political_power_factor = 0.1
+                stability_factor = 0.05
+            }
+            
+            cancel_if_invalid = yes
+        }
+		federation = {
+
+            available = {
+                OR = {
+                    tag = SOV
+                    tag = ZSR
+                    tag = MAL
+                    tag = USA
+                    tag = AUS
+                    tag = BEL
+                    tag = AST
+                    tag = CAN
+                    tag = MEX
+                    tag = RAJ
+                    tag = BRA
+                }
+            }
+
+            cost = 200
+
+            modifier = {
+                political_power_factor = -0.1
+                compliance_growth = 0.05
+				resistance_activity = -0.10
+				resistance_target = -0.10
+            }
+            
+            cancel_if_invalid = yes
+        }
+		confederation = {
+
+            cost = 150
+
+            modifier = {
+                stability_factor = 0.1
+                war_support_factor = 0.05
+                political_power_factor = -0.05
+            }
+            
+            cancel_if_invalid = yes
+        }
+    }
+
+	form_of_government = { #Форма правления
+        law = yes
+        use_list_view = yes
+
+        presidential_republic = {
+
+            available = {
+                NOT = {
+                    has_government = fascism
+                    has_government = communism
+                    has_government = anarchism
+                }
+            }
+
+            cost = 200
+
+            modifier = {
+                stability_factor = 0.10
+                war_support_factor = 0.10
+            }
+
+            cancel_if_invalid = yes
+        }
+		parliamentary_republic = {
+
+            available = {
+                NOT = {
+                    has_government = fascism
+                    has_government = anarchism
+                    has_government = communism
+                }
+            }
+
+            cost = 200
+
+            modifier = {
+                political_power_factor = 0.15
+            }
+
+            cancel_if_invalid = yes
+        }
+		constitutional_monarchy = {
+
+            available = {
+                OR = {
+                    has_government = neutrality
+                    has_government = democratic
+                    has_government = liberal
+                    has_government = social_democrat
+                }
+            }
+
+            cost = 200
+
+            modifier = {
+                political_power_factor = 0.05
+                stability_factor = 0.05
+                war_support_factor = 0.05
+            }
+
+            cancel_if_invalid = yes
+        }
+		absolute_monarchy = {
+
+            available = {
+                has_government = neutrality
+            }
+
+            cost = 200
+
+            modifier = {
+                political_power_factor = 0.1
+                war_support_factor = 0.05
+                stability_factor = -0.05
+            }
+
+            cancel_if_invalid = yes
+        }
+		theocracy = {
+
+            available = {
+                NOT = {
+                    has_government = communism
+                    has_government = anarchism
+                    has_government = social_democrat
+                    has_government = liberal
+                }
+            }
+
+            cost = 200
+
+            modifier = {
+                political_power_factor = 0.10
+                stability_factor = 0.05
+                drift_defence_factor = 0.20
+            }
+
+            cancel_if_invalid = yes
+        }
+		dictatorship = {
+
+            available = {
+                NOT = {
+                    has_government = democratic
+                    has_government = liberal
+                    has_government = social_democrat
+                    has_government = anarchism
+                }
+            }
+
+            modifier = {
+                offensive_war_stability_factor = 0.10
+                defensive_war_stability_factor = 0.15
+                war_support_factor = 0.15
+                max_command_power_mult = 0.20
+                #max_command_power = 10
+                command_power_gain_mult = 0.20
+                stability_factor = -0.10
+                political_power_factor = -0.05
+            }
+
+        }
+		soviets = {
+
+            available = {
+                OR = {
+                    has_government = communism
+                    has_government = anarchism
+                    has_government = social_democrat
+                }
+            }
+
+            cost = 200
+
+            modifier = {
+                political_power_factor = 0.1
+                war_support_factor = -0.1
+                stability_factor = 0.05
+                line_change_production_efficiency_factor = 0.05
+                production_factory_max_efficiency_factor = 0.05
+            }
+
+            cancel_if_invalid = yes
+        }
+	}
+
+	economic_system = { #Экономическая система
+        law = yes
+        use_list_view = yes
+
+        corporatism = {
+
+            cost = 200
+
+            available = {
+                OR = {
+                    has_government = fascism
+                    has_government = neutrality
+                }
+            }
+
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+				research_speed_factor = -0.05
+				industrial_capacity_factory = 0.05
+				min_export = -0.15
+				local_resources_factor = 0.15
+				consumer_goods_factor = 0.1
+            }
+
+            ai_will_do = {
+                factor = 1
+                modifier = {
+                    has_government = fascism
+                    factor = 60
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+        market_economy = {
+
+            cost = 200
+
+            available = {
+                OR = {
+                    has_government = democratic
+                    has_government = liberal
+                    has_government = social_democrat
+                    has_government = neutrality
+                }
+            }
+
+            modifier = {
+                consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				local_resources_factor = 0.05
+				research_speed_factor = 0.05
+				industrial_capacity_factory = -0.05
+				min_export = 0.15
+            }
+
+            ai_will_do = {
+                factor = 1
+                modifier = {
+                    OR = {
+                        has_government = democratic
+                        has_government = liberal
+                    }
+                    factor = 60
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+		state_capitalism = {
+
+            cost = 200
+
+            available = {
+                OR = {
+                    has_government = democratic
+                    has_government = social_democrat
+                    has_government = neutrality
+                }
+            }
+
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = -0.05
+				research_speed_factor = -0.05
+				industrial_capacity_factory = 0.05
+				min_export = 0.1
+            }
+
+            ai_will_do = {
+                factor = 1
+                modifier = {
+                    OR = {
+                        has_government = democratic
+                        has_government = social_democrat
+                    }
+                    factor = 60
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+		welfare_state = {
+
+            cost = 200
+
+            available = {
+                OR = {
+                    has_government = communism
+                    has_government = social_democrat
+                }
+            }
+
+            modifier = {
+                consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				min_export = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = -0.05
+            }
+
+            ai_will_do = {
+                factor = 1
+                modifier = {
+                    has_government = social_democrat
+                    factor = 80
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+		mixed_economy = {
+
+            cost = 200
+
+            available = {
+                OR = {
+                    has_government = neutrality
+                    has_government = democratic
+                    has_government = liberal
+                    has_government = social_democrat
+                }
+            }
+
+            modifier = {
+                production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = 0.1
+				research_speed_factor = 0.05
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = 0.05
+				min_export = 0.1
+            }
+
+            ai_will_do = {
+                factor = 1
+                modifier = {
+                    OR = {
+                        has_government = democratic
+                        has_government = social_democrat
+                        has_government = neutrality
+                    }
+                    factor = 50
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+		planned_economy = {
+
+            cost = 200
+
+            available = {
+                has_government = communism
+            }
+
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = -0.05
+				local_resources_factor = 0.1
+				consumer_goods_factor = 0.10
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.1
+				min_export = -0.2
+            }
+
+            ai_will_do = {
+                factor = 1
+                modifier = {
+                    has_government = communism
+                    factor = 80
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+	}
+
+    press = { #Пресса
+        law = yes
+        use_list_view = yes
+
+        state_press = {
+
+            cost = 100
+
+            available = {
+                NOT = {
+                    has_government = democratic
+                    has_government = liberal
+                    has_government = social_democrat
+                }
+            }
+
+            modifier = {
+                drift_defence_factor = 0.1
+				justify_war_goal_time = -0.1
+				stability_factor = -0.1
+				political_power_factor = -0.1
+				war_support_factor = 0.1
+            }
+
+            cancel_if_invalid = yes
+        }
+        limited_censorship = {
+
+            cost = 150
+
+            available = {
+                NOT = {
+                    has_government = democratic
+                    has_government = liberal
+                    has_government = social_democrat
+                }
+            }
+
+            modifier = {
+                drift_defence_factor = 0.05
+				justify_war_goal_time = -0.05
+				political_power_factor = -0.05
+				war_support_factor = 0.05
+				stability_factor = -0.05
+            }
+            
+            cancel_if_invalid = yes
+        }
+
+        free_press = {
+
+            cost = 200
+
+            available = {
+                NOT = {
+                    has_government = fascism
+                    has_government = neutrality
+                }
+            }
+
+            modifier = {
+                drift_defence_factor = -0.05
+				justify_war_goal_time = 0.1
+				war_support_factor = -0.05
+				stability_factor = 0.1
+				political_power_factor = 0.15
+            }
+            
+            cancel_if_invalid = yes
+        }
+    }
+
+    education = { #Образование
+        law = yes
+        use_list_view = yes
+
+        subsidized_higher_education = {
+
+            cost = 200
+
+            modifier = {
+                consumer_goods_factor = 0.10
+                research_speed_factor = 0.15
+                drift_defence_factor = -0.30
+                army_leader_start_level = 1
+            }
+
+            cancel_if_invalid = yes
+        }
+        subsidized_basic_education = {
+
+            cost = 100
+
+            modifier = {
+                consumer_goods_factor = 0.05
+                research_speed_factor = 0.1
+                drift_defence_factor = -0.10
+            }
+
+            cancel_if_invalid = yes
+        } 
+        basic_education_system = {
+
+            cost = 50
+
+            modifier = {
+                monthly_population = 0.05
+                research_speed_factor = 0.05
+            }
+
+            cancel_if_invalid = yes
+        } 
+        private_education = {
+
+            cost = 150
+
+            available = {
+                OR = {
+                    has_idea = market_economy
+                    has_idea = mixed_economy
+                    has_idea = corporatism
+                    has_idea = state_capitalism
+                }
+                AND = {
+                    NOT = {
+                        has_government = communism
+                        has_government = anarchism
+                    }
+                }
+            }
+
+            modifier = {
+                consumer_goods_factor = -0.10
+                research_speed_factor = 0.10
+                stability_factor = -0.05
+                drift_defence_factor = 0.2
+            }
+
+            cancel_if_invalid = yes
+        } 
+    }
+}
+
+

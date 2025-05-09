@@ -2,7 +2,7 @@ spriteTypes = {
     
    	spriteType = {
 		name = "GFX_idea_BLR_belarusian_army"
-		texturefile = "gfx/interface/ideas/blr/blr_belarusian_army.dds"
+		texturefile = "gfx/interface/ideas/blr/blr_belarusian_army.png"
 	}
 
 	spriteType = {
@@ -10,8 +10,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/zsr/zsr_caucasian_army.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_ZSR_artillery_corps"
+		texturefile = "gfx/interface/ideas/zsr/artillery_corps.dds"
+	}
+
     spriteType = {
 		name = "GFX_idea_UKR_ukraine_army"
 		texturefile = "gfx/interface/ideas/ukr/ukraine_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_UKR_armored_forces"
+		texturefile = "gfx/interface/ideas/ukr/armored_forces.dds"
 	}
 }

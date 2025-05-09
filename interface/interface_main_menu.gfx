@@ -12,4 +12,8 @@ spriteTypes = {
 		name = "GFX_goldenage_youtube_logo"
 		texturefile = "gfx/interface/main_menu_gui/goldenage_youtube_logo.dds"
 	}
+	spriteType = {
+		name = "GFX_RMK_logo"
+		texturefile = "gfx/interface/main_menu_gui/RMK_logo.dds"
+	}
 }

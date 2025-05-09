@@ -1,7 +1,7 @@
 guiTypes = {
     containerWindowType = {
 		name = "fascCoal"
-		position = { x = 361 y = 248 }
+		position = { x = 348 y = 379 }
 		iconType ={
 			name = "coalition_pol_party_bg"
 			spriteType = "GFX_coalition_pol_party_bg"
@@ -12,7 +12,7 @@ guiTypes = {
 	}
 	containerWindowType = {
 		name = "neutralCoal"
-		position = { x = 361 y = 263 }
+		position = { x = 361 y = 379 }
 		iconType ={
 			name = "coalition_pol_party_bg"
 			spriteType = "GFX_coalition_pol_party_bg"

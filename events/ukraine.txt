@@ -339,6 +339,7 @@ country_event = {
 	option = {
 		name = UKR_Ev.15.b
 		ai_chance = { factor = 0 }
+		custom_effect_tooltip = in_development
 		promote_character = UKR_stepan_bandera
 		set_politics = {
 			ruling_party = fascism

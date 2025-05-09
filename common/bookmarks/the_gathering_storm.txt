@@ -249,9 +249,10 @@ bookmarks = {
 				SAF_anti_colonialist_crusade
 			}
 		}
-		"RAJ"={
+		RAJ = {
 			minor = yes
 			history = "RAJ_GATHERING_STORM_DESC"
+			available = {  NOT = { has_dlc = "Graveyard of Empires" } }
 			ideology = neutrality
 			ideas = {
 				RAJ_agrarian_society
@@ -261,6 +262,23 @@ bookmarks = {
 				RAJ_all_india_forward_bloc
 				RAJ_indian_gurkhas
 				RAJ_the_smiling_buddha
+			}
+		}
+
+		RAJ = {
+			minor = yes
+			history = "RAJ_GATHERING_STORM_DESC"
+			available = {  has_dlc = "Graveyard of Empires" }
+			ideology = neutrality
+			ideas = {
+				RAJ_marginalized_muslim_community
+				RAJ_princely_states
+				idea_RAJ_great_depression_1
+			}
+			focuses = {
+				RAJ_mahatma
+				RAJ_netaji
+				RAJ_a_peacock_prince
 			}
 		}
 		"CZE"={
