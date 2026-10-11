@@ -1,25 +1,25 @@
 state={
-	id=1017
-	name="STATE_1017"
+	id=1048
+	name="STATE_1048"
 	history={
 		owner = TAN
 		buildings = {
 			infrastructure = 1
 			arms_factory = 0
-			industrial_complex = 0
+			industrial_complex = 1
 
 		}
 		victory_points = {
-			1676 1 
+			10646 1 
 		}
 		add_core_of = TAN
 		add_core_of = SOV
 
 	}
 	provinces={
-		1676 7804 7819 
+		4680 7703 7731 12610 12625 
 	}
-	manpower=10000
+	manpower=40000
 	buildings_max_level_factor=1.000
 	state_category=rural
 	local_supplies=0.000
