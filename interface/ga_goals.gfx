@@ -483,7 +483,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_BLR_the_people_defend_the_country"
-		texturefile = "gfx/interface/goals/blr/goal_BLR_the_people_defend_the_country.png"			
+		texturefile = "gfx/interface/goals/blr/goal_BLR_the_people_defend_the_country.dds"			
 	}
 
 	SpriteType = {
@@ -665,12 +665,12 @@ spriteTypes = {
 	
     SpriteType = {
         name = "GFX_focus_propaganda_soviet"
-        texturefile = "gfx/interface/goals/generic/r56_goal_generic_propaganda_soviet.dds"
+        texturefile = "gfx/interface/goals/goal_generic_propaganda.dds"
     }
 
     spriteType = {
 		name = "GFX_goal_generic_communist_pride"
-		texturefile = "gfx/interface/goals/generic/r56_goal_generic_communist_pride.dds"
+		texturefile = "gfx/interface/goals/goal_generic_political_pressure.dds"
 	}
 	
 	SpriteType = {
@@ -1164,7 +1164,7 @@ spriteTypes = {
 
 	SpriteType = {
 	name = "GFX_goal_generic_tank_hunt"
-	texturefile = "gfx/interface/goals/generic/goal_generic_tank_hunt.dds"			
+	texturefile = "gfx/interface/goals/goal_generic_army_tanks.dds"			
 	}
 
 	SpriteType = {
@@ -1234,17 +1234,17 @@ spriteTypes = {
 
 	SpriteType = {
 	name = "GFX_r56_goal_GER_restore_weimar"
-	texturefile = "gfx/interface/goals/ger/r56_goal_GER_restore_weimar.dds"			
+	texturefile = "gfx/interface/goals/goal_generic_political_pressure.dds"			
 	}
 
 	SpriteType = {
 	name = "GFX_r56_goal_GER_anschluss"
-	texturefile = "gfx/interface/goals/ger/r56_goal_GER_anschluss.dds"			
+	texturefile = "gfx/interface/goals/goal_anschluss.dds"			
 	}
 
 	SpriteType = {
 	name = "GFX_r56_goal_generic_soviet_assistance"
-	texturefile = "gfx/interface/goals/generic/r56_goal_generic_soviet_assistance.dds"			
+	texturefile = "gfx/interface/goals/focus_chi_mission_to_the_soviet_union.dds"			
 	}	
 	
     SpriteType = {
@@ -1254,7 +1254,7 @@ spriteTypes = {
 
 	SpriteType = {
 	name = "gfx_r56_goal_SOV_postive_heroism"
-	texturefile = "gfx/interface/goals/sov/r56_goal_SOV_postive_heroism.dds"			
+	texturefile = "gfx/interface/goals/goal_generic_political_pressure.dds"			
 	}
 
 	SpriteType = {

@@ -1,4 +1,91 @@
-﻿
+# Current 1939 technologies precede historical focus rewards.
+1939.1.1 = {
+if = {
+limit = { has_dlc = "By Blood Alone" }
+set_technology = {
+				basic_large_airframe = 1
+			}
+else = {
+set_technology = {
+				CAS1 = 1
+				tactical_bomber1 = 1
+			}
+}
+}
+set_technology = {
+		interwar_artillery = 1
+		interwar_antitank = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+		support_weapons2 = 1
+		paratroopers = 1
+
+		#doctrines
+		#Air
+		#formation_flying = 1		
+		#dive_bombing = 1
+		#direct_ground_support = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		oil_processing = 1
+		fuel_refining2 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+	}
+if = {
+limit = {
+			NOT = { has_dlc = "No Step Back" }
+		}
+set_technology = {
+			improved_light_tank = 1 
+			basic_heavy_tank = 1    # Should be available in 1936 (T-35)
+			basic_medium_tank = 1 # Should be available in 1936 (T-28)
+		}
+}
+if = {
+limit = {
+			has_dlc = "No Step Back"
+		}
+set_technology = {
+			improved_light_tank_chassis = 1
+			basic_heavy_tank_chassis = 1
+			basic_medium_tank_chassis = 1 
+		}
+}
+if = {
+limit = { not = { has_dlc = "Man the Guns" } }
+set_technology = {
+			basic_submarine = 1
+			basic_destroyer = 1
+			basic_heavy_cruiser = 1
+		}
+}
+if = {
+limit = { has_dlc = "Man the Guns" }
+set_technology = {
+			improved_ship_hull_light = 1
+			improved_ship_hull_submarine = 1
+			basic_ship_hull_cruiser = 1
+		}
+}
+}
+
 ####
 #### NO STEP BACK
 ####
@@ -1227,15 +1314,15 @@ add_ideas = {
 		paratroopers = 1
 
 		#doctrines
-		pocket_defence = 1
-		defence_in_depth = 1
-		battlefleet_concentration = 1
-		submarine_operations = 1
+		
+		
+		
+		
 
 		#Air
-		formation_flying = 1		
-		dive_bombing = 1
-		direct_ground_support = 1
+				
+		
+		
 
 		#electronics
 		electronic_mechanical_engineering = 1
@@ -1304,6 +1391,31 @@ add_ideas = {
 			basic_ship_hull_cruiser = 1
 		}
 	}
+
+# Doctrine initialization migrated to the mastery system.
+set_grand_doctrine = mass_assault
+set_grand_doctrine = new_fleet_in_being
+set_grand_doctrine = new_battlefield_support
+set_sub_doctrine = large_unit_tactics
+add_mastery = {
+    amount = 200
+    sub_doctrine = large_unit_tactics
+}
+set_sub_doctrine = fire_concentration
+add_mastery = {
+    amount = 100
+    sub_doctrine = fire_concentration
+}
+set_sub_doctrine = deep_battle
+add_mastery = {
+    amount = 100
+    sub_doctrine = deep_battle
+}
+set_sub_doctrine = air_subdoctrine_dogfighting_mastery
+add_mastery = {
+    amount = 75
+    sub_doctrine = air_subdoctrine_dogfighting_mastery
+}
 }
 
 
@@ -2015,3 +2127,7 @@ if = {
 		}
 	}
 }
+
+# Variables initialized by the current vanilla scenario.
+set_variable = { SOV_the_red_army_mastery_loss_factor = -0.15 }
+set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }

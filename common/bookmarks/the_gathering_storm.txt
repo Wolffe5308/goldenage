@@ -148,7 +148,7 @@ bookmarks = {
 			history = "JAP_GATHERING_STORM_DESC"
 			available = {  NOT = { has_dlc = "No Compromise, No Surrender" } }
 			ideology = neutrality
-			new_content = yes
+
 			override_leader_portrait = JAP_emperor_hirohito
 			ideas = {
 				JAP_1936_fake_state_shintoism_idea
@@ -166,7 +166,7 @@ bookmarks = {
 			history = "JAP_GATHERING_STORM_DESC"
 			available = {  has_dlc = "No Compromise, No Surrender" }
 			ideology = neutrality
-			new_content = yes
+
 			override_leader_portrait = JAP_emperor_hirohito
 			ideas = {
 				JAP_1936_fake_state_shintoism_idea
@@ -958,7 +958,7 @@ bookmarks = {
 			history = "PHI_GATHERING_STORM_DESC" 
 			ideology = neutrality
 			available = { has_dlc = "No Compromise, No Surrender" }
-			new_content = yes
+
 			ideas = {
 				PHI_island_nation_ns_fake
 				PHI_the_great_depression_ns_fake
@@ -975,7 +975,7 @@ bookmarks = {
 			history = "CHI_GATHERING_STORM_DESC"
 			available = { has_dlc = "No Compromise, No Surrender" }
 			ideology = neutrality
-			new_content = yes
+
 			ideas = {
 				CHI_neglected_countryside_fake_ns
 				CHI_corruption_in_the_armed_forces_fake_ns
@@ -992,7 +992,7 @@ bookmarks = {
 			history = "PRC_GATHERING_STORM_DESC"
 			available = { has_dlc = "No Compromise, No Surrender" }
 			ideology = communism
-			new_content = yes
+
 			ideas = {
 				PRC_central_committee_1936_fake
 				PRC_the_chinese_red_army_1936_fake
@@ -1009,7 +1009,7 @@ bookmarks = {
 			history = "MAN_TSR_GATHERING_STORM_DESC"
 			available = { has_dlc = "No Compromise, No Surrender" } 
 			ideology = fascism
-			new_content = yes
+
 			ideas = {
 				MAN_banditry
 				MAN_the_kangde_emperor
@@ -1026,7 +1026,7 @@ bookmarks = {
 			available = { has_dlc = "No Compromise, No Surrender" } 
 			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
-			new_content = yes
+
 			ideas = {
 				PRC_government_corruption
 				CHI_ineffective_bureaucracy_warlord
@@ -1043,7 +1043,7 @@ bookmarks = {
 			available = { has_dlc = "No Compromise, No Surrender" } 
 			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
-			new_content = yes
+
 			ideas = {
 				PRC_government_corruption
 				CHI_ineffective_bureaucracy_warlord
@@ -1060,7 +1060,7 @@ bookmarks = {
 			available = { has_dlc = "No Compromise, No Surrender" } 
 			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
-			new_content = yes
+
 			ideas = {
 				PRC_government_corruption
 				CHI_ineffective_bureaucracy_warlord
@@ -1077,7 +1077,7 @@ bookmarks = {
 			available = { has_dlc = "No Compromise, No Surrender" } 
 			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
-			new_content = yes
+
 			ideas = {
 				PRC_government_corruption
 				CHI_ineffective_bureaucracy_warlord
@@ -1094,7 +1094,7 @@ bookmarks = {
 			available = { has_dlc = "No Compromise, No Surrender" } 
 			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = neutrality
-			new_content = yes
+
 			ideas = {
 				PRC_government_corruption
 				CHI_ineffective_bureaucracy_warlord
@@ -1111,7 +1111,7 @@ bookmarks = {
 			available = { has_dlc = "No Compromise, No Surrender" } 
 			history = "WARLORDS_GATHERING_STORM_DESC"
 			ideology = communism
-			new_content = yes
+
 			ideas = {
 				PRC_government_corruption
 				CHI_ineffective_bureaucracy_warlord

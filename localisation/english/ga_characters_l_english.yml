@@ -15,7 +15,6 @@
  TAN_khertek_amyrbitovna:0 "Khertek Amyrbitovna"
  
  #MONGOLIA
- MON_anandyn_amar:0 "Anandyn Amar"
  MON_darizavyn_losol:0 "Darzhavyn Losol"
  MON_banzarjavyn_baasanjav:0 "Banzarzhavyn Basanzhav"
  MON_shirnengiin_ayuush:0 "Shirnengiin Ayuush"
@@ -25,10 +24,7 @@
  MON_issa_pliev:0 "Issa Pliev"
  MON_jamsrang_tseren:0 "Jamsrang Tseren"
  MON_tsendiin_olzvoy:0 "Tsendiin Ozloy"
- MON_gomgchigryn_bumtsend:0 "Gomgchigrin Bumtsend"  
- MON_yundunwangcug:0 "Yundunwangkoog"
  MON_shagdaryn_gongor:0 "Shagdaryn Gongor"
- MON_khorloogiin_choibalsan:0 "Khorlogiin Choibalsan"
  MON_genepil:0 "Genepil"
  MON_zhamyangiyn_lhagvasuren:0 "Zhamyangiin Lhagvasuren"
  MON_lodongiin_dandar:0 "Lodongiin Dandar"
@@ -45,8 +41,6 @@
  MON_aisin_gioro_puyi:0 "Aisin Gioro Puyi"
 
  #COM.CHINA
- PRC_he_long:0 "He Long"
- PRC_wang_ming:0 "Wang Ming"
  PRC_zhang_lan:0 "Zhang Lan"
 
  #BELARUS
@@ -54,7 +48,6 @@
  BLR_nikolay_goloded:0 "Nikolay Goloded"
  
  BLR_vasily_korzh:0 "Vasily Korzh"
- BLR_panteleimon_ponomarenko:0 "Panteleimon Ponomarenko"
  BLR_vasily_blykher:0 "Vasily Blucher"
  BLR_nikolai_krylov:0 "Nikolai Krylov"
  BLR_ivan_maslennikov:0 "Ivan Maslennikov"
@@ -69,14 +62,9 @@
  BLR_alexander_chervyakov:0 "Alexander Chervyakov"
  BLR_supreme_soviet:0 "Supreme Soviet"
  BLR_anton_lutskevich:0 "Anton Lutskevich"
- BLR_stepan_krasovsky:0 "Stepan Krasovsky"
-
- #UKRAINE
- #Head of Government
  UKR_panas_lyubchenko:0 "Panas Lyubchenko"
 
  UKR_nikita_khrushev:0 "Nikita Khrushchev"
- UKR_stepan_bandera:0 "Stepan Bandera"
  UKR_provisional_ukrainian_government:0 "Provisional Ukrainian government"
  UKR_pavel_skoropadskiy:0 "Pavel Skoropadsky"
  UKR_vasil_vyshivany:0 "Vasil Vyshivany"
@@ -154,9 +142,6 @@
  POL_zygmunt_berling:0 "Zygmunt Berling"
  POL_michal_rola_zymerski:0 "Michal Rola-Zymerski"
  POL_konstantin_rokossovsky:0 "Konstantin Rokossovsky"
- POL_roman_abraham:0 "Roman Abraham"
-
- #USSR
  SOV_vladislav_anders:0 "Vladislav Anders"
  SOV_friedrich_paulus:0 "Friedrich Paulus"
  SOV_walter_von_seidlitz_kurzbach:0 "Walter von Seidlitz-Kurzbach"

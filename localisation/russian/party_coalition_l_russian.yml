@@ -39,7 +39,6 @@
  party_popularity_gain_value_mapped: "[?party_popularity@var:political_power_ideology|2=+]"
  party_popularity_gain_value_disabled: "[?0|2=+]"
 
- party_pop_coalition: "\n\n§HПартнеры по коалиции:§!\n"
  party_pop_coalition_pp_gain: "[?coalition_pp_gain|=+2]"
 
  ### Coalition Tooltips###
@@ -59,7 +58,6 @@
  com_will_leave_coalition_tt:0 "§RКоммунисты§! выйдут из коалиции."
  anarch_will_leave_coalition_tt:0 "§LАнархисты§! выйдут из коалиции."
 
- party_pop_coalition: "\n\n§HПартнеры по коалиции:§!\n"
  party_pop_coalition_fascism: "- [?token:fascism.GetTokenLocalizedKey] ([GetCoalitionPPGain_Fascism])\n"
  party_pop_coalition_neutrality: "- [?token:neutrality.GetTokenLocalizedKey] ([GetCoalitionPPGain_Neutrality])\n"
  party_pop_coalition_democratic: "- [?token:democratic.GetTokenLocalizedKey] ([GetCoalitionPPGain_Democratic])\n"

@@ -1,4 +1,78 @@
-﻿capital = 284
+# Current 1939 technologies precede historical focus rewards.
+1939.1.1 = {
+set_technology = {
+		fighter1 = 1
+		early_bomber = 1
+		tactical_bomber1 = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+		support_weapons2 = 1
+
+		#doctrines
+		#air_superiority = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		fuel_silos = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+if = {
+limit = {
+			NOT = {
+				has_dlc = "No Step Back"
+			}
+		}
+set_technology = {
+			basic_light_tank = 1
+			improved_light_tank = 1
+			basic_medium_tank = 1
+			basic_heavy_tank = 1
+		}
+}
+if = {
+limit = {
+			
+			has_dlc = "No Step Back"
+			
+		}
+set_technology = {
+			basic_light_tank_chassis = 1
+			improved_light_tank_chassis = 1
+			basic_medium_tank_chassis = 1
+			basic_heavy_tank_chassis = 1
+		}
+}
+if = {
+limit = { not = { has_dlc = "Man the Guns" } }
+set_technology = {
+			basic_destroyer = 1
+		}
+}
+if = {
+limit = { has_dlc = "Man the Guns" }
+set_technology = {
+			basic_ship_hull_light = 1
+			basic_ship_hull_cruiser = 1
+		}
+}
+}
+capital = 284
 
 oob = "NZL_1936"
 if = {
@@ -171,12 +245,12 @@ if = {
 		support_weapons2 = 1
 
 		#doctrines
-		air_superiority = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		submarine_operations = 1
+		
+		
+		
+		
+		
+		
 
 		#electronics
 		electronic_mechanical_engineering = 1
@@ -239,6 +313,11 @@ if = {
 			basic_ship_hull_cruiser = 1
 		}
 	}
+
+# Doctrine initialization migrated to the mastery system.
+set_grand_doctrine = grand_battleplan
+set_grand_doctrine = new_fleet_in_being
+set_grand_doctrine = new_strategic_destruction
 }
 set_politics = {
 	ruling_party = social_democrat
@@ -332,3 +411,9 @@ if = {
 		}
 	}
 }
+
+# Variables initialized by the current vanilla scenario.
+set_variable = { NZL_train_var = 40 }
+set_variable = { NZL_ministry_of_public_works_dynamic_modifier_stability_factor = 0.05 }
+set_variable = { NZL_ministry_of_public_works_dynamic_modifier_consumer_goods_factor = -0.05 }
+set_variable = { NZL_ministry_of_public_works_dynamic_modifier_conscription_factor = 0 }

@@ -2,12 +2,12 @@ spriteTypes = {
 
 	SpriteType = {
 	name = "GFX_ss_soldat_gui"
-	texturefile = "gfx/interface/scripted_gui/ss_soldat_gui.png"			
+	texturefile = "gfx/interface/scripted_gui/ss_background_gui.png"			
 	}	
 	
 	SpriteType = {
 	name = "GFX_ss_button_gui"
-	texturefile = "gfx/interface/scripted_gui/ss_button_gui.dss"			
+	texturefile = "gfx/interface/scripted_gui/ss_background_gui.png"			
 	}	
 	
 	SpriteType = {

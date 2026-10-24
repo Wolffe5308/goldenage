@@ -1,4 +1,4 @@
-﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
@@ -3465,7 +3465,7 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				category = ca_tech
-				category = cl_tech
+				
 			}
 
 			#Kronshtadt Class Battlecruiser
@@ -6864,7 +6864,7 @@ focus_tree = {
 
 			#New
 			hidden_effect = {
-				set_technology = { masterful_blitz = 1 popup = no }
+				unlock_tactic = tactic_masterful_blitz
 			}
 			custom_effect_tooltip = SOV_the_glory_of_the_red_army_masterful_blitz_tactic_tt
 
@@ -6910,7 +6910,7 @@ focus_tree = {
 
 			#New
 			hidden_effect = {
-				set_technology = { masterful_blitz = 1 popup = no }
+				unlock_tactic = tactic_masterful_blitz
 			}
 			custom_effect_tooltip = SOV_the_glory_of_the_red_army_masterful_blitz_tactic_tt
 		}
@@ -13607,7 +13607,7 @@ focus = {
 					}
 					if = {
 						limit = {
-							has_tech = basic_medium_battery
+							has_tech = basic_heavy_battery
 						}
 						create_equipment_variant = {
 							name = "Hipper Class"
@@ -19501,8 +19501,8 @@ ai_will_do = {
 				bonus = 1.0
 				uses = 4
 				category = dd_tech
-				category = cl_tech
 				category = ca_tech
+				
 				category = bb_tech
 				category = cv_tech
 				category = ss_tech
@@ -19725,6 +19725,44 @@ ai_will_do = {
 			GER = {
 				country_event = { id = NSB_soviet_fascist_tsarist.25 hours = 6 }
 			}
+		}
+	}
+
+focus = {
+		id = SOV_found_the_warsaw_pact
+
+		icon = GFX_focus_SOV_found_the_warsaw_pact
+		prerequisite = { focus = SOV_found_the_comecon }
+		x = 0
+		y = 1
+		relative_position_id = SOV_found_the_comecon
+		cost = 10
+
+		allow_branch = {
+			has_government = communism
+			has_dlc = "No Compromise, No Surrender"
+		}
+
+		available = {
+			num_subjects > 0
+			is_subject = no
+			is_faction_leader = yes
+			has_government = communism
+		}
+		
+		search_filters = {  }
+
+		completion_reward = {
+			
+			set_faction_name = SOV_warsaw_pact_faction 
+			set_faction_manifest = faction_manifest_an_iron_curtain
+			add_faction_goal_slot = {
+				category  = long_term # options: short_term, medium_term, long_term 
+				value = 1 
+			}
+			add_faction_goal = faction_goal_eastern_european_security
+			add_faction_initiative = 1
+
 		}
 	}
 }

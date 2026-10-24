@@ -325,7 +325,7 @@ focus_tree = {
 }
 	focus = {
 		id = BIR_birobidzhaner_stern
-		icon = GFX_generic_goal_communist_reforms
+		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = BIR_jewish_refugees }
 		x = 15
 		y = 2

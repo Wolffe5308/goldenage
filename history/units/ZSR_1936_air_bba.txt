@@ -1,0 +1,16 @@
+air_wings = {
+	231 = { 
+		small_plane_airframe_0 = {
+			owner = "ZSR" 
+			amount = 100
+ version_name = "I-15"
+		}
+	}
+	230 = {
+		small_plane_airframe_0 = {
+			owner = "ZSR" 
+			amount = 100
+ version_name = "I-15"
+		}
+	}
+}

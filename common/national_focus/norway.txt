@@ -1351,22 +1351,10 @@ focus_tree = {
 	focus = {
 		id = NOR_a_new_norway
 
-		icon = {
-			trigger = {
-				has_country_flag = NOR_going_stalinist
-			}
-			value = GFX_focus_NOR_a_new_norway_SOV_communism
-		}
+		
 
-		icon = {
-			trigger = {
-				has_country_flag = NOR_trotsky_embraced
-			}
-			value = GFX_focus_NOR_a_new_norway_Trotsky_communism
-		}
-		icon = {
-			value = GFX_focus_NOR_a_new_norway_communism 
-		}
+		
+		
 
 		prerequisite = { focus = NOR_worker_armies }
 		prerequisite = { focus = NOR_nationalize_the_hydro_plants }
@@ -1421,7 +1409,17 @@ focus_tree = {
 				tooltip = war_support_factor_tt
 			}
 		}
-	}
+	
+icon = {
+			GFX_focus_NOR_a_new_norway_SOV_communism = {
+				has_country_flag = NOR_going_stalinist
+			}
+			GFX_focus_NOR_a_new_norway_Trotsky_communism = {
+				has_country_flag = NOR_trotsky_embraced
+			}
+			GFX_focus_NOR_a_new_norway_communism = yes
+		}
+}
 
 	focus = {
 		id = NOR_reawaken_the_permanent_revolution

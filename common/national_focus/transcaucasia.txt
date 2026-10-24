@@ -40,7 +40,172 @@ focus_tree = {
 
 	shared_focus = REP_development_of_the_republics
 
-    focus = {
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+	
+
+    ##### ВМФ
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+
+###### ВВС
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+#### Армия
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+    
+
+	
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+
+
+
+
+focus = {
 		id = ZSR_party_congress
 		icon = GFX_goal_ZSR_party_congress
 		x = 13
@@ -75,9 +240,7 @@ focus_tree = {
 		unlock_decision_category_tooltip = government_projects
 			}
 		}
-
-
-    focus = {
+focus = {
 		id = ZSR_unity_of_the_armenian_people
 		icon = GFX_r56_goal_ARM_flag
         prerequisite = { focus = ZSR_party_congress }
@@ -104,8 +267,7 @@ focus_tree = {
 			}
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_veto_on_national_conflicts
 		icon = GFX_goal_generic_defence
         prerequisite = { focus = ZSR_party_congress }
@@ -132,8 +294,7 @@ focus_tree = {
 			}
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_law_and_order
 		icon = GFX_focus_generic_treaty
         prerequisite = { focus = ZSR_party_congress }
@@ -160,8 +321,7 @@ focus_tree = {
 			}
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_equal_rights_for_armenians
 		icon = GFX_r56_goal_ARM_caucasia_is_our_homeland
         prerequisite = { focus = ZSR_veto_on_national_conflicts }
@@ -189,8 +349,7 @@ focus_tree = {
 			}
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_equal_rights_for_azerbaijan
 		icon = GFX_focus_generic_concessions
         prerequisite = { focus = ZSR_law_and_order }
@@ -218,8 +377,7 @@ focus_tree = {
 			}
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_freedom_equality_brotherhood
 		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
         prerequisite = { focus = ZSR_equal_rights_for_armenians }
@@ -252,8 +410,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = ZSR_foreign_policy_of_the_caucasus
 		icon = GFX_goal_foreign_policy_of_the_caucasus
         prerequisite = { focus = ZSR_freedom_equality_brotherhood }
@@ -274,8 +431,7 @@ focus_tree = {
         add_political_power = 50
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_condemn_the_armenian_genocide
 		icon = GFX_goal_generic_demand_territory
         prerequisite = { focus = ZSR_foreign_policy_of_the_caucasus }
@@ -300,8 +456,7 @@ focus_tree = {
 		    }
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_claims_on_iranian_azerbaijan
 		icon = GFX_goal_claims_on_iranian_azerbaijan
         prerequisite = { focus = ZSR_foreign_policy_of_the_caucasus }
@@ -330,8 +485,7 @@ focus_tree = {
 			}
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_delegation_to_moscow
 		icon = GFX_goal_UKR_help_for_moscow
         prerequisite = { focus = ZSR_claims_on_iranian_azerbaijan }
@@ -353,8 +507,7 @@ focus_tree = {
 		    }
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_preparing_for_war
 		icon = GFX_goal_generic_occupy_states_ongoing_war
         prerequisite = { focus = ZSR_delegation_to_moscow }
@@ -372,8 +525,7 @@ focus_tree = {
 			add_ideas = Preparing_for_war
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_invasion_of_turkey
 		icon = GFX_focus_generic_attack_turkey
         prerequisite = { focus = ZSR_preparing_for_war }
@@ -418,8 +570,7 @@ focus_tree = {
 			}
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_invasion_of_iran
 		icon = GFX_focus_generic_attack_iran
         prerequisite = { focus = ZSR_preparing_for_war }
@@ -452,8 +603,7 @@ focus_tree = {
 			}
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_internal_politics_of_the_caucasus
 		icon = GFX_goal_internal_politics_of_the_caucasus
         prerequisite = { focus = ZSR_freedom_equality_brotherhood }
@@ -480,8 +630,7 @@ focus_tree = {
 		}
 	}
 }
-
-     focus = {
+focus = {
 		id = ZSR_control_of_christian_churches
 		icon = GFX_goal_control_of_christian_churches
         prerequisite = { focus = ZSR_internal_politics_of_the_caucasus }
@@ -505,8 +654,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = ZSR_compromise_of_religions
 		icon = GFX_goal_compromise_of_religions
         prerequisite = { focus = ZSR_internal_politics_of_the_caucasus }
@@ -535,8 +683,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = ZSR_control_of_islamic_mosques
 		icon = GFX_goal_control_of_islamic_mosques
         prerequisite = { focus = ZSR_internal_politics_of_the_caucasus }
@@ -560,8 +707,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = ZSR_industrial_reforms
 		icon = GFX_goal_industrial_reforms
         prerequisite = { focus = ZSR_control_of_christian_churches }
@@ -585,8 +731,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = ZSR_united_komsomol
 		icon = GFX_goal_united_komsomol
         prerequisite = { focus = ZSR_compromise_of_religions }
@@ -610,8 +755,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = ZSR_spread_of_atheism
 		icon = GFX_goal_spread_of_atheism
         prerequisite = { focus = ZSR_control_of_islamic_mosques }
@@ -635,8 +779,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = ZSR_unity_of_peoples
 		icon = GFX_goal_unity_of_peoples
         prerequisite = { focus = ZSR_spread_of_atheism }
@@ -662,8 +805,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = ZSR_the_great_patriotic_war
 		icon = GFX_goal_UKR_the_great_patriotic_war
 		x = 7
@@ -688,8 +830,7 @@ focus_tree = {
 		add_timed_idea = { idea = UKR_the_great_patriotic_war_1 days = 60 }
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_give_battle_to_the_invaders
 		icon = GFX_goal_UKR_give_battle_to_the_invaders
         prerequisite = { focus = ZSR_the_great_patriotic_war }
@@ -713,8 +854,7 @@ focus_tree = {
 		add_ideas = UKR_death_to_the_invaders
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_we_wont_give_up
 		icon = GFX_goal_UKR_we_wont_give_up
         prerequisite = { focus = ZSR_the_great_patriotic_war }
@@ -738,8 +878,7 @@ focus_tree = {
 		add_ideas = UKR_well_die_but_we_wont_give_up
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_bring_back_the_deserters
 		icon = GFX_goal_UKR_bring_back_the_deserters
         prerequisite = { focus = ZSR_the_great_patriotic_war }
@@ -763,8 +902,7 @@ focus_tree = {
 		add_ideas = UKR_back_in_line
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_holy_war
 		icon = GFX_goal_UKR_holy_war
         prerequisite = { focus = ZSR_give_battle_to_the_invaders }
@@ -790,8 +928,7 @@ focus_tree = {
 		add_ideas = UKR_the_holy_war
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_civil_milita
 		icon = GFX_goal_generic_red_milita
 		prerequisite = { focus = ZSR_bring_back_the_deserters }
@@ -855,10 +992,7 @@ focus_tree = {
 			}
 		}
 	}
-
-    ##### ВМФ
-
-	focus = {
+focus = {
 		id = ZSR_wsf
 		icon = GFX_goal_generic_build_navy
 		x = 29
@@ -875,8 +1009,7 @@ focus_tree = {
 	    add_ideas = Transcaucasian_navy
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_expand_southern_bases
 		icon = GFX_focus_SOV_reinforce_southern_naval_bases
 		prerequisite = { focus = ZSR_wsf }
@@ -912,8 +1045,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_nk_navy_tssr
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = ZSR_wsf }
@@ -932,8 +1064,7 @@ focus_tree = {
         add_ideas = Shipbuilding
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_fleet_development
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = ZSR_wsf }
@@ -969,8 +1100,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_submarine_development
 		icon = GFX_goal_generic_navy_submarine
 		prerequisite = { focus = ZSR_expand_southern_bases }
@@ -998,8 +1128,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = ZSR_construction_of_the_surface_fleet
 		icon = GFX_focus_generic_destroyer
 		prerequisite = { focus = ZSR_fleet_development }
@@ -1026,8 +1155,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_mine_warfare
 		icon = GFX_focus_generic_mine_warfare
 		prerequisite = { focus = ZSR_submarine_development }
@@ -1054,10 +1182,7 @@ focus_tree = {
 		}
 	}
 }
-
-###### ВВС
-
-    focus = {
+focus = {
 		id = ZSR_waf
 		icon = GFX_focus_generic_aircraft_production
 		x = 23
@@ -1076,8 +1201,7 @@ focus_tree = {
 		add_ideas = Transcaucasian_air_force
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_soviet_specialists
 		icon = GFX_focus_SOV_flying_clubs
 		prerequisite = { focus = ZSR_waf }
@@ -1105,8 +1229,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_construction_of_airfields
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = ZSR_waf }
@@ -1134,8 +1257,7 @@ focus_tree = {
 				}
 			}
 		}
-
-	focus = {
+focus = {
 		id = ZSR_service_staff
 		icon = GFX_goal_generic_air_production
 		prerequisite = { focus = ZSR_construction_of_airfields }
@@ -1163,8 +1285,7 @@ focus_tree = {
 				}
 			}
 		}
-
-	focus = {
+focus = {
 		id = ZSR_new_aircraft
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = ZSR_soviet_specialists }
@@ -1191,8 +1312,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_aircraft_manufacturing
 		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = ZSR_soviet_specialists }
@@ -1220,8 +1340,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_standardized_production
 		icon =  GFX_goal_generic_air_doctrine
 		prerequisite = { focus = ZSR_new_aircraft }
@@ -1244,10 +1363,7 @@ focus_tree = {
 			add_ideas = Aircraft_manufacturing
 		}
 	}
-
-#### Армия
-
-	focus = {
+focus = {
 		id = ZSR_reform_the_army
 		icon =  GFX_goal_reform_the_army
 		x = 9
@@ -1268,8 +1384,7 @@ focus_tree = {
 		army_experience = 50
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_new_military_era
 		icon = GFX_goal_new_military_era
 		prerequisite = { focus = ZSR_reform_the_army }
@@ -1301,8 +1416,7 @@ focus_tree = {
 		}
 	}
 }
-
-	focus = {
+focus = {
 		id = ZSR_reform_the_officer_corps
 		icon = GFX_goal_reform_the_officer_corps
 		prerequisite = { focus = ZSR_new_military_era }
@@ -1323,8 +1437,7 @@ focus_tree = {
 		add_to_variable = { ZSR_artillery_corps_command_abilities_cost_factor = -0.1 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_covering_the_rear
 		icon = GFX_goal_covering_the_rear
 		prerequisite = { focus = ZSR_reform_the_officer_corps }
@@ -1345,8 +1458,7 @@ focus_tree = {
 		add_to_variable = { ZSR_artillery_corps_land_reinforce_rate = 0.05 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_tank_destroyer
 		icon = GFX_goal_tank_destroyer
 		prerequisite = { focus = ZSR_reform_the_officer_corps }
@@ -1367,35 +1479,7 @@ focus_tree = {
 		add_to_variable = { ZSR_artillery_corps_supply_consumption_factor = -0.05 }
 		}
 	}
-
-	focus = {
-		id = ZSR_modern_cars
-		icon = GFX_goal_modern_cars
-		prerequisite = { focus = ZSR_developing_tactics }
-		prerequisite = { focus = ZSR_reform_the_officer_corps }
-		relative_position_id = ZSR_developing_tactics
-		relative_position_id = ZSR_reform_the_officer_corps
-		x = -2
-		y = 1
-		
-		cost = 5
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		completion_reward = {
-		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_modern_cars"
-		add_tech_bonus = {
-			name = SOV_superior_war_machines
-			bonus = 0.75
-			uses = 2
-			category = armor
-		}
-	}
-}
-
-	focus = {
+focus = {
 		id = ZSR_developing_tactics
 		icon = GFX_goal_developing_tactics
 		prerequisite = { focus = ZSR_new_military_era }
@@ -1421,8 +1505,33 @@ focus_tree = {
 		add_to_variable = { ZSR_artillery_corps_planning_speed = 0.1 }
 		}
 	}
+focus = {
+		id = ZSR_modern_cars
+		icon = GFX_goal_modern_cars
+		prerequisite = { focus = ZSR_developing_tactics }
+		prerequisite = { focus = ZSR_reform_the_officer_corps }
+		relative_position_id = ZSR_developing_tactics
+		relative_position_id = ZSR_reform_the_officer_corps
+		x = -2
+		y = 1
+		
+		cost = 5
 
-	focus = {
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus ZSR_modern_cars"
+		add_tech_bonus = {
+			name = SOV_superior_war_machines
+			bonus = 0.75
+			uses = 2
+			category = armor
+		}
+	}
+}
+focus = {
 		id = ZSR_self_propelled_artillery
 		icon = GFX_goal_self_propelled_artillery
 		prerequisite = { focus = ZSR_developing_tactics }
@@ -1443,8 +1552,7 @@ focus_tree = {
 		add_to_variable = { ZSR_artillery_corps_breakthrough_factor = 0.2 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_assault_groups
 		icon = GFX_goal_assault_groups
 		prerequisite = { focus = ZSR_developing_tactics }
@@ -1465,8 +1573,7 @@ focus_tree = {
 		add_to_variable = { ZSR_artillery_corps_terrain_penalty_reduction = 0.05 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_siege_tactics
 		icon = GFX_goal_siege_tactics
 		prerequisite = { focus = ZSR_self_propelled_artillery }
@@ -1496,8 +1603,7 @@ focus_tree = {
 		}
 	}
 }
-
-	focus = {
+focus = {
 		id = ZSR_armor_enhancement
 		icon = GFX_goal_armor_enhancement
 		prerequisite = { focus = ZSR_tank_destroyer }
@@ -1519,8 +1625,7 @@ focus_tree = {
 		}
 	}
 }
-
-	focus = {
+focus = {
 		id = ZSR_increased_production
 		icon = GFX_goal_increased_production
 		prerequisite = { focus = ZSR_siege_tactics }
@@ -1541,8 +1646,7 @@ focus_tree = {
 		add_ideas = ZSR_artillery_god_of_war
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_modern_doctrine
 		icon = GFX_goal_modern_doctrine
 		prerequisite = { focus = ZSR_reform_the_army }
@@ -1571,8 +1675,7 @@ focus_tree = {
 		    }
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_modern_military_exercises
 		icon = GFX_goal_modern_military_exercises
 		prerequisite = { focus = ZSR_modern_doctrine }
@@ -1596,8 +1699,7 @@ focus_tree = {
 		add_to_variable = { ZSR_caucasian_army_land_reinforce_rate = 0.05 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_retrain_generals
 		icon = GFX_goal_retrain_generals
 		prerequisite = { focus = ZSR_modern_military_exercises }
@@ -1617,8 +1719,7 @@ focus_tree = {
 		add_to_variable = { ZSR_caucasian_army_max_planning_factor = 0.1 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_training_in_the_mountains
 		icon = GFX_goal_training_in_the_mountains
 		prerequisite = { focus = ZSR_modern_military_exercises }
@@ -1639,8 +1740,7 @@ focus_tree = {
 		add_to_variable = { ZSR_caucasian_army_heat_attrition_factor = -0.1 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_improving_logistics
 		icon = GFX_goal_improving_logistics
 		prerequisite = { focus = ZSR_training_in_the_mountains }
@@ -1669,8 +1769,7 @@ focus_tree = {
 		add_to_variable = { ZSR_caucasian_army_supply_node_range = 0.1 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_summer_uniform
 		icon = GFX_goal_summer_uniform
 		prerequisite = { focus = ZSR_training_in_the_mountains }
@@ -1690,8 +1789,7 @@ focus_tree = {
 		add_to_variable = { ZSR_caucasian_army_acclimatization_hot_climate_gain_factor = 0.1 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_young_officers
 		icon = GFX_goal_young_officers
 		prerequisite = { focus = ZSR_modern_doctrine }
@@ -1715,8 +1813,7 @@ focus_tree = {
 		}
 	}
 }
-
-	focus = {
+focus = {
 		id = ZSR_new_weapons
 		icon = GFX_goal_new_weapons
 		prerequisite = { focus = ZSR_young_officers }
@@ -1741,8 +1838,7 @@ focus_tree = {
 		    }	
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_new_summoning_system
 		icon = GFX_goal_new_summoning_system
 		prerequisite = { focus = ZSR_young_officers }
@@ -1764,8 +1860,7 @@ focus_tree = {
 		add_to_variable = { ZSR_caucasian_army_special_forces_cap = 0.05 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_mountain_riflemen
 		icon = GFX_goal_mountain_riflemen
 		prerequisite = { focus = ZSR_young_officers }
@@ -1789,8 +1884,7 @@ focus_tree = {
 		add_to_variable = { ZSR_caucasian_army_modifier_army_sub_unit_mountaineers_attack_factor = 0.1 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_civil_war_experience
 		icon = GFX_goal_civil_war_experience
 		prerequisite = { focus = ZSR_new_weapons }
@@ -1821,8 +1915,7 @@ focus_tree = {
 			hidden_effect = { set_technology = { mountain_warfare = 1 } }
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_specialists_in_factories
 		icon = GFX_focus_generic_industry_3
 		x = -3
@@ -1844,8 +1937,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_restructuring_of_factories
 		icon =  GFX_goal_generic_construction
 		prerequisite = { focus = ZSR_specialists_in_factories }
@@ -1866,8 +1958,7 @@ focus_tree = {
 		remove_ideas = ZSR_decrepit_industry_1
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_new_technologies
 		icon =  GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = ZSR_restructuring_of_factories }
@@ -1894,8 +1985,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = ZSR_peoples_production
 		icon =  GFX_focus_eng_concessions_to_the_trade_unions
 		x = -1
@@ -1932,8 +2022,7 @@ focus_tree = {
 			}
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_military_production
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 1
@@ -1981,8 +2070,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_industrialization
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = ZSR_military_production }
@@ -2039,8 +2127,7 @@ focus_tree = {
 			}
 	}
 }
-
-    focus = {
+focus = {
 		id = ZSR_mountain_resources
 		icon = GFX_goal_generic_construction2
 		x = 3
@@ -2069,8 +2156,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_oil_production
 		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = ZSR_mountain_resources }
@@ -2117,8 +2203,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_rubber_production
 		icon = GFX_focus_generic_rubber
 		prerequisite = { focus = ZSR_oil_production }
@@ -2143,8 +2228,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = ZSR_five_year_plan
 		icon = GFX_goal_SOV_five_year_plan
 		prerequisite = { focus = ZSR_rubber_production }
@@ -2165,8 +2249,7 @@ focus_tree = {
 		add_ideas = ZSR_five_year_plan_kavkaz
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_help_for_the_spaniards
 		icon = GFX_focus_intervention_spain_republic
         prerequisite = { focus = ZSR_freedom_equality_brotherhood }
@@ -2234,8 +2317,7 @@ focus_tree = {
 		add_timed_idea = { idea = SPA_spanish_civil_war_commitments days = 730 }
 		}
 	}
-
-    focus = {
+focus = {
 		id = ZSR_sending_equipment
 		icon = GFX_focus_ITA_garibaldi_legion
         prerequisite = { focus = ZSR_help_for_the_spaniards }
@@ -2307,7 +2389,6 @@ focus_tree = {
 			}
 		}
 	}
-
 focus = {
 		id = ZSR_volunteers_in_spain
 		icon = GFX_focus_SOV_support_spanish_poum
@@ -2379,7 +2460,6 @@ focus = {
             }
 		}
 	}
-
 focus = {
 		id = ZSR_political_recognition
 		icon = GFX_focus_spr_war_of_independence

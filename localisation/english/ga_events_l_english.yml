@@ -399,7 +399,6 @@
  #BOP
  BLR_bop.2.t:0 "Successfully completed mission"
  BLR_bop.2.d:0 "The task set for the development of our republic was successfully completed. The Chairman at the next congress of the Central Committee made a speech in which he expressed gratitude to the people of the republic and the officials who built a plan for the task. Also, the Chairman at the end of his speech announced the further development that the republic needs for its prosperity. The authority of the Chairman in the party has risen, thanks to which he can be given more complex and important tasks."
- BLR_bop.2.a:0 "Forward to further prosperity!"
  BLR_bop.3.t:0 "The mission was failed"
  BLR_bop.3.d:0 "The assigned task failed. At the next congress of the Central Committee, party members criticized the Chairman, due to which his authority fell. Party members in their criticism mentioned the mistakes made by the officials and the mistakes of the Chairman. By the end of the congress, the consequences of the failed task were entrusted to the Supreme Soviet, and now the Chairman will think about how to do better next time."
  BLR_bop.3.a:0 "Need to rely more on the Supreme Soviet"
@@ -411,7 +410,6 @@
  ZSR_bop.3.a:0 "Need to rely more on the Supreme Soviet"
  UKR_bop.2.t:0 "Successfully completed mission"
  UKR_bop.2.d:0 "The task set for the development of our republic was successfully completed. The Chairman at the next congress of the Central Committee made a speech in which he expressed gratitude to the people of the republic and the officials who built a plan for the task. Also, the Chairman at the end of his speech announced the further development that the republic needs for its prosperity. The authority of the Chairman in the party has risen, thanks to which he can be given more complex and important tasks."
- BLR_bop.2.a:0 "Forward to further prosperity!"
  UKR_bop.2.a:0 "Forward to further prosperity!"
  UKR_bop.3.t:0 "The mission was failed"
  UKR_bop.3.d:0 "The assigned task failed. At the next congress of the Central Committee, party members criticized the Chairman, due to which his authority fell. Party members in their criticism mentioned the mistakes made by the officials and the mistakes of the Chairman. By the end of the congress, the consequences of the failed task were entrusted to the Supreme Soviet, and now the Chairman will think about how to do better next time."

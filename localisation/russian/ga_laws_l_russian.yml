@@ -7,8 +7,6 @@
  is_head_of_government_NOT: "Не является главой правительства"
 
  laws: "Законы"
- government: "Правительство"
-
  political_system: "Политическая система"
  unitary_state: "Унитарное государство"
  federation: "Федерация"

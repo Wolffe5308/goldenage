@@ -234,7 +234,7 @@ UKR_black_sea_shipyard_organization = {
 
 		position = { x=@ship_2_X y=@ship_3_Y }
 
-		mutually_exclusive = { SOV_mio_trait_merge_leninskaya_kuznitsa_plant }
+		
 		
 		visible = {
 			FROM = { original_tag = UKR }

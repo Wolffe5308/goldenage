@@ -1,4 +1,70 @@
-﻿capital = 276
+# Current 1939 technologies precede historical focus rewards.
+1939.1.1 = {
+if = {
+limit = { has_dlc = "By Blood Alone" }
+set_technology = {
+				iw_small_airframe = 1
+				iw_medium_airframe = 1
+				aa_lmg = 1
+				early_bombs = 1
+				engines_1 = 1
+				bba_early_transport_plane = 1
+			}
+else = {
+set_technology = {
+				fighter1 = 1
+			}
+}
+}
+set_technology = {
+		interwar_artillery = 1
+		interwar_antitank = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+		support_weapons2 = 1
+
+		#doctrines
+		#Air
+		#force_rotation = 1
+		#fighter_baiting = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		fuel_silos = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+	}
+if = {
+limit = { not = { has_dlc = "Man the Guns" } }
+set_technology = {
+		}
+}
+if = {
+limit = { has_dlc = "Man the Guns" }
+set_technology = {
+			basic_light_battery = 1
+			sonar = 1
+			improved_sonar = 1
+			improved_depth_charges = 1
+		}
+}
+}
+capital = 276
 
 if = {
 	limit = {
@@ -242,15 +308,15 @@ if = {
 
 		#doctrines
 		#Air
-		force_rotation = 1
-		fighter_baiting = 1
+		
+		
 
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		subsidiary_carrier_role = 1
-		convoy_sailing = 1
+		
+		
+		
+		
+		
+		
 
 		#electronics
 		electronic_mechanical_engineering = 1
@@ -290,6 +356,11 @@ if = {
 			improved_depth_charges = 1
 		}
 	}
+
+# Doctrine initialization migrated to the mastery system.
+set_grand_doctrine = grand_battleplan
+set_grand_doctrine = new_fleet_in_being
+set_grand_doctrine = new_operational_integrity
 }
 
 set_politics = {

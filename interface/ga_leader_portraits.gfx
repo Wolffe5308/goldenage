@@ -21,7 +21,7 @@ spriteTypes = {
 
     spriteType = {
 		name = "GFX_r56_portrait_POL_Wladyslaw_Anders"
-		texturefile = "gfx/leaders/SOV/r56_portrait_POL_Wladyslaw_Anders.dds"
+		texturefile = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 	}
 
 	spriteType = {
@@ -87,12 +87,12 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_portrait_tan_churguy_ool_khomushku"
-		texturefile = "gfx/interface/leaders/TAN/portrait_tan_churguy_ool_khomushku.dds"
+		texturefile = "gfx/leaders/TAN/portrait_tan_churguy_ool_khomushku.dds"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_SOV_supreme_soviet"
-		texturefile = "gfx/interface/leaders/TAN/portrait_SOV_supreme_soviet.dds"
+		texturefile = "gfx/leaders/TAN/portrait_SOV_supreme_soviet.dds"
 	}
 
 	spriteType = {
@@ -350,17 +350,17 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_Portrait_Alexander_Chervyakov"
-		texturefile = "gfx/interface/leaders/BLR/Portrait_Alexander_Chervyakov.dds"
+		texturefile = "gfx/leaders/BLR/Portrait_Alexander_Chervyakov.dds"
 	}
 
 	spriteType = {
 		name = "GFX_Portrait_Aleksandr_Lizyukov"
-		texturefile = "gfx/interface/leaders/BLR/Portrait_Aleksandr_Lizyukov.dds"
+		texturefile = "gfx/leaders/BLR/Portrait_Aleksandr_Lizyukov.dds"
 	}
 
 	spriteType = {
 		name = "GFX_portrait_SOV_supreme_soviet"
-		texturefile = "gfx/interface/leaders/BLR/portrait_SOV_supreme_soviet.dds"
+		texturefile = "gfx/leaders/BLR/portrait_SOV_supreme_soviet.dds"
 	}
 
 	spriteType = {
@@ -519,7 +519,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_portrait_SOV_supreme_soviet"
-		texturefile = "gfx/interface/leaders/ZSR/portrait_SOV_supreme_soviet.dds"
+		texturefile = "gfx/leaders/ZSR/portrait_SOV_supreme_soviet.dds"
 	}
 
 	spriteType = {
@@ -798,7 +798,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_portrait_UKR_pavel_shandruk"
-		texturefile = "gfx/leaders/UKR/portrait_UKR_pavel_shandruk.dds"
+		texturefile = "gfx/leaders/UKR/portrait_UKR_pavlo_shandruk.dds"
 	}
 
     ### MOL ###

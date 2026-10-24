@@ -40,7 +40,183 @@ focus_tree = {
 
 	shared_focus = REP_development_of_the_republics
 
-    focus = {
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+
+	
+
+	
+	
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+    
+
+	
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+focus = {
 		id = BLR_waf
 		icon = GFX_focus_generic_aircraft_production
 		x = 15
@@ -59,8 +235,7 @@ focus_tree = {
 		add_ideas = Belarusian_air_force
 		}
 	}
-
-    focus = {
+focus = {
 		id = BLR_soviet_specialists
 		icon = GFX_focus_SOV_flying_clubs
 		prerequisite = { focus = BLR_waf }
@@ -86,8 +261,7 @@ focus_tree = {
 			}
 		}
 	}
-
-    focus = {
+focus = {
 		id = BLR_construction_of_airfields
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = BLR_waf }
@@ -113,8 +287,7 @@ focus_tree = {
 				}
 			}
 		}
-
-    focus = {
+focus = {
 		id = BLR_service_staff
 		icon = GFX_goal_generic_air_production
 		prerequisite = { focus = BLR_construction_of_airfields }
@@ -140,8 +313,7 @@ focus_tree = {
 				}
 			}
 		}
-
-    focus = {
+focus = {
 		id = BLR_new_aircraft
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = BLR_soviet_specialists }
@@ -165,8 +337,7 @@ focus_tree = {
 			}
 		}
 	}
-
-    focus = {
+focus = {
 		id = BLR_aircraft_manufacturing
 		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = BLR_soviet_specialists }
@@ -192,8 +363,7 @@ focus_tree = {
 			}
 		}
 	}
-
-    focus = {
+focus = {
 		id = BLR_standardized_production
 		icon =  GFX_goal_generic_air_doctrine
 		prerequisite = { focus = BLR_new_aircraft }
@@ -212,8 +382,7 @@ focus_tree = {
 			add_ideas = Aircraft_manufacturing
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_officer_training
 		icon = GFX_goal_TAN_recruit_officers
 		x = 4
@@ -233,8 +402,7 @@ focus_tree = {
 		army_experience = 25
 	}
 }
-
-	focus = {
+focus = {
 		id = BLR_military_competition
 		icon = GFX_goal_TAN_start_training_divisions
 		prerequisite = { focus = BLR_regular_army focus = BLR_peoples_army }
@@ -252,8 +420,7 @@ focus_tree = {
 			army_experience = 50
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_doctrine_development
 		icon = GFX_goal_BLR_doctrine_development
 		prerequisite = { focus = BLR_regular_army focus = BLR_peoples_army }
@@ -278,8 +445,7 @@ focus_tree = {
 		    }
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_army_stabilization
 		icon = GFX_goal_BLR_army_stabilization
 		prerequisite = { focus = BLR_doctrine_development }
@@ -311,8 +477,7 @@ focus_tree = {
 		    }
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_peoples_army
 		icon = GFX_goal_BLR_peoples_army
 		mutually_exclusive = { focus = BLR_regular_army }
@@ -344,8 +509,7 @@ focus_tree = {
 		}
 	}
 }
-
-	focus = {
+focus = {
 		id = BLR_weapons_for_the_militia
 		icon = GFX_goal_BLR_weapons_for_the_militia
 		prerequisite = { focus = BLR_peoples_army }
@@ -375,8 +539,7 @@ focus_tree = {
 		}
 	}
 }
-
-	focus = {
+focus = {
 		id = BLR_organize_the_people
 		icon = GFX_goal_BLR_organize_the_people
 		prerequisite = { focus = BLR_peoples_army }
@@ -403,8 +566,7 @@ focus_tree = {
 		add_to_variable = { BLR_peoples_militia_modifier_army_sub_unit_militia_max_org_factor = 0.1 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_guerrilla_methods
 		icon = GFX_goal_BLR_guerrilla_methods
 		prerequisite = { focus = BLR_peoples_army }
@@ -439,8 +601,7 @@ focus_tree = {
 		add_to_variable = { BLR_peoples_militia_modifier_army_pocket_penalty = -0.1 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_pride_to_serve
 		icon =  GFX_goal_BLR_pride_to_serve
 		prerequisite = { focus = BLR_weapons_for_the_militia }
@@ -474,8 +635,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_recruit_training
 		icon =  GFX_goal_BLR_recruit_training
 		prerequisite = { focus = BLR_organize_the_people }
@@ -508,8 +668,7 @@ focus_tree = {
 			army_experience = 25
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_the_people_defend_the_country
 		icon =  GFX_goal_BLR_the_people_defend_the_country
 		prerequisite = { focus = BLR_pride_to_serve }
@@ -538,8 +697,7 @@ focus_tree = {
 			add_to_variable = { BLR_peoples_militia_land_bunker_effectiveness_factor = 0.05 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_regular_army
 		icon = GFX_goal_BLR_regular_army
 		mutually_exclusive = { focus = BLR_peoples_army }
@@ -562,8 +720,7 @@ focus_tree = {
 		add_to_variable = { BLR_belarusian_army_army_defence_factor = 0.05 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_anti_air_defense
 		icon = GFX_goal_BLR_anti_air_defense
 		prerequisite = { focus = BLR_regular_army }
@@ -590,8 +747,7 @@ focus_tree = {
 		}
 	}
 }
-
-	focus = {
+focus = {
 		id = BLR_anti_tank_guns
 		icon = GFX_goal_BLR_anti_tank_guns
 		prerequisite = { focus = BLR_anti_air_defense }
@@ -621,35 +777,7 @@ focus_tree = {
 		}
 	}
 }
-
-	focus = {
-		id = BLR_production_katyusha
-		icon = GFX_goal_BLR_production_katyusha
-		prerequisite = { focus = BLR_anti_tank_guns }
-		prerequisite = { focus = BLR_military_conveyor }
-		relative_position_id = BLR_military_conveyor
-		relative_position_id = BLR_anti_tank_guns
-		x = -1
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		completion_reward = {
-		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_production_katyusha"
-		mio:BLR_mogilev_automobile_plant_organization = {
-			add_mio_funds = 500
-		}
-		custom_effect_tooltip = BLR_production_katyusha_ns_tt
-		add_to_variable = { BLR_belarusian_army_motorized_attack_factor = 0.05 }
-		add_to_variable = { BLR_belarusian_army_motorized_defence_factor = 0.05 }
-		add_ideas = BLR_katyusha
-		}
-	}
-
-	focus = {
+focus = {
 		id = BLR_artillery_upgrade
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = BLR_regular_army }
@@ -675,37 +803,7 @@ focus_tree = {
 		    }
 		}
 	}
-
-	focus = {
-		id = BLR_weapons_of_war
-		icon = GFX_goal_BLR_weapons_of_war
-		prerequisite = { focus = BLR_artillery_upgrade }
-		relative_position_id = BLR_artillery_upgrade
-		x = -1
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_weapons_of_war"
-            custom_effect_tooltip = BLR_weapons_of_war_ns_tt
-			add_to_variable = { BLR_belarusian_army_planning_speed = 0.1 }
-			add_to_variable = { BLR_belarusian_army_army_attack_factor = 0.05 }
-		    add_to_variable = { BLR_belarusian_army_army_defence_factor = 0.05 }
-			add_to_variable = { BLR_belarusian_army_breakthrough_factor = 0.05 }
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = cat_superior_firepower
-		    }
-		}
-	}
-
-	focus = {
+focus = {
 		id = BLR_military_conveyor
 		icon = GFX_goal_BLR_military_conveyor
 		prerequisite = { focus = BLR_artillery_upgrade }
@@ -736,8 +834,61 @@ focus_tree = {
 		    }
 		}
 	}
+focus = {
+		id = BLR_production_katyusha
+		icon = GFX_goal_BLR_production_katyusha
+		prerequisite = { focus = BLR_anti_tank_guns }
+		prerequisite = { focus = BLR_military_conveyor }
+		relative_position_id = BLR_military_conveyor
+		relative_position_id = BLR_anti_tank_guns
+		x = -1
+		y = 1
+		cost = 5
 
-	focus = {
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_production_katyusha"
+		mio:BLR_mogilev_automobile_plant_organization = {
+			add_mio_funds = 500
+		}
+		custom_effect_tooltip = BLR_production_katyusha_ns_tt
+		add_to_variable = { BLR_belarusian_army_motorized_attack_factor = 0.05 }
+		add_to_variable = { BLR_belarusian_army_motorized_defence_factor = 0.05 }
+		add_ideas = BLR_katyusha
+		}
+	}
+focus = {
+		id = BLR_weapons_of_war
+		icon = GFX_goal_BLR_weapons_of_war
+		prerequisite = { focus = BLR_artillery_upgrade }
+		relative_position_id = BLR_artillery_upgrade
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BLR_weapons_of_war"
+            custom_effect_tooltip = BLR_weapons_of_war_ns_tt
+			add_to_variable = { BLR_belarusian_army_planning_speed = 0.1 }
+			add_to_variable = { BLR_belarusian_army_army_attack_factor = 0.05 }
+		    add_to_variable = { BLR_belarusian_army_army_defence_factor = 0.05 }
+			add_to_variable = { BLR_belarusian_army_breakthrough_factor = 0.05 }
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = cat_superior_firepower
+		    }
+		}
+	}
+focus = {
 		id = BLR_artillery_god_of_war
 		icon = GFX_goal_BLR_artilery_god_of_war
 		prerequisite = { focus = BLR_military_conveyor }
@@ -764,8 +915,7 @@ focus_tree = {
 			add_ideas = BLR_artillery_production
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_development_of_belarus
 		icon = GFX_goal_generic_production
 		x = 13
@@ -798,8 +948,7 @@ focus_tree = {
 		}
 	}
 }
-
-	focus = {
+focus = {
 		id = BLR_infrastructure_effort
 		icon = GFX_goal_generic_construction
 		mutually_exclusive = { focus = BLR_market_economy }
@@ -851,8 +1000,7 @@ focus_tree = {
 		}
 	}
 }
-
-	focus = {
+focus = {
 		id = BLR_finish_five_year_plan
 		icon = GFX_goal_SOV_five_year_plan
 		prerequisite = { focus = BLR_development_of_belarus }
@@ -879,8 +1027,7 @@ focus_tree = {
 			remove_ideas = BLR_ruined_industry_1
 		}
 	}
-
-    focus = {
+focus = {
 		id = BLR_new_five_year_plan
 		icon = GFX_goal_reichsautobahn
 		prerequisite = { focus = BLR_finish_five_year_plan }
@@ -906,8 +1053,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = development_of_industrial_regions
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_industrial_modernization
 		icon = GFX_focus_spa_the_spanish_miracle
 		prerequisite = { focus = BLR_new_five_year_plan }
@@ -935,8 +1081,7 @@ focus_tree = {
 		    }
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_improvement_of_working_conditions
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		prerequisite = { focus = BLR_industrial_modernization }
@@ -964,8 +1109,7 @@ focus_tree = {
 		    }
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_steel_mining
 		icon = GFX_focus_generic_steel
 		prerequisite = { focus = BLR_new_five_year_plan }
@@ -995,8 +1139,7 @@ focus_tree = {
 				}
 			}
 		}
-	
-	focus = {
+focus = {
 		id = BLR_mining
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = BLR_new_five_year_plan }
@@ -1021,8 +1164,7 @@ focus_tree = {
 			add_ideas = Mining
 		}
 	}
-	
-	focus = {
+focus = {
 			id = BLR_belarusian_state_institutions
 			icon = GFX_focus_research2
 			prerequisite = { focus = BLR_steel_mining }
@@ -1049,8 +1191,7 @@ focus_tree = {
 				add_research_slot = 1
 			}
 		}
-
-	focus = {
+focus = {
 		id = BLR_military_industry_of_belarus
 		icon = GFX_focus_generic_reorient_production
 		prerequisite = { focus = BLR_infrastructure_effort focus = BLR_market_economy }
@@ -1096,8 +1237,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_construction_of_military_factories
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = BLR_infrastructure_effort focus = BLR_market_economy }
@@ -1143,8 +1283,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_civil_industry_construction
 		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = BLR_military_industry_of_belarus }
@@ -1191,8 +1330,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_building_in_belarus
 		icon = GFX_focus_generic_industry_3
 		prerequisite = { focus = BLR_construction_of_military_factories }
@@ -1239,8 +1377,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_development_of_western_belarus
 		icon = GFX_focus_generic_modernize_industry
 		prerequisite = { focus = BLR_civil_industry_construction }
@@ -1278,8 +1415,7 @@ focus_tree = {
 		}
 	}
 }
-
-	focus = {
+focus = {
 		id = BLR_military_industry
 		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = BLR_development_of_western_belarus }
@@ -1326,8 +1462,7 @@ focus_tree = {
 		}
 	}
 }
-
-	focus = {
+focus = {
 		id = BLR_building_infrastructure_in_the_west
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = BLR_development_of_western_belarus }
@@ -1379,8 +1514,7 @@ focus_tree = {
 		}
 	}
 }
-
-	focus = {
+focus = {
 		id = BLR_construction_of_factories
 		icon = GFX_focus_generic_low_cost_housing
 		prerequisite = { focus = BLR_development_of_western_belarus }
@@ -1427,8 +1561,7 @@ focus_tree = {
 		}
 	}
 }
-
-	focus = {
+focus = {
 		id = BLR_market_economy
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		mutually_exclusive = { focus = BLR_infrastructure_effort }
@@ -1455,8 +1588,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_privatization
 		icon = GFX_focus_mex_privatisation
 		prerequisite = { focus = BLR_market_economy }
@@ -1481,8 +1613,7 @@ focus_tree = {
 			remove_ideas = BLR_ruined_industry_1
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_foreign_investment
 		icon = GFX_focus_GER_customs_union
 		prerequisite = { focus = BLR_market_economy }
@@ -1512,8 +1643,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_private_universities
 		icon = GFX_focus_research
 		prerequisite = { focus = BLR_foreign_investment }
@@ -1538,8 +1668,7 @@ focus_tree = {
 			add_research_slot = 1
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_economic_reforms
 		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = BLR_privatization }
@@ -1566,8 +1695,7 @@ focus_tree = {
 			add_ideas = BLR_belarusian_economy
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_road_construction
 		icon = GFX_focus_generic_railroad
 		prerequisite = { focus = BLR_economic_reforms }
@@ -1592,8 +1720,7 @@ focus_tree = {
 			add_ideas = BLR_road_construction_idea
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_development_of_electronics
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = BLR_economic_reforms }
@@ -1623,8 +1750,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_search_for_resources
 		icon = GFX_focus_generic_central_planning
 		prerequisite = { focus = BLR_economic_reforms }
@@ -1652,8 +1778,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_complete_victory_of_capitalism
 		icon = GFX_focus_generic_currency_reforms
 		prerequisite = { focus = BLR_road_construction }
@@ -1685,8 +1810,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_wsf
 		icon = GFX_goal_generic_build_navy
 		x = 22
@@ -1708,8 +1832,7 @@ focus_tree = {
 		add_ideas = BLR_navy
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_expand_north_bases
 		icon = GFX_focus_SOV_reinforce_western_naval_bases
 		prerequisite = { focus = BLR_wsf }
@@ -1742,8 +1865,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_fleet_development
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = BLR_wsf }
@@ -1776,8 +1898,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_nk_navy_bssr
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = BLR_wsf }
@@ -1794,8 +1915,7 @@ focus_tree = {
             add_ideas = Shipbuilding
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_submarine_development
 		icon = GFX_goal_generic_navy_submarine
 		prerequisite = { focus = BLR_expand_north_bases }
@@ -1820,8 +1940,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_construction_of_the_surface_fleet
 		icon = GFX_focus_generic_destroyer
 		prerequisite = { focus = BLR_fleet_development }
@@ -1845,8 +1964,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_mine_warfare
 		icon = GFX_focus_generic_mine_warfare
 		prerequisite = { focus = BLR_submarine_development }
@@ -1871,8 +1989,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_new_party
 		icon = GFX_goal_BLR_new_party
 		x = 21
@@ -1902,8 +2019,7 @@ focus_tree = {
 		unlock_decision_category_tooltip = building_a_new_party
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_negotiations_with_protesters
 		icon = GFX_goal_BLR_negotiations_with_protesters
 		prerequisite = { focus = BLR_new_party }
@@ -1927,8 +2043,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_disperse_the_rest
 		icon = GFX_goal_BLR_disperse_the_rest
 		prerequisite = { focus = BLR_negotiations_with_protesters }
@@ -1952,8 +2067,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_komsomol
 		icon = GFX_focus_NOR_moscows_education_centers
 		prerequisite = { focus = BLR_new_party }
@@ -1978,8 +2092,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_peoples_newspaper
 		icon = GFX_goal_BLR_people's_newspaper
 		prerequisite = { focus = BLR_komsomol }
@@ -2000,8 +2113,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_restoring_order
 		icon = GFX_goal_BLR_restoring_order
 		prerequisite = { focus = BLR_peoples_newspaper }
@@ -2024,8 +2136,7 @@ focus_tree = {
 		remove_ideas = BLR_popular_riots_2
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_internal_policy_of_belarus
 		icon = GFX_goal_BLR_domestic_policy_of_belarus
 		prerequisite = { focus = BLR_restoring_order }
@@ -2049,8 +2160,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_recruitment_to_partisan_troops
 		icon = GFX_goal_generic_red_milita
 		prerequisite = { focus = BLR_internal_policy_of_belarus }
@@ -2120,8 +2230,7 @@ focus_tree = {
 			}
 		}
 	}
-
-    focus = {
+focus = {
 		id = BLR_military_commissariats
 		icon = GFX_goal_BLR_military_commissariats
 		prerequisite = { focus = BLR_internal_policy_of_belarus }
@@ -2142,8 +2251,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_partisan_komsomol
 		icon = GFX_goal_BLR_partisan_komsomol
 		prerequisite = { focus = BLR_military_commissariats }
@@ -2169,8 +2277,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_war_propoganda
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = BLR_military_commissariats }
@@ -2191,8 +2298,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_partisan_exercises
 		icon = GFX_goal_BLR_partisan_exercises
 		prerequisite = { focus = BLR_recruitment_to_partisan_troops }
@@ -2213,8 +2319,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_state_and_people_are_united
 		icon = GFX_focus_generic_soviet_politics
 		prerequisite = { focus = BLR_war_propoganda }
@@ -2240,8 +2345,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_foreign_policy_of_belarus
 		icon = GFX_goal_BLR_foreign_policy_of_belarus
 		prerequisite = { focus = BLR_restoring_order }
@@ -2261,8 +2365,7 @@ focus_tree = {
 		add_political_power = 100
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_undermine_morale_in_poland
 		icon = GFX_goal_UKR_destabilize_the_situation_in_poland
 		prerequisite = { focus = BLR_foreign_policy_of_belarus }
@@ -2281,8 +2384,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_western_scientists
 		icon = GFX_focus_generic_socialist_science
 		prerequisite = { focus = BLR_undermine_morale_in_poland }
@@ -2300,8 +2402,7 @@ focus_tree = {
 		add_ideas = BLR_western_scientists_blr
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_delegation_to_western_countries
 		icon = GFX_goal_BLR_delegation_to_west
 		prerequisite = { focus = BLR_foreign_policy_of_belarus }
@@ -2336,8 +2437,7 @@ focus_tree = {
 		}
 	}
 }
-
-    focus = {
+focus = {
 		id = BLR_military_advisers
 		icon = GFX_goal_BLR_military_advisers
 		prerequisite = { focus = BLR_western_scientists }
@@ -2364,7 +2464,6 @@ focus_tree = {
 		}
 	}
 }
-
 focus = {
 		id = BLR_treaty_with_lithuania
 		icon = GFX_goal_BLR_treaty_with_lithuania
@@ -2386,8 +2485,7 @@ focus = {
 					}
 				}
 			}
-
-	focus = {
+focus = {
 		id = BLR_anti_hitler_coalition
 		icon = GFX_goal_BLR_anti_hitler_coalition
 		prerequisite = { focus = BLR_western_scientists }
@@ -2414,8 +2512,7 @@ focus = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_the_great_patriotic_war
 		icon = GFX_goal_UKR_the_great_patriotic_war
 		x = 21
@@ -2438,8 +2535,7 @@ focus = {
 		add_timed_idea = { idea = UKR_the_great_patriotic_war_1 days = 60 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_give_battle_to_the_invaders
 		icon = GFX_goal_UKR_give_battle_to_the_invaders
 		prerequisite = { focus = BLR_the_great_patriotic_war }
@@ -2461,8 +2557,7 @@ focus = {
 		add_ideas = UKR_death_to_the_invaders
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_we_wont_give_up
 		icon = GFX_goal_UKR_we_wont_give_up
 		prerequisite = { focus = BLR_the_great_patriotic_war }
@@ -2484,8 +2579,7 @@ focus = {
 		add_ideas = UKR_well_die_but_we_wont_give_up
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_bring_back_the_deserters
 		icon = GFX_goal_UKR_bring_back_the_deserters
 		prerequisite = { focus = BLR_the_great_patriotic_war }
@@ -2507,8 +2601,7 @@ focus = {
 		add_ideas = UKR_back_in_line
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_holy_war
 		icon = GFX_goal_UKR_holy_war
 		prerequisite = { focus = BLR_give_battle_to_the_invaders }
@@ -2532,8 +2625,7 @@ focus = {
 		add_ideas = UKR_the_holy_war
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_help_for_the_spaniards
 		icon = GFX_focus_intervention_spain_republic
 		prerequisite = { focus = BLR_restoring_order }
@@ -2597,8 +2689,7 @@ focus = {
 		add_timed_idea = { idea = SPA_spanish_civil_war_commitments days = 730 }
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_sending_equipment
 		icon = GFX_focus_ITA_garibaldi_legion
 		prerequisite = { focus = BLR_help_for_the_spaniards }
@@ -2666,8 +2757,7 @@ focus = {
 			}
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_volunteers_in_spain
 		icon = GFX_focus_SOV_support_spanish_poum
 		prerequisite = { focus = BLR_help_for_the_spaniards }
@@ -2733,8 +2823,7 @@ focus = {
             }
 		}
 	}
-
-	focus = {
+focus = {
 		id = BLR_political_recognition
 		icon = GFX_focus_spr_war_of_independence
 		prerequisite = { focus = BLR_sending_equipment }

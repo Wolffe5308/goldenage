@@ -1,4 +1,31 @@
-﻿capital = 330
+# Current 1939 technologies precede historical focus rewards.
+1939.1.1 = {
+set_technology = {
+		support_weapons = 1
+		gw_artillery = 1
+		
+		#doctrines
+		#air_superiority = 1
+		#mass_assault = 1
+		#pocket_defence = 1
+		#defence_in_depth = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+	}
+}
+capital = 330
 
 oob = "MON_1936"
 
@@ -69,11 +96,11 @@ recruit_character = MON_ilya_baldinov
 		gw_artillery = 1
 		
 		#doctrines
-		air_superiority = 1
 		
-		mass_assault = 1
-		pocket_defence = 1
-		defence_in_depth = 1
+		
+		
+		
+		
 
 		#electronics
 		electronic_mechanical_engineering = 1
@@ -90,6 +117,10 @@ recruit_character = MON_ilya_baldinov
 		concentrated_industry = 1
 		concentrated_industry2 = 1
 	}
+
+# Doctrine initialization migrated to the mastery system.
+set_grand_doctrine = mass_assault
+set_grand_doctrine = new_strategic_destruction
 }
 
 set_politics = {
@@ -108,7 +139,7 @@ set_popularities = {
 		limited_conscription
 	}
 
-	recruit_character = MON_khorloogiin_choibalsan
+	
 	promote_character = MON_khorloogiin_choibalsan
 	retire_character = MON_anandyn_amar
 }

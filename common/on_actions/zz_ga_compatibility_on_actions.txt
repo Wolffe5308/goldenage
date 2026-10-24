@@ -1,0 +1,3 @@
+on_actions = {
+ on_startup = { effect = { every_possible_country = { set_variable = { ga_compatibility_country_locale_scope = 1 } } } }
+}

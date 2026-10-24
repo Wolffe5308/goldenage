@@ -43,8 +43,8 @@ set_technology = {
 	early_bomber = 1
 	strategic_bomber1 = 1
 	naval_bomber1 = 1
-	mass_assault = 1
-	fleet_in_being = 1
+	
+	
 }
 
 if = {
@@ -78,6 +78,8 @@ if = {
 		basic_torpedo = 1
 }
 
+}
+
 set_politics = {
 	ruling_party = communism
 	last_election = "1933.7.1"
@@ -91,3 +93,6 @@ set_popularities = {
 }
 
 #couldnt find anything else, the commies simply forced everyone else into exile
+# Doctrine initialization migrated to the mastery system.
+set_grand_doctrine = mass_assault
+set_grand_doctrine = new_fleet_in_being

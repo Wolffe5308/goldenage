@@ -1,4 +1,25 @@
-﻿capital = 327
+# Current 1939 technologies precede historical focus rewards.
+1939.1.1 = {
+set_technology = {
+		basic_ship_hull_light = 1
+		basic_torpedo = 1
+		electronic_mechanical_engineering = 1
+		radio = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		infantry_weapons1 = 1
+	}
+}
+capital = 327
 
 IF = {
 	limit = { 

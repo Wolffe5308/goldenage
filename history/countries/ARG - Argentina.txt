@@ -1,4 +1,38 @@
-﻿capital = 278
+# Current 1939 technologies precede historical focus rewards.
+1939.1.1 = {
+set_technology = {
+		interwar_artillery = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+		tech_support = 1
+		tech_engineers = 1
+
+		#doctrines
+		#air_superiority = 1
+		#grand_battle_plan = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		fuel_silos = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+capital = 278
 
 oob = "ARG_1936"
 
@@ -281,12 +315,12 @@ set_country_flag = monroe_doctrine
 		tech_engineers = 1
 
 		#doctrines
-		air_superiority = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		convoy_sailing = 1
+		
+		
+		
+		
+		
+		
 
 
 		#electronics
@@ -322,9 +356,14 @@ set_country_flag = monroe_doctrine
 		limit = { has_dlc = "Man the Guns" }
 		set_technology = {
 			basic_light_battery = 1
-			basic_medium_battery = 1
+			
 		}
 	}
+
+# Doctrine initialization migrated to the mastery system.
+set_grand_doctrine = grand_battleplan
+set_grand_doctrine = new_fleet_in_being
+set_grand_doctrine = new_strategic_destruction
 }
 
 set_convoys = 120
@@ -357,9 +396,9 @@ set_popularities = {
 		neutrality = 50
 	}
 
-	recruit_character = ARG_roberto_maria_ortiz
+	
 	promote_character = ARG_roberto_maria_ortiz
-	retire_character = ARG_agustín_pedro_justo
+	retire_character = ARG_agustin_pedro_justo
 }
 
 

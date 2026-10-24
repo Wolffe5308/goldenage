@@ -9,10 +9,10 @@ state = {
 	history = {
 		owner = MOL
 		victory_points = {
-			13378 20
+			13416 20
 		}
 		victory_points = {
-			13379 5
+			13417 5
 		}
 		buildings = {
 			infrastructure = 2
@@ -21,7 +21,7 @@ state = {
 		add_core_of = MOL
 	}
 	provinces = {
-		13378 13379 13380
+		13416 13417 13418
 	}
 
 	local_supplies = 6.0 

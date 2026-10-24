@@ -8015,4 +8015,96 @@ focus_tree = {
 			custom_effect_tooltip = BRA_unify_south_america_tt
 		}
 	}
+
+focus = {
+		id = BRA_claim_the_french_throne
+
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { 
+					has_completed_focus = BRA_prepare_for_second_intentona 
+					has_completed_focus = BRA_tribunal_de_seguranca_nacional
+				}
+			}
+			has_country_flag = BRA_pedro_de_alcantara_dead_flag
+		}
+
+		available = {
+			is_subject = no 
+			FRA = {
+				exists = yes 
+				NOT = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		bypass = {
+		}
+
+		prerequisite = { focus = BRA_united_kingdom_of_brazil_and_portugal }
+		
+		icon = GFX_focus_focus_fra_orleans_restoration
+		x = 0
+		y = 1
+		relative_position_id = BRA_united_kingdom_of_brazil_and_portugal
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+			create_wargoal = {
+				type = annex_everything
+				target = FRA
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			FRA = {
+				every_core_state = {
+					add_claim_by = ROOT
+				}
+			}
+			
+		}
+	}
+
+focus = {
+		id = BRA_establish_companhia_vale_do_rio_doce
+		icon = GFX_focus_generic_mining_industry
+		prerequisite = { focus = BRA_batalha_do_borracha }
+		x = -2
+		y = 1
+		relative_position_id = BRA_batalha_do_borracha
+		cost = 10
+		available = {
+			496 = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+
+			496 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}	
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}	
+			}
+
+		}
+	}
 }

@@ -1,0 +1,20 @@
+air_wings = {
+	226 = { 
+		fighter_equipment_0 = {
+			owner = "UKR" 
+			amount = 100
+		}
+	}
+	199 = {
+		fighter_equipment_0 = {
+			owner = "UKR" 
+			amount = 100
+		}
+	}
+	193 = {
+		fighter_equipment_0 = {
+			owner = "UKR" 
+			amount = 100
+		}
+	}
+}

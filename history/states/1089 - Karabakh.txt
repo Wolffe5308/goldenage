@@ -1,11 +1,11 @@
 state={
-	id=1054
-	name="STATE_1054"
+	id=1089
+	name="STATE_1089"
 	
 	history={
 		owner = ZSR
 		victory_points = {
-			13376 2 
+			13414 2 
 		}
 		buildings = {
 			infrastructure = 3
@@ -16,7 +16,7 @@ state={
 
 	}
 	provinces={
-		13376 13377
+		13414 13415
 	}
 	manpower=150837
 	buildings_max_level_factor=1.000

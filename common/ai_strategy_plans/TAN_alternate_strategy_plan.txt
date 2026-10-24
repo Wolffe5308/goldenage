@@ -94,7 +94,7 @@ TAN_opposition_to_the_kremlin_plan = {
 
 }
 
-SOV_left_opposition_cooperative_plan = {
+TAN_left_opposition_cooperative_plan = {
 	name = "SOV left opposition cooperative plan"
 	desc = ""
 
@@ -223,7 +223,7 @@ SOV_left_opposition_cooperative_plan = {
 }
 
 
-SOV_right_opposition_plan = {
+TAN_right_opposition_plan = {
 	name = "SOV right opposition plan"
 	desc = ""
 
@@ -354,7 +354,7 @@ SOV_right_opposition_plan = {
 
 
 
-SOV_right_opposition_cooperative_plan = {
+TAN_right_opposition_cooperative_plan = {
 	name = "SOV right opposition cooperative plan"
 	desc = ""
 
@@ -800,7 +800,7 @@ SOV_right_opposition_cooperative_plan = {
 #SOV_the_peoples_revolution
 #SOV_the_supreme_soviet
 
-SOV_exiles_tsarist_plan = {
+TAN_exiles_tsarist_plan = {
 	name = "Soviet Union Tsarist Plan"
 	desc = "The White Exiles return to bring Russia onto the path to renewed Tsarism."
 
@@ -917,7 +917,7 @@ SOV_exiles_tsarist_plan = {
 
 }
 
-SOV_exiles_fascist_plan = {
+TAN_exiles_fascist_plan = {
 	name = "Soviet Union Fascist Plan"
 	desc = "The White Exiles return to bring Fascism to Russia."
 

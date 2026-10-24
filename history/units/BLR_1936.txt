@@ -152,20 +152,7 @@ units = {
 }
 
 ### Air Wings
-air_wings = {
-	207 = { 
-		fighter_equipment_0 = {
-			owner = "BLR" 
-			amount = 100
-		}
-	}
-	194 = {
-		fighter_equipment_0 = {
-			owner = "BLR" 
-			amount = 100
-		}
-	}
-}
+
 
 ### Starting Production ###
 instant_effect = {

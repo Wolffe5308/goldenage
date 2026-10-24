@@ -415,7 +415,7 @@ characters={
 		}
 		advisor = {
 			slot = high_command
-			idea_token = BLR_stepan_krasovsky
+			idea_token = BLR_stepan_krasovsky_high_command
 			ledger = air
 			allowed = {
 				original_tag = BLR
@@ -468,6 +468,21 @@ characters={
 			ai_will_do = {
 				factor = 10
 			}
+		}
+	}
+
+BLR_adam_stankievic = {
+		name = BLR_adam_stankievic
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Adam_Stankievic
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1965.3.1"
+			id = -1
+			traits = { }
 		}
 	}
 }

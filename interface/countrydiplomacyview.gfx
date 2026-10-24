@@ -418,7 +418,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_relation_air_volunteers_receiver"
-		textureFile = "gfx/interface/relations/relation_air_volunteers_receiver.dds"
+		textureFile = "gfx/interface/relations/relation_air_volunteers_reciever.dds"
 	}
 	
 	spriteType = {
@@ -693,7 +693,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_diplo_trade_entry_bg"
-		textureFile = "gfx/interface/diplo_trade_entry_bg.dds"
+		textureFile = "gfx/interface/tradeview/diplo_trade_entry_bg.dds"
 	}
 
 	spriteType = {
@@ -758,4 +758,106 @@ spriteTypes = {
 		textureFile = "gfx/interface/spy_missions_placeholder.dds"
 		noOfFrames = 3
 	}	
+
+spriteType = {
+		name = "GFX_diplo_action_embargo"
+		textureFile = "gfx//interface//diplo_action_embargo.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"		
+	}
+
+spriteType = {
+		name = "GFX_maximum_stockpile_button"
+		textureFile = "gfx/interface/stockpile_maximum_button.dds"
+		noOfFrames = 2
+	}
+
+spriteType = {
+		name = "GFX_relation_air_base_access"
+		textureFile = "gfx/interface/relations/relation_air_base_access.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_air_base_access_initiator"
+		textureFile = "gfx/interface/relations/relation_air_base_access_initiator.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_air_base_access_receiver"
+		textureFile = "gfx/interface/relations/relation_air_base_access_receiver.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_demilitarized_zone_initiator"
+		textureFile = "gfx/interface/relations/relation_dmz_initiator.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_demilitarized_zone_receiver"
+		textureFile = "gfx/interface/relations/relation_dmz_receiver.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_embargo"
+		textureFile = "gfx/interface/relations/relation_embargo.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_naval_blockade"
+		textureFile = "gfx/interface/relations/relation_naval_blockade.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_naval_blockade"
+		textureFile = "gfx/interface/relations/relation_naval_blockade.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_naval_blockade_initiator"
+		textureFile = "gfx/interface/relations/relation_naval_blockade_initiator.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_naval_blockade_initiator"
+		textureFile = "gfx/interface/relations/relation_naval_blockade_initiator.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_naval_blockade_receiver"
+		textureFile = "gfx/interface/relations/relation_naval_blockade_receiver.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_naval_blockade_receiver"
+		textureFile = "gfx/interface/relations/relation_naval_blockade_receiver.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_offer_air_base_access_initiator"
+		textureFile = "gfx/interface/relations/relation_air_base_access_receiver.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_offer_air_base_access_receiver"
+		textureFile = "gfx/interface/relations/relation_air_base_access_initiator.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_resource_rights_initiator"
+		textureFile = "gfx/interface/relations/relation_resource_rights_initiator.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_resource_rights_receiver"
+		textureFile = "gfx/interface/relations/relation_resource_rights_receiver.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_war_reparation_initiator"
+		textureFile = "gfx/interface/relations/relation_war_reparations_initiator.dds"
+	}
+
+spriteType = {
+		name = "GFX_relation_war_reparation_receiver"
+		textureFile = "gfx/interface/relations/relation_war_reparations_receiver.dds"
+	}
 }

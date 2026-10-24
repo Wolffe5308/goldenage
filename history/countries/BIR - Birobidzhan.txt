@@ -5,7 +5,6 @@ set_party_name = {
 	name = BIR_communism_party
 }
 
-oob = "BIR_1936"
 
 capital = 657 
 

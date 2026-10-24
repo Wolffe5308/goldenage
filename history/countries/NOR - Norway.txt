@@ -1,4 +1,47 @@
-﻿capital = 110
+# Current 1939 technologies precede historical focus rewards.
+1939.1.1 = {
+set_technology = {
+		interwar_artillery = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+		support_weapons2 = 1 
+		
+		#doctrines
+		#air_superiority = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		fuel_silos = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+if = {
+limit = { not = { has_dlc = "Man the Guns" } }
+set_technology = {
+		}
+}
+if = {
+limit = { has_dlc = "Man the Guns" }
+set_technology = {
+			basic_depth_charges = 1
+		}
+}
+}
+capital = 110
 
 oob = "NOR_1936"
 if = {
@@ -241,12 +284,12 @@ if = {
 		support_weapons2 = 1 
 		
 		#doctrines
-		air_superiority = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		submarine_operations = 1
+		
+		
+		
+		
+		
+		
 
 		#electronics
 		electronic_mechanical_engineering = 1
@@ -282,6 +325,11 @@ if = {
 	}
 	set_convoys = 400		# 4th biggest merchant marine in the world
 	set_stability = 0.8
+
+# Doctrine initialization migrated to the mastery system.
+set_grand_doctrine = grand_battleplan
+set_grand_doctrine = new_fleet_in_being
+set_grand_doctrine = new_strategic_destruction
 }
 
 
@@ -425,4 +473,5 @@ if = {
 				rear_1_custom_slot = ship_depth_charge_1
 			}
 		}
+}
 }

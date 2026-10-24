@@ -15,7 +15,10 @@ ideologies = {
 
 			populism = {
 			}
-		}
+		
+socialism = {
+			}
+}
 
 		dynamic_faction_names = {
 			"FACTION_NAME_DEMOCRATIC_1"
@@ -64,7 +67,9 @@ ideologies = {
 		}
 		ai_democratic = yes # uses the democratic AI behaviour
 		ai_ideology_wanted_units_factor = 1.10 # multiplies threat impact on number of desired units by this value, defaults to 1.0. If at war, the larger of this value and NDefines::NAI::WANTED_UNITS_WAR_THREAT_FACTOR will be used instead
-	}
+	
+ai_give_core_state_control_threshold = 0
+}
 
 
 	communism = {
@@ -86,7 +91,10 @@ ideologies = {
 			buddhist_socialism = {
 				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
 			}
-		}
+		
+anarchist_communism = {
+			}
+}
 
 		dynamic_faction_names = {
 			"FACTION_NAME_COMMUNIST_1"
@@ -127,7 +135,9 @@ ideologies = {
 
 		}
 
-	}
+	
+ai_give_core_state_control_threshold = 10
+}
 
 	fascism = {
 
@@ -187,7 +197,9 @@ ideologies = {
 
 		ai_fascist = yes # uses the fascist AI behaviour
 		ai_ideology_wanted_units_factor = 1.65
-	}
+	
+ai_give_core_state_control_threshold = 10000
+}
 
 	neutrality = {
 
@@ -208,7 +220,11 @@ ideologies = {
 			japan_militarism_ideology = {
 				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
 			}
-		}
+		
+anarchism = {
+				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
+			}
+}
 
 		dynamic_faction_names = {
 			"FACTION_NAME_NONALIGNED_1"
@@ -249,7 +265,9 @@ ideologies = {
 
 		ai_neutral = yes #
 		ai_ideology_wanted_units_factor = 1.15
-	}
+	
+ai_give_core_state_control_threshold = 10000
+}
 
 	liberal = {
 

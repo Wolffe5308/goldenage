@@ -1,0 +1,23 @@
+air_wings = {
+	226 = { 
+		small_plane_airframe_0 = {
+			owner = "UKR" 
+			amount = 100
+ version_name = "I-15"
+		}
+	}
+	199 = {
+		small_plane_airframe_0 = {
+			owner = "UKR" 
+			amount = 100
+ version_name = "I-15"
+		}
+	}
+	193 = {
+		small_plane_airframe_0 = {
+			owner = "UKR" 
+			amount = 100
+ version_name = "I-15"
+		}
+	}
+}

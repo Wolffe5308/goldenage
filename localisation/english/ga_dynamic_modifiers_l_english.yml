@@ -1,33 +1,4 @@
 ﻿l_english:
-SOV_Crimean_assr:0 "Crimean ASSR"
-SOV_Bashkir_assr:0 "Bashkir ASSR"
-SOV_Buryat_mongolian_assr:0 "Buryat-Mongolian ASSR"
-SOV_Dagestan_assr:0 "Dagestan ASSR"
-SOV_Tatar_assr:0 "Tatar ASSR"
-SOV_assr_of_volga_germans:0 "Volga German ASSR"
-SOV_chuvash_assr:0 "Chuvash ASSR"
-SOV_yakut_assr:0 "Yakut ASSR"
-SOV_karelian_ssr:0 "Karelian SSR"
-SOV_kazak_ssr:0 "Kazakh SSR"
-SOV_kirghiz_ssr:0 "Kirghiz SSR"
-SOV_tajik_ssr:0 "Tajik SSR"
-SOV_turkmen_ssr:0 "Turkmen SSR"
-SOV_karakalpak_assr:0 "Karakalpak ASSR"
-SOV_uzbek_ssr:0 "Uzbek SSR"
-SOV_komi_assr:0 "Komi ASSR"
-SOV_mari_assr:0 "Mari ASSR"
-SOV_mordovian_assr:0 "Mordovian ASSR"
-SOV_udmurt_assr:0 "Udmurt ASSR"
-SOV_chechen_ingush_assr:0 "Chechen-Ingush ASSR"
-SOV_kabardino_balkarian_assr:0 "Kabardino-Balkarian ASSR"
-SOV_north_ossetian_assr:0 "North Ossetian ASSR"
-SOV_abkhazian_assr:0 "Abkhaz ASSR"
-
-#Dynamic modifiers for focuses
-
-#Беларусь
-BLR_belarusian_army_dynamic_modifier:0 "Belarusian army"
-BLR_belarusian_army_dynamic_modifier_desc:0 "After the defeat in the Soviet-Polish war of 1919-1921, the army of Belarus was defeated. Now it is time to create a new Belarusian army from scratch to protect the state and borders."
 BLR_modify_belarusian_army_ns_intro:0 "Modify §Y[GetAppropriateBelarusianArmyNsName]§! by"
 BLR_modify_belarusian_army_ns_name_default:0 "$BLR_belarusian_army_dynamic_modifier$"
 BLR_regular_army_ns_tt:0 "$BLR_modify_belarusian_army_ns_intro$ \nDivision Organization: §G+5.0%§! \nDivision Attack: §G+5.0%§! \nDivision Defense: §G+5.0%§! \nPlanning Speed: §G+10.0%§!"

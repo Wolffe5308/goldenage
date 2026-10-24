@@ -1,4 +1,4 @@
-﻿capital = 231 #Tbilisi
+capital = 231 #Tbilisi
 
 oob = "ZSR_1936"
 
@@ -56,8 +56,8 @@ set_technology = {
 	early_bomber = 1
 	strategic_bomber1 = 1
 	naval_bomber1 = 1
-	mass_assault = 1
-	fleet_in_being = 1
+	
+	
 	basic_train = 1
 	fuel_silos = 1
 	fuel_refining = 1
@@ -216,3 +216,16 @@ set_popularities = {
 	communism = 75
 }
 
+
+# Doctrine initialization migrated to the mastery system.
+set_grand_doctrine = mass_assault
+set_grand_doctrine = new_fleet_in_being
+
+# Current air designer and legacy OOB paths; original aircraft counts are retained.
+if = {
+ limit = { has_dlc = "By Blood Alone" }
+ set_technology = { iw_small_airframe = 1 aa_lmg = 1 engines_1 = 1 aircraft_construction = 1 }
+ create_equipment_variant = { name = "I-15" type = small_plane_airframe_0 modules = { fixed_main_weapon_slot = light_mg_4x engine_type_slot = engine_1_1x special_type_slot_1 = empty } obsolete = yes }
+ set_air_oob = "ZSR_1936_air_bba"
+ else = { set_air_oob = "ZSR_1936_air_legacy" }
+}
